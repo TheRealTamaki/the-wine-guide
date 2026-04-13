@@ -1,0 +1,82 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import ArticleCard from '../components/ui/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+}
+
+const { article } = Astro.props;
+const { title, description, category, publishDate, modifiedDate, ogImage } = article.data;
+
+// Fetch child articles in same category
+const children = (await getCollection('articles', (a) =>
+  a.data.category === category &&
+  !a.data.draft &&
+  a.id !== article.id
+)).sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: title },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: Astro.url.href,
+};
+---
+
+<BaseLayout
+  {title}
+  {description}
+  {ogImage}
+  publishDate={publishDate}
+  modifiedDate={modifiedDate}
+  {schema}
+>
+  <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <!-- Hero -->
+    <header class="mt-6 max-w-[42rem]">
+      <h1 class="text-[2rem] font-heading font-bold text-primary leading-tight">{title}</h1>
+      <p class="mt-4 text-lg text-secondary leading-relaxed">{description}</p>
+    </header>
+
+    <!-- Intro content -->
+    <div class="mt-8 prose">
+      <slot />
+    </div>
+
+    <!-- Child articles grid -->
+    {children.length > 0 && (
+      <div class="mt-12 pt-8 border-t border-border">
+        <h2 class="text-xl font-heading font-semibold text-primary mb-6">
+          All {category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())} Guides
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {children.map((child) => {
+            const slug = child.id.replace(`${category}/`, '').replace(/\.mdx?$/, '');
+            return (
+              <ArticleCard
+                title={child.data.title}
+                description={child.data.description}
+                href={`/${category}/${slug}/`}
+                category={child.data.category}
+                date={child.data.publishDate}
+                ogImage={child.data.ogImage}
+              />
+            );
+          })}
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>

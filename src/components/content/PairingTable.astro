@@ -1,0 +1,40 @@
+---
+interface Pairing {
+  wine: string;
+  food: string;
+  notes?: string;
+}
+
+interface Props {
+  pairings: Pairing[];
+  caption?: string;
+}
+
+const { pairings, caption } = Astro.props;
+---
+
+<div class="not-prose my-6 overflow-x-auto rounded-xl border border-border">
+  <table class="w-full text-sm border-collapse">
+    {caption && (
+      <caption class="text-xs text-text-muted text-left px-4 pt-3 pb-1 font-medium">
+        {caption}
+      </caption>
+    )}
+    <thead>
+      <tr class="bg-bg-alt border-b border-border">
+        <th class="text-left px-4 py-3 font-semibold text-primary text-xs uppercase tracking-wider">Wine</th>
+        <th class="text-left px-4 py-3 font-semibold text-primary text-xs uppercase tracking-wider">Food</th>
+        <th class="text-left px-4 py-3 font-semibold text-primary text-xs uppercase tracking-wider hidden sm:table-cell">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      {pairings.map((row, i) => (
+        <tr class={`border-b border-border last:border-0 ${i % 2 === 0 ? '' : 'bg-bg-alt/50'}`}>
+          <td class="px-4 py-3 font-medium text-primary align-top">{row.wine}</td>
+          <td class="px-4 py-3 text-secondary align-top">{row.food}</td>
+          <td class="px-4 py-3 text-text-muted align-top hidden sm:table-cell">{row.notes}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

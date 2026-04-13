@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ui/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('articles', (a) =>
+  a.data.category === 'types-of-wine' && !a.data.draft
+)).sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+---
+
+<BaseLayout
+  title="Types Of Wine"
+  description="Red, white, rosé, sparkling, dessert — a clear guide to every major wine style."
+>
+  <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <header class="max-w-[42rem] mb-10">
+      <span class="text-xs font-semibold uppercase tracking-wider text-accent">Types Of Wine</span>
+      <h1 class="mt-2 font-heading text-[2rem] font-bold text-primary leading-tight">Types Of Wine</h1>
+      <p class="mt-3 text-lg text-secondary leading-relaxed">Red, white, rosé, sparkling, dessert — a clear guide to every major wine style.</p>
+    </header>
+
+    {articles.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {articles.map((article) => {
+          const slug = article.id.replace('types-of-wine/', '').replace(/\.mdx?$/, '');
+          return (
+            <ArticleCard
+              title={article.data.title}
+              description={article.data.description}
+              href={`/types-of-wine/${slug}/`}
+              category={article.data.category}
+              date={article.data.publishDate}
+              ogImage={article.data.ogImage}
+            />
+          );
+        })}
+      </div>
+    ) : (
+      <p class="text-text-muted">Guides coming soon.</p>
+    )}
+  </div>
+</BaseLayout>

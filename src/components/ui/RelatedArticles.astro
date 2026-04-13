@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from './ArticleCard.astro';
+
+interface Props {
+  slugs: string[];
+}
+
+const { slugs } = Astro.props;
+
+const all = await getCollection('articles', (a) => !a.data.draft);
+
+const related = slugs
+  .map((slug) => all.find((a) => a.id === slug || a.id.endsWith(`/${slug}`)))
+  .filter(Boolean)
+  .slice(0, 3) as NonNullable<typeof all[number]>[];
+
+function articleHref(id: string): string {
+  // id is like "best-wines/best-red-wine-under-20.mdx"
+  const clean = id.replace(/\.mdx?$/, '');
+  const slashIdx = clean.indexOf('/');
+  if (slashIdx === -1) return `/${clean}/`;
+  const category = clean.slice(0, slashIdx);
+  const slug = clean.slice(slashIdx + 1);
+  return `/${category}/${slug}/`;
+}
+---
+
+{related.length > 0 && (
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {related.map((article) => (
+      <ArticleCard
+        title={article.data.title}
+        description={article.data.description}
+        href={articleHref(article.id)}
+        category={article.data.category}
+        date={article.data.publishDate}
+        ogImage={article.data.ogImage}
+      />
+    ))}
+  </div>
+)}

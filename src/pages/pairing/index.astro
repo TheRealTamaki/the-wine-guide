@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ui/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('articles', (a) =>
+  a.data.category === 'pairing' && !a.data.draft
+)).sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+---
+
+<BaseLayout
+  title="Pairing"
+  description="Match the right wine to any dish. Simple, reliable pairing advice that actually works."
+>
+  <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <header class="max-w-[42rem] mb-10">
+      <span class="text-xs font-semibold uppercase tracking-wider text-accent">Pairing</span>
+      <h1 class="mt-2 font-heading text-[2rem] font-bold text-primary leading-tight">Pairing</h1>
+      <p class="mt-3 text-lg text-secondary leading-relaxed">Match the right wine to any dish. Simple, reliable pairing advice that actually works.</p>
+    </header>
+
+    {articles.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {articles.map((article) => {
+          const slug = article.id.replace('pairing/', '').replace(/\.mdx?$/, '');
+          return (
+            <ArticleCard
+              title={article.data.title}
+              description={article.data.description}
+              href={`/pairing/${slug}/`}
+              category={article.data.category}
+              date={article.data.publishDate}
+              ogImage={article.data.ogImage}
+            />
+          );
+        })}
+      </div>
+    ) : (
+      <p class="text-text-muted">Guides coming soon.</p>
+    )}
+  </div>
+</BaseLayout>

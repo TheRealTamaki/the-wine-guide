@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  category: string;
+  date?: Date;
+  ogImage?: string;
+  featured?: boolean;
+}
+
+const { title, description, href, category, date, ogImage, featured = false } = Astro.props;
+
+const categoryLabel = category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+---
+
+<a
+  href={href}
+  class={`group block bg-white rounded-xl shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer overflow-hidden border border-border ${featured ? 'ring-1 ring-accent/20' : ''}`}
+>
+  {ogImage && (
+    <div class="aspect-[16/9] overflow-hidden bg-bg-alt">
+      <img
+        src={ogImage}
+        alt={title}
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  )}
+
+  <div class="p-5">
+    <span class="text-xs font-semibold uppercase tracking-wider text-accent">
+      {categoryLabel}
+    </span>
+
+    <h3 class="mt-2 font-heading font-semibold text-primary leading-snug group-hover:text-accent transition-colors duration-200 line-clamp-2">
+      {title}
+    </h3>
+
+    <p class="mt-2 text-sm text-text-muted leading-relaxed line-clamp-2">
+      {description}
+    </p>
+
+    {date && (
+      <time
+        datetime={date.toISOString()}
+        class="block mt-3 text-xs text-text-muted"
+      >
+        {date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+      </time>
+    )}
+  </div>
+</a>

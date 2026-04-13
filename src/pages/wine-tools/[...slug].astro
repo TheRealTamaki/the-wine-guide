@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import PillarLayout from '../../layouts/PillarLayout.astro';
+import ComparisonLayout from '../../layouts/ComparisonLayout.astro';
+
+export async function getStaticPaths() {
+  const CATEGORY = 'wine-tools';
+  const articles = await getCollection('articles', (a) =>
+    a.data.category === CATEGORY && !a.data.draft
+  );
+
+  return articles.map((article) => {
+    // article.id is like "best-wines/best-red-wine-under-20.mdx"
+    const slug = article.id
+      .replace(`${CATEGORY}/`, '')
+      .replace(/\.mdx?$/, '');
+    return {
+      params: { slug },
+      props: { article },
+    };
+  });
+}
+
+const { article } = Astro.props;
+const { Content, headings } = await render(article);
+const { templateType } = article.data;
+---
+
+{templateType === 'pillar' ? (
+  <PillarLayout {article}>
+    <Content />
+  </PillarLayout>
+) : templateType === 'comparison' ? (
+  <ComparisonLayout {article} {headings}>
+    <Content />
+  </ComparisonLayout>
+) : (
+  <ArticleLayout {article} {headings}>
+    <Content />
+  </ArticleLayout>
+)}
