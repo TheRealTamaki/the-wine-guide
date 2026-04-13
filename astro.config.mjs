@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://thewine.guide',
+  server: { port: 4324 },
   integrations: [
     mdx(),
     sitemap(),

@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Public+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+/* ─── Design Tokens ─────────────────────────────────────────────────────────
+   Colors and fonts go in @theme so Tailwind generates utility classes.
+   Everything else (spacing, shadows, radii, layout) goes in :root to avoid
+   overriding Tailwind v4's built-in variable namespaces (--spacing-*, etc.)
+────────────────────────────────────────────────────────────────────────────── */
 @theme {
-  /* Colors */
+  /* Colors — generates bg-*, text-*, border-* utilities */
   --color-primary: #18181B;
   --color-secondary: #3F3F46;
   --color-accent: #7C2D41;
@@ -18,101 +23,90 @@
   --color-border: #E2E8F0;
   --color-border-dark: #D1D1D1;
 
-  /* Typography */
+  /* Fonts — generates font-heading and font-body utilities */
   --font-heading: 'Libre Bodoni', Georgia, serif;
   --font-body: 'Public Sans', system-ui, sans-serif;
+}
 
-  /* Font sizes */
-  --text-display: 2.5rem;
-  --text-h1: 2rem;
-  --text-h2: 1.5rem;
-  --text-h3: 1.25rem;
-  --text-h4: 1.125rem;
-  --text-body: 1.0625rem;
-  --text-sm: 0.875rem;
-  --text-xs: 0.75rem;
+/* ─── Custom properties (outside @theme to avoid namespace conflicts) ──────── */
+:root {
+  /* Layout widths — used as arbitrary values or CSS vars in components */
+  --w-prose: 42rem;
+  --w-page: 72rem;
+  --w-wide: 80rem;
 
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
-
-  /* Layout */
-  --max-w-prose: 42rem;
-  --max-w-page: 72rem;
-  --max-w-wide: 80rem;
+  /* Shadows — kept out of @theme to not override Tailwind's --shadow-* */
+  --twg-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --twg-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --twg-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --twg-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
 
   /* Radii */
-  --radius: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --twg-radius: 0.5rem;
+  --twg-radius-lg: 0.75rem;
+  --twg-radius-xl: 1rem;
 }
 
-/* Base styles */
-html {
-  font-family: var(--font-body);
-  font-size: var(--text-body);
-  line-height: 1.7;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ─── Base layer — lower specificity than Tailwind utilities ─────────────────
+   Wrapping in @layer base ensures utility classes like text-white can override
+   these element-level defaults (avoids the dark-h1-on-dark-bg bug).
+────────────────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1, h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1.25;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-body);
+    color: var(--color-primary);
+    line-height: 1.4;
+  }
+
+  h1 { font-size: 2rem; font-weight: 700; }
+  h2 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; }
+  h3 { font-size: 1.25rem; font-weight: 600; }
+  h4 { font-size: 1.125rem; font-weight: 600; }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-h1, h2 {
-  font-family: var(--font-heading);
-  color: var(--color-primary);
-  line-height: 1.25;
-}
-
-h3, h4, h5, h6 {
-  font-family: var(--font-body);
-  color: var(--color-primary);
-}
-
-h1 { font-size: var(--text-h1); font-weight: 700; }
-h2 { font-size: var(--text-h2); font-weight: 600; line-height: 1.3; }
-h3 { font-size: var(--text-h3); font-weight: 600; line-height: 1.4; }
-h4 { font-size: var(--text-h4); font-weight: 600; line-height: 1.4; }
-
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color 200ms ease;
-}
-
-a:hover {
-  color: var(--color-accent-hover);
-}
-
-/* Focus states (WCAG) */
-:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-/* Prose customization for @tailwindcss/typography */
+/* ─── Prose (article body) ───────────────────────────────────────────────── */
 .prose {
   --tw-prose-body: var(--color-text);
   --tw-prose-headings: var(--color-primary);
@@ -127,20 +121,13 @@ a:hover {
   --tw-prose-code: var(--color-primary);
   --tw-prose-th-borders: var(--color-border-dark);
   --tw-prose-td-borders: var(--color-border);
-  max-width: var(--max-w-prose);
-  font-size: var(--text-body);
+  max-width: var(--w-prose);
+  font-size: 1.0625rem;
   line-height: 1.7;
 }
 
-.prose h1,
-.prose h2 {
-  font-family: var(--font-heading);
-}
-
-.prose h3,
-.prose h4 {
-  font-family: var(--font-body);
-}
+.prose h1, .prose h2 { font-family: var(--font-heading); }
+.prose h3, .prose h4 { font-family: var(--font-body); }
 
 .prose a {
   text-decoration: underline;
@@ -148,21 +135,17 @@ a:hover {
   text-decoration-thickness: 1px;
 }
 
-.prose a:hover {
-  color: var(--color-accent-hover);
-}
+.prose a:hover { color: var(--color-accent-hover); }
 
 .prose blockquote {
   border-left-color: var(--color-accent);
   font-style: italic;
   background-color: var(--color-accent-light);
   padding: 1rem 1.5rem;
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0 var(--twg-radius) var(--twg-radius) 0;
 }
 
-.prose table {
-  border-collapse: collapse;
-}
+.prose table { border-collapse: collapse; }
 
 .prose thead th {
   background-color: var(--color-bg-alt);
@@ -170,7 +153,7 @@ a:hover {
   font-weight: 600;
 }
 
-/* Reduced motion */
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
