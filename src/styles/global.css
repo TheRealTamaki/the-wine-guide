@@ -1,60 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Public+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 /* ─── Design Tokens ─────────────────────────────────────────────────────────
-   Colors and fonts go in @theme so Tailwind generates utility classes.
-   Everything else (spacing, shadows, radii, layout) goes in :root to avoid
-   overriding Tailwind v4's built-in variable namespaces (--spacing-*, etc.)
+   Adapted from Stitch "The Curated Cellar" design system.
+   Material Design 3 warm palette + editorial serif/sans pairing.
 ────────────────────────────────────────────────────────────────────────────── */
 @theme {
-  /* Colors — generates bg-*, text-*, border-* utilities */
-  --color-primary: #18181B;
-  --color-secondary: #3F3F46;
-  --color-accent: #7C2D41;
-  --color-accent-hover: #9B3A54;
-  --color-accent-light: #F5EBF0;
-  --color-cta: #B8860B;
-  --color-cta-hover: #A07609;
-  --color-cta-light: #FDF6E3;
-  --color-bg: #FAFAFA;
-  --color-bg-alt: #F5F5F5;
-  --color-text: #09090B;
-  --color-text-muted: #555555;
-  --color-border: #E2E8F0;
-  --color-border-dark: #D1D1D1;
+  /* Colors — warm cream & deep wine palette */
+  --color-primary: #570013;
+  --color-primary-container: #800020;
+  --color-secondary: #584141;
+  --color-accent: #800020;
+  --color-accent-hover: #570013;
+  --color-accent-light: #ffdada;
+  --color-cta: #800020;
+  --color-cta-hover: #570013;
+  --color-cta-light: #bdedaa;
+  --color-bg: #fff8ef;
+  --color-bg-alt: #f5edde;
+  --color-surface-high: #efe7d9;
+  --color-surface-highest: #e9e2d3;
+  --color-surface-low: #fbf3e4;
+  --color-surface-white: #ffffff;
+  --color-text: #1e1b13;
+  --color-text-muted: #584141;
+  --color-border: #e0bfbf;
+  --color-border-dark: #8c7071;
+  --color-green: #3f6833;
+  --color-green-light: #bdedaa;
+  --color-green-dark: #28501e;
 
-  /* Fonts — generates font-heading and font-body utilities */
-  --font-heading: 'Libre Bodoni', Georgia, serif;
-  --font-body: 'Public Sans', system-ui, sans-serif;
+  /* Fonts — Noto Serif (headlines) + Plus Jakarta Sans (body) */
+  --font-heading: 'Noto Serif', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 /* ─── Custom properties (outside @theme to avoid namespace conflicts) ──────── */
 :root {
-  /* Layout widths — used as arbitrary values or CSS vars in components */
+  /* Layout widths */
   --w-prose: 42rem;
   --w-page: 72rem;
   --w-wide: 80rem;
 
-  /* Shadows — kept out of @theme to not override Tailwind's --shadow-* */
-  --twg-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --twg-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --twg-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --twg-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  /* Shadows — editorial style */
+  --twg-shadow-sm: 0 1px 2px rgba(30, 27, 19, 0.04);
+  --twg-shadow-md: 0 12px 24px rgba(30, 27, 19, 0.06);
+  --twg-shadow-lg: 0 16px 32px rgba(30, 27, 19, 0.08);
+  --twg-shadow-xl: 0 24px 48px rgba(30, 27, 19, 0.12);
 
-  /* Radii */
-  --twg-radius: 0.5rem;
-  --twg-radius-lg: 0.75rem;
-  --twg-radius-xl: 1rem;
+  /* Radii — large, editorial */
+  --twg-radius: 0.75rem;
+  --twg-radius-lg: 1.5rem;
+  --twg-radius-xl: 2rem;
+  --twg-radius-2xl: 2.5rem;
+  --twg-radius-3xl: 3rem;
 }
 
-/* ─── Base layer — lower specificity than Tailwind utilities ─────────────────
-   Wrapping in @layer base ensures utility classes like text-white can override
-   these element-level defaults (avoids the dark-h1-on-dark-bg bug).
-────────────────────────────────────────────────────────────────────────────── */
+/* ─── Base layer ───────────────────────────────────────────────────────────── */
 @layer base {
   html {
     font-family: var(--font-body);
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.7;
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -72,27 +78,27 @@
     flex: 1;
   }
 
-  h1, h2 {
+  h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--color-primary);
-    line-height: 1.25;
+    line-height: 1.2;
   }
 
-  h3, h4, h5, h6 {
+  h4, h5, h6 {
     font-family: var(--font-body);
     color: var(--color-primary);
     line-height: 1.4;
   }
 
-  h1 { font-size: 2rem; font-weight: 700; }
-  h2 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; }
-  h3 { font-size: 1.25rem; font-weight: 600; }
+  h1 { font-size: 2.5rem; font-weight: 700; }
+  h2 { font-size: 1.75rem; font-weight: 700; line-height: 1.25; }
+  h3 { font-size: 1.25rem; font-weight: 700; }
   h4 { font-size: 1.125rem; font-weight: 600; }
 
   a {
     color: var(--color-accent);
     text-decoration: none;
-    transition: color 200ms ease;
+    transition: color 300ms ease;
   }
 
   a:hover {
@@ -123,26 +129,68 @@
   --tw-prose-td-borders: var(--color-border);
   max-width: var(--w-prose);
   font-size: 1.0625rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-.prose h1, .prose h2 { font-family: var(--font-heading); }
-.prose h3, .prose h4 { font-family: var(--font-body); }
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
+}
+
+.prose hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-color: var(--color-border);
+}
+
+.prose img {
+  border-radius: 0;
+}
+
+.prose blockquote {
+  border-radius: 0;
+}
+
+.prose h1, .prose h2, .prose h3 { font-family: var(--font-heading); }
+.prose h4 { font-family: var(--font-body); }
 
 .prose a {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
 
 .prose a:hover { color: var(--color-accent-hover); }
+
+.prose .not-prose a,
+.not-prose a {
+  text-decoration: none;
+}
 
 .prose blockquote {
   border-left-color: var(--color-accent);
   font-style: italic;
   background-color: var(--color-accent-light);
   padding: 1rem 1.5rem;
-  border-radius: 0 var(--twg-radius) var(--twg-radius) 0;
 }
 
 .prose table { border-collapse: collapse; }
@@ -151,6 +199,16 @@
   background-color: var(--color-bg-alt);
   font-family: var(--font-body);
   font-weight: 600;
+}
+
+/* ─── Utility classes ──────────────────────────────────────────────────────── */
+.editorial-shadow {
+  box-shadow: 0 12px 24px rgba(30, 27, 19, 0.06);
+}
+
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 /* ─── Reduced motion ─────────────────────────────────────────────────────── */

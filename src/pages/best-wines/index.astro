@@ -10,13 +10,13 @@ const articles = (await getCollection('articles', (a) =>
 
 <BaseLayout
   title="Best Wines"
-  description="Our top wine picks by price, style, and occasion — all tested, none overrated."
+  description="Our top wine picks by price, style, and occasion. All tested, none overrated."
 >
   <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <header class="max-w-[42rem] mb-10">
       <span class="text-xs font-semibold uppercase tracking-wider text-accent">Best Wines</span>
       <h1 class="mt-2 font-heading text-[2rem] font-bold text-primary leading-tight">Best Wines</h1>
-      <p class="mt-3 text-lg text-secondary leading-relaxed">Our top wine picks by price, style, and occasion — all tested, none overrated.</p>
+      <p class="mt-3 text-lg text-secondary leading-relaxed">Our top wine picks by price, style, and occasion. All tested, none overrated.</p>
     </header>
 
     {articles.length > 0 ? (

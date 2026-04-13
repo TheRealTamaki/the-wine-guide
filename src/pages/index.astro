@@ -20,39 +20,48 @@ const schema = {
   '@type': 'WebSite',
   name: 'The Wine Guide',
   url: 'https://thewine.guide',
-  description: 'Honest recommendations and real knowledge for everyday wine drinkers.',
+  description: 'Pick better bottles, pair them with confidence, and actually know what you\'re drinking.',
 };
 ---
 
 <BaseLayout
   title="The Wine Guide"
-  description="Honest recommendations and real knowledge for everyday wine drinkers. Wine pairings, buying guides, grape varieties, and more."
+  description="Pick better bottles, pair them with confidence, and actually know what you're drinking. Useful wine knowledge that respects your time."
   {schema}
 >
   <!-- Hero -->
-  <section class="bg-primary text-white">
-    <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-      <div class="max-w-[42rem]">
-        <h1 class="font-heading text-[2.5rem] md:text-5xl font-bold leading-tight text-white">
-          Real wine knowledge.<br />No nonsense.
+  <section class="relative min-h-[700px] flex items-center px-8 overflow-hidden">
+    <!-- Background image with overlay -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/pexels-7015332.webp"
+        alt="Wine bottles neatly arranged on a rack in a cozy cellar"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-primary/70"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="font-heading text-5xl md:text-7xl font-bold text-white leading-none mb-6">
+          The Best Place<br />To Learn About Wine.
         </h1>
-        <p class="mt-5 text-lg text-white/80 leading-relaxed">
-          Straightforward recommendations and honest advice for everyday wine drinkers.
-          We skip the jargon and tell you exactly what to buy, what to pair, and why it matters.
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+          You shouldn't need a sommelier certification to pick a good bottle. We'll show you what to buy, what to pair it with, and how to sound like you know what you're talking about. Because you will.
         </p>
-        <div class="mt-8 flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-4 justify-center">
           <a
             href="/wine-basics/"
-            class="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 cursor-pointer"
+            class="bg-white hover:bg-accent-light text-primary px-8 py-4 font-bold transition-all duration-200 shadow-lg flex items-center gap-2 cursor-pointer"
           >
-            Start Here
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            Show Me the Basics
+            <span class="material-symbols-outlined">arrow_forward</span>
           </a>
           <a
             href="/best-wines/"
-            class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 cursor-pointer border border-white/20"
+            class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 font-bold transition-all duration-200 cursor-pointer"
           >
-            Best Wines
+            Just Tell Me What to Buy
           </a>
         </div>
       </div>
@@ -61,9 +70,14 @@ const schema = {
 
   <!-- Featured articles -->
   {featured.length > 0 && (
-    <section class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="font-heading text-2xl font-semibold text-primary mb-6">Editor's Picks</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section class="max-w-7xl mx-auto px-8 py-24">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div class="max-w-2xl">
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">Start Here</h2>
+          <p class="text-text-muted text-lg">The guides people keep coming back to. If you only read three things, make it these.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {featured.map((article) => {
           const [category, ...rest] = article.id.split('/');
           const slug = rest.join('/').replace(/\.mdx?$/, '');
@@ -84,39 +98,46 @@ const schema = {
   )}
 
   <!-- Category navigation -->
-  <section class="bg-bg-alt border-y border-border">
-    <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="font-heading text-2xl font-semibold text-primary mb-8">Explore by Topic</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {navGroups.map((group) => (
-          <div>
-            <h3 class="text-xs font-semibold uppercase tracking-wider text-accent mb-4">{group.label}</h3>
-            <ul class="space-y-3">
-              {group.items.map((item) => (
-                <li>
-                  <a href={item.href} class="flex items-start gap-2 group cursor-pointer">
-                    <svg class="w-4 h-4 mt-0.5 text-border-dark group-hover:text-accent transition-colors duration-200 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-                    <span>
-                      <span class="text-sm font-medium text-primary group-hover:text-accent transition-colors duration-200 block">{item.label}</span>
-                      {item.description && (
-                        <span class="text-xs text-text-muted mt-0.5 block">{item.description}</span>
-                      )}
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+  <section class="bg-surface-low py-24 px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <div>
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">What Are You Looking For?</h2>
+        <p class="text-text-muted text-lg leading-relaxed mb-10">
+          Need a bottle for tonight? Trying to figure out what "dry" actually means? Want to stop bringing the same wine to every dinner party? Pick your problem.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          {navGroups.map((group) => (
+            group.items.map((item) => (
+              <a
+                href={item.href}
+                class="px-6 py-2 bg-surface-highest text-primary font-semibold text-sm uppercase tracking-widest cursor-pointer hover:bg-accent hover:text-white transition-all duration-200"
+              >
+                {item.label}
+              </a>
+            ))
+          ))}
+        </div>
+      </div>
+      <div class="relative hidden md:block">
+        <img
+          src="/images/pexels-18248851.webp"
+          alt="Golden sunset casting warm hues over expansive vineyards in Colmar, France"
+          class="shadow-2xl w-full h-auto"
+        />
       </div>
     </div>
   </section>
 
   <!-- Latest articles -->
   {latest.length > 0 && (
-    <section class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="font-heading text-2xl font-semibold text-primary mb-6">Latest Guides</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section class="max-w-7xl mx-auto px-8 py-24">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div class="max-w-2xl">
+          <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">New on the Site</h2>
+          <p class="text-text-muted text-lg">The latest stuff we've put together. All tested, all opinionated, none of it filler.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {latest.map((article) => {
           const [category, ...rest] = article.id.split('/');
           const slug = rest.join('/').replace(/\.mdx?$/, '');
@@ -136,20 +157,20 @@ const schema = {
   )}
 
   <!-- About strip -->
-  <section class="bg-accent-light border-t border-accent/20">
-    <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center gap-6 justify-between">
-      <div class="max-w-[36rem]">
-        <h2 class="font-heading text-xl font-semibold text-primary">About The Wine Guide</h2>
-        <p class="mt-2 text-sm text-secondary leading-relaxed">
-          We're a team of wine enthusiasts who got tired of pretentious advice. Every recommendation is tested,
-          every price point is realistic, and every guide is written for real people — not sommeliers.
+  <section class="bg-accent text-white">
+    <div class="max-w-7xl mx-auto px-8 py-16 flex flex-col md:flex-row items-center gap-8 justify-between">
+      <div class="max-w-2xl">
+        <h2 class="font-heading text-3xl font-bold text-white">Wine Knowledge Without the Waffle</h2>
+        <p class="mt-4 text-white/80 text-lg leading-relaxed">
+          We keep it practical, honest, and useful. So you can spend less time reading about wine and more time drinking it.
         </p>
       </div>
       <a
         href="/about/"
-        class="flex-shrink-0 inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 cursor-pointer text-sm"
+        class="flex-shrink-0 inline-flex items-center gap-2 bg-white text-primary font-bold px-8 py-4 transition-all duration-200 cursor-pointer hover:bg-accent-light text-sm uppercase tracking-widest"
       >
         Our Story
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>
     </div>
   </section>

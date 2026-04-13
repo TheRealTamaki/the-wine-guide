@@ -17,16 +17,16 @@ const filtered = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 {filtered.length > 1 && (
   <div class="toc">
-    <p class="text-xs font-semibold uppercase tracking-wider text-text-muted mb-3">
+    <h4 class="text-lg font-bold text-primary font-heading mb-4">
       On this page
-    </p>
+    </h4>
     <nav aria-label="Table of contents">
-      <ol class="space-y-1.5">
+      <ol class="space-y-2">
         {filtered.map((heading) => (
-          <li class={heading.depth === 3 ? 'pl-3' : ''}>
+          <li class={heading.depth === 3 ? 'pl-4' : ''}>
             <a
               href={`#${heading.slug}`}
-              class="toc-link block text-sm text-secondary hover:text-accent transition-colors duration-200 cursor-pointer leading-snug py-0.5"
+              class="toc-link block text-sm text-text-muted hover:text-accent transition-colors duration-200 cursor-pointer leading-snug py-1"
               data-heading={heading.slug}
             >
               {heading.text}
@@ -39,7 +39,6 @@ const filtered = headings.filter((h) => h.depth === 2 || h.depth === 3);
 )}
 
 <script>
-  // Highlight current section on scroll
   const links = document.querySelectorAll<HTMLAnchorElement>('.toc-link');
   if (links.length > 0) {
     const headingEls = Array.from(links).map((link) => {
@@ -52,15 +51,15 @@ const filtered = headings.filter((h) => h.depth === 2 || h.depth === 3);
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             links.forEach((link) => {
-              link.classList.remove('text-accent', 'font-medium');
-              link.classList.add('text-secondary');
+              link.classList.remove('text-accent', 'font-bold');
+              link.classList.add('text-text-muted');
             });
             const activeLink = document.querySelector<HTMLAnchorElement>(
               `.toc-link[data-heading="${entry.target.id}"]`
             );
             if (activeLink) {
-              activeLink.classList.remove('text-secondary');
-              activeLink.classList.add('text-accent', 'font-medium');
+              activeLink.classList.remove('text-text-muted');
+              activeLink.classList.add('text-accent', 'font-bold');
             }
           }
         });

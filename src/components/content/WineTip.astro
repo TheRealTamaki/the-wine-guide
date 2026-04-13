@@ -8,20 +8,20 @@ const { type = 'tip', title } = Astro.props;
 
 const styles = {
   tip: {
-    container: 'bg-accent-light border-accent/30',
-    icon: `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/><path d="M9 18h6"/></svg>`,
+    container: 'bg-accent-light border border-accent/40',
+    icon: 'lightbulb',
     label: 'tip',
     color: 'text-accent',
   },
   note: {
-    container: 'bg-cta-light border-cta/30',
-    icon: `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>`,
+    container: 'bg-green-light border border-green/40',
+    icon: 'info',
     label: 'note',
-    color: 'text-cta',
+    color: 'text-green',
   },
   warning: {
-    container: 'bg-amber-50 border-amber-200',
-    icon: `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>`,
+    container: 'bg-amber-50 border border-amber-400/50',
+    icon: 'warning',
     label: 'heads up',
     color: 'text-amber-700',
   },
@@ -30,12 +30,12 @@ const styles = {
 const s = styles[type];
 ---
 
-<aside class={`not-prose my-5 border rounded-lg px-4 py-3.5 ${s.container}`}>
-  <div class={`flex items-center gap-2 text-xs font-semibold uppercase tracking-wider mb-2 ${s.color}`}>
-    <Fragment set:html={s.icon} />
+<aside class={`not-prose my-6 px-6 py-5 ${s.container}`}>
+  <div class={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-2 ${s.color}`}>
+    <span class="material-symbols-outlined text-base">{s.icon}</span>
     {title ?? s.label}
   </div>
-  <div class="text-sm text-secondary leading-relaxed">
+  <div class="text-sm text-text leading-relaxed">
     <slot />
   </div>
 </aside>

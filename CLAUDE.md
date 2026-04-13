@@ -46,14 +46,18 @@ the-wine-guide/
 └── src/                             ← Astro site source (pages, layouts, components)
 ```
 
+## Brand Voice (MANDATORY)
+
+**Before writing ANY content** (articles, page copy, headlines, CTAs, descriptions, emails — anything reader-facing), you MUST read `content/docs/voice-guide.md` first. No exceptions. This applies to drafts, rewrites, and edits alike.
+
 ## Routing
 
 | Task | Go to | Read |
 |------|-------|------|
 | Research a wine topic or region | `/research/` | `CONTEXT.md` |
 | Find keywords or analyze competitors | `/research/` | `CONTEXT.md` |
-| Write or edit an article | `/content/` | `CONTEXT.md` → `workflows/CONTEXT.md` |
-| Check voice/style guidelines | `/content/` | `REFERENCES.md`, `docs/voice-guide.md` |
+| Write or edit an article | `/content/` | `docs/voice-guide.md` → `CONTEXT.md` → `workflows/CONTEXT.md` |
+| Check voice/style guidelines | `/content/` | `docs/voice-guide.md` |
 | Optimize content for SEO | `/seo/` | `CONTEXT.md` |
 | Run an SEO audit | `/seo/` | `CONTEXT.md` |
 | Build site pages or components | `/src/` | Astro docs |

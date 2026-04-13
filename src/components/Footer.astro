@@ -4,49 +4,31 @@ import { footerLinks } from '../data/navigation';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t border-border bg-bg-alt mt-16">
-  <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<footer class="w-full rounded-t-[var(--twg-radius-lg)] mt-20 bg-bg">
+  <div class="flex flex-col md:flex-row justify-between items-center p-12 gap-8 w-full max-w-7xl mx-auto">
+    <!-- Wordmark -->
+    <a
+      href="/"
+      class="font-heading font-bold text-primary text-2xl hover:text-accent transition-colors duration-300 cursor-pointer"
+    >
+      The Wine Guide
+    </a>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-      <!-- Brand -->
-      <div>
+    <!-- Links -->
+    <div class="flex flex-wrap justify-center gap-8 text-sm uppercase tracking-widest">
+      {footerLinks.map((link) => (
         <a
-          href="/"
-          class="font-heading font-bold text-lg text-primary hover:text-accent transition-colors duration-200 cursor-pointer"
+          href={link.href}
+          class="text-text hover:text-green transition-all duration-200 cursor-pointer"
         >
-          The Wine Guide
+          {link.label}
         </a>
-        <p class="mt-3 text-sm text-text-muted leading-relaxed">
-          Honest recommendations and real knowledge for everyday wine drinkers.
-          No jargon, no nonsense — just good wine advice.
-        </p>
-      </div>
-
-      <!-- Links -->
-      <div class="md:col-span-2">
-        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {footerLinks.map((link) => (
-            <li>
-              <a
-                href={link.href}
-                class="text-sm text-text-muted hover:text-accent transition-colors duration-200 cursor-pointer"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      ))}
     </div>
 
-    <!-- Bottom bar -->
-    <div class="pt-8 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-      <p class="text-xs text-text-muted">
-        &copy; {currentYear} The Wine Guide. All rights reserved.
-      </p>
-      <p class="text-xs text-text-muted max-w-[28rem]">
-        <strong>Affiliate disclosure:</strong> We may earn a commission when you buy through links on this site, at no extra cost to you. We only recommend products we genuinely believe in.
-      </p>
+    <!-- Copyright -->
+    <div class="text-sm uppercase tracking-widest text-text-muted text-center md:text-right">
+      &copy; {currentYear} The Wine Guide
     </div>
   </div>
 </footer>
