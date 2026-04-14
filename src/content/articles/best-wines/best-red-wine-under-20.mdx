@@ -17,12 +17,49 @@ relatedArticles: []
 
 import AffiliateCTA from '../../../components/content/AffiliateCTA.astro';
 import WineTip from '../../../components/content/WineTip.astro';
+import TopPicksInline from '../../../components/content/TopPicksInline.astro';
 
 You've done it before. You grab something off the bottom shelf, it looks fine, the back label says something about "hints of blackcurrant and a lingering finish," and you take it home. It's drinkable. It's also completely forgettable. You finish the glass and feel nothing. You don't buy it again. You also can't remember what it was called.
 
 That experience doesn't have to be the default under $20.
 
 This list exists because there are genuinely excellent bottles hiding in that price range: wines that critics score 90+ points, that customers rate 4.3 stars and above, and that taste like they belong in the $35 bracket. Every bottle here is available on wine.com right now. Every one of them is worth buying twice.
+
+<TopPicksInline picks={[
+  {
+    rank: 1,
+    label: "J. Lohr Estates Seven Oaks Cabernet Sauvignon 2023",
+    href: "https://www.wine.com/product/j-lohr-estates-seven-oaks-cabernet-sauvignon-2023/4124622",
+    image: "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/bdatmb58hhuijdrgctpj.jpg",
+    score: 92,
+    critic: "James Suckling",
+    region: "Paso Robles",
+    grape: "Cabernet Sauvignon",
+    pairings: ["Ribeye", "Burgers"]
+  },
+  {
+    rank: 2,
+    label: "Castellani Chianti Classico Riserva 2019",
+    href: "https://www.wine.com/product/castellani-chianti-classico-riserva-2019/2375170",
+    image: "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/s47mm9al0f82ocv1exby.jpg",
+    score: 91,
+    critic: "James Suckling",
+    region: "Tuscany",
+    grape: "Sangiovese",
+    pairings: ["Pasta", "Pizza"]
+  },
+  {
+    rank: 3,
+    label: "BenMarco Malbec 2022",
+    href: "https://www.wine.com/product/benmarco-malbec-2022/2669489",
+    image: "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/csragcjypok3dxolfnnf.jpg",
+    score: 93,
+    critic: "James Suckling",
+    region: "Uco Valley",
+    grape: "Malbec",
+    pairings: ["Lamb", "Empanadas"]
+  }
+]} />
 
 <WineTip type="tip">
   Prices on wine.com vary by state and change frequently, especially for bottles that are on sale. Click through to see your current price before buying.

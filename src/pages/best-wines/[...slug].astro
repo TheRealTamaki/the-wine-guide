@@ -27,22 +27,25 @@ const { Content, headings } = await render(article);
 const { templateType } = article.data;
 
 // Top 3 picks data for listicle sidebar (images + links for click-worthy cards)
-const topPicksData: Record<string, { image: string; href: string; highlight: string }[]> = {
+const topPicksData: Record<string, { image: string; href: string; highlight: string; rating: number }[]> = {
   'best-red-wine-under-20': [
     {
       image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/bdatmb58hhuijdrgctpj.jpg',
       href: 'https://www.wine.com/product/j-lohr-estates-seven-oaks-cabernet-sauvignon-2023/4124622',
       highlight: 'Best overall value',
+      rating: 4.2,
     },
     {
       image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/s47mm9al0f82ocv1exby.jpg',
       href: 'https://www.wine.com/product/castellani-chianti-classico-riserva-2019/2375170',
       highlight: 'Best for food pairing',
+      rating: 4.1,
     },
     {
       image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/csragcjypok3dxolfnnf.jpg',
       href: 'https://www.wine.com/product/benmarco-malbec-2022/2669489',
       highlight: 'Best bang for your buck',
+      rating: 4.2,
     },
   ],
 };
@@ -63,6 +66,7 @@ const topPicks = templateType === 'listicle'
           highlight: pickData[i]?.highlight ?? '',
           image: pickData[i]?.image ?? '',
           href: pickData[i]?.href ?? '',
+          rating: pickData[i]?.rating,
         };
       })
   : [];
