@@ -31,10 +31,11 @@ const s = styles[type];
 ---
 
 <aside class={`not-prose my-6 px-6 py-5 ${s.container}`}>
-  <div class={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-2 ${s.color}`}>
-    <span class="material-symbols-outlined text-base">{s.icon}</span>
-    {title ?? s.label}
-  </div>
+  {title && (
+    <div class={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-2 ${s.color}`}>
+      {title}
+    </div>
+  )}
   <div class="text-sm text-text leading-relaxed">
     <slot />
   </div>

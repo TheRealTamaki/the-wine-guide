@@ -114,7 +114,7 @@
 
 /* ─── Prose (article body) ───────────────────────────────────────────────── */
 .prose {
-  --tw-prose-body: var(--color-text);
+  --tw-prose-body: #000000;
   --tw-prose-headings: var(--color-primary);
   --tw-prose-links: var(--color-accent);
   --tw-prose-bold: var(--color-primary);
@@ -130,6 +130,10 @@
   max-width: var(--w-prose);
   font-size: 1.0625rem;
   line-height: 1.8;
+}
+
+.prose {
+  color: #000000;
 }
 
 .prose p {

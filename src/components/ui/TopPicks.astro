@@ -1,0 +1,72 @@
+---
+interface Pick {
+  rank: number;
+  label: string;
+  slug: string;
+  highlight: string;
+  image: string;
+  href: string;
+}
+
+interface Props {
+  picks: Pick[];
+}
+
+const { picks } = Astro.props;
+---
+
+{picks.length > 0 && (
+  <div class="mt-6 pt-6 border-t border-border">
+    <h4 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">Our Top 3 Picks</h4>
+    <div class="space-y-3">
+      {picks.map((pick) => (
+        <div class="top-pick-card relative rounded-[5px] border-2 border-border bg-surface-white overflow-hidden transition-all duration-200">
+          <div class="absolute top-0 left-0 w-6 h-6 flex items-center justify-center text-[10px] font-bold text-white z-10 rounded-br-[5px]" style="background-color: #6ab165;">
+            #{pick.rank}
+          </div>
+          <a href={`#${pick.slug}`} class="block no-underline">
+            <div class="flex items-center gap-3 p-2.5">
+              {pick.image && (
+                <div class="flex-shrink-0 w-12 h-16 flex items-center justify-center">
+                  <img
+                    src={pick.image}
+                    alt={pick.label}
+                    class="max-h-14 w-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              )}
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-bold text-primary leading-tight line-clamp-2">{pick.label}</p>
+                <p class="text-[10px] text-text-muted mt-0.5">{pick.highlight}</p>
+              </div>
+            </div>
+          </a>
+          <a
+            href={pick.href}
+            rel="nofollow sponsored"
+            target="_blank"
+            class="top-pick-btn block w-full text-center text-white text-[10px] font-bold py-1.5 no-underline uppercase tracking-wider"
+          >
+            Check Prices
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+<style>
+  .top-pick-card:hover {
+    border-color: #6ab165;
+  }
+  .top-pick-btn {
+    background-color: #6ab165;
+    color: #ffffff !important;
+  }
+  .top-pick-btn:hover {
+    background-color: #5a9a56;
+    color: #ffffff !important;
+  }
+</style>

@@ -3,16 +3,27 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
 import CategoryBadge from '../components/ui/CategoryBadge.astro';
 import TableOfContents from '../components/ui/TableOfContents.astro';
+import TopPicks from '../components/ui/TopPicks.astro';
 import RelatedArticles from '../components/ui/RelatedArticles.astro';
 import AffiliateDisclosure from '../components/ui/AffiliateDisclosure.astro';
 import type { CollectionEntry } from 'astro:content';
 
+interface TopPick {
+  rank: number;
+  label: string;
+  slug: string;
+  highlight: string;
+  image: string;
+  href: string;
+}
+
 interface Props {
   article: CollectionEntry<'articles'>;
   headings?: { depth: number; slug: string; text: string }[];
+  topPicks?: TopPick[];
 }
 
-const { article, headings = [] } = Astro.props;
+const { article, headings = [], topPicks = [] } = Astro.props;
 const { title, description, category, publishDate, modifiedDate, ogImage, affiliateDisclosure, relatedArticles } = article.data;
 
 const breadcrumbs = [
@@ -47,30 +58,29 @@ const readingTime = Math.ceil((article.body?.length ?? 0) / 1400);
   <div class="max-w-7xl mx-auto px-6 py-8">
     <Breadcrumbs items={breadcrumbs} />
 
-    <!-- Header -->
-    <header class="mb-12 mt-8">
-      <div class="flex items-center gap-2 mb-4">
-        <CategoryBadge {category} />
-        {readingTime > 0 && (
-          <span class="text-text-muted text-sm uppercase tracking-widest">{readingTime} min read</span>
-        )}
-      </div>
-      <h1 class="text-4xl md:text-5xl font-heading font-bold text-primary leading-tight mb-4">
-        {title}
-      </h1>
-      <p class="text-xl text-text-muted max-w-3xl leading-relaxed">
-        {description}
-      </p>
-      <div class="mt-4 text-sm text-text-muted">
-        <time datetime={publishDate.toISOString()}>
-          {publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-        </time>
-      </div>
-    </header>
-
     <div class="lg:grid lg:grid-cols-[1fr_18rem] lg:gap-12">
       <!-- Main content -->
       <article>
+        <!-- Header -->
+        <header class="mb-12 mt-8" style="max-width: var(--w-prose);">
+          <div class="flex items-center gap-2 mb-4">
+            <CategoryBadge {category} />
+            {readingTime > 0 && (
+              <span class="text-text-muted text-sm uppercase tracking-widest">{readingTime} min read</span>
+            )}
+          </div>
+          <h1 class="text-4xl md:text-5xl font-heading font-bold text-primary leading-tight mb-4">
+            {title}
+          </h1>
+          <p class="text-xl text-text-muted leading-relaxed">
+            {description}
+          </p>
+          <div class="mt-4 text-sm text-text-muted">
+            <time datetime={publishDate.toISOString()}>
+              {publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+          </div>
+        </header>
         {affiliateDisclosure && <AffiliateDisclosure class="mb-6" />}
 
         <div class="prose">
@@ -90,6 +100,7 @@ const readingTime = Math.ceil((article.body?.length ?? 0) / 1400);
         <aside class="hidden lg:block">
           <div class="sticky top-28 bg-bg-alt rounded-[var(--twg-radius-lg)] p-8">
             <TableOfContents {headings} />
+            <TopPicks picks={topPicks} />
           </div>
         </aside>
       )}
