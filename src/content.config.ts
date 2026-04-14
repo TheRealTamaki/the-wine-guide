@@ -32,7 +32,7 @@ const articles = defineCollection({
     draft: z.boolean().default(true),
     relatedArticles: z.array(z.string()).default([]),
     affiliateDisclosure: z.boolean().default(false),
-    templateType: z.enum(['article', 'pillar', 'comparison', 'listicle', 'glossary']).default('article'),
+    templateType: z.enum(['article', 'pillar', 'comparison', 'listicle', 'glossary', 'product']).default('article'),
     priority: z.number().int().min(1).max(4).default(3),
   }),
 });

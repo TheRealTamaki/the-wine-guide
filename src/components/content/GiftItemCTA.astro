@@ -1,0 +1,112 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  store: 'Amazon' | 'Wine.com' | 'Vivino' | string;
+  price?: string;
+  priceTag?: string;
+  image?: string;
+  description?: string;
+  rating?: number;
+  reviewCount?: number;
+  forWhom?: string;
+}
+
+const { href, label, store, price, priceTag, image, description, rating = 0, reviewCount, forWhom } = Astro.props;
+
+const fullStars = Math.floor(rating);
+const hasHalf = (rating - fullStars) >= 0.3;
+const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+
+const isAmazon = store === 'Amazon';
+const btnClass = isAmazon ? 'gift-btn-amazon' : 'gift-btn-wine';
+---
+
+<aside class="not-prose my-10 bg-surface-white border border-border rounded-[5px] overflow-hidden">
+  <div class="flex flex-col sm:flex-row">
+    {image && (
+      <a href={href} rel="nofollow sponsored" target="_blank" class="flex-shrink-0 sm:w-44 w-full h-56 sm:h-auto bg-surface-low flex items-center justify-center p-4 no-underline">
+        <img
+          src={image}
+          alt={label}
+          class="max-h-48 sm:max-h-full w-auto object-contain drop-shadow-md"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+    )}
+    <div class="flex-1 min-w-0 p-5 sm:p-6">
+      <div class="flex items-center gap-2 mb-1 flex-wrap">
+        <p class="text-xs font-bold uppercase tracking-widest text-accent">{store}</p>
+        {priceTag && (
+          <span class="text-xs font-semibold bg-accent-light text-primary px-2 py-0.5 rounded-full">{priceTag}</span>
+        )}
+        {forWhom && (
+          <span class="text-xs text-text-muted italic">— {forWhom}</span>
+        )}
+      </div>
+
+      <h3 class="font-heading font-bold text-primary text-xl leading-snug mb-2">{label}</h3>
+
+      {rating > 0 && (
+        <div class="flex items-center gap-2 mb-2">
+          <div class="flex items-center gap-0.5">
+            {Array.from({ length: fullStars }).map(() => (
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            ))}
+            {hasHalf && (
+              <svg class="w-4 h-4" viewBox="0 0 20 20">
+                <defs><linearGradient id={`half-gift-${label.replace(/\W/g, '')}`}><stop offset="50%" stop-color="#fbbf24" /><stop offset="50%" stop-color="#d1d5db" /></linearGradient></defs>
+                <path fill={`url(#half-gift-${label.replace(/\W/g, '')})`} d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            )}
+            {Array.from({ length: emptyStars }).map(() => (
+              <svg class="w-4 h-4 text-gray-300" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            ))}
+          </div>
+          <span class="text-sm font-semibold text-primary">{rating.toFixed(1)}</span>
+          {reviewCount && (
+            <span class="text-xs text-text-muted">({reviewCount.toLocaleString()} reviews)</span>
+          )}
+        </div>
+      )}
+
+      {description && (
+        <p class="text-sm text-text-muted leading-relaxed mb-4">{description}</p>
+      )}
+
+      <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+        {price && (
+          <span class="text-base font-bold text-primary">{price}</span>
+        )}
+        <a
+          href={href}
+          rel="nofollow sponsored"
+          target="_blank"
+          class={`${btnClass} inline-flex items-center gap-2 text-sm font-bold px-6 py-3 no-underline transition-all duration-200 cursor-pointer uppercase tracking-widest rounded-[5px]`}
+        >
+          Buy on {store}
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<style>
+  .gift-btn-amazon {
+    background-color: #f0a830;
+    color: #111827 !important;
+  }
+  .gift-btn-amazon:hover {
+    background-color: #d9941f;
+    color: #111827 !important;
+  }
+  .gift-btn-wine {
+    background-color: #6ab165;
+    color: #ffffff !important;
+  }
+  .gift-btn-wine:hover {
+    background-color: #5a9a56;
+    color: #ffffff !important;
+  }
+</style>

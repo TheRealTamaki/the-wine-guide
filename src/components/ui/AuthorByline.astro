@@ -1,0 +1,27 @@
+---
+interface Props {
+  name: string;
+  role: string;
+  avatar?: string;
+  readingTime?: number;
+}
+
+const { name, role, avatar, readingTime } = Astro.props;
+const initials = name.split(' ').map((w: string) => w[0]).join('').slice(0, 2).toUpperCase();
+---
+
+<div class="flex items-center gap-3">
+  <div class="w-9 h-9 rounded-full overflow-hidden bg-accent/10 flex items-center justify-center shrink-0 border border-border">
+    {avatar ? (
+      <img src={avatar} alt={name} class="w-full h-full object-cover" />
+    ) : (
+      <span class="text-xs font-bold text-accent">{initials}</span>
+    )}
+  </div>
+  <div class="leading-tight">
+    <p class="text-sm font-semibold text-primary">{name}</p>
+    <p class="text-xs text-text-muted">
+      {role}{readingTime && readingTime > 0 ? <span class="before:content-['·'] before:mx-1">{readingTime} min read</span> : null}
+    </p>
+  </div>
+</div>
