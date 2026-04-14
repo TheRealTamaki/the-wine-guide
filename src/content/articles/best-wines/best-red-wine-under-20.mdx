@@ -19,6 +19,7 @@ import AffiliateCTA from '../../../components/content/AffiliateCTA.astro';
 import WineTip from '../../../components/content/WineTip.astro';
 import TopPicksInline from '../../../components/content/TopPicksInline.astro';
 import WineQuiz from '../../../components/content/WineQuiz.astro';
+import MethodologyBox from '../../../components/content/MethodologyBox.astro';
 
 You've done it before. You grab something off the bottom shelf, it looks fine, the back label says something about "hints of blackcurrant and a lingering finish," and you take it home. It's drinkable. It's also completely forgettable. You finish the glass and feel nothing. You don't buy it again. You also can't remember what it was called.
 
@@ -66,7 +67,6 @@ This list exists because there are genuinely excellent bottles hiding in that pr
   Prices on wine.com vary by state and change frequently, especially for bottles that are on sale. Click through to see your current price before buying.
 </WineTip>
 
-<WineQuiz />
 
 ## 1. J. Lohr Estates Seven Oaks Cabernet Sauvignon 2023
 
@@ -236,4 +236,36 @@ It's frequently on sale. When it is, buy two.
   description="Highest-scored bottle on this list. Sta. Rita Hills, one of California's finest Pinot appellations. Frequently on sale."
   scores={[{ critic: "James Suckling", score: 94 }, { critic: "Tasting Panel", score: 90 }]}
   pairings={["Date night", "Roast duck", "Wild mushrooms"]}
+/>
+
+<WineQuiz />
+
+<MethodologyBox
+  intro="A $20 bottle isn't good by default. Here's what every wine on this list has in common."
+  criteria={[
+    {
+      title: "Regions that over-deliver on price",
+      description: "We favour appellations that consistently produce above their tag. Paso Robles runs warmer than Napa but costs a fraction. Bierzo, Patagonia, Chianti Rufina, and Uco Valley are all under-celebrated addresses doing serious work at this price."
+    },
+    {
+      title: "Winemaker pedigree",
+      description: "Every pick comes from a producer with real history. Frescobaldi has been making wine in Tuscany since the 1300s. Walter Schug planted Sonoma Coast in 1980 when everyone said it was too cold. Baron Philippe de Rothschild's name usually sits on bottles that cost $200."
+    },
+    {
+      title: "Critic-backed — 90 points or higher",
+      description: "Every bottle has earned at least 90 points from a major critic (James Suckling, Wine Spectator, Wine Enthusiast, Vinous, Tasting Panel, or Wilfred Wong)."
+    },
+    {
+      title: "Multiple critics in agreement, where possible",
+      description: "Four of the ten bottles here carry 90+ point scores from three separate publications: J. Lohr Seven Oaks, BenMarco Malbec, Frescobaldi Nipozzano, and the Vinos de Arganza Mencia. That kind of agreement at this price is rare."
+    },
+    {
+      title: "Cross-checked with real drinkers",
+      description: "Where wine.com customer ratings exist, we check them too. The Castellani Chianti Classico Riserva holds 4.3 stars from 100+ customers. The Sur de los Andes Patagonian Pinot holds 4.4 from 60+. Critics can miss what ordinary palates catch."
+    },
+    {
+      title: "In stock on wine.com at under $20",
+      description: "Every bottle here is available on wine.com right now, at the current vintage, under $20 at the time of writing. Prices vary by state and change frequently, especially for bottles on sale — click through for your current price before buying."
+    }
+  ]}
 />

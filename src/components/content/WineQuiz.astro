@@ -1,10 +1,11 @@
 ---
 /**
- * WineQuiz — 3-question interactive quiz that matches a reader
- * to one of the 10 wines on this page based on food, occasion, and style.
+ * WineQuiz — split-layout interactive quiz.
+ * Questions live on the left, a persistent hero (copy + wine glass image) on the right.
+ * On the last answer, a 5-second "finding your match" screen shows, then reveals the matched bottle.
  *
  * Scoring: food match = 3pts, occasion = 2pts, style = 2pts.
- * Highest score wins; on tie, lower wine number (higher-ranked on page) breaks it.
+ * Highest score wins; on tie, lower wine number (higher on page) breaks it.
  */
 
 const wines = [
@@ -104,7 +105,7 @@ const winesJson = JSON.stringify(wines);
 ---
 
 <section class="not-prose my-12 wine-quiz" data-wine-quiz>
-  {/* Header */}
+  {/* Centered header */}
   <div class="flex items-center gap-4 mb-3">
     <div class="h-px flex-1 bg-border"></div>
     <div class="px-1">
@@ -115,197 +116,158 @@ const winesJson = JSON.stringify(wines);
   <p class="text-center text-sm text-text-muted italic mb-7">Three quick questions. One matched bottle.</p>
 
   <div class="quiz-shell relative overflow-hidden rounded-[5px] border-2 border-border bg-surface-white">
-    {/* Top progress bar */}
-    <div class="quiz-progress-track h-1 bg-bg-alt">
-      <div class="quiz-progress-fill h-full transition-all duration-300" style="width: 0%;"></div>
-    </div>
 
-    {/* STEP: Intro */}
-    <div class="quiz-step px-6 sm:px-10 py-10" data-step="intro">
-      <div class="text-center max-w-lg mx-auto">
-        <span class="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-3">Wine Matcher</span>
-        <h4 class="font-heading font-bold text-primary text-2xl sm:text-3xl leading-tight mb-4">Let's find the right bottle for you.</h4>
-        <p class="text-sm text-text-muted leading-relaxed mb-7">Tell us what you're eating, what the night looks like, and how adventurous you're feeling. We'll match you to one of the 10 bottles on this page.</p>
-        <button type="button" class="quiz-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-[5px] font-bold text-sm uppercase tracking-wider cursor-pointer transition-all duration-200" data-quiz-start>
-          Start the Quiz
-          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
-        </button>
-      </div>
-    </div>
+    {/* SPLIT LAYOUT — questions left, hero right */}
+    <div class="quiz-layout-split grid grid-cols-1 md:grid-cols-[1fr_1fr]" data-layout="split">
 
-    {/* STEP: Q1 - Food */}
-    <div class="quiz-step px-6 sm:px-10 py-10" data-step="q1" hidden>
-      <div class="flex items-center justify-between mb-5 text-xs uppercase tracking-widest font-bold">
-        <span class="text-text-muted">Step 1 of 3</span>
-        <span class="text-accent">Food</span>
-      </div>
-      <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">What's on the table tonight?</h4>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <button type="button" class="quiz-option" data-answer="food:meat">
-          <span class="quiz-option-emoji-icon" data-icon="meat"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Red meat, burgers, steak</span>
-            <span class="quiz-option-sub">Anything off the grill or in the oven</span>
-          </span>
-        </button>
-        <button type="button" class="quiz-option" data-answer="food:pasta">
-          <span class="quiz-option-emoji-icon" data-icon="pasta"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Pasta, pizza, Italian</span>
-            <span class="quiz-option-sub">Tomato sauce, garlic, olive oil</span>
-          </span>
-        </button>
-        <button type="button" class="quiz-option" data-answer="food:poultry">
-          <span class="quiz-option-emoji-icon" data-icon="poultry"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Chicken, pork, salmon</span>
-            <span class="quiz-option-sub">Lighter proteins, roasted veg</span>
-          </span>
-        </button>
-        <button type="button" class="quiz-option" data-answer="food:cheese">
-          <span class="quiz-option-emoji-icon" data-icon="cheese"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Cheese, charcuterie, or nothing</span>
-            <span class="quiz-option-sub">Drinking it on its own or with a nibble</span>
-          </span>
-        </button>
-      </div>
-    </div>
+      {/* LEFT: Questions */}
+      <div class="quiz-left relative px-6 sm:px-10 py-10 md:py-12 flex flex-col">
 
-    {/* STEP: Q2 - Occasion */}
-    <div class="quiz-step px-6 sm:px-10 py-10" data-step="q2" hidden>
-      <div class="flex items-center justify-between mb-5 text-xs uppercase tracking-widest font-bold">
-        <span class="text-text-muted">Step 2 of 3</span>
-        <span class="text-accent">Occasion</span>
-      </div>
-      <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">What's the occasion?</h4>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <button type="button" class="quiz-option" data-answer="occasion:weeknight">
-          <span class="quiz-option-emoji-icon" data-icon="weeknight"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Just a regular night in</span>
-            <span class="quiz-option-sub">Something good without overthinking</span>
-          </span>
-        </button>
-        <button type="button" class="quiz-option" data-answer="occasion:dinner-party">
-          <span class="quiz-option-emoji-icon" data-icon="party"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Friends coming over</span>
-            <span class="quiz-option-sub">Dinner party, needs to please a crowd</span>
-          </span>
-        </button>
-        <button type="button" class="quiz-option" data-answer="occasion:special">
-          <span class="quiz-option-emoji-icon" data-icon="heart"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Date night or celebration</span>
-            <span class="quiz-option-sub">Something a little more memorable</span>
-          </span>
-        </button>
-        <button type="button" class="quiz-option" data-answer="occasion:gift">
-          <span class="quiz-option-emoji-icon" data-icon="gift"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">I'm bringing it as a gift</span>
-            <span class="quiz-option-sub">Has to look the part on the label</span>
-          </span>
-        </button>
-      </div>
-      <div class="mt-6">
-        <button type="button" class="quiz-back text-xs uppercase tracking-widest font-bold text-text-muted cursor-pointer" data-quiz-back>← Back</button>
-      </div>
-    </div>
-
-    {/* STEP: Q3 - Style */}
-    <div class="quiz-step px-6 sm:px-10 py-10" data-step="q3" hidden>
-      <div class="flex items-center justify-between mb-5 text-xs uppercase tracking-widest font-bold">
-        <span class="text-text-muted">Step 3 of 3</span>
-        <span class="text-accent">Style</span>
-      </div>
-      <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">How adventurous are you feeling?</h4>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <button type="button" class="quiz-option" data-answer="style:classic">
-          <span class="quiz-option-emoji-icon" data-icon="classic"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Give me a safe bet</span>
-            <span class="quiz-option-sub">A classic region I'll recognise</span>
-          </span>
-        </button>
-        <button type="button" class="quiz-option" data-answer="style:adventurous"
-        >
-          <span class="quiz-option-emoji-icon" data-icon="spark"></span>
-          <span class="quiz-option-body">
-            <span class="quiz-option-title">Surprise me</span>
-            <span class="quiz-option-sub">Show me something new and lesser-known</span>
-          </span>
-        </button>
-      </div>
-      <div class="mt-6">
-        <button type="button" class="quiz-back text-xs uppercase tracking-widest font-bold text-text-muted cursor-pointer" data-quiz-back>← Back</button>
-      </div>
-    </div>
-
-    {/* STEP: Calculating */}
-    <div class="quiz-step px-6 sm:px-10 py-14" data-step="calculating" hidden>
-      <div class="flex flex-col items-center text-center max-w-md mx-auto">
-        <div class="quiz-spinner mb-6" aria-hidden="true">
-          <svg class="w-12 h-12" viewBox="0 0 50 50">
-            <circle cx="25" cy="25" r="20" fill="none" stroke="var(--color-border)" stroke-width="3"></circle>
-            <circle class="quiz-spinner-arc" cx="25" cy="25" r="20" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="60 200"></circle>
-          </svg>
+        {/* Q1 - Food */}
+        <div class="quiz-step" data-step="q1">
+          <div class="flex items-center justify-between mb-5 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <span class="text-text-muted">Step 1 of 3</span>
+            <span class="text-accent">Food</span>
+          </div>
+          <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">What's on the table tonight?</h4>
+          <div class="flex flex-col gap-2.5 max-w-sm">
+            <button type="button" class="quiz-pill" data-answer="food:meat">Red meat, burgers, steak</button>
+            <button type="button" class="quiz-pill" data-answer="food:pasta">Pasta, pizza, anything Italian</button>
+            <button type="button" class="quiz-pill" data-answer="food:poultry">Chicken, pork, or salmon</button>
+            <button type="button" class="quiz-pill" data-answer="food:cheese">Cheese, charcuterie, or on its own</button>
+          </div>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-2">Finding Your Match</span>
-        <h4 class="font-heading font-bold text-primary text-2xl leading-tight mb-4" data-calc-label>Reading your food pairing…</h4>
-        <div class="flex items-center gap-2 mt-1">
-          <span class="quiz-calc-dot" data-calc-dot="0"></span>
-          <span class="quiz-calc-dot" data-calc-dot="1"></span>
-          <span class="quiz-calc-dot" data-calc-dot="2"></span>
-          <span class="quiz-calc-dot" data-calc-dot="3"></span>
+
+        {/* Q2 - Occasion */}
+        <div class="quiz-step" data-step="q2" hidden>
+          <div class="flex items-center justify-between mb-5 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <span class="text-text-muted">Step 2 of 3</span>
+            <span class="text-accent">Occasion</span>
+          </div>
+          <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">What's the occasion?</h4>
+          <div class="flex flex-col gap-2.5 max-w-sm">
+            <button type="button" class="quiz-pill" data-answer="occasion:weeknight">Just a regular night in</button>
+            <button type="button" class="quiz-pill" data-answer="occasion:dinner-party">Friends coming over for dinner</button>
+            <button type="button" class="quiz-pill" data-answer="occasion:special">Date night or celebration</button>
+            <button type="button" class="quiz-pill" data-answer="occasion:gift">A gift for someone else</button>
+          </div>
+          <div class="mt-5">
+            <button type="button" class="quiz-back text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted cursor-pointer" data-quiz-back>← Back</button>
+          </div>
+        </div>
+
+        {/* Q3 - Style */}
+        <div class="quiz-step" data-step="q3" hidden>
+          <div class="flex items-center justify-between mb-5 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <span class="text-text-muted">Step 3 of 3</span>
+            <span class="text-accent">Style</span>
+          </div>
+          <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">How adventurous are you feeling?</h4>
+          <div class="flex flex-col gap-2.5 max-w-sm">
+            <button type="button" class="quiz-pill" data-answer="style:classic">Give me a safe bet</button>
+            <button type="button" class="quiz-pill" data-answer="style:adventurous">Surprise me with something new</button>
+          </div>
+          <div class="mt-5">
+            <button type="button" class="quiz-back text-[10px] uppercase tracking-[0.2em] font-bold text-text-muted cursor-pointer" data-quiz-back>← Back</button>
+          </div>
+        </div>
+
+        {/* Dot progress indicator */}
+        <div class="mt-auto pt-8 flex items-center gap-2" aria-hidden="true">
+          <span class="quiz-step-dot" data-step-dot="q1"></span>
+          <span class="quiz-step-dot" data-step-dot="q2"></span>
+          <span class="quiz-step-dot" data-step-dot="q3"></span>
+        </div>
+      </div>
+
+      {/* RIGHT: Hero */}
+      <div class="quiz-right relative overflow-hidden">
+        <img
+          src="/images/pexels-15103775.webp"
+          alt="A glass of red wine on a dark backdrop"
+          loading="lazy"
+          decoding="async"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="quiz-right-overlay absolute inset-0"></div>
+        <div class="quiz-right-content relative z-10 h-full flex flex-col justify-center px-8 sm:px-12 py-14 md:py-16">
+          <span class="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-white/80 mb-3">Wine Matcher</span>
+          <h4 class="font-heading font-bold text-white text-3xl sm:text-4xl leading-tight mb-4 text-balance">Let's find the right bottle for you.</h4>
+          <p class="text-sm sm:text-base text-white/85 leading-relaxed max-w-sm">
+            Tell us what you're eating, the occasion, and how adventurous you're feeling. We'll match you to one of the ten bottles on this page.
+          </p>
+          <span class="sr-only">Photo by Skyler Ewing on Pexels</span>
         </div>
       </div>
     </div>
 
-    {/* STEP: Result */}
-    <div class="quiz-step px-6 sm:px-10 py-10" data-step="result" hidden>
-      <div class="text-center mb-7">
-        <span class="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-2">Your Match</span>
-        <h4 class="font-heading font-bold text-primary text-2xl sm:text-3xl leading-tight">Pour this tonight.</h4>
+    {/* FULL-WIDTH LAYOUT — calculating + result */}
+    <div class="quiz-layout-full" data-layout="full" hidden>
+
+      {/* STEP: Calculating */}
+      <div class="quiz-step px-6 sm:px-10 py-14" data-step="calculating" hidden>
+        <div class="flex flex-col items-center text-center max-w-md mx-auto">
+          <div class="quiz-spinner mb-6" aria-hidden="true">
+            <svg class="w-12 h-12" viewBox="0 0 50 50">
+              <circle cx="25" cy="25" r="20" fill="none" stroke="var(--color-border)" stroke-width="3"></circle>
+              <circle class="quiz-spinner-arc" cx="25" cy="25" r="20" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="60 200"></circle>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-2">Finding Your Match</span>
+          <h4 class="font-heading font-bold text-primary text-2xl leading-tight mb-4" data-calc-label>Reading your food pairing…</h4>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="quiz-calc-dot" data-calc-dot="0"></span>
+            <span class="quiz-calc-dot" data-calc-dot="1"></span>
+            <span class="quiz-calc-dot" data-calc-dot="2"></span>
+            <span class="quiz-calc-dot" data-calc-dot="3"></span>
+          </div>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start bg-surface-low rounded-[5px] border border-border p-6">
-        <a class="quiz-result-image-link block mx-auto sm:mx-0 shrink-0" data-result-href target="_blank" rel="nofollow sponsored">
-          <div class="w-28 h-40 flex items-center justify-center">
-            <img data-result-image alt="" class="max-h-40 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
+      {/* STEP: Result */}
+      <div class="quiz-step px-6 sm:px-10 py-10" data-step="result" hidden>
+        <div class="text-center mb-7">
+          <span class="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-2">Your Match</span>
+          <h4 class="font-heading font-bold text-primary text-2xl sm:text-3xl leading-tight">Pour this tonight.</h4>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start bg-surface-low rounded-[5px] border border-border p-6">
+          <a class="quiz-result-image-link block mx-auto sm:mx-0 shrink-0" data-result-href target="_blank" rel="nofollow sponsored">
+            <div class="w-28 h-40 flex items-center justify-center">
+              <img data-result-image alt="" class="max-h-40 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
+            </div>
+          </a>
+          <div class="flex-1">
+            <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-1" data-result-rank></span>
+            <h5 class="font-heading font-bold text-primary text-xl leading-snug m-0 mb-2" data-result-name></h5>
+            <p class="text-xs text-text-muted m-0 mb-3" data-result-meta></p>
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider mb-3 px-2 py-1 rounded-[3px] bg-green-light" style="color: var(--color-green-dark);">
+              <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              <span data-result-score></span>
+            </div>
+            <p class="text-sm text-text leading-relaxed m-0 mb-5" data-result-blurb></p>
+            <a data-result-href target="_blank" rel="nofollow sponsored" class="quiz-btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-[5px] font-bold text-sm uppercase tracking-wider no-underline transition-all duration-200">
+              Check Price on Wine.com
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+            </a>
           </div>
-        </a>
-        <div class="flex-1">
-          <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-1" data-result-rank></span>
-          <h5 class="font-heading font-bold text-primary text-xl leading-snug m-0 mb-2" data-result-name></h5>
-          <p class="text-xs text-text-muted m-0 mb-3" data-result-meta></p>
-          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider mb-3 px-2 py-1 rounded-[3px] bg-green-light" style="color: var(--color-green-dark);">
-            <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-            <span data-result-score></span>
-          </div>
-          <p class="text-sm text-text leading-relaxed m-0 mb-5" data-result-blurb></p>
-          <a data-result-href target="_blank" rel="nofollow sponsored" class="quiz-btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-[5px] font-bold text-sm uppercase tracking-wider no-underline transition-all duration-200">
-            Check Price on Wine.com
-            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+        </div>
+
+        <div class="mt-5 pt-5 border-t border-border/70" data-runner-up hidden>
+          <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-text-muted mb-2">Also Worth Considering</p>
+          <a data-runner-href target="_blank" rel="nofollow sponsored" class="runner-up-card flex items-center gap-4 p-3 rounded-[5px] border border-border bg-surface-white no-underline transition-all duration-200">
+            <img data-runner-image alt="" class="w-10 h-14 object-contain shrink-0" loading="lazy" />
+            <div class="flex-1 min-w-0">
+              <p class="font-heading font-semibold text-primary text-sm leading-snug m-0 truncate" data-runner-name></p>
+              <p class="text-xs text-text-muted m-0 mt-0.5" data-runner-meta></p>
+            </div>
+            <svg class="w-4 h-4 text-text-muted shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
           </a>
         </div>
-      </div>
 
-      <div class="mt-5 pt-5 border-t border-border/70" data-runner-up hidden>
-        <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-text-muted mb-2">Also Worth Considering</p>
-        <a data-runner-href target="_blank" rel="nofollow sponsored" class="runner-up-card flex items-center gap-4 p-3 rounded-[5px] border border-border bg-surface-white no-underline transition-all duration-200">
-          <img data-runner-image alt="" class="w-10 h-14 object-contain shrink-0" loading="lazy" />
-          <div class="flex-1 min-w-0">
-            <p class="font-heading font-semibold text-primary text-sm leading-snug m-0 truncate" data-runner-name></p>
-            <p class="text-xs text-text-muted m-0 mt-0.5" data-runner-meta></p>
-          </div>
-          <svg class="w-4 h-4 text-text-muted shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
-        </a>
-      </div>
-
-      <div class="text-center mt-7">
-        <button type="button" class="quiz-restart text-xs uppercase tracking-widest font-bold text-text-muted cursor-pointer" data-quiz-restart>↻ Retake the Quiz</button>
+        <div class="text-center mt-7">
+          <button type="button" class="quiz-restart text-xs uppercase tracking-widest font-bold text-text-muted cursor-pointer" data-quiz-restart>↻ Retake the Quiz</button>
+        </div>
       </div>
     </div>
   </div>
@@ -317,10 +279,9 @@ const winesJson = JSON.stringify(wines);
     const container = document.querySelector('[data-wine-quiz]');
     if (!container) return;
 
-    const steps = ['intro', 'q1', 'q2', 'q3', 'calculating', 'result'];
-    const progressMap = { intro: 0, q1: 33, q2: 66, q3: 99, calculating: 100, result: 100 };
+    const splitSteps = new Set(['q1', 'q2', 'q3']);
     const state = { food: null, occasion: null, style: null };
-    let currentStep = 'intro';
+    let currentStep = 'q1';
     let calcTimers = [];
 
     const calcLabels = [
@@ -359,16 +320,33 @@ const winesJson = JSON.stringify(wines);
 
     function showStep(step) {
       currentStep = step;
+
+      // Show correct layout
+      const split = container.querySelector('[data-layout="split"]');
+      const full = container.querySelector('[data-layout="full"]');
+      const onSplit = splitSteps.has(step);
+      if (split) split.hidden = !onSplit;
+      if (full) full.hidden = onSplit;
+
+      // Toggle step visibility within active layout
       container.querySelectorAll('[data-step]').forEach((el) => {
         el.hidden = el.getAttribute('data-step') !== step;
       });
-      const fill = container.querySelector('.quiz-progress-fill');
-      if (fill) fill.style.width = progressMap[step] + '%';
-      // Smooth scroll to keep the quiz visible
+
+      // Update step dots
+      const order = { q1: 0, q2: 1, q3: 2 };
+      container.querySelectorAll('[data-step-dot]').forEach((dot) => {
+        const dotStep = dot.getAttribute('data-step-dot');
+        dot.classList.remove('is-active', 'is-done');
+        if (dotStep === step) dot.classList.add('is-active');
+        else if (order[dotStep] < order[step]) dot.classList.add('is-done');
+      });
+
+      // Scroll-into-view if the quiz has drifted off-screen
       const shell = container.querySelector('.quiz-shell');
-      if (shell && step !== 'intro') {
+      if (shell) {
         const rect = shell.getBoundingClientRect();
-        if (rect.top < 0 || rect.top > window.innerHeight * 0.3) {
+        if (rect.top < 0 || rect.top > window.innerHeight * 0.4) {
           shell.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
@@ -421,10 +399,6 @@ const winesJson = JSON.stringify(wines);
       const target = e.target.closest('button, a');
       if (!target) return;
 
-      if (target.matches('[data-quiz-start]')) {
-        showStep('q1');
-        return;
-      }
       if (target.matches('[data-quiz-back]')) {
         const back = { q2: 'q1', q3: 'q2' };
         if (back[currentStep]) showStep(back[currentStep]);
@@ -433,7 +407,7 @@ const winesJson = JSON.stringify(wines);
       if (target.matches('[data-quiz-restart]')) {
         clearCalcTimers();
         state.food = null; state.occasion = null; state.style = null;
-        showStep('intro');
+        showStep('q1');
         return;
       }
 
@@ -453,6 +427,9 @@ const winesJson = JSON.stringify(wines);
         }
       }
     });
+
+    // Initialise step dots
+    showStep('q1');
   })();
 </script>
 
@@ -460,9 +437,68 @@ const winesJson = JSON.stringify(wines);
   .quiz-shell {
     box-shadow: 0 4px 16px rgba(30, 27, 19, 0.06);
   }
-  .quiz-progress-fill {
-    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-primary) 100%);
+
+  /* Right hero overlay: wine-red gradient for contrast over the photo */
+  .quiz-right {
+    min-height: 320px;
   }
+  .quiz-right-overlay {
+    background: linear-gradient(135deg, rgba(87, 0, 19, 0.78) 0%, rgba(30, 10, 15, 0.72) 100%);
+  }
+  @media (min-width: 768px) {
+    .quiz-right { min-height: 100%; }
+  }
+
+  /* Pill-style answer buttons */
+  .quiz-pill {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.875rem 1.25rem;
+    border-radius: 5px;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-surface-white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1.25;
+  }
+  .quiz-pill:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-surface-high);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(87, 0, 19, 0.1);
+  }
+  .quiz-pill:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+  .quiz-pill:active {
+    transform: translateY(0);
+  }
+
+  /* Step progress dots at bottom of left column */
+  .quiz-step-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background-color: var(--color-border);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+  .quiz-step-dot.is-active {
+    background-color: var(--color-accent);
+    transform: scale(1.25);
+  }
+  .quiz-step-dot.is-done {
+    background-color: var(--color-primary);
+  }
+
+  /* Back / Restart */
+  .quiz-back:hover, .quiz-restart:hover { color: var(--color-accent); }
 
   /* Primary CTA */
   .quiz-btn-primary {
@@ -475,91 +511,6 @@ const winesJson = JSON.stringify(wines);
     border-color: var(--color-accent-hover);
     transform: translateY(-1px);
   }
-
-  /* Answer option buttons */
-  .quiz-option {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.875rem;
-    width: 100%;
-    text-align: left;
-    padding: 1rem 1.125rem;
-    border-radius: 5px;
-    border: 2px solid var(--color-border);
-    background-color: var(--color-surface-white);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: inherit;
-  }
-  .quiz-option:hover {
-    border-color: var(--color-primary);
-    background-color: var(--color-surface-high);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(87, 0, 19, 0.12);
-  }
-  .quiz-option:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-  }
-  .quiz-option-body { display: flex; flex-direction: column; gap: 0.15rem; flex: 1; }
-  .quiz-option-title {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--color-primary);
-    line-height: 1.3;
-  }
-  .quiz-option-sub {
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-    line-height: 1.4;
-  }
-
-  /* Icon circle per option */
-  .quiz-option-emoji-icon {
-    flex-shrink: 0;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 9999px;
-    background-color: var(--color-surface-low);
-    border: 1px solid var(--color-border);
-    position: relative;
-    transition: all 0.2s ease;
-  }
-  .quiz-option:hover .quiz-option-emoji-icon {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-  }
-
-  .quiz-option-emoji-icon::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1.1rem 1.1rem;
-    opacity: 0.85;
-    transition: filter 0.2s ease;
-  }
-  .quiz-option:hover .quiz-option-emoji-icon::before {
-    filter: brightness(0) invert(1);
-    opacity: 1;
-  }
-
-  /* SVG backgrounds per icon token — burgundy tint */
-  .quiz-option-emoji-icon[data-icon="meat"]::before     { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12.5 3.5A5.5 5.5 0 0 0 7 9c0 2.5-1.5 3.5-3 5-.8.8-1 2.2 0 3s2.2.8 3 0c1.5-1.5 2.5-3 5-3a5.5 5.5 0 0 0 .5-10.5z'/><circle cx='10' cy='9' r='1'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="pasta"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 14h16'/><path d='M4 14a8 8 0 0 0 16 0'/><path d='M8 14V8'/><path d='M12 14V6'/><path d='M16 14V8'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="poultry"]::before  { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 13a6 6 0 1 1 12 0c0 3-2 5-5 6l-1 2H9l-1-2c-1-1-2-3-2-6z'/><circle cx='15' cy='10' r='0.7' fill='%23800020'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="cheese"]::before   { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 13l9-7 9 5v5H3z'/><circle cx='8' cy='14' r='0.7' fill='%23800020'/><circle cx='14' cy='15' r='0.7' fill='%23800020'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="weeknight"]::before{ background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="party"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='9' cy='8' r='3'/><circle cx='17' cy='8' r='3'/><path d='M2 20c1-3 4-5 7-5s6 2 7 5'/><path d='M14 20c1-2.5 3-4 5-4s3.5 1 5 4'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="heart"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23800020' stroke='%23800020' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M20.8 4.6c-2-2-5.3-2-7.3 0L12 5.9l-1.5-1.3c-2-2-5.3-2-7.3 0-2 2-2 5.3 0 7.3l8.8 8.7 8.8-8.7c2-2 2-5.3 0-7.3z'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="gift"]::before     { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='8' width='18' height='4' rx='1'/><path d='M12 8v13'/><path d='M19 12v9H5v-9'/><path d='M7.5 8a2.5 2.5 0 0 1 0-5c2.5 0 4.5 3 4.5 5'/><path d='M16.5 8a2.5 2.5 0 0 0 0-5c-2.5 0-4.5 3-4.5 5'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="classic"]::before  { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 3h12l-1 8c-.5 3-3 5-5 5s-4.5-2-5-5z'/><path d='M12 16v5'/><path d='M9 21h6'/></svg>"); }
-  .quiz-option-emoji-icon[data-icon="spark"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23800020' stroke='%23800020' stroke-width='1'><path d='M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z'/></svg>"); }
-
-  /* Back / Restart link */
-  .quiz-back:hover, .quiz-restart:hover { color: var(--color-accent); }
 
   /* Calculating spinner + dots */
   .quiz-spinner svg { display: block; }
@@ -586,18 +537,26 @@ const winesJson = JSON.stringify(wines);
     background-color: var(--color-primary);
   }
 
-  /* Runner up */
+  /* Runner-up */
   .runner-up-card:hover {
     border-color: var(--color-green);
     background-color: var(--color-surface-low);
     transform: translateY(-1px);
   }
 
+  /* Text balance helper */
+  .text-balance { text-wrap: balance; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .quiz-option, .quiz-btn-primary, .runner-up-card, .quiz-progress-fill, .quiz-calc-dot {
+    .quiz-pill, .quiz-btn-primary, .runner-up-card, .quiz-step-dot, .quiz-calc-dot {
       transition: none !important;
     }
-    .quiz-option:hover, .quiz-btn-primary:hover, .runner-up-card:hover {
+    .quiz-pill:hover, .quiz-btn-primary:hover, .runner-up-card:hover {
       transform: none;
     }
     .quiz-spinner-arc { animation: none; }
