@@ -1,6 +1,6 @@
 # The Wine Guide — Handoff
 
-Last updated: 2026-04-14
+Last updated: 2026-04-14 (evening update — quiz, methodology box, local image skill)
 
 ## What This Project Is
 
@@ -69,6 +69,33 @@ Wine education blog and affiliate site built on Astro. Targets everyday wine ent
 - [x] Auto-extracted from first 3 h2 headings for listicle template articles
 - [x] Image/href data defined in `src/pages/best-wines/[...slug].astro` per article
 
+### Top 3 Picks Inline Cards (in-body)
+- [x] `src/components/content/TopPicksInline.astro` — card row placed directly under the article intro
+- [x] Three cards side-by-side: wine image, rank badge, 5-star derived rating, name, region/grape, critic score, "Check Price" CTA
+- [x] Editor's Pick marker on the first card, green border and elevated shadow
+- [x] Heading simplified to plain centred "Our Top 3 Picks" (no star graphics, no decorative rules) per latest iteration
+
+### WineQuiz — Interactive Matching Tool
+- [x] `src/components/content/WineQuiz.astro` — placed at the bottom of listicle articles
+- [x] Persistent split layout: questions on the left, hero copy ("Let's find the right bottle for you.") + wine-glass photo on the right
+- [x] Three questions: food on the table, occasion, classic vs adventurous
+- [x] 5-second "Finding Your Match" calculating step with animated spinner and four rotating status labels before the reveal
+- [x] Scoring: food match = 3 pts, occasion = 2 pts, style = 2 pts. Highest score wins, lower wine number breaks ties
+- [x] Result reveal: matched bottle card with image, score, critic, blurb, affiliate CTA + runner-up + "Retake the Quiz" button
+- [x] Pill-style answer buttons, burgundy hover, three-dot step progress indicator
+- [x] Keyboard focus states, `prefers-reduced-motion` handled, inline SVG icons only (no emojis)
+- [x] Wine-glass hero photo: `public/images/pexels-15103775.webp` (Pexels — Skyler Ewing), attribution in sr-only caption
+
+### MethodologyBox — "How We Chose" Callout
+- [x] `src/components/content/MethodologyBox.astro` — centred callout at the very bottom of the article
+- [x] Headline "How We Chose These Wines" + centred intro, then a stacked list of criteria (one per row)
+- [x] Six article-verified criteria: regions that over-deliver, winemaker pedigree, 90+ critic scores, multi-critic agreement, customer ratings cross-check, in-stock on wine.com under $20
+- [x] **Factual integrity rule:** every claim in a MethodologyBox must be verifiable against the article it appears on. No fabricated methodology (no "blind-tasted", no "re-checked monthly" unless actually true)
+- [x] No icons, no em-dashes — plain text inside a simple warm cream callout, matches WineTip styling
+
+### Section Headings
+- [x] "Our Top 3 Picks" and other in-article section headings are centred (no decorative rules or icons)
+
 ### Content Written (3 articles)
 - [x] `how-to-taste-wine` — Wine Basics, TOFU, featured
 - [x] `best-red-wine-under-20` — Best Wines, BOFU, featured, affiliate disclosure
@@ -82,6 +109,10 @@ Wine education blog and affiliate site built on Astro. Targets everyday wine ent
 - [x] Persuasion psychology techniques applied: storytelling, Forer Effect, serial positioning, regret aversion, affective forecasting
 - [x] Scores and food pairings passed as structured data to AffiliateCTA component
 - [x] Top 3 picks sidebar configured with images/links for this article
+- [x] Inline Top 3 Picks card row above the list
+- [x] `WineTip` price-varies-by-state callout placed above the list
+- [x] `WineQuiz` (matching tool) at the bottom of the article
+- [x] `MethodologyBox` ("How We Chose These Wines") below the quiz, claims cross-checked against the article
 
 ### SEO Keyword Plan
 - [x] `wine-site-seo-keywords.xlsx` reviewed and documented
@@ -91,6 +122,14 @@ Wine education blog and affiliate site built on Astro. Targets everyday wine ent
   - **TOFU (23 pages):** How-to guides, educational basics, health topics, info products
 - [x] "Best Wine For" tab = scratchpad, ignore it
 - [x] URL slugs already defined in the spreadsheet — always match them exactly
+
+### Local Skills
+- [x] `.claude/skills/wine-imagegen/` — project-scoped image generation skill
+  - Wraps kie.ai's Nano Banana 2 at 1K resolution
+  - Pre-configured API key baked into the script (override via `WINE_IMAGEGEN_KEY` env var)
+  - Auto-enhances prompts with editorial wine styling (warm moody lighting, burgundy tones, no text/logos)
+  - Downloads JPG → converts to WebP (max 1600px, quality 85) → saves to `public/images/<name>.webp`
+  - Strict "one generation per request" rule enforced in `SKILL.md`
 
 ### SEO Skill Routing
 - [x] Decision guide added to `seo/CONTEXT.md`
@@ -160,6 +199,11 @@ Wine education blog and affiliate site built on Astro. Targets everyday wine ent
 - Green `#6ab165` for CTA buttons, white text on hover
 - AffiliateCTA: scores as SVG ring charts, star ratings from averaged scores, food pairing tags
 - Top 3 Picks sidebar for listicle articles with bottle images and direct purchase CTAs
+- Inline Top 3 Picks card row placed directly under the article intro for listicle articles
 - WineTip boxes: no icon/label by default, content-only
 - Prose body text: black (`#000000`)
 - H1/sub-head contained within prose column width
+- Section headings centre-aligned, no decorative rules or icon accents
+- Interactive WineQuiz at the bottom of listicle articles: 3 questions, 5-second calculating screen, match + runner-up + retake
+- MethodologyBox ("How We Chose These Wines") below the quiz — centred callout, plain row list, every criterion must be verifiable against the article it appears on
+- Wine-related imagery generated locally via `.claude/skills/wine-imagegen/` (kie.ai Nano Banana 2, 1K), saved as WebP to `public/images/`
