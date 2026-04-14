@@ -6,6 +6,7 @@ import TableOfContents from '../components/ui/TableOfContents.astro';
 import TopPicks from '../components/ui/TopPicks.astro';
 import RelatedArticles from '../components/ui/RelatedArticles.astro';
 import AffiliateDisclosure from '../components/ui/AffiliateDisclosure.astro';
+import AuthorByline from '../components/ui/AuthorByline.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface TopPick {
@@ -63,11 +64,13 @@ const readingTime = Math.ceil((article.body?.length ?? 0) / 1400);
       <article>
         <!-- Header -->
         <header class="mb-12 mt-8" style="max-width: var(--w-prose);">
-          <div class="flex items-center gap-2 mb-4">
-            <CategoryBadge {category} />
-            {readingTime > 0 && (
-              <span class="text-text-muted text-sm uppercase tracking-widest">{readingTime} min read</span>
-            )}
+          <div class="mb-4">
+            <AuthorByline
+              name="Claire Bennett"
+              role="Wine Editor"
+              avatar="/images/author-claire.webp"
+              readingTime={readingTime}
+            />
           </div>
           <h1 class="text-4xl md:text-5xl font-heading font-bold text-primary leading-tight mb-4">
             {title}

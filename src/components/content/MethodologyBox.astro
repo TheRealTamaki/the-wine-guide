@@ -1,0 +1,50 @@
+---
+interface Criterion {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  criteria: Criterion[];
+  eyebrow?: string;
+  title?: string;
+  intro?: string;
+}
+
+const {
+  criteria,
+  eyebrow = 'How We Chose',
+  title = 'How We Chose These Wines',
+  intro,
+} = Astro.props;
+---
+
+<aside class="not-prose my-10 methodology-box">
+  <div class="rounded-[5px] border border-border bg-surface-low px-6 sm:px-10 py-8 sm:py-10">
+
+    {/* Centered header */}
+    <div class="text-center max-w-2xl mx-auto mb-7">
+      <span class="block text-[10px] font-bold uppercase tracking-[0.28em] text-accent mb-2">{eyebrow}</span>
+      <h3 class="font-heading font-bold text-primary text-2xl sm:text-[1.75rem] m-0 leading-tight tracking-tight">
+        {title}
+      </h3>
+      {intro && (
+        <p class="text-sm sm:text-[0.95rem] text-text-muted m-0 mt-3 leading-relaxed">{intro}</p>
+      )}
+    </div>
+
+    <div class="h-px w-16 bg-border mx-auto mb-7"></div>
+
+    {/* Flat list, row per criterion */}
+    <div class="max-w-3xl mx-auto space-y-5">
+      {criteria.map((c) => (
+        <div>
+          <h4 class="font-heading font-bold text-primary text-base leading-snug m-0 mb-1">
+            {c.title}
+          </h4>
+          <p class="text-sm text-text leading-relaxed m-0">{c.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</aside>

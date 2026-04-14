@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import PillarLayout from '../../layouts/PillarLayout.astro';
 import ComparisonLayout from '../../layouts/ComparisonLayout.astro';
+import ProductSalesLayout from '../../layouts/ProductSalesLayout.astro';
 
 export async function getStaticPaths() {
   const CATEGORY = 'products';
@@ -27,7 +28,11 @@ const { Content, headings } = await render(article);
 const { templateType } = article.data;
 ---
 
-{templateType === 'pillar' ? (
+{templateType === 'product' ? (
+  <ProductSalesLayout {article}>
+    <Content />
+  </ProductSalesLayout>
+) : templateType === 'pillar' ? (
   <PillarLayout {article}>
     <Content />
   </PillarLayout>

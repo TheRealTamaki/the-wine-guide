@@ -50,6 +50,16 @@ the-wine-guide/
 
 **Before writing ANY content** (articles, page copy, headlines, CTAs, descriptions, emails — anything reader-facing), you MUST read `content/docs/voice-guide.md` first. No exceptions. This applies to drafts, rewrites, and edits alike.
 
+This includes short strings inside component props: `MethodologyBox` criteria, `WineQuiz` wine blurbs, `AffiliateCTA` descriptions, `WineTip` content, FAQ answers, intro paragraphs, and wine descriptions. If it renders on the page, the voice guide applies. Read it in the same turn you're writing, not "generally at some point".
+
+Hard rules that are most commonly violated in this project:
+- **No em-dashes anywhere.** Use full stops, commas, or colons instead.
+- **No "not X, just Y" / "this isn't X. It's Y" / "not X. Just Y" patterns.** Say the positive thing directly.
+
+## Building Listicle Pages (best-wines/*)
+
+**Before building any `best-wines/*` page, read `content/docs/listicle-template.md`.** It covers the required component order (TopPicksInline → pricing WineTip → wine listings → slow cooker WineTip → WineQuiz → MethodologyBox → FAQ), the required `topPicksData` entry in `src/pages/best-wines/[...slug].astro`, the WineQuiz prop contract, and the NeuronWriter gap-analysis loop. Every listicle must match the reference page `/best-wines/best-red-wine-under-20/` in structure, not just tone.
+
 ## Routing
 
 | Task | Go to | Read |
@@ -61,6 +71,7 @@ the-wine-guide/
 | Optimize content for SEO | `/seo/` | `CONTEXT.md` |
 | Run an SEO audit | `/seo/` | `CONTEXT.md` |
 | Build site pages or components | `/src/` | Astro docs |
+| Build a `best-wines/*` listicle page | `/src/content/articles/best-wines/` | `content/docs/voice-guide.md` → `content/docs/listicle-template.md` |
 
 ## Cross-Workspace Flow
 

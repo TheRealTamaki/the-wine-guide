@@ -11,8 +11,12 @@ interface Props {
 
 const { headings } = Astro.props;
 
-// Only show h2 and h3
-const filtered = headings.filter((h) => h.depth === 2 || h.depth === 3);
+// Only show h2 and h3, and exclude FAQ + its child question headings
+const faqIndex = headings.findIndex(
+  (h) => h.depth === 2 && /frequently asked questions|faqs?/i.test(h.text)
+);
+const beforeFaq = faqIndex === -1 ? headings : headings.slice(0, faqIndex);
+const filtered = beforeFaq.filter((h) => h.depth === 2 || h.depth === 3);
 ---
 
 {filtered.length > 1 && (
