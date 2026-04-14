@@ -1,0 +1,605 @@
+---
+/**
+ * WineQuiz — 3-question interactive quiz that matches a reader
+ * to one of the 10 wines on this page based on food, occasion, and style.
+ *
+ * Scoring: food match = 3pts, occasion = 2pts, style = 2pts.
+ * Highest score wins; on tie, lower wine number (higher-ranked on page) breaks it.
+ */
+
+const wines = [
+  {
+    id: 'jlohr', n: 1,
+    name: 'J. Lohr Seven Oaks Cabernet Sauvignon 2023',
+    href: 'https://www.wine.com/product/j-lohr-estates-seven-oaks-cabernet-sauvignon-2023/4124622',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/bdatmb58hhuijdrgctpj.jpg',
+    region: 'Paso Robles', grape: 'Cabernet Sauvignon', score: 92, critic: 'James Suckling',
+    blurb: 'A Paso Robles Cab that drinks like $40. Dark plum, soft cedar, structured enough to hold up to anything off the grill.',
+    tags: { food: ['meat'], occasion: ['dinner-party','weeknight'], style: ['classic'] },
+  },
+  {
+    id: 'castellani', n: 2,
+    name: 'Castellani Chianti Classico Riserva 2019',
+    href: 'https://www.wine.com/product/castellani-chianti-classico-riserva-2019/2375170',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/s47mm9al0f82ocv1exby.jpg',
+    region: 'Tuscany', grape: 'Sangiovese', score: 91, critic: 'James Suckling',
+    blurb: 'The tomato-and-garlic default. Aged 24+ months before release, bright acidity, the best pasta wine under $20.',
+    tags: { food: ['pasta'], occasion: ['weeknight','dinner-party'], style: ['classic'] },
+  },
+  {
+    id: 'benmarco', n: 3,
+    name: 'BenMarco Malbec 2022',
+    href: 'https://www.wine.com/product/benmarco-malbec-2022/2669489',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/csragcjypok3dxolfnnf.jpg',
+    region: 'Uco Valley', grape: 'Malbec', score: 93, critic: 'James Suckling',
+    blurb: 'High-altitude Uco Valley Malbec with mineral backbone. The safest impressive bottle here — three top critics agree.',
+    tags: { food: ['meat'], occasion: ['dinner-party','special'], style: ['classic'] },
+  },
+  {
+    id: 'patagonia', n: 4,
+    name: 'Sur de los Andes Reserva Pinot Noir 2022',
+    href: 'https://www.wine.com/product/sur-de-los-andes-reserva-pinot-noir-2022/3504496',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/dwegqojdjkzqjnktd8da.jpg',
+    region: 'Patagonia', grape: 'Pinot Noir', score: 93, critic: 'Wilfred Wong',
+    blurb: 'Patagonian Pinot that sits closer to Burgundy than California. Bright, fresh, genuinely different.',
+    tags: { food: ['poultry'], occasion: ['special','dinner-party'], style: ['adventurous'] },
+  },
+  {
+    id: 'nipozzano', n: 5,
+    name: 'Frescobaldi Nipozzano Chianti Rufina Riserva 2022',
+    href: 'https://www.wine.com/product/frescobaldi-nipozzano-chianti-rufina-riserva-2022/3871328',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/b7f12caobgigotyelw6b.jpg',
+    region: 'Chianti Rufina', grape: 'Sangiovese', score: 92, critic: 'James Suckling',
+    blurb: 'No. 31 on Wine Spectator\'s Top 100 of 2025. Seven centuries of family history on the label — gift-worthy.',
+    tags: { food: ['poultry','pasta'], occasion: ['gift','special'], style: ['classic'] },
+  },
+  {
+    id: 'mencia', n: 6,
+    name: 'Vinos de Arganza Alvarez de Toledo Mencia 2021',
+    href: 'https://www.wine.com/product/vinos-de-arganza-alvarez-de-toledo-mencia-2021/1288870',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/xqrnpyjo6lzszel7xug4.jpg',
+    region: 'Bierzo', grape: 'Mencia', score: 93, critic: 'Wine Enthusiast',
+    blurb: 'The grape you haven\'t tried yet. Dark fruit, earthy edge, brightness that makes you pour a second glass.',
+    tags: { food: ['cheese'], occasion: ['weeknight','dinner-party'], style: ['adventurous'] },
+  },
+  {
+    id: 'escudo', n: 7,
+    name: 'Escudo Rojo Gran Reserva Pinot Noir 2023',
+    href: 'https://www.wine.com/product/baron-philippe-de-rothschild-escudo-rojo-gran-reserva-pinot-noir-2023/3221830',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/jxqshwnctkrnm5j5hngh.jpg',
+    region: 'Casablanca Valley', grape: 'Pinot Noir', score: 93, critic: 'James Suckling',
+    blurb: 'The Rothschild name on a bottle at a fraction of their Bordeaux. Coastal Chilean Pinot with genuine precision.',
+    tags: { food: ['poultry'], occasion: ['dinner-party','gift'], style: ['classic'] },
+  },
+  {
+    id: 'schug', n: 8,
+    name: 'Schug Sonoma Coast Pinot Noir 2023',
+    href: 'https://www.wine.com/product/schug-sonoma-coast-pinot-noir-2023/2283884',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/ts9mst70tdpadiyreome.jpg',
+    region: 'Sonoma Coast', grape: 'Pinot Noir', score: 91, critic: 'James Suckling',
+    blurb: 'Ripe strawberry, cola lift, tannins that dissolve on the finish. Changes the mind of anyone who says they don\'t drink red.',
+    tags: { food: ['poultry'], occasion: ['dinner-party','weeknight'], style: ['classic'] },
+  },
+  {
+    id: 'manzanos', n: 9,
+    name: 'Bodegas Manzanos Reino De Altuzarra Cabernet Sauvignon 2021',
+    href: 'https://www.wine.com/product/bodegas-manzanos-reino-de-altuzarra-cabernet-sauvignon-2021/1618322',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/whfbhk0e7fcsilflwtba.jpg',
+    region: 'Rioja', grape: 'Cabernet Sauvignon', score: 93, critic: 'Wine Enthusiast',
+    blurb: 'Spanish Cabernet from Rioja country. Same budget as your usual Chilean bottle, considerably more to talk about.',
+    tags: { food: ['meat'], occasion: ['weeknight'], style: ['adventurous'] },
+  },
+  {
+    id: 'lincourt', n: 10,
+    name: 'Lincourt Rancho Santa Rosa Pinot Noir 2023',
+    href: 'https://www.wine.com/product/lincourt-rancho-santa-rosa-pinot-noir-2023/3728163',
+    image: 'https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/nwoos4axzp4cpkij4v9c.jpg',
+    region: 'Sta. Rita Hills', grape: 'Pinot Noir', score: 94, critic: 'James Suckling',
+    blurb: 'The highest-scored bottle on the list. Rose petal, red cherry, tannins so fine they\'re barely there. Save it for the right night.',
+    tags: { food: ['poultry'], occasion: ['special','gift'], style: ['classic'] },
+  },
+];
+
+const winesJson = JSON.stringify(wines);
+---
+
+<section class="not-prose my-12 wine-quiz" data-wine-quiz>
+  {/* Header */}
+  <div class="flex items-center gap-4 mb-3">
+    <div class="h-px flex-1 bg-border"></div>
+    <div class="px-1">
+      <h3 class="font-heading font-bold text-primary text-xl sm:text-2xl m-0 tracking-tight">Not Sure Which One? Take the 20-Second Quiz</h3>
+    </div>
+    <div class="h-px flex-1 bg-border"></div>
+  </div>
+  <p class="text-center text-sm text-text-muted italic mb-7">Three quick questions. One matched bottle.</p>
+
+  <div class="quiz-shell relative overflow-hidden rounded-[5px] border-2 border-border bg-surface-white">
+    {/* Top progress bar */}
+    <div class="quiz-progress-track h-1 bg-bg-alt">
+      <div class="quiz-progress-fill h-full transition-all duration-300" style="width: 0%;"></div>
+    </div>
+
+    {/* STEP: Intro */}
+    <div class="quiz-step px-6 sm:px-10 py-10" data-step="intro">
+      <div class="text-center max-w-lg mx-auto">
+        <span class="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-3">Wine Matcher</span>
+        <h4 class="font-heading font-bold text-primary text-2xl sm:text-3xl leading-tight mb-4">Let's find the right bottle for you.</h4>
+        <p class="text-sm text-text-muted leading-relaxed mb-7">Tell us what you're eating, what the night looks like, and how adventurous you're feeling. We'll match you to one of the 10 bottles on this page.</p>
+        <button type="button" class="quiz-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-[5px] font-bold text-sm uppercase tracking-wider cursor-pointer transition-all duration-200" data-quiz-start>
+          Start the Quiz
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+        </button>
+      </div>
+    </div>
+
+    {/* STEP: Q1 - Food */}
+    <div class="quiz-step px-6 sm:px-10 py-10" data-step="q1" hidden>
+      <div class="flex items-center justify-between mb-5 text-xs uppercase tracking-widest font-bold">
+        <span class="text-text-muted">Step 1 of 3</span>
+        <span class="text-accent">Food</span>
+      </div>
+      <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">What's on the table tonight?</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button type="button" class="quiz-option" data-answer="food:meat">
+          <span class="quiz-option-emoji-icon" data-icon="meat"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Red meat, burgers, steak</span>
+            <span class="quiz-option-sub">Anything off the grill or in the oven</span>
+          </span>
+        </button>
+        <button type="button" class="quiz-option" data-answer="food:pasta">
+          <span class="quiz-option-emoji-icon" data-icon="pasta"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Pasta, pizza, Italian</span>
+            <span class="quiz-option-sub">Tomato sauce, garlic, olive oil</span>
+          </span>
+        </button>
+        <button type="button" class="quiz-option" data-answer="food:poultry">
+          <span class="quiz-option-emoji-icon" data-icon="poultry"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Chicken, pork, salmon</span>
+            <span class="quiz-option-sub">Lighter proteins, roasted veg</span>
+          </span>
+        </button>
+        <button type="button" class="quiz-option" data-answer="food:cheese">
+          <span class="quiz-option-emoji-icon" data-icon="cheese"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Cheese, charcuterie, or nothing</span>
+            <span class="quiz-option-sub">Drinking it on its own or with a nibble</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    {/* STEP: Q2 - Occasion */}
+    <div class="quiz-step px-6 sm:px-10 py-10" data-step="q2" hidden>
+      <div class="flex items-center justify-between mb-5 text-xs uppercase tracking-widest font-bold">
+        <span class="text-text-muted">Step 2 of 3</span>
+        <span class="text-accent">Occasion</span>
+      </div>
+      <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">What's the occasion?</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button type="button" class="quiz-option" data-answer="occasion:weeknight">
+          <span class="quiz-option-emoji-icon" data-icon="weeknight"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Just a regular night in</span>
+            <span class="quiz-option-sub">Something good without overthinking</span>
+          </span>
+        </button>
+        <button type="button" class="quiz-option" data-answer="occasion:dinner-party">
+          <span class="quiz-option-emoji-icon" data-icon="party"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Friends coming over</span>
+            <span class="quiz-option-sub">Dinner party, needs to please a crowd</span>
+          </span>
+        </button>
+        <button type="button" class="quiz-option" data-answer="occasion:special">
+          <span class="quiz-option-emoji-icon" data-icon="heart"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Date night or celebration</span>
+            <span class="quiz-option-sub">Something a little more memorable</span>
+          </span>
+        </button>
+        <button type="button" class="quiz-option" data-answer="occasion:gift">
+          <span class="quiz-option-emoji-icon" data-icon="gift"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">I'm bringing it as a gift</span>
+            <span class="quiz-option-sub">Has to look the part on the label</span>
+          </span>
+        </button>
+      </div>
+      <div class="mt-6">
+        <button type="button" class="quiz-back text-xs uppercase tracking-widest font-bold text-text-muted cursor-pointer" data-quiz-back>← Back</button>
+      </div>
+    </div>
+
+    {/* STEP: Q3 - Style */}
+    <div class="quiz-step px-6 sm:px-10 py-10" data-step="q3" hidden>
+      <div class="flex items-center justify-between mb-5 text-xs uppercase tracking-widest font-bold">
+        <span class="text-text-muted">Step 3 of 3</span>
+        <span class="text-accent">Style</span>
+      </div>
+      <h4 class="font-heading font-bold text-primary text-xl sm:text-2xl leading-snug mb-6">How adventurous are you feeling?</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button type="button" class="quiz-option" data-answer="style:classic">
+          <span class="quiz-option-emoji-icon" data-icon="classic"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Give me a safe bet</span>
+            <span class="quiz-option-sub">A classic region I'll recognise</span>
+          </span>
+        </button>
+        <button type="button" class="quiz-option" data-answer="style:adventurous"
+        >
+          <span class="quiz-option-emoji-icon" data-icon="spark"></span>
+          <span class="quiz-option-body">
+            <span class="quiz-option-title">Surprise me</span>
+            <span class="quiz-option-sub">Show me something new and lesser-known</span>
+          </span>
+        </button>
+      </div>
+      <div class="mt-6">
+        <button type="button" class="quiz-back text-xs uppercase tracking-widest font-bold text-text-muted cursor-pointer" data-quiz-back>← Back</button>
+      </div>
+    </div>
+
+    {/* STEP: Calculating */}
+    <div class="quiz-step px-6 sm:px-10 py-14" data-step="calculating" hidden>
+      <div class="flex flex-col items-center text-center max-w-md mx-auto">
+        <div class="quiz-spinner mb-6" aria-hidden="true">
+          <svg class="w-12 h-12" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="var(--color-border)" stroke-width="3"></circle>
+            <circle class="quiz-spinner-arc" cx="25" cy="25" r="20" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="60 200"></circle>
+          </svg>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-2">Finding Your Match</span>
+        <h4 class="font-heading font-bold text-primary text-2xl leading-tight mb-4" data-calc-label>Reading your food pairing…</h4>
+        <div class="flex items-center gap-2 mt-1">
+          <span class="quiz-calc-dot" data-calc-dot="0"></span>
+          <span class="quiz-calc-dot" data-calc-dot="1"></span>
+          <span class="quiz-calc-dot" data-calc-dot="2"></span>
+          <span class="quiz-calc-dot" data-calc-dot="3"></span>
+        </div>
+      </div>
+    </div>
+
+    {/* STEP: Result */}
+    <div class="quiz-step px-6 sm:px-10 py-10" data-step="result" hidden>
+      <div class="text-center mb-7">
+        <span class="inline-block text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-2">Your Match</span>
+        <h4 class="font-heading font-bold text-primary text-2xl sm:text-3xl leading-tight">Pour this tonight.</h4>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start bg-surface-low rounded-[5px] border border-border p-6">
+        <a class="quiz-result-image-link block mx-auto sm:mx-0 shrink-0" data-result-href target="_blank" rel="nofollow sponsored">
+          <div class="w-28 h-40 flex items-center justify-center">
+            <img data-result-image alt="" class="max-h-40 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
+          </div>
+        </a>
+        <div class="flex-1">
+          <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-text-muted mb-1" data-result-rank></span>
+          <h5 class="font-heading font-bold text-primary text-xl leading-snug m-0 mb-2" data-result-name></h5>
+          <p class="text-xs text-text-muted m-0 mb-3" data-result-meta></p>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider mb-3 px-2 py-1 rounded-[3px] bg-green-light" style="color: var(--color-green-dark);">
+            <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+            <span data-result-score></span>
+          </div>
+          <p class="text-sm text-text leading-relaxed m-0 mb-5" data-result-blurb></p>
+          <a data-result-href target="_blank" rel="nofollow sponsored" class="quiz-btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-[5px] font-bold text-sm uppercase tracking-wider no-underline transition-all duration-200">
+            Check Price on Wine.com
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-5 pt-5 border-t border-border/70" data-runner-up hidden>
+        <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-text-muted mb-2">Also Worth Considering</p>
+        <a data-runner-href target="_blank" rel="nofollow sponsored" class="runner-up-card flex items-center gap-4 p-3 rounded-[5px] border border-border bg-surface-white no-underline transition-all duration-200">
+          <img data-runner-image alt="" class="w-10 h-14 object-contain shrink-0" loading="lazy" />
+          <div class="flex-1 min-w-0">
+            <p class="font-heading font-semibold text-primary text-sm leading-snug m-0 truncate" data-runner-name></p>
+            <p class="text-xs text-text-muted m-0 mt-0.5" data-runner-meta></p>
+          </div>
+          <svg class="w-4 h-4 text-text-muted shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+        </a>
+      </div>
+
+      <div class="text-center mt-7">
+        <button type="button" class="quiz-restart text-xs uppercase tracking-widest font-bold text-text-muted cursor-pointer" data-quiz-restart>↻ Retake the Quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ winesJson }}>
+  (function () {
+    const wines = JSON.parse(winesJson);
+    const container = document.querySelector('[data-wine-quiz]');
+    if (!container) return;
+
+    const steps = ['intro', 'q1', 'q2', 'q3', 'calculating', 'result'];
+    const progressMap = { intro: 0, q1: 33, q2: 66, q3: 99, calculating: 100, result: 100 };
+    const state = { food: null, occasion: null, style: null };
+    let currentStep = 'intro';
+    let calcTimers = [];
+
+    const calcLabels = [
+      'Reading your food pairing…',
+      'Matching body and occasion…',
+      'Checking critic scores…',
+      'Pouring your recommendation…',
+    ];
+
+    function clearCalcTimers() {
+      calcTimers.forEach((t) => clearTimeout(t));
+      calcTimers = [];
+    }
+
+    function runCalculating(onDone) {
+      const labelEl = container.querySelector('[data-calc-label]');
+      const dots = Array.from(container.querySelectorAll('[data-calc-dot]'));
+      dots.forEach((d) => d.classList.remove('is-active', 'is-done'));
+      let i = 0;
+      const step = () => {
+        dots.forEach((d, idx) => {
+          d.classList.toggle('is-active', idx === i);
+          d.classList.toggle('is-done', idx < i);
+        });
+        if (labelEl) labelEl.textContent = calcLabels[i];
+      };
+      step();
+      for (let k = 1; k < calcLabels.length; k++) {
+        calcTimers.push(setTimeout(() => { i = k; step(); }, 1250 * k));
+      }
+      calcTimers.push(setTimeout(() => {
+        dots.forEach((d) => { d.classList.remove('is-active'); d.classList.add('is-done'); });
+        onDone();
+      }, 5000));
+    }
+
+    function showStep(step) {
+      currentStep = step;
+      container.querySelectorAll('[data-step]').forEach((el) => {
+        el.hidden = el.getAttribute('data-step') !== step;
+      });
+      const fill = container.querySelector('.quiz-progress-fill');
+      if (fill) fill.style.width = progressMap[step] + '%';
+      // Smooth scroll to keep the quiz visible
+      const shell = container.querySelector('.quiz-shell');
+      if (shell && step !== 'intro') {
+        const rect = shell.getBoundingClientRect();
+        if (rect.top < 0 || rect.top > window.innerHeight * 0.3) {
+          shell.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    function scoreWines() {
+      const results = wines.map((w) => {
+        let s = 0;
+        if (state.food && w.tags.food.includes(state.food)) s += 3;
+        if (state.occasion && w.tags.occasion.includes(state.occasion)) s += 2;
+        if (state.style && w.tags.style.includes(state.style)) s += 2;
+        return { wine: w, score: s };
+      });
+      results.sort((a, b) => b.score - a.score || a.wine.n - b.wine.n);
+      return results;
+    }
+
+    function renderResult() {
+      const ranked = scoreWines();
+      const winner = ranked[0].wine;
+      const runner = ranked[1] && ranked[1].score > 0 && ranked[1].wine.id !== winner.id ? ranked[1].wine : null;
+
+      container.querySelector('[data-result-rank]').textContent = '#' + winner.n + ' on our list';
+      container.querySelector('[data-result-name]').textContent = winner.name;
+      container.querySelector('[data-result-meta]').textContent = winner.region + ' · ' + winner.grape;
+      container.querySelector('[data-result-score]').textContent = winner.score + ' pts · ' + winner.critic;
+      container.querySelector('[data-result-blurb]').textContent = winner.blurb;
+      const img = container.querySelector('[data-result-image]');
+      img.src = winner.image;
+      img.alt = winner.name;
+      container.querySelectorAll('[data-result-href]').forEach((el) => {
+        el.setAttribute('href', winner.href);
+      });
+
+      const runnerWrap = container.querySelector('[data-runner-up]');
+      if (runner) {
+        runnerWrap.hidden = false;
+        container.querySelector('[data-runner-name]').textContent = runner.name;
+        container.querySelector('[data-runner-meta]').textContent = runner.region + ' · ' + runner.grape + ' · ' + runner.score + ' pts';
+        const rImg = container.querySelector('[data-runner-image]');
+        rImg.src = runner.image;
+        rImg.alt = runner.name;
+        container.querySelector('[data-runner-href]').setAttribute('href', runner.href);
+      } else {
+        runnerWrap.hidden = true;
+      }
+    }
+
+    container.addEventListener('click', (e) => {
+      const target = e.target.closest('button, a');
+      if (!target) return;
+
+      if (target.matches('[data-quiz-start]')) {
+        showStep('q1');
+        return;
+      }
+      if (target.matches('[data-quiz-back]')) {
+        const back = { q2: 'q1', q3: 'q2' };
+        if (back[currentStep]) showStep(back[currentStep]);
+        return;
+      }
+      if (target.matches('[data-quiz-restart]')) {
+        clearCalcTimers();
+        state.food = null; state.occasion = null; state.style = null;
+        showStep('intro');
+        return;
+      }
+
+      const answer = target.getAttribute('data-answer');
+      if (answer) {
+        const [key, value] = answer.split(':');
+        state[key] = value;
+        if (key === 'food') showStep('q2');
+        else if (key === 'occasion') showStep('q3');
+        else if (key === 'style') {
+          showStep('calculating');
+          clearCalcTimers();
+          runCalculating(() => {
+            renderResult();
+            showStep('result');
+          });
+        }
+      }
+    });
+  })();
+</script>
+
+<style>
+  .quiz-shell {
+    box-shadow: 0 4px 16px rgba(30, 27, 19, 0.06);
+  }
+  .quiz-progress-fill {
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  }
+
+  /* Primary CTA */
+  .quiz-btn-primary {
+    background-color: var(--color-accent);
+    color: #ffffff !important;
+    border: 2px solid var(--color-accent);
+  }
+  .quiz-btn-primary:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-1px);
+  }
+
+  /* Answer option buttons */
+  .quiz-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.125rem;
+    border-radius: 5px;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-surface-white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .quiz-option:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-surface-high);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(87, 0, 19, 0.12);
+  }
+  .quiz-option:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  .quiz-option-body { display: flex; flex-direction: column; gap: 0.15rem; flex: 1; }
+  .quiz-option-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    line-height: 1.3;
+  }
+  .quiz-option-sub {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+  }
+
+  /* Icon circle per option */
+  .quiz-option-emoji-icon {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background-color: var(--color-surface-low);
+    border: 1px solid var(--color-border);
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  .quiz-option:hover .quiz-option-emoji-icon {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .quiz-option-emoji-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.1rem 1.1rem;
+    opacity: 0.85;
+    transition: filter 0.2s ease;
+  }
+  .quiz-option:hover .quiz-option-emoji-icon::before {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+  }
+
+  /* SVG backgrounds per icon token — burgundy tint */
+  .quiz-option-emoji-icon[data-icon="meat"]::before     { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12.5 3.5A5.5 5.5 0 0 0 7 9c0 2.5-1.5 3.5-3 5-.8.8-1 2.2 0 3s2.2.8 3 0c1.5-1.5 2.5-3 5-3a5.5 5.5 0 0 0 .5-10.5z'/><circle cx='10' cy='9' r='1'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="pasta"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 14h16'/><path d='M4 14a8 8 0 0 0 16 0'/><path d='M8 14V8'/><path d='M12 14V6'/><path d='M16 14V8'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="poultry"]::before  { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 13a6 6 0 1 1 12 0c0 3-2 5-5 6l-1 2H9l-1-2c-1-1-2-3-2-6z'/><circle cx='15' cy='10' r='0.7' fill='%23800020'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="cheese"]::before   { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 13l9-7 9 5v5H3z'/><circle cx='8' cy='14' r='0.7' fill='%23800020'/><circle cx='14' cy='15' r='0.7' fill='%23800020'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="weeknight"]::before{ background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="party"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='9' cy='8' r='3'/><circle cx='17' cy='8' r='3'/><path d='M2 20c1-3 4-5 7-5s6 2 7 5'/><path d='M14 20c1-2.5 3-4 5-4s3.5 1 5 4'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="heart"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23800020' stroke='%23800020' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M20.8 4.6c-2-2-5.3-2-7.3 0L12 5.9l-1.5-1.3c-2-2-5.3-2-7.3 0-2 2-2 5.3 0 7.3l8.8 8.7 8.8-8.7c2-2 2-5.3 0-7.3z'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="gift"]::before     { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='8' width='18' height='4' rx='1'/><path d='M12 8v13'/><path d='M19 12v9H5v-9'/><path d='M7.5 8a2.5 2.5 0 0 1 0-5c2.5 0 4.5 3 4.5 5'/><path d='M16.5 8a2.5 2.5 0 0 0 0-5c-2.5 0-4.5 3-4.5 5'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="classic"]::before  { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23800020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 3h12l-1 8c-.5 3-3 5-5 5s-4.5-2-5-5z'/><path d='M12 16v5'/><path d='M9 21h6'/></svg>"); }
+  .quiz-option-emoji-icon[data-icon="spark"]::before    { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23800020' stroke='%23800020' stroke-width='1'><path d='M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z'/></svg>"); }
+
+  /* Back / Restart link */
+  .quiz-back:hover, .quiz-restart:hover { color: var(--color-accent); }
+
+  /* Calculating spinner + dots */
+  .quiz-spinner svg { display: block; }
+  .quiz-spinner-arc {
+    transform-origin: 25px 25px;
+    animation: quiz-spin 1.1s linear infinite;
+  }
+  @keyframes quiz-spin {
+    to { transform: rotate(360deg); }
+  }
+  .quiz-calc-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: var(--color-border);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+  .quiz-calc-dot.is-active {
+    background-color: var(--color-accent);
+    transform: scale(1.35);
+  }
+  .quiz-calc-dot.is-done {
+    background-color: var(--color-primary);
+  }
+
+  /* Runner up */
+  .runner-up-card:hover {
+    border-color: var(--color-green);
+    background-color: var(--color-surface-low);
+    transform: translateY(-1px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .quiz-option, .quiz-btn-primary, .runner-up-card, .quiz-progress-fill, .quiz-calc-dot {
+      transition: none !important;
+    }
+    .quiz-option:hover, .quiz-btn-primary:hover, .runner-up-card:hover {
+      transform: none;
+    }
+    .quiz-spinner-arc { animation: none; }
+  }
+</style>
