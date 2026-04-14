@@ -8,6 +8,15 @@ Wine education blog and affiliate site built on Astro. Targets everyday wine ent
 
 ---
 
+## Repo State
+
+- All work merged into `main` as of commit `e333384`.
+- Only one active worktree: `claude/dreamy-edison` (this session's working copy). Will be removed after session ends.
+- Three prior worktrees (`fervent-margulis`, `friendly-gagarin`, and `dreamy-edison` itself) were created across earlier sessions via Claude Code's worktree feature. After this session, only `main` should remain.
+- Remaining cleanup if you see leftover folders in `.claude/worktrees/`: stop any Node dev servers running in them, then `rm -rf` the directory and `git worktree remove --force <path>` if the registration lingers.
+
+---
+
 ## What's Been Done
 
 ### Astro Setup
