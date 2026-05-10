@@ -26,6 +26,7 @@ interface Props {
 
 const { article, headings = [], topPicks = [] } = Astro.props;
 const { title, description, category, publishDate, modifiedDate, ogImage, affiliateDisclosure, relatedArticles } = article.data;
+const showAffiliate = import.meta.env.SHOW_AFFILIATE === 'true';
 
 const breadcrumbs = [
   { label: 'Home', href: '/' },
@@ -78,17 +79,47 @@ const readingTime = Math.ceil((article.body?.length ?? 0) / 1400);
           <p class="text-xl text-text-muted leading-relaxed">
             {description}
           </p>
-          <div class="mt-4 text-sm text-text-muted">
-            <time datetime={publishDate.toISOString()}>
-              {publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </time>
-          </div>
         </header>
-        {affiliateDisclosure && <AffiliateDisclosure class="mb-6" />}
+        {ogImage && (
+          <div class="mb-8 overflow-hidden" style="max-width: var(--w-prose);">
+            <img
+              src={ogImage}
+              alt={title}
+              class="w-full h-64 sm:h-80 object-cover"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        )}
+
+        {showAffiliate && affiliateDisclosure && <AffiliateDisclosure class="mb-6" />}
 
         <div class="prose">
           <slot />
         </div>
+
+        <aside class="not-prose mt-16 pt-8 border-t border-border" style="max-width: var(--w-prose);">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-text-muted mb-4">About the author</h2>
+          <div class="flex gap-5 items-start">
+            <img
+              src="/images/author-claire.webp"
+              alt="Claire Bennett"
+              width="96"
+              height="96"
+              class="w-24 h-24 rounded-full object-cover shrink-0 border border-border"
+              loading="lazy"
+            />
+            <div class="leading-relaxed">
+              <p class="text-base font-semibold text-primary">Claire Bennett, Wine Editor</p>
+              <p class="text-sm text-text mt-2">
+                Claire learned wine from the inside. She spent years on the marketing teams at two of Australia's major wine companies, directing photoshoots, sitting across from top winemakers for on-camera interviews, and running the monthly magazine at one of the brands.
+              </p>
+              <p class="text-sm text-text mt-2">
+                The sharper education happened on the phones. Week after week she talked wine-club members through their next case, hearing what they'd loved, what had missed, and what they wanted next. That's where the recommendations on this site come from. They're the bottles she'd send a friend who texted asking what to grab.
+              </p>
+            </div>
+          </div>
+        </aside>
 
         {relatedArticles.length > 0 && (
           <div class="mt-16 pt-8 border-t border-border">

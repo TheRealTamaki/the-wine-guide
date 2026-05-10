@@ -1,19 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ArticleCard from '../components/ui/ArticleCard.astro';
 import { getCollection } from 'astro:content';
-import { navGroups } from '../data/navigation';
 
 const allArticles = await getCollection('articles', (a) => !a.data.draft);
-
-const featured = allArticles
-  .filter((a) => a.data.featured)
+const latestThree = allArticles
   .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
   .slice(0, 3);
 
-const latest = allArticles
-  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
-  .slice(0, 6);
+const editorialFallbackImages = [
+  { src: '/images/wine-barolo-bottle-glass.webp', alt: 'Barolo wine bottle and glass on a wooden table' },
+  { src: '/images/wine-tasting-white-sommelier.webp', alt: 'Sommelier tasting white wine' },
+  { src: '/images/wine-harvest-grapes-crate.webp', alt: 'Harvested wine grapes in a crate with vineyard behind' },
+];
 
 const schema = {
   '@context': 'https://schema.org',
@@ -25,153 +23,1367 @@ const schema = {
 ---
 
 <BaseLayout
-  title="The Wine Guide"
+  title="The Wine Guide · Wine Education Without the Waffle"
   description="Pick better bottles, pair them with confidence, and actually know what you're drinking. Useful wine knowledge that respects your time."
   {schema}
 >
-  <!-- Hero -->
-  <section class="relative min-h-[700px] flex items-center px-8 overflow-hidden">
-    <!-- Background image with overlay -->
-    <div class="absolute inset-0 z-0">
-      <img
-        src="/images/pexels-7015332.webp"
-        alt="Wine bottles neatly arranged on a rack in a cozy cellar"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 bg-primary/70"></div>
+
+<!-- ============ HERO: INDEX ============ -->
+<section class="hp-hero-index">
+  <div class="hp-hero-top">
+    <div class="hp-hero-left">
+      <h1>Easy To Understand<br />Wine Guides<br />For <em>Beginners</em></h1>
+      <p class="hp-lede">A people who don't know sh*t about wine and just want answers without the jargon.</p>
     </div>
-
-    <div class="max-w-7xl mx-auto w-full relative z-10 text-center">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="font-heading text-5xl md:text-7xl font-bold text-white leading-none mb-6">
-          The Best Place<br />To Learn About Wine.
-        </h1>
-        <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-          You shouldn't need a sommelier certification to pick a good bottle. We'll show you what to buy, what to pair it with, and how to sound like you know what you're talking about. Because you will.
-        </p>
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a
-            href="/wine-basics/"
-            class="bg-white hover:bg-accent-light text-primary px-8 py-4 font-bold transition-all duration-200 shadow-lg flex items-center gap-2 cursor-pointer"
-          >
-            Show Me the Basics
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
-          <a
-            href="/best-wines/"
-            class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 font-bold transition-all duration-200 cursor-pointer"
-          >
-            Just Tell Me What to Buy
-          </a>
-        </div>
-      </div>
+    <div class="hp-hero-right">
+      <img src="/images/champagne-pouring-dark.webp" alt="Champagne being poured into a glass" class="hp-hero-right-bg" loading="eager" />
     </div>
-  </section>
+  </div>
 
-  <!-- Featured articles -->
-  {featured.length > 0 && (
-    <section class="max-w-7xl mx-auto px-8 py-24">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-        <div class="max-w-2xl">
-          <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">Start Here</h2>
-          <p class="text-text-muted text-lg">The guides people keep coming back to. If you only read three things, make it these.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {featured.map((article) => {
-          const [category, ...rest] = article.id.split('/');
-          const slug = rest.join('/').replace(/\.mdx?$/, '');
-          return (
-            <ArticleCard
-              title={article.data.title}
-              description={article.data.description}
-              href={`/${category}/${slug}/`}
-              category={article.data.category}
-              date={article.data.publishDate}
-              ogImage={article.data.ogImage}
-              featured
-            />
-          );
-        })}
-      </div>
-    </section>
-  )}
+  <div class="hp-index-rows">
+    <a href="/wine-basics/" class="hp-row">
+      <div class="hp-row-n">&sect; 01</div>
+      <h4>The <em>basics</em></h4>
+      <div class="hp-row-desc">Start here. What wine is, how it's made, and the six grapes worth knowing first.</div>
+    </a>
+    <a href="/grapes/" class="hp-row">
+      <div class="hp-row-n">&sect; 02</div>
+      <h4>Grape <em>varietals</em></h4>
+      <div class="hp-row-desc">The noble grapes, the forgotten ones, and the ones worth finding.</div>
+    </a>
+    <a href="/regions/" class="hp-row">
+      <div class="hp-row-n">&sect; 03</div>
+      <h4>Regions &amp; <em>maps</em></h4>
+      <div class="hp-row-desc">Annotated maps of twelve wine-making regions. Pronunciations included.</div>
+    </a>
+    <a href="/food-wine-pairing/" class="hp-row">
+      <div class="hp-row-n">&sect; 04</div>
+      <h4>How to <em>taste</em></h4>
+      <div class="hp-row-desc">The vocabulary of flavour, built slowly. Free worksheets at the end of each lesson.</div>
+    </a>
+  </div>
+</section>
 
-  <!-- Category navigation -->
-  <section class="bg-surface-low py-24 px-8">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-      <div>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">What Are You Looking For?</h2>
-        <p class="text-text-muted text-lg leading-relaxed mb-10">
-          Need a bottle for tonight? Trying to figure out what "dry" actually means? Want to stop bringing the same wine to every dinner party? Pick your problem.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          {navGroups.map((group) => (
-            group.items.map((item) => (
-              <a
-                href={item.href}
-                class="px-6 py-2 bg-surface-highest text-primary font-semibold text-sm uppercase tracking-widest cursor-pointer hover:bg-accent hover:text-white transition-all duration-200"
-              >
-                {item.label}
-              </a>
-            ))
-          ))}
-        </div>
+<!-- ============ MARQUEE ============ -->
+<div class="hp-marquee">
+  <div class="hp-marquee-track" aria-hidden="true">
+    <span>Free reading every Wednesday</span>
+    <span>Twelve regions &middot; One shared vocabulary</span>
+    <span>No scores &middot; No snobbery &middot; No affiliate links</span>
+    <span>Written by working editors &middot; Read worldwide</span>
+    <span>Est. 2012 &middot; Sydney &middot; Mornington &middot; Margaret River</span>
+    <span>Free reading every Wednesday</span>
+    <span>Twelve regions &middot; One shared vocabulary</span>
+    <span>No scores &middot; No snobbery &middot; No affiliate links</span>
+    <span>Written by working editors &middot; Read worldwide</span>
+    <span>Est. 2012 &middot; Sydney &middot; Mornington &middot; Margaret River</span>
+  </div>
+</div>
+
+<!-- ============ GRAPE GRID ============ -->
+<section class="hp-section">
+  <div class="hp-wrap">
+    <div class="hp-section-head">
+      <div class="hp-section-title">
+        <div class="hp-meta">&sect; 02 &middot; Begin with the six noble grapes</div>
+        <h2>Learn the<br />grapes <em>first.</em></h2>
       </div>
-      <div class="relative hidden md:block">
-        <img
-          src="/images/pexels-18248851.webp"
-          alt="Golden sunset casting warm hues over expansive vineyards in Colmar, France"
-          class="shadow-2xl w-full h-auto"
-        />
+      <div class="hp-nav-arrows">
+        <button class="hp-arrow-btn" aria-label="Previous">&#8592;</button>
+        <button class="hp-arrow-btn" aria-label="Next">&#8594;</button>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="hp-grape-grid">
+    <!-- 01 Cabernet Sauvignon -->
+    <a href="/grapes/" class="hp-grape-card">
+      <div class="hp-swatch" style="background:#5a1a2b; color:#f4efe6;">
+        <img src="/images/grape-cabernet-sauvignon-cluster.webp" alt="Cabernet Sauvignon grapes on the vine" class="hp-grape-img" loading="lazy" />
+        <div class="hp-swatch-label">Red &middot; Bold</div>
+        <div class="hp-swatch-num">01</div>
+      </div>
+      <div class="hp-meta-line"><span>Pronounced &middot; /kab-er-nay/</span></div>
+      <h4>Cabernet<br />Sauvignon</h4>
+      <p>Dense, dark, reliably structured. The grape most likely to still be drinking well at twenty.</p>
+    </a>
 
-  <!-- Latest articles -->
-  {latest.length > 0 && (
-    <section class="max-w-7xl mx-auto px-8 py-24">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-        <div class="max-w-2xl">
-          <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">New on the Site</h2>
-          <p class="text-text-muted text-lg">The latest stuff we've put together. All tested, all opinionated, none of it filler.</p>
-        </div>
+    <!-- 02 Merlot -->
+    <a href="/grapes/" class="hp-grape-card">
+      <div class="hp-swatch" style="background:#7a2738; color:#f4efe6;">
+        <img src="/images/grape-merlot-red-vine-napa.webp" alt="Merlot red grapes on a vine in Napa" class="hp-grape-img" loading="lazy" />
+        <div class="hp-swatch-label">Red &middot; Plush</div>
+        <div class="hp-swatch-num">02</div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {latest.map((article) => {
-          const [category, ...rest] = article.id.split('/');
-          const slug = rest.join('/').replace(/\.mdx?$/, '');
-          return (
-            <ArticleCard
-              title={article.data.title}
-              description={article.data.description}
-              href={`/${category}/${slug}/`}
-              category={article.data.category}
-              date={article.data.publishDate}
-              ogImage={article.data.ogImage}
-            />
-          );
-        })}
-      </div>
-    </section>
-  )}
+      <div class="hp-meta-line"><span>Pronounced &middot; /mer-loh/</span></div>
+      <h4>Merlot</h4>
+      <p>Softer, rounder, more forgiving. The grape that taught a generation it was allowed to enjoy wine young.</p>
+    </a>
 
-  <!-- About strip -->
-  <section class="bg-accent text-white">
-    <div class="max-w-7xl mx-auto px-8 py-16 flex flex-col md:flex-row items-center gap-8 justify-between">
-      <div class="max-w-2xl">
-        <h2 class="font-heading text-3xl font-bold text-white">Wine Knowledge Without the Waffle</h2>
-        <p class="mt-4 text-white/80 text-lg leading-relaxed">
-          We keep it practical, honest, and useful. So you can spend less time reading about wine and more time drinking it.
-        </p>
+    <!-- 03 Pinot Noir -->
+    <a href="/grapes/" class="hp-grape-card">
+      <div class="hp-swatch" style="background:#a63a52; color:#f4efe6;">
+        <img src="/images/grape-pinot-noir-dark-vine.webp" alt="Pinot Noir dark grapes on a vineyard vine" class="hp-grape-img" loading="lazy" />
+        <div class="hp-swatch-label">Red &middot; Light</div>
+        <div class="hp-swatch-num">03</div>
       </div>
-      <a
-        href="/about/"
-        class="flex-shrink-0 inline-flex items-center gap-2 bg-white text-primary font-bold px-8 py-4 transition-all duration-200 cursor-pointer hover:bg-accent-light text-sm uppercase tracking-widest"
-      >
-        Our Story
-        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-      </a>
+      <div class="hp-meta-line"><span>Pronounced &middot; /pee-no-nwar/</span></div>
+      <h4>Pinot<br />Noir</h4>
+      <p>Quiet, translucent, endlessly opinionated about where it's grown. The grape of geography.</p>
+    </a>
+
+    <!-- 04 Chardonnay -->
+    <a href="/grapes/" class="hp-grape-card">
+      <div class="hp-swatch" style="background:#d9b24a; color:#1f1f1f;">
+        <img src="/images/grape-chardonnay-green-cluster.webp" alt="Chardonnay green grapes cluster on the vine" class="hp-grape-img" loading="lazy" />
+        <div class="hp-swatch-label">White &middot; Rich</div>
+        <div class="hp-swatch-num">04</div>
+      </div>
+      <div class="hp-meta-line"><span>Pronounced &middot; /shar-doh-nay/</span></div>
+      <h4>Chardonnay</h4>
+      <p>A chameleon. Buttery and toasted in one hemisphere; lean and flinty in another. Learn the difference.</p>
+    </a>
+
+    <!-- 05 Sauvignon Blanc -->
+    <a href="/grapes/" class="hp-grape-card">
+      <div class="hp-swatch" style="background:#8fa847; color:#f4efe6;">
+        <img src="/images/grape-sauvignon-blanc-sunlit.webp" alt="Sauvignon Blanc sunlit green grapes on a Croatian vine" class="hp-grape-img" loading="lazy" />
+        <div class="hp-swatch-label">White &middot; Crisp</div>
+        <div class="hp-swatch-num">05</div>
+      </div>
+      <div class="hp-meta-line"><span>Pronounced &middot; /soh-vin-yawn-blahnk/</span></div>
+      <h4>Sauvignon<br />Blanc</h4>
+      <p>High-toned and herbaceous. If Chardonnay is a wool jumper, this is a linen shirt: sharp, green, wide awake.</p>
+    </a>
+
+    <!-- 06 Riesling -->
+    <a href="/grapes/" class="hp-grape-card">
+      <div class="hp-swatch" style="background:#cfc06b; color:#1f1f1f;">
+        <img src="/images/grape-riesling-tokaj-hungary.jpg" alt="Riesling grapes on a vine in Tokaj, Hungary" class="hp-grape-img" loading="lazy" />
+        <div class="hp-swatch-label">White &middot; Aromatic</div>
+        <div class="hp-swatch-num">06</div>
+      </div>
+      <div class="hp-meta-line"><span>Pronounced &middot; /reece-ling/</span></div>
+      <h4>Riesling</h4>
+      <p>The most misread grape in the world. Dry more often than sweet, and the last one left standing at dinner.</p>
+    </a>
+  </div>
+</section>
+
+<!-- ============ COURSE CTA ============ -->
+<section class="hp-course">
+  <div class="hp-course-left">
+    <div>
+      <div class="hp-course-kicker">A Free Eight-Part Reading Guide</div>
+      <h2>The <strong>Fundamentals</strong></h2>
     </div>
-  </section>
+    <div class="hp-lessons">
+      <div class="hp-li"><span class="hp-li-n">01</span><span class="hp-li-t">Reading a label</span></div>
+      <div class="hp-li"><span class="hp-li-n">02</span><span class="hp-li-t">The six grapes to know first</span></div>
+      <div class="hp-li"><span class="hp-li-n">03</span><span class="hp-li-t">Acid, tannin, body: the three axes</span></div>
+      <div class="hp-li"><span class="hp-li-n">04</span><span class="hp-li-t">Why old-world and new-world still matter</span></div>
+      <div class="hp-li"><span class="hp-li-n">05</span><span class="hp-li-t">Building a tasting vocabulary</span></div>
+      <div class="hp-li"><span class="hp-li-n">06</span><span class="hp-li-t">Food and wine, without the rules</span></div>
+    </div>
+    <div>
+      <a href="/wine-basics/fundamentals-1-reading-a-label/" class="hp-btn hp-btn-inverse">Learn More</a>
+    </div>
+  </div>
+  <div class="hp-course-right">
+    <img
+      src="/images/wine-cellar-bordeaux-aging.webp"
+      alt="Dusty wine bottles aging in a Bordeaux cellar"
+      class="hp-course-photo"
+      loading="lazy"
+    />
+  </div>
+</section>
+
+<!-- ============ EDITORIAL FEED ============ -->
+<section class="hp-editorial-section">
+  <div class="hp-wrap">
+    <div class="hp-section-head">
+      <div class="hp-section-title">
+        <div class="hp-meta">&sect; 07 &middot; The Journal &middot; Written this week</div>
+        <h2>From the <em>journal.</em></h2>
+      </div>
+      <div class="hp-nav-arrows">
+        <a href="/journal/" class="hp-all-link">All articles &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="hp-editorial">
+    {latestThree.length > 0 ? (
+      latestThree.map((article, i) => {
+        const [category, ...rest] = article.id.split('/');
+        const slug = rest.join('/').replace(/\.mdx?$/, '');
+        const href = `/${category}/${slug}/`;
+        const isLead = i === 0;
+        return (
+          <article class={isLead ? 'hp-ed-article hp-ed-lead' : 'hp-ed-article hp-ed-small'}>
+            <a href={href} class="hp-ed-photo-link">
+              <div class={`hp-ed-photo${i === 2 ? ' hp-ed-photo-alt' : ''}`}>
+                {(() => {
+                  const fb = editorialFallbackImages[i];
+                  const imgSrc = (article.data as any).ogImage || fb.src;
+                  const imgAlt = article.data.title || fb.alt;
+                  return <img src={imgSrc} alt={imgAlt} class="hp-ed-img" loading="lazy" />;
+                })()}
+                <div class="hp-ed-caption">
+                  {article.data.category?.replace(/-/g, ' ').toUpperCase() ?? 'JOURNAL'}
+                </div>
+              </div>
+            </a>
+            <div class="hp-article-kicker">
+              <span>{isLead ? 'Long read' : 'Primer'}</span>
+              <span>&sect; {article.data.category?.replace(/-/g, ' ') ?? 'Journal'}</span>
+            </div>
+            <h3><a href={href}>{article.data.title}</a></h3>
+            <p>{article.data.description}</p>
+          </article>
+        );
+      })
+    ) : (
+      <>
+        <article class="hp-ed-article hp-ed-lead">
+          <div class="hp-ed-photo">
+            <img src="/images/wine-barolo-bottle-glass.webp" alt="Barolo wine bottle and glass on a wooden table" class="hp-ed-img" loading="lazy" />
+            <div class="hp-ed-caption">REGIONS &middot; ITALY</div>
+          </div>
+          <div class="hp-article-kicker"><span>Long read &middot; 22 min</span><span>&sect; Regions</span></div>
+          <h3>Barolo, in <em>five small</em> sips and one long walk.</h3>
+          <p>The hill is the lesson. We walked the ridge from La Morra to Serralunga and came back with a map a beginner could use.</p>
+          <div class="hp-byline">By the editors &middot; 14 April 2026</div>
+        </article>
+        <article class="hp-ed-article hp-ed-small">
+          <div class="hp-ed-photo">
+            <img src="/images/wine-tasting-white-sommelier.webp" alt="Sommelier tasting white wine" class="hp-ed-img" loading="lazy" />
+            <div class="hp-ed-caption">TASTING</div>
+          </div>
+          <div class="hp-article-kicker"><span>Primer &middot; 9 min</span><span>&sect; Tasting</span></div>
+          <h3>Acidity, quietly <em>explained.</em></h3>
+          <p>Why the best wine writers keep returning to the word "zing," and what they actually mean when they do.</p>
+          <div class="hp-byline">By the editors &middot; 11 April 2026</div>
+        </article>
+        <article class="hp-ed-article hp-ed-small">
+          <div class="hp-ed-photo hp-ed-photo-alt">
+            <img src="/images/wine-harvest-grapes-crate.webp" alt="Harvested wine grapes in a crate with vineyard behind" class="hp-ed-img" loading="lazy" />
+            <div class="hp-ed-caption">VARIETALS</div>
+          </div>
+          <div class="hp-article-kicker"><span>Field notes &middot; 14 min</span><span>&sect; Varietals</span></div>
+          <h3>In defence of the under-<em>ripe</em> grape.</h3>
+          <p>A quiet argument for greener, lower-alcohol reds: and the Australian winemakers making them on purpose.</p>
+          <div class="hp-byline">By the editors &middot; 7 April 2026</div>
+        </article>
+      </>
+    )}
+  </div>
+</section>
+
+<!-- ============ REGION MAP ============ -->
+<section class="hp-region">
+  <div class="hp-region-left">
+    <div>
+      <div class="hp-meta" style="color:#8a8177;">&sect; 03 &middot; Annotated Regions</div>
+      <h2 style="margin-top:14px;">The top <em>seven</em><br />wine-producing<br />countries.</h2>
+      <p style="max-width:40ch; margin-top:20px; color:#3a3530; font-size:15px; line-height:1.6;">Each country annotated: hero wines, key regions, pronunciations, and one bottle to start with.</p>
+    </div>
+    <div class="hp-region-list">
+      <a href="/regions/france-wine-guide/" class="hp-region-row"><span class="hp-region-n">01</span><span class="hp-region-name">France</span></a>
+      <a href="/regions/italy-wine-guide/" class="hp-region-row"><span class="hp-region-n">02</span><span class="hp-region-name">Italy</span></a>
+      <a href="/regions/spain-wine-guide/" class="hp-region-row"><span class="hp-region-n">03</span><span class="hp-region-name">Spain</span></a>
+      <a href="/regions/us-wine-guide/" class="hp-region-row"><span class="hp-region-n">04</span><span class="hp-region-name">United States</span></a>
+      <a href="/regions/australia-wine-guide/" class="hp-region-row"><span class="hp-region-n">05</span><span class="hp-region-name">Australia</span></a>
+      <a href="/regions/argentina-wine-guide/" class="hp-region-row"><span class="hp-region-n">06</span><span class="hp-region-name">Argentina</span></a>
+      <a href="/regions/chile-wine-guide/" class="hp-region-row"><span class="hp-region-n">07</span><span class="hp-region-name">Chile</span></a>
+    </div>
+    <a href="/regions/" class="hp-btn" style="align-self:flex-start;">Learn More &rarr;</a>
+  </div>
+  <div class="hp-region-right">
+    <div class="hp-map-placeholder" role="img" aria-label="World map: top seven wine-producing countries">
+      <div class="hp-map-placeholder-inner">
+        <div class="hp-map-kicker">PLATE III</div>
+        <div class="hp-map-title">Top seven wine-producing countries</div>
+        <div class="hp-map-sub">France &middot; Italy &middot; Spain &middot; United States &middot; Australia &middot; Argentina &middot; Chile</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </BaseLayout>
+
+<style>
+/* ============ HOMEPAGE DESIGN TOKENS ============ */
+:root {
+  --bg: #f4efe6;
+  --bg-2: #ebe3d3;
+  --ink: #1f1f1f;
+  --ink-soft: #3a3530;
+  --muted: #8a8177;
+  --line: #1f1f1f;
+  --burgundy: #5a1a2b;
+  --terracotta: #8a4a2f;
+  --accent: var(--burgundy);
+  --paper: #ffffff;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --pad: 28px;
+  --gap: 24px;
+  --rule: 1.5px;
+  --max: 1440px;
+}
+
+/* ============ SHARED UTILITIES ============ */
+.hp-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.hp-meta {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: var(--rule) solid var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hp-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+  text-decoration: none;
+  color: var(--bg);
+}
+
+.hp-btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.hp-btn-ghost:hover {
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.hp-btn-inverse {
+  background: var(--bg);
+  color: var(--ink);
+  border-color: var(--bg);
+}
+
+.hp-btn-inverse:hover {
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--bg);
+}
+
+/* ============ HERO: INDEX ============ */
+.hp-hero-index {
+  background: var(--bg);
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-hero-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-hero-left {
+  padding: 18px var(--pad);
+  border-right: var(--rule) solid var(--line);
+}
+
+.hp-hero-right {
+  padding: 18px var(--pad);
+  background: var(--burgundy);
+  color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hp-hero-right-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.hp-hero-right > *:not(.hp-hero-right-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.hp-hero-index h1 {
+  font-family: var(--serif);
+  font-size: clamp(60px, 8vw, 128px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+  color: var(--ink);
+  margin: 0;
+}
+
+.hp-hero-index h1 em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.hp-lede {
+  margin-top: 24px;
+  max-width: 56ch;
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.hp-cta-row {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hp-hero-right-mini {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.hp-hero-right h3 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--bg);
+  margin: 0;
+}
+
+.hp-hero-right p {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+  max-width: 32ch;
+}
+
+/* Index rows */
+.hp-index-rows {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.hp-row {
+  padding: 28px 22px;
+  border-right: var(--rule) solid var(--line);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.hp-row:last-child {
+  border-right: 0;
+}
+
+.hp-row:hover {
+  background: var(--bg-2);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.hp-row-n {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hp-row h4 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.hp-row h4 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hp-row-desc {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.hp-row-count {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ============ MARQUEE ============ */
+.hp-marquee {
+  background: var(--ink);
+  color: var(--bg);
+  overflow: hidden;
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-marquee-track {
+  display: flex;
+  gap: 48px;
+  padding: 14px 0;
+  animation: hp-marq 40s linear infinite;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.hp-marquee-track span {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.hp-marquee-track span::after {
+  content: "\2736";
+  margin-left: 48px;
+  color: var(--terracotta);
+}
+
+@keyframes hp-marq {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hp-marquee-track {
+    animation: none;
+  }
+}
+
+/* ============ SECTION SHARED ============ */
+.hp-section {
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-section-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  padding: 36px 0 24px;
+  gap: 24px;
+}
+
+.hp-section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hp-section-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.hp-section-head h2 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hp-nav-arrows {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hp-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border: var(--rule) solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  transition: all 0.15s ease;
+}
+
+.hp-arrow-btn:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.hp-all-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--line);
+  padding-bottom: 4px;
+}
+
+.hp-all-link:hover {
+  opacity: 0.7;
+}
+
+/* ============ GRAPE GRID ============ */
+.hp-grape-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: var(--rule) solid var(--line);
+}
+
+.hp-grape-card {
+  padding: 24px 22px 28px;
+  border-right: var(--rule) solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg);
+  min-height: 400px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.hp-grape-card:last-child {
+  border-right: 0;
+}
+
+.hp-grape-card:nth-child(-n+3) {
+  border-bottom: 1.5px solid var(--line);
+}
+
+.hp-grape-card:nth-last-child(-n+3) {
+  border-bottom: 0;
+}
+
+.hp-grape-card:hover {
+  background: var(--bg-2);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.hp-swatch {
+  width: 100%;
+  aspect-ratio: 1 / 0.70;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 14px;
+  color: var(--bg);
+  overflow: hidden;
+}
+
+.hp-illus {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hp-grape-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hp-swatch-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 0.8;
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  z-index: 1;
+}
+
+.hp-swatch-label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.hp-grape-card h4 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.hp-meta-line {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hp-grape-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ============ COURSE CTA ============ */
+.hp-course {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-course-left {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 56px var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  border-right: var(--rule) solid var(--line);
+}
+
+.hp-course-kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 8px;
+}
+
+.hp-course-left h2 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--bg);
+  max-width: 14ch;
+}
+
+.hp-course-left h2 strong {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.hp-lessons {
+  border-top: var(--rule) solid rgba(244, 239, 230, 0.2);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hp-li {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: var(--rule) solid rgba(244, 239, 230, 0.15);
+  align-items: baseline;
+}
+
+.hp-li-n {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  opacity: 0.7;
+}
+
+.hp-li-t {
+  font-family: var(--serif);
+  font-size: 18px;
+}
+
+.hp-li-m {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  opacity: 0.7;
+}
+
+.hp-course-right {
+  background: var(--terracotta);
+  color: var(--bg);
+  padding: 48px var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.hp-course-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.hp-course-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hp-diagram-wrap {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+.hp-pricing {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: var(--rule) solid rgba(244, 239, 230, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.hp-price {
+  font-family: var(--serif);
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.hp-price-sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  max-width: 24ch;
+  line-height: 1.7;
+}
+
+/* ============ EDITORIAL FEED ============ */
+.hp-editorial-section {
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-editorial {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  border-top: var(--rule) solid var(--line);
+}
+
+.hp-ed-article {
+  padding: 28px 24px 32px;
+  border-right: var(--rule) solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hp-ed-article:last-child {
+  border-right: 0;
+}
+
+.hp-ed-photo-link {
+  display: block;
+  text-decoration: none;
+}
+
+.hp-ed-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hp-ed-photo {
+  aspect-ratio: 4 / 3;
+  background: var(--burgundy);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hp-ed-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(244, 239, 230, 0.08) 0 12px, transparent 12px 24px);
+}
+
+.hp-ed-photo-alt {
+  background: var(--terracotta);
+}
+
+.hp-ed-photo-alt::before {
+  background: repeating-linear-gradient(-45deg, rgba(244, 239, 230, 0.15) 0 8px, transparent 8px 16px);
+}
+
+.hp-ed-caption {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 8px 12px;
+}
+
+.hp-article-kicker {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+}
+
+.hp-ed-article h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.hp-ed-lead h3,
+.hp-ed-small h3 {
+  font-size: 34px;
+}
+
+.hp-ed-article h3 em {
+  font-style: italic;
+}
+
+.hp-ed-article h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hp-ed-article h3 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hp-ed-article p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.hp-byline {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 12px;
+  border-top: var(--rule) solid var(--line);
+  margin-top: auto;
+}
+
+/* ============ REGION MAP ============ */
+.hp-region {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  background: var(--bg-2);
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-region-left {
+  padding: 56px var(--pad);
+  border-right: var(--rule) solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.hp-region-left h2 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.hp-region-left h2 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hp-region-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hp-region-row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: var(--rule) solid var(--line);
+  align-items: baseline;
+  cursor: pointer;
+  transition: padding-left 0.15s ease;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.hp-region-row:last-child {
+  border-bottom: var(--rule) solid var(--line);
+}
+
+.hp-region-row:hover {
+  padding-left: 8px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.hp-region-n {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hp-region-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.hp-region-count {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hp-region-right {
+  padding: 40px var(--pad);
+  display: grid;
+  place-items: center;
+  background: var(--paper);
+}
+
+.hp-map-placeholder {
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 16 / 11;
+  background: var(--bg-2);
+  border: 1.5px solid var(--line);
+  display: grid;
+  place-items: center;
+}
+
+.hp-map-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}
+
+.hp-map-kicker {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+}
+
+.hp-map-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.hp-map-sub {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+/* ============ NEWSLETTER CLOSER ============ */
+.hp-closer {
+  background: var(--burgundy);
+  color: var(--bg);
+  padding: 72px var(--pad) 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+}
+
+.hp-closer h2 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 6.5vw, 112px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  max-width: 12ch;
+  color: var(--bg);
+  margin: 0;
+}
+
+.hp-closer h2 strong {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+.hp-closer-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hp-closer p {
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 44ch;
+  opacity: 0.92;
+  margin: 0;
+}
+
+.hp-form {
+  display: flex;
+  border: var(--rule) solid var(--bg);
+  background: transparent;
+}
+
+.hp-form input {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  padding: 16px 18px;
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 15px;
+  outline: none;
+}
+
+.hp-form input::placeholder {
+  color: rgba(244, 239, 230, 0.6);
+}
+
+.hp-form button {
+  background: var(--bg);
+  color: var(--ink);
+  border: 0;
+  padding: 0 28px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.hp-form button:hover {
+  opacity: 0.85;
+}
+
+.hp-mono-note {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1100px) {
+  .hp-hero-top {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-hero-left {
+    border-right: 0;
+    border-bottom: var(--rule) solid var(--line);
+  }
+
+  .hp-hero-right {
+    min-height: 260px;
+  }
+
+  .hp-grape-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hp-grape-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .hp-grape-card:nth-child(3) {
+    border-right: var(--rule) solid var(--line);
+  }
+
+  .hp-index-rows {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hp-row:nth-child(even) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .hp-course {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-course-left {
+    border-right: 0;
+    border-bottom: var(--rule) solid var(--line);
+  }
+
+  .hp-editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-ed-article {
+    border-right: 0;
+    border-bottom: var(--rule) solid var(--line);
+  }
+
+  .hp-region {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-region-left {
+    border-right: 0;
+    border-bottom: var(--rule) solid var(--line);
+  }
+
+  .hp-closer {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-closer h2 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hp-index-rows {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-row {
+    border-right: 0;
+    border-bottom: var(--rule) solid var(--line);
+  }
+
+  .hp-row:last-child {
+    border-bottom: 0;
+  }
+
+  .hp-grape-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hp-grape-card {
+    border-right: 0;
+    border-bottom: var(--rule) solid var(--line);
+  }
+
+  .hp-grape-card:last-child {
+    border-bottom: 0;
+  }
+
+}
+</style>

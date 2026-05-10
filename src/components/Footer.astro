@@ -1,34 +1,187 @@
 ---
-import { footerLinks } from '../data/navigation';
-
-const currentYear = new Date().getFullYear();
+const showAffiliate = import.meta.env.SHOW_AFFILIATE === 'true';
 ---
 
-<footer class="w-full rounded-t-[var(--twg-radius-lg)] mt-20 bg-bg">
-  <div class="flex flex-col md:flex-row justify-between items-center p-12 gap-8 w-full max-w-7xl mx-auto">
-    <!-- Wordmark -->
-    <a
-      href="/"
-      class="font-heading font-bold text-primary text-2xl hover:text-accent transition-colors duration-300 cursor-pointer"
-    >
-      The Wine Guide
-    </a>
+<footer class="twg-footer">
+  <div class="twg-footer-wrap">
+    <!-- Top grid: brand + 4 link columns -->
+    <div class="twg-foot-top">
+      <!-- Brand column -->
+      <div class="twg-foot-brand">
+        <a href="/" class="twg-foot-wordmark">The Wine<br />Guide.</a>
+      </div>
 
-    <!-- Links -->
-    <div class="flex flex-wrap justify-center gap-8 text-sm uppercase tracking-widest">
-      {footerLinks.map((link) => (
-        <a
-          href={link.href}
-          class="text-text hover:text-green transition-all duration-200 cursor-pointer"
-        >
-          {link.label}
-        </a>
-      ))}
+      <!-- Learn -->
+      <div class="twg-foot-col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="/wine-basics/">Wine Basics</a></li>
+          <li><a href="/grapes/">Grape Varietals</a></li>
+          <li><a href="/regions/">Region Maps</a></li>
+          <li><a href="/tasting-vocabulary/">Tasting Vocabulary</a></li>
+          <li><a href="/food-wine-pairing/">Food Pairing</a></li>
+          <li><a href="/pronunciation-guide/">Pronunciation Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Notes -->
+      <div class="twg-foot-col">
+        <h5>Notes</h5>
+        <ul>
+          <li><a href="/about/">About us</a></li>
+          <li><a href="/about/">Our editors</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Copyright -->
-    <div class="text-sm uppercase tracking-widest text-text-muted text-center md:text-right">
-      &copy; {currentYear} The Wine Guide
+    <!-- Bottom row -->
+    <div class="twg-foot-bot">
+      <span>&#169; MMXXVI The Wine Guide, Pty. Ltd. &middot; Sydney, AU</span>
+      <span>We publish responsibly &middot; Drink the same</span>
+      {showAffiliate && (
+        <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/affiliate-disclaimer/">Affiliates</a></span>
+      )}
     </div>
   </div>
 </footer>
+
+<style>
+  .twg-footer {
+    background: #1f1f1f;
+    color: #f4efe6;
+    padding: 56px 28px 32px;
+    margin-top: 0;
+  }
+
+  .twg-footer-wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .twg-foot-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1.5px solid rgba(244, 239, 230, 0.2);
+  }
+
+  /* Brand column */
+  .twg-foot-wordmark {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 56px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: #f4efe6;
+    text-decoration: none;
+    margin-bottom: 14px;
+  }
+
+  .twg-foot-brand small {
+    display: block;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    line-height: 1.6;
+    margin-top: 4px;
+  }
+
+  /* Link columns */
+  .twg-foot-col h5 {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8a4a2f;
+    font-weight: 500;
+    margin: 0 0 14px;
+  }
+
+  .twg-foot-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .twg-foot-col li a {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    color: #f4efe6;
+    text-decoration: none;
+    opacity: 0.88;
+    transition: opacity 0.15s ease;
+  }
+
+  .twg-foot-col li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Bottom row */
+  .twg-foot-bot {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .twg-foot-bot a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .twg-foot-bot a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .twg-foot-top {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .twg-foot-brand {
+      grid-column: 1 / -1;
+    }
+
+    .twg-foot-wordmark {
+      font-size: 44px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .twg-foot-top {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .twg-foot-bot {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .twg-foot-top {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

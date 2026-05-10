@@ -10,6 +10,7 @@ interface Props {
 
 const { article } = Astro.props;
 const { title, description, publishDate, modifiedDate, ogImage, affiliateDisclosure } = article.data;
+const showAffiliate = import.meta.env.SHOW_AFFILIATE === 'true';
 
 const breadcrumbs = [
   { label: 'Home', href: '/' },
@@ -43,7 +44,7 @@ const schema = {
       <p class="text-lg text-secondary leading-relaxed max-w-[38rem] mx-auto">{description}</p>
     </header>
 
-    {affiliateDisclosure && <AffiliateDisclosure class="mb-8" />}
+    {showAffiliate && affiliateDisclosure && <AffiliateDisclosure class="mb-8" />}
 
     <div class="prose mx-auto">
       <slot />

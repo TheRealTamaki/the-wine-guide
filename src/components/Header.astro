@@ -1,160 +1,412 @@
 ---
 import { navGroups } from '../data/navigation';
-
-const currentPath = Astro.url.pathname;
 ---
 
-<nav class="fixed top-0 w-full z-50 bg-bg/80 glass-nav">
-  <div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
-    <!-- Wordmark -->
-    <a
-      href="/"
-      class="text-2xl font-bold font-heading text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
-      aria-label="The Wine Guide: Home"
-    >
-      The Wine Guide
-    </a>
-
-    <!-- Desktop nav -->
-    <div class="hidden md:flex items-center gap-8">
+<!-- Nav row -->
+<nav class="twg-nav" aria-label="Main navigation">
+  <div class="twg-wrap twg-nav-inner">
+    <div class="twg-nav-left">
       {navGroups.map((group) => (
-        <div class="relative group">
-          <button
-            class="text-text font-heading text-lg tracking-tight hover:text-accent transition-colors duration-300 cursor-pointer flex items-center gap-1"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {group.label}
-            <span class="material-symbols-outlined text-sm mt-0.5 transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+        <div class="twg-dropdown">
+          <button class="twg-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            {group.label} <span class="twg-caret" aria-hidden="true">&#9662;</span>
           </button>
-
-          <!-- Dropdown -->
-          <div
-            class="absolute left-0 top-full pt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
-            role="menu"
-          >
-            <div class="bg-surface-white rounded-[var(--twg-radius-lg)] shadow-[var(--twg-shadow-lg)] border border-border overflow-hidden py-2">
-              {group.items.map((item) => (
-                <a
-                  href={item.href}
-                  class="block px-5 py-3 hover:bg-bg-alt transition-colors duration-200 cursor-pointer group/item"
-                  role="menuitem"
-                >
-                  <div class="text-sm font-semibold text-primary group-hover/item:text-accent transition-colors duration-200">
-                    {item.label}
-                  </div>
-                  {item.description && (
-                    <div class="text-xs text-text-muted mt-0.5 leading-snug">
-                      {item.description}
-                    </div>
-                  )}
-                </a>
-              ))}
-            </div>
+          <div class="twg-dropdown-panel" role="menu">
+            {group.items.map((item) => (
+              <a href={item.href} class="twg-dropdown-item" role="menuitem">
+                <span class="twg-dropdown-label">{item.label}</span>
+                {item.description && (
+                  <span class="twg-dropdown-desc">{item.description}</span>
+                )}
+              </a>
+            ))}
           </div>
         </div>
       ))}
     </div>
-
-    <!-- Right side -->
-    <div class="flex items-center gap-4">
-      <!-- Search (desktop) -->
-      <div class="hidden md:flex bg-bg-alt rounded-full px-4 py-2 items-center">
-        <span class="material-symbols-outlined text-text-muted text-sm">search</span>
-        <input
-          class="bg-transparent border-none focus:ring-0 focus:outline-none text-sm placeholder:text-text-muted ml-2 w-32"
-          placeholder="Search..."
-          type="text"
-        />
-      </div>
-
-      <!-- Mobile menu button -->
+    <a href="/" class="twg-logo" aria-label="The Wine Guide: Home">
+      The Wine Guide
+      <small>Wine guides for curious people</small>
+    </a>
+    <div class="twg-nav-right">
+      <button id="search-trigger" aria-label="Open search" title="Search (⌘K)">Search &#8981;</button>
+      <!-- Mobile hamburger (right side hidden on desktop) -->
       <button
-        id="mobile-menu-toggle"
-        class="md:hidden p-2 text-primary hover:text-accent transition-colors duration-200 cursor-pointer"
+        id="twg-mobile-toggle"
+        class="twg-hamburger"
         aria-label="Open navigation menu"
         aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
-      </button>
+        aria-controls="twg-mobile-menu"
+      >&#9776;</button>
     </div>
   </div>
 </nav>
 
-<!-- Spacer for fixed nav -->
-<div class="h-20"></div>
-
 <!-- Mobile drawer -->
-<div
-  id="mobile-menu"
-  class="fixed inset-0 z-40 hidden"
-  aria-hidden="true"
->
-  <!-- Backdrop -->
-  <div id="mobile-backdrop" class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-
-  <!-- Drawer -->
-  <nav
-    class="absolute right-0 top-0 h-full w-80 bg-bg shadow-xl overflow-y-auto"
-    aria-label="Mobile navigation"
-  >
-    <div class="p-8 pt-24">
-      {navGroups.map((group) => (
-        <div class="mb-8">
-          <div class="text-xs font-bold text-text-muted uppercase tracking-widest mb-3 font-body">
-            {group.label}
-          </div>
-          <ul class="space-y-1">
-            {group.items.map((item) => (
-              <li>
-                <a
-                  href={item.href}
-                  class="block px-4 py-3 rounded-xl text-sm font-medium text-text hover:text-primary hover:bg-bg-alt transition-colors duration-200 cursor-pointer"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+<div id="twg-mobile-menu" class="twg-mobile-menu" aria-hidden="true">
+  <div id="twg-mobile-backdrop" class="twg-mobile-backdrop"></div>
+  <nav class="twg-mobile-drawer" aria-label="Mobile navigation">
+    <button id="twg-mobile-close" class="twg-mobile-close" aria-label="Close navigation">&#10005;</button>
+    <ul class="twg-mobile-links">
+      {navGroups.flatMap((group) =>
+        group.items.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))
+      )}
+      <li><button class="twg-mobile-search" onclick="document.dispatchEvent(new Event('open-search'))">Search</button></li>
+    </ul>
   </nav>
 </div>
 
 <script>
-  const toggle = document.getElementById('mobile-menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const backdrop = document.getElementById('mobile-backdrop');
-  const icon = document.getElementById('menu-icon');
+  const toggle = document.getElementById('twg-mobile-toggle');
+  const closeBtn = document.getElementById('twg-mobile-close');
+  const menu = document.getElementById('twg-mobile-menu');
+  const backdrop = document.getElementById('twg-mobile-backdrop');
 
   function openMenu() {
-    menu?.classList.remove('hidden');
+    menu?.classList.add('is-open');
     menu?.setAttribute('aria-hidden', 'false');
     toggle?.setAttribute('aria-expanded', 'true');
-    toggle?.setAttribute('aria-label', 'Close navigation menu');
-    if (icon) icon.textContent = 'close';
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
-    menu?.classList.add('hidden');
+    menu?.classList.remove('is-open');
     menu?.setAttribute('aria-hidden', 'true');
     toggle?.setAttribute('aria-expanded', 'false');
-    toggle?.setAttribute('aria-label', 'Open navigation menu');
-    if (icon) icon.textContent = 'menu';
     document.body.style.overflow = '';
   }
 
-  toggle?.addEventListener('click', () => {
-    const isOpen = menu?.classList.contains('hidden') === false;
-    isOpen ? closeMenu() : openMenu();
-  });
-
+  toggle?.addEventListener('click', openMenu);
+  closeBtn?.addEventListener('click', closeMenu);
   backdrop?.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
+  document.getElementById('search-trigger')?.addEventListener('click', () => {
+    document.dispatchEvent(new Event('open-search'));
   });
 </script>
+
+<style>
+  /* Tokens mirroring the homepage design tokens */
+  :root {
+    --twg-ink: #1f1f1f;
+    --twg-bg: #f4efe6;
+    --twg-ink-soft: #3a3530;
+    --twg-terracotta: #8a4a2f;
+    --twg-serif: 'Playfair Display', Georgia, serif;
+    --twg-sans: 'Inter', system-ui, sans-serif;
+    --twg-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --twg-rule: 1.5px;
+    --twg-pad: 28px;
+    --twg-max: 1440px;
+  }
+
+  /* Nav row */
+  .twg-nav {
+    border-bottom: var(--twg-rule) solid var(--twg-ink);
+    background: var(--twg-bg);
+    position: relative;
+    z-index: 100;
+  }
+
+  .twg-nav-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    min-height: 80px;
+    padding: 0;
+    gap: 24px;
+  }
+
+  .twg-nav-left,
+  .twg-nav-right {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .twg-nav-right {
+    justify-content: flex-end;
+    gap: 28px;
+  }
+
+  .twg-nav-right a,
+  #search-trigger {
+    font-family: var(--twg-sans);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    color: var(--twg-ink);
+    text-decoration: none;
+    padding-bottom: 2px;
+    transition: opacity 0.15s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .twg-nav-right a:hover,
+  #search-trigger:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .twg-mobile-search {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 14px 0;
+    font-family: var(--twg-sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--twg-ink);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+
+  .twg-mobile-search:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Dropdown trigger button */
+  .twg-dropdown {
+    position: relative;
+  }
+
+  .twg-dropdown-trigger {
+    background: transparent;
+    border: none;
+    font-family: var(--twg-sans);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    color: var(--twg-ink);
+    cursor: pointer;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 1;
+    transition: opacity 0.15s ease;
+  }
+
+  .twg-dropdown-trigger:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .twg-caret {
+    font-size: 9px;
+    opacity: 0.7;
+    transition: transform 0.15s ease;
+  }
+
+  /* Dropdown panel */
+  .twg-dropdown-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 12px;
+    background: var(--twg-ink);
+    border: var(--twg-rule) solid var(--twg-ink);
+    min-width: 260px;
+    display: none;
+    flex-direction: column;
+    z-index: 200;
+  }
+
+  /* Show on hover of the group wrapper */
+  .twg-dropdown:hover .twg-dropdown-panel {
+    display: flex;
+  }
+
+  .twg-dropdown:hover .twg-caret {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown items */
+  .twg-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 14px 18px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(244, 239, 230, 0.12);
+    transition: background 0.12s ease;
+  }
+
+  .twg-dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .twg-dropdown-item:hover {
+    background: rgba(244, 239, 230, 0.08);
+  }
+
+  .twg-dropdown-label {
+    font-family: var(--twg-sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--twg-bg);
+  }
+
+  .twg-dropdown-desc {
+    font-family: var(--twg-sans);
+    font-size: 11.5px;
+    color: rgba(244, 239, 230, 0.62);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+
+  /* Logo */
+  .twg-logo {
+    font-family: var(--twg-serif);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+    line-height: 1;
+    font-style: italic;
+    color: var(--twg-ink);
+    text-decoration: none;
+    display: block;
+  }
+
+  .twg-logo small {
+    display: block;
+    font-family: var(--twg-mono);
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    font-style: normal;
+    margin-top: 4px;
+    color: var(--twg-ink-soft);
+    text-transform: uppercase;
+  }
+
+  /* Shared wrap */
+  .twg-wrap {
+    max-width: var(--twg-max);
+    margin: 0 auto;
+    padding: 0 var(--twg-pad);
+  }
+
+  /* Hamburger — hidden on desktop */
+  .twg-hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--twg-ink);
+    padding: 4px;
+    line-height: 1;
+  }
+
+  /* Mobile menu */
+  .twg-mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+  }
+
+  .twg-mobile-menu.is-open {
+    display: block;
+  }
+
+  .twg-mobile-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .twg-mobile-drawer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 280px;
+    background: var(--twg-bg);
+    padding: 32px 28px;
+    overflow-y: auto;
+    border-right: var(--twg-rule) solid var(--twg-ink);
+  }
+
+  .twg-mobile-close {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--twg-ink);
+    padding: 0;
+    margin-bottom: 32px;
+    display: block;
+  }
+
+  .twg-mobile-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .twg-mobile-links li {
+    border-top: var(--twg-rule) solid var(--twg-ink);
+  }
+
+  .twg-mobile-links li:last-child {
+    border-bottom: var(--twg-rule) solid var(--twg-ink);
+  }
+
+  .twg-mobile-links a {
+    display: block;
+    padding: 14px 0;
+    font-family: var(--twg-sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--twg-ink);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .twg-mobile-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .twg-nav-inner {
+      grid-template-columns: 1fr auto 1fr;
+      padding: 24px 0;
+    }
+
+    .twg-nav-left {
+      display: none;
+    }
+
+    /* Right side: only show hamburger */
+    .twg-nav-right a {
+      display: none;
+    }
+
+    .twg-hamburger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .twg-logo {
+      font-size: 22px;
+    }
+  }
+</style>

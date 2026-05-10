@@ -2,6 +2,7 @@
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SearchOverlay from '../components/ui/SearchOverlay.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -48,6 +49,7 @@ const {
   </head>
   <body class="bg-bg text-text font-body selection:bg-accent-light selection:text-primary">
     <Header />
+    <SearchOverlay />
     <main id="main-content">
       <slot />
     </main>
