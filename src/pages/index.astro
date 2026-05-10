@@ -33,10 +33,10 @@ const schema = {
   <div class="hp-hero-top">
     <div class="hp-hero-left">
       <h1>Easy To Understand<br />Wine Guides<br />For <em>Beginners</em></h1>
-      <p class="hp-lede">A people who don't know sh*t about wine and just want answers without the jargon.</p>
+      <p class="hp-lede">For people who are new to wine and want down-to-earth advice and knowledge.</p>
     </div>
     <div class="hp-hero-right">
-      <img src="/images/champagne-pouring-dark.webp" alt="Champagne being poured into a glass" class="hp-hero-right-bg" loading="eager" />
+      <img src="/images/champagne-pouring-dark.webp" alt="Chilled glass of white wine by a window" class="hp-hero-right-bg" loading="eager" />
     </div>
   </div>
 
@@ -63,22 +63,6 @@ const schema = {
     </a>
   </div>
 </section>
-
-<!-- ============ MARQUEE ============ -->
-<div class="hp-marquee">
-  <div class="hp-marquee-track" aria-hidden="true">
-    <span>Free reading every Wednesday</span>
-    <span>Twelve regions &middot; One shared vocabulary</span>
-    <span>No scores &middot; No snobbery &middot; No affiliate links</span>
-    <span>Written by working editors &middot; Read worldwide</span>
-    <span>Est. 2012 &middot; Sydney &middot; Mornington &middot; Margaret River</span>
-    <span>Free reading every Wednesday</span>
-    <span>Twelve regions &middot; One shared vocabulary</span>
-    <span>No scores &middot; No snobbery &middot; No affiliate links</span>
-    <span>Written by working editors &middot; Read worldwide</span>
-    <span>Est. 2012 &middot; Sydney &middot; Mornington &middot; Margaret River</span>
-  </div>
-</div>
 
 <!-- ============ GRAPE GRID ============ -->
 <section class="hp-section">
@@ -412,7 +396,7 @@ const schema = {
 
 .hp-hero-right {
   padding: 18px var(--pad);
-  background: var(--burgundy);
+  background: var(--bg);
   color: var(--bg);
   display: flex;
   flex-direction: column;
@@ -428,7 +412,7 @@ const schema = {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
+  opacity: 1;
   z-index: 0;
 }
 
@@ -560,47 +544,7 @@ const schema = {
   color: var(--accent);
 }
 
-/* ============ MARQUEE ============ */
-.hp-marquee {
-  background: var(--ink);
-  color: var(--bg);
-  overflow: hidden;
-  border-bottom: var(--rule) solid var(--line);
-}
 
-.hp-marquee-track {
-  display: flex;
-  gap: 48px;
-  padding: 14px 0;
-  animation: hp-marq 40s linear infinite;
-  white-space: nowrap;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.hp-marquee-track span {
-  display: inline-flex;
-  gap: 14px;
-  align-items: center;
-}
-
-.hp-marquee-track span::after {
-  content: "\2736";
-  margin-left: 48px;
-  color: var(--terracotta);
-}
-
-@keyframes hp-marq {
-  to { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hp-marquee-track {
-    animation: none;
-  }
-}
 
 /* ============ SECTION SHARED ============ */
 .hp-section {
