@@ -25,19 +25,8 @@ import { navGroups } from '../data/navigation';
       ))}
     </div>
     <a href="/" class="twg-logo" aria-label="The Wine Guide: Home">
-      <svg class="twg-logo-mark" viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-        <path d="M22 41c15 0 28 4 42 14v47c-13-10-27-15-42-15V41Z" fill="var(--twg-bg)" stroke="var(--twg-ink-soft)" stroke-width="4" stroke-linejoin="round"></path>
-        <path d="M106 41c-15 0-28 4-42 14v47c13-10 27-15 42-15V41Z" fill="var(--twg-bg)" stroke="var(--twg-ink-soft)" stroke-width="4" stroke-linejoin="round"></path>
-        <path d="M64 55v47" fill="none" stroke="var(--twg-ink-soft)" stroke-width="4" stroke-linecap="round"></path>
-        <path d="M50 22h28l-5 36c-1 8-5 13-9 13s-8-5-9-13L50 22Z" fill="var(--twg-bg)" stroke="var(--twg-ink-soft)" stroke-width="4" stroke-linejoin="round"></path>
-        <path d="M56 43c5 0 11 2 16 5l-2 11c-1 5-3 8-6 8s-5-3-6-8l-2-16Z" fill="var(--twg-burgundy)"></path>
-        <text x="43" y="82" text-anchor="middle" fill="var(--twg-ink)" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-style="italic">T</text>
-        <text x="86" y="82" text-anchor="middle" fill="var(--twg-ink)" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-style="italic">W</text>
-      </svg>
-      <span class="twg-logo-copy">
-        The Wine Guide
-        <small>Wine Guides For Beginners</small>
-      </span>
+      The Wine Guide
+      <small>Wine Guides For Beginners</small>
     </a>
     <div class="twg-nav-right">
       <button id="search-trigger" aria-label="Open search" title="Search (⌘K)">Search &#8981;</button>
@@ -106,7 +95,6 @@ import { navGroups } from '../data/navigation';
     --twg-bg: #f4efe6;
     --twg-ink-soft: #3a3530;
     --twg-terracotta: #8a4a2f;
-    --twg-burgundy: #5a1a2b;
     --twg-serif: 'Playfair Display', Georgia, serif;
     --twg-sans: 'Inter', system-ui, sans-serif;
     --twg-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -286,23 +274,9 @@ import { navGroups } from '../data/navigation';
     text-align: center;
     line-height: 1;
     font-style: italic;
-    color: var(--twg-burgundy);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .twg-logo-mark {
-    width: 42px;
-    height: 42px;
-    flex: 0 0 auto;
-    color: var(--twg-burgundy);
-  }
-
-  .twg-logo-copy {
-    display: block;
     color: var(--twg-ink);
+    text-decoration: none;
+    display: block;
   }
 
   .twg-logo small {
@@ -433,17 +407,11 @@ import { navGroups } from '../data/navigation';
   @media (max-width: 480px) {
     .twg-logo {
       font-size: 22px;
-      gap: 8px;
-    }
-
-    .twg-logo-mark {
-      width: 34px;
-      height: 34px;
     }
 
     .twg-logo small {
-      font-size: 7px;
-      letter-spacing: 0.22em;
+      font-size: 9px;
+      letter-spacing: 0.3em;
     }
   }
 </style>
