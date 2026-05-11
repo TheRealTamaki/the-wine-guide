@@ -1,0 +1,18 @@
+{
+  "slug": "good-cheap-wine",
+  "date": "2026-04-19",
+  "wines": [
+    { "name": "Sur de los Andes Reserva Malbec 2023", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["Mendoza Malbec varietal profile (quick-ref)"] },
+    { "name": "Chateau Bourdieu No.1 2018", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 3, "body": 4, "confidence": "inferred", "sources": ["Bordeaux blend (Cab/Merlot) varietal profile"] },
+    { "name": "Frescobaldi Nipozzano Chianti Rufina Riserva 2022", "tannin": 4, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Chianti Classico/Rufina Riserva (Sangiovese) varietal profile"] },
+    { "name": "Goldschmidt Stonemason Hill Cabernet Sauvignon 2023", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["California Cab varietal profile (quick-ref)"] },
+    { "name": "Ziobaffa Organic Toscana 2020", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Tuscan Sangiovese blend varietal profile"] },
+    { "name": "Chateau La Freynelle Blanc 2025", "tannin": 1, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Bordeaux white blend (Sauv Blanc/Semillon)"] },
+    { "name": "Grand Napa Vineyards Sauvignon Blanc 2025", "tannin": 1, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Napa Sauvignon Blanc, Spring Mountain District"] },
+    { "name": "Diatom Santa Barbara Chardonnay 2024", "tannin": 1, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["Santa Barbara Chardonnay, minimal-intervention style"] },
+    { "name": "Chateau Montaud Cotes de Provence Rose 2024", "tannin": 1, "acidity": 4, "sweetness": 2, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Provence Rosé varietal profile (quick-ref)"] },
+    { "name": "Damilano Moscato d'Asti 2024", "tannin": 1, "acidity": 3, "sweetness": 4, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["Moscato d'Asti varietal profile (quick-ref, ABV 5.5%)"] },
+    { "name": "Caposaldo Moscato", "tannin": 1, "acidity": 3, "sweetness": 4, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["Italian Moscato, lightly sparkling low-ABV style"] },
+    { "name": "La Marca Prosecco", "tannin": 1, "acidity": 4, "sweetness": 2, "alcohol": 2, "body": 2, "confidence": "inferred", "sources": ["Prosecco DOC Extra Dry (Glera), ~11% ABV"] }
+  ]
+}

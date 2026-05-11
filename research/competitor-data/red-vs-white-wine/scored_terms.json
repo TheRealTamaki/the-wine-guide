@@ -1,0 +1,1506 @@
+{
+  "keyword": "red vs white wine",
+  "analysis_date": "2026-04-27",
+  "competitor_count": 2,
+  "competitors": [
+    {
+      "url": "https://winefolly.com/tips/red-wine-vs-white-wine-the-real-differences/",
+      "title": "Red Wine vs White Wine: The Real Differences",
+      "file": "red-vs-white-wine_competitor-1.md"
+    },
+    {
+      "url": "https://www.coravin.com/blogs/community/red-wine-vs-white-wine",
+      "title": "Red Wine vs White Wine: Key Differences in Taste, Grapes, Production & Health Benefits",
+      "file": "red-vs-white-wine_competitor-2.md"
+    }
+  ],
+  "basic_terms": [
+    {
+      "term": "health benefits",
+      "term_lemma": "health benefit",
+      "importance": 76,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": true,
+      "h2h3_recommended": true,
+      "h1_pct": 50,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "flavors",
+      "term_lemma": "flavor",
+      "importance": 66,
+      "suggested_range": [
+        3,
+        9
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        3,
+        9
+      ]
+    },
+    {
+      "term": "red white wines",
+      "term_lemma": "red white wine",
+      "importance": 64,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        2,
+        6
+      ]
+    },
+    {
+      "term": "used",
+      "term_lemma": "use",
+      "importance": 63,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        4,
+        1
+      ]
+    },
+    {
+      "term": "one",
+      "term_lemma": "one",
+      "importance": 62,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "term": "compounds",
+      "term_lemma": "compound",
+      "importance": 62,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "term": "oak barrels",
+      "term_lemma": "oak barrel",
+      "importance": 57,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        4
+      ]
+    },
+    {
+      "term": "champagne",
+      "term_lemma": "champagne",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "term": "technique",
+      "term_lemma": "technique",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1
+      ]
+    },
+    {
+      "term": "grape skins",
+      "term_lemma": "grape skin",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "term": "wines taste",
+      "term_lemma": "wine taste",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "white wines made",
+      "term_lemma": "white wine make",
+      "importance": 56,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "term": "red wines made",
+      "term_lemma": "red wine make",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "blanc de noirs",
+      "term_lemma": "blanc de noirs",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "color",
+      "term_lemma": "color",
+      "importance": 54,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        6
+      ]
+    },
+    {
+      "term": "creates",
+      "term_lemma": "create",
+      "importance": 54,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        6
+      ]
+    },
+    {
+      "term": "winemaking",
+      "term_lemma": "winemaking",
+      "importance": 54,
+      "suggested_range": [
+        2,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        2
+      ]
+    },
+    {
+      "term": "pinot noir",
+      "term_lemma": "pinot noir",
+      "importance": 53,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        3
+      ]
+    },
+    {
+      "term": "example",
+      "term_lemma": "example",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1
+      ]
+    },
+    {
+      "term": "process",
+      "term_lemma": "process",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "result",
+      "term_lemma": "result",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1
+      ]
+    },
+    {
+      "term": "similar",
+      "term_lemma": "similar",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1
+      ]
+    },
+    {
+      "term": "soft",
+      "term_lemma": "soft",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "rich",
+      "term_lemma": "rich",
+      "importance": 52,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "term": "zesty",
+      "term_lemma": "zesty",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "winemakers",
+      "term_lemma": "winemaker",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1
+      ]
+    },
+    {
+      "term": "better",
+      "term_lemma": "good",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "include",
+      "term_lemma": "include",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        4
+      ]
+    },
+    {
+      "term": "moderation",
+      "term_lemma": "moderation",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "cabernet sauvignon",
+      "term_lemma": "cabernet sauvignon",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "term": "black grapes",
+      "term_lemma": "black grape",
+      "importance": 52,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "term": "grapes red",
+      "term_lemma": "grape red",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1
+      ]
+    },
+    {
+      "term": "acidity floral",
+      "term_lemma": "acidity floral",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "fruit notes",
+      "term_lemma": "fruit note",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1
+      ]
+    },
+    {
+      "term": "wines made red",
+      "term_lemma": "wine make red",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "term": "wines made white",
+      "term_lemma": "wine make white",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "fermented skins seeds",
+      "term_lemma": "ferment skin seed",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "stainless steel tanks",
+      "term_lemma": "stainless steel tank",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "term": "red wines made red",
+      "term_lemma": "red wine make red",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "white wines made white",
+      "term_lemma": "white wine make white",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "term": "though",
+      "term_lemma": "though",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "natural",
+      "term_lemma": "natural",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "cellar",
+      "term_lemma": "cellar",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "way",
+      "term_lemma": "way",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "also",
+      "term_lemma": "also",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "aromas",
+      "term_lemma": "aromas",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "achieve",
+      "term_lemma": "achieve",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "two",
+      "term_lemma": "two",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "breathe",
+      "term_lemma": "breathe",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "associated",
+      "term_lemma": "associate",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "antioxidants",
+      "term_lemma": "antioxidant",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pinot grigio",
+      "term_lemma": "pinot grigio",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pinot gris",
+      "term_lemma": "pinot gris",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "fermented grape",
+      "term_lemma": "ferment grape",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wine comes",
+      "term_lemma": "wine come",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "grapes fermented",
+      "term_lemma": "grape ferment",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "allow wine",
+      "term_lemma": "allow wine",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wine grape",
+      "term_lemma": "wine grape",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "polyphenols tannins",
+      "term_lemma": "polyphenols tannin",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "balanced lifestyle",
+      "term_lemma": "balance lifestyle",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "made red grapes",
+      "term_lemma": "make red grape",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "made white grapes",
+      "term_lemma": "make white grape",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "white grapes chardonnay",
+      "term_lemma": "white grape chardonnay",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "make red wine",
+      "term_lemma": "make red wine",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "make white wine",
+      "term_lemma": "make white wine",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "differences red wines",
+      "term_lemma": "difference red wine",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "like white wine",
+      "term_lemma": "like white wine",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "skins removed early",
+      "term_lemma": "skin remove early",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wines made red grapes",
+      "term_lemma": "wine make red grape",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wines made white grapes",
+      "term_lemma": "wine make white grape",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1
+      ]
+    }
+  ],
+  "extended_terms": [],
+  "entities": [
+    {
+      "entity": "Pinot",
+      "importance": 100,
+      "suggested_range": [
+        5,
+        7
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "White Wine",
+      "importance": 100,
+      "suggested_range": [
+        11,
+        29
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Grapes",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Differences",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Gris",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot Noir",
+      "importance": 100,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Cabernet",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Blanc",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Wines",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Wine",
+      "importance": 100,
+      "suggested_range": [
+        42,
+        63
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Made",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot Grigio",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Champagne",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "One",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Red",
+      "importance": 100,
+      "suggested_range": [
+        16,
+        41
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Grape",
+      "importance": 100,
+      "suggested_range": [
+        17,
+        19
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Cabernet Sauvignon",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Noir",
+      "importance": 100,
+      "suggested_range": [
+        4,
+        5
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Sauvignon",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Red Wine",
+      "importance": 100,
+      "suggested_range": [
+        11,
+        21
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "White",
+      "importance": 100,
+      "suggested_range": [
+        18,
+        42
+      ],
+      "competitor_usage_pct": 100
+    }
+  ],
+  "heading_terms": {
+    "h1": [
+      "health benefits"
+    ],
+    "h2h3": [
+      "health benefits",
+      "flavors",
+      "red white wines",
+      "used",
+      "one",
+      "compounds",
+      "oak barrels",
+      "champagne",
+      "technique",
+      "grape skins",
+      "wines taste",
+      "white wines made",
+      "red wines made",
+      "blanc de noirs"
+    ]
+  },
+  "target_word_count": {
+    "median": 838,
+    "range": [
+      549,
+      1127
+    ]
+  },
+  "summary": {
+    "basic_count": 70,
+    "extended_count": 0,
+    "entity_count": 21,
+    "h1_term_count": 1,
+    "h2h3_term_count": 14
+  }
+}

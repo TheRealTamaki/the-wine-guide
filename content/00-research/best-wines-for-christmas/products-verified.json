@@ -1,0 +1,695 @@
+{
+  "topic": "best-wines-for-christmas",
+  "target_keyword": "best wines for christmas",
+  "serp_median_wine_count": 17,
+  "price_band_applied": "$15-$40 standard",
+  "research_date": "2026-04-19",
+  "verification_run": "pass -- 17/17 live | 9 image ID mismatches found and corrected",
+  "notes": "Article was written and deployed outside normal pipeline. This file records live-verified Cloudinary IDs from Wine.com as of 2026-04-19. All 17 URLs resolved live (200). 9 of 17 image IDs in the article do not match the current live product page -- corrected IDs are in image_cloudinary_id. The article MDX must be updated to use corrected IDs.",
+  "candidates": [
+    {
+      "rank_suggestion": 1,
+      "name": "Adami Bosco di Gica Prosecco Superiore",
+      "vintage": "NV",
+      "url": "https://www.wine.com/product/adami-bosco-di-gica-prosecco-superiore/110627",
+      "product_id": "110627",
+      "image_cloudinary_id": "110627fbs",
+      "image_cloudinary_id_in_article": "110627fbs",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/110627fbs.jpg",
+      "critic_scores": [
+        {
+          "critic": "Wilfred Wong",
+          "score": 92
+        }
+      ],
+      "region": "Valdobbiadene, Veneto, Italy",
+      "grape": "Glera",
+      "style_bucket": "Sparkling / Aperitif",
+      "food_pairings": [
+        "Smoked salmon",
+        "Aperitif",
+        "Risotto",
+        "Light pasta"
+      ],
+      "why_picked": "Top Pick #3. DOCG Valdobbiadene Prosecco from steep hill vineyards. 92pt Wilfred Wong.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 2,
+      "name": "La Marca Prosecco",
+      "vintage": "NV",
+      "url": "https://www.wine.com/product/la-marca-prosecco/24828",
+      "product_id": "24828",
+      "image_cloudinary_id": "o3smk8maejbbv2yq7pvn",
+      "image_cloudinary_id_in_article": "o3smk8maejbbv2yq7pvn",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/o3smk8maejbbv2yq7pvn.jpg",
+      "critic_scores": [
+        {
+          "critic": "James Suckling",
+          "score": 90
+        },
+        {
+          "critic": "Wilfred Wong",
+          "score": 90
+        }
+      ],
+      "region": "Treviso, Italy",
+      "grape": "Glera",
+      "style_bucket": "Sparkling / Aperitif",
+      "food_pairings": [
+        "Aperitif",
+        "Smoked salmon",
+        "Prosciutto",
+        "Oysters"
+      ],
+      "why_picked": "Most recognisable Prosecco. 90pt JS + WW. Crowd-safe under $20.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 3,
+      "name": "Mionetto Prosecco Brut",
+      "vintage": "NV",
+      "url": "https://www.wine.com/product/mionetto-prosecco-brut/114238",
+      "product_id": "114238",
+      "image_cloudinary_id": "lahbbrm1dz0kym2taquw",
+      "image_cloudinary_id_in_article": "lahbbrm1dz0kym2taquw",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/lahbbrm1dz0kym2taquw.jpg",
+      "critic_scores": [
+        {
+          "critic": "Wine Enthusiast",
+          "score": 90
+        }
+      ],
+      "region": "Treviso, Italy",
+      "grape": "Glera",
+      "style_bucket": "Sparkling / Aperitif",
+      "food_pairings": [
+        "Aperitif",
+        "Antipasto",
+        "Light appetizers"
+      ],
+      "why_picked": "90pt Wine Enthusiast. Budget sparkling under $17 for large tables.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 4,
+      "name": "Chateau d'Esclans Whispering Angel Rose",
+      "vintage": "2024",
+      "url": "https://www.wine.com/product/chateau-desclans-whispering-angel-rose-2024/2847780",
+      "product_id": "2847780",
+      "image_cloudinary_id": "uvvwuexhb9rmzzmqdd4t",
+      "image_cloudinary_id_in_article": "uvvwuexhb9rmzzmqdd4t",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/uvvwuexhb9rmzzmqdd4t.jpg",
+      "critic_scores": [
+        {
+          "critic": "James Suckling",
+          "score": 92
+        },
+        {
+          "critic": "Tasting Panel",
+          "score": 94
+        }
+      ],
+      "region": "Provence, France",
+      "grape": "Grenache, Cinsault, Mourvedre",
+      "style_bucket": "Rose / Aperitif",
+      "food_pairings": [
+        "Smoked salmon",
+        "Brie",
+        "Charcuterie",
+        "Aperitif"
+      ],
+      "why_picked": "Iconic Provence rose. 92pt JS, 94pt Tasting Panel. Bone dry, aperitif and gift dual purpose.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 5,
+      "name": "St. Supery Sauvignon Blanc",
+      "vintage": "2023",
+      "url": "https://www.wine.com/product/st-supery-sauvignon-blanc-2023/2794641",
+      "product_id": "2794641",
+      "image_cloudinary_id": "wk9ihhqfevucvu4bkrgn",
+      "image_cloudinary_id_in_article": "wk9ihhqfevucvu4bkrlr",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/wk9ihhqfevucvu4bkrgn.jpg",
+      "critic_scores": [
+        {
+          "critic": "Tasting Panel",
+          "score": 94
+        },
+        {
+          "critic": "Wine Enthusiast",
+          "score": 93
+        },
+        {
+          "critic": "Wine Spectator",
+          "score": 91
+        },
+        {
+          "critic": "James Suckling",
+          "score": 90
+        }
+      ],
+      "region": "Napa Valley, California",
+      "grape": "Sauvignon Blanc",
+      "style_bucket": "White / Starter",
+      "food_pairings": [
+        "Oysters",
+        "Crab",
+        "Smoked salmon",
+        "Goat cheese"
+      ],
+      "why_picked": "94pt Tasting Panel, 93pt Wine Enthusiast. Premium Napa SB with four critic scores in agreement.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: wk9ihhqfevucvu4bkrlr | Live: wk9ihhqfevucvu4bkrgn (last 2 chars lr->gn)"
+    },
+    {
+      "rank_suggestion": 6,
+      "name": "Kim Crawford Sauvignon Blanc",
+      "vintage": "2025",
+      "url": "https://www.wine.com/product/kim-crawford-sauvignon-blanc-2025/4120242",
+      "product_id": "4120242",
+      "image_cloudinary_id": "zwich78zgrepaaqjlmlw",
+      "image_cloudinary_id_in_article": "zwich78zgrepaaqjlmgu",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/zwich78zgrepaaqjlmlw.jpg",
+      "critic_scores": [
+        {
+          "critic": "James Suckling",
+          "score": 90
+        }
+      ],
+      "region": "Marlborough, New Zealand",
+      "grape": "Sauvignon Blanc",
+      "style_bucket": "White / Starter",
+      "food_pairings": [
+        "Smoked salmon",
+        "Seafood",
+        "Goat cheese",
+        "Light appetizers"
+      ],
+      "why_picked": "Most recognised Marlborough SB. 90pt JS. Crowd-safe at ~$17.97.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: zwich78zgrepaaqjlmgu | Live: zwich78zgrepaaqjlmlw (last 2 chars gu->lw)"
+    },
+    {
+      "rank_suggestion": 7,
+      "name": "Chateau Montaud Cotes de Provence Rose",
+      "vintage": "2024",
+      "url": "https://www.wine.com/product/chateau-montaud-cotes-de-provence-rose-2024/3160572",
+      "product_id": "3160572",
+      "image_cloudinary_id": "vwckwhradvydafevsauy",
+      "image_cloudinary_id_in_article": "vwckwhradvydafevsa0j",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/vwckwhradvydafevsauy.jpg",
+      "critic_scores": [
+        {
+          "critic": "Wilfred Wong",
+          "score": 91
+        },
+        {
+          "critic": "Wine Enthusiast",
+          "score": 90
+        }
+      ],
+      "customer_rating": 4.5,
+      "customer_review_count": 50,
+      "region": "Cotes de Provence, France",
+      "grape": "Grenache, Cinsault, Syrah",
+      "style_bucket": "Rose / Starter",
+      "food_pairings": [
+        "Aperitif",
+        "Charcuterie",
+        "Light starters",
+        "Christmas ham"
+      ],
+      "why_picked": "91pt Wilfred Wong, 4.5 stars/50 reviews. Value Provence rose for white and red wine drinkers alike.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: vwckwhradvydafevsa0j | Live: vwckwhradvydafevsauy (last 2 chars 0j->uy)"
+    },
+    {
+      "rank_suggestion": 8,
+      "name": "E. Guigal Cotes du Rhone Rouge",
+      "vintage": "2022",
+      "url": "https://www.wine.com/product/e-guigal-cotes-du-rhone-rouge-2022/3372328",
+      "product_id": "3372328",
+      "image_cloudinary_id": "gaixg3arjgwbeh9zu8aa",
+      "image_cloudinary_id_in_article": "gaixg3arjgwbeh9zu8jh",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/gaixg3arjgwbeh9zu8aa.jpg",
+      "critic_scores": [
+        {
+          "critic": "Wine Enthusiast",
+          "score": 92
+        },
+        {
+          "critic": "Jeb Dunnuck",
+          "score": 90
+        },
+        {
+          "critic": "Robert Parker",
+          "score": 90
+        }
+      ],
+      "region": "Cotes du Rhone, France",
+      "grape": "Grenache, Syrah, Mourvedre",
+      "style_bucket": "Red / Main",
+      "food_pairings": [
+        "Roast chicken",
+        "Turkey",
+        "Christmas charcuterie",
+        "Gratin"
+      ],
+      "why_picked": "92pt Wine Enthusiast. Most versatile Christmas red under $20 from Rhone's top producers.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: gaixg3arjgwbeh9zu8jh | Live: gaixg3arjgwbeh9zu8aa (last 2 chars jh->aa)"
+    },
+    {
+      "rank_suggestion": 9,
+      "name": "Lemelson Thea's Selection Pinot Noir",
+      "vintage": "2022",
+      "url": "https://www.wine.com/product/lemelson-theas-selection-pinot-noir-2022/2560816",
+      "product_id": "2560816",
+      "image_cloudinary_id": "nt73llcz20ilvgputf5h",
+      "image_cloudinary_id_in_article": "nt73llcz20ilvgputf5h",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/nt73llcz20ilvgputf5h.jpg",
+      "critic_scores": [
+        {
+          "critic": "Decanter",
+          "score": 93
+        },
+        {
+          "critic": "Vinous",
+          "score": 91
+        },
+        {
+          "critic": "Wine Spectator",
+          "score": 91
+        }
+      ],
+      "region": "Willamette Valley, Oregon",
+      "grape": "Pinot Noir",
+      "style_bucket": "Red / Main",
+      "food_pairings": [
+        "Roast turkey",
+        "Salmon",
+        "Duck",
+        "Mushroom risotto"
+      ],
+      "why_picked": "93pt Decanter. Oregon Pinot for complex multi-protein Christmas menus.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 10,
+      "name": "CVNE Rioja Reserva",
+      "vintage": "2020",
+      "url": "https://www.wine.com/product/cvne-rioja-reserva-2020/2609673",
+      "product_id": "2609673",
+      "image_cloudinary_id": "xtbmbny0dlgyo4qycjrq",
+      "image_cloudinary_id_in_article": "xtbmbny0dlgyo4qycj3j",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/xtbmbny0dlgyo4qycjrq.jpg",
+      "critic_scores": [
+        {
+          "critic": "James Suckling",
+          "score": 92
+        },
+        {
+          "critic": "Vinous",
+          "score": 92
+        },
+        {
+          "critic": "Robert Parker",
+          "score": 91
+        }
+      ],
+      "region": "Rioja, Spain",
+      "grape": "Tempranillo",
+      "style_bucket": "Red / Main",
+      "food_pairings": [
+        "Turkey",
+        "Roast pork",
+        "Christmas dinner",
+        "Tapas"
+      ],
+      "why_picked": "92pt JS + Vinous. Classic Rioja Reserva under $20. Strong 2020 vintage.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: xtbmbny0dlgyo4qycj3j | Live: xtbmbny0dlgyo4qycjrq (last 2 chars 3j->rq)"
+    },
+    {
+      "rank_suggestion": 11,
+      "name": "Matsu El Picaro",
+      "vintage": "2024",
+      "url": "https://www.wine.com/product/matsu-el-picaro-2024/3532037",
+      "product_id": "3532037",
+      "image_cloudinary_id": "usyxbtkyxzqjzayxzhsm",
+      "image_cloudinary_id_in_article": "usyxbtkyxzqjzayxzhsm",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/usyxbtkyxzqjzayxzhsm.jpg",
+      "critic_scores": [
+        {
+          "critic": "Wilfred Wong",
+          "score": 91
+        },
+        {
+          "critic": "James Suckling",
+          "score": 90
+        }
+      ],
+      "customer_rating": 4.7,
+      "customer_review_count": 40,
+      "region": "Toro, Spain",
+      "grape": "Tempranillo (Tinta de Toro)",
+      "style_bucket": "Red / Main",
+      "food_pairings": [
+        "Christmas lamb",
+        "Roast pork",
+        "Tapas",
+        "Charcuterie"
+      ],
+      "why_picked": "4.7 stars/40 reviews -- highest customer rating on list. Old-vine Tempranillo at ~$16.97.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 12,
+      "name": "Frescobaldi Nipozzano Chianti Rufina Riserva",
+      "vintage": "2022",
+      "url": "https://www.wine.com/product/frescobaldi-nipozzano-chianti-rufina-riserva-2022/3871328",
+      "product_id": "3871328",
+      "image_cloudinary_id": "b7f12caobgigotyelw6b",
+      "image_cloudinary_id_in_article": "b7f12caobgigotyelwpg",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/b7f12caobgigotyelw6b.jpg",
+      "critic_scores": [
+        {
+          "critic": "James Suckling",
+          "score": 92
+        },
+        {
+          "critic": "Vinous",
+          "score": 90
+        },
+        {
+          "critic": "Wine Spectator",
+          "score": 90
+        }
+      ],
+      "region": "Tuscany, Italy",
+      "grape": "Sangiovese",
+      "style_bucket": "Red / Main",
+      "food_pairings": [
+        "Pasta with meat sauce",
+        "Roast pork",
+        "Hard cheeses",
+        "Antipasto"
+      ],
+      "why_picked": "92pt JS. Seven centuries of Tuscan winemaking. Italian red for antipasto-tradition tables.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: b7f12caobgigotyelwpg | Live: b7f12caobgigotyelw6b (last 2 chars pg->6b)"
+    },
+    {
+      "rank_suggestion": 13,
+      "name": "BenMarco Malbec",
+      "vintage": "2022",
+      "url": "https://www.wine.com/product/benmarco-malbec-2022/2669489",
+      "product_id": "2669489",
+      "image_cloudinary_id": "csragcjypok3dxolfnnf",
+      "image_cloudinary_id_in_article": "csragcjypok3dxolfnnf",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/csragcjypok3dxolfnnf.jpg",
+      "critic_scores": [
+        {
+          "critic": "James Suckling",
+          "score": 93
+        },
+        {
+          "critic": "Vinous",
+          "score": 91
+        },
+        {
+          "critic": "Wine Spectator",
+          "score": 90
+        }
+      ],
+      "region": "Uco Valley, Mendoza, Argentina",
+      "grape": "Malbec",
+      "style_bucket": "Red / Main",
+      "food_pairings": [
+        "Prime rib",
+        "Lamb",
+        "Grilled meats",
+        "Mushroom dishes"
+      ],
+      "why_picked": "93pt JS. High-altitude Uco Valley Malbec. Crowd pleaser for beef and lamb tables.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 14,
+      "name": "Chateau Bourdieu No.1",
+      "vintage": "2018",
+      "url": "https://www.wine.com/product/chateau-bourdieu-no1-2018/4122420",
+      "product_id": "4122420",
+      "image_cloudinary_id": "er5x60ivuahoioj5msit",
+      "image_cloudinary_id_in_article": "er5x60ivuahoioj5msit",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/er5x60ivuahoioj5msit.jpg",
+      "critic_scores": [
+        {
+          "critic": "Decanter",
+          "score": 97
+        },
+        {
+          "critic": "Wine Enthusiast",
+          "score": 92
+        },
+        {
+          "critic": "James Suckling",
+          "score": 91
+        }
+      ],
+      "region": "Blaye Cotes de Bordeaux, France",
+      "grape": "Merlot-dominant Bordeaux blend",
+      "style_bucket": "Red / Main",
+      "food_pairings": [
+        "Roast beef",
+        "Lamb",
+        "Christmas dinner",
+        "Aged cheese"
+      ],
+      "why_picked": "Top Pick #1. 97pt Decanter at ~$19.99. Best value-to-score on list.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": true,
+        "scores_match": true
+      }
+    },
+    {
+      "rank_suggestion": 15,
+      "name": "Banfi Rosa Regale Brachetto d'Acqui Rose",
+      "vintage": "2022",
+      "url": "https://www.wine.com/product/banfi-rosa-regale-brachetto-dacqui-rose-2022/1391076",
+      "product_id": "1391076",
+      "image_cloudinary_id": "c37gtdb42xvzm1xnlkln",
+      "image_cloudinary_id_in_article": "c37gtdb42xvzm1xnlkaj",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/c37gtdb42xvzm1xnlkln.jpg",
+      "critic_scores": [],
+      "region": "Piedmont, Italy",
+      "grape": "Brachetto",
+      "style_bucket": "Dessert / Sparkling Red",
+      "food_pairings": [
+        "Dark chocolate",
+        "Strawberries",
+        "Christmas pudding",
+        "Panettone"
+      ],
+      "why_picked": "Quintessential Christmas sparkling red. Sweet, 7% ABV, DOC Brachetto d'Acqui.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: c37gtdb42xvzm1xnlkaj | Live: c37gtdb42xvzm1xnlkln (last 2 chars aj->ln)"
+    },
+    {
+      "rank_suggestion": 16,
+      "name": "Graham's Six Grapes Reserve Ruby Port",
+      "vintage": "NV",
+      "url": "https://www.wine.com/product/grahams-six-grapes-reserve-ruby-port/5968",
+      "product_id": "5968",
+      "image_cloudinary_id": "aha20fvmjxlslz3dhthw",
+      "image_cloudinary_id_in_article": "aha20fvmjxlslz3dhtrl",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/aha20fvmjxlslz3dhthw.jpg",
+      "critic_scores": [
+        {
+          "critic": "Decanter",
+          "score": 95
+        },
+        {
+          "critic": "Wine & Spirits",
+          "score": 91
+        },
+        {
+          "critic": "Wilfred Wong",
+          "score": 91
+        }
+      ],
+      "region": "Douro, Portugal",
+      "grape": "Touriga Nacional, Tinta Roriz",
+      "style_bucket": "Dessert / Port",
+      "food_pairings": [
+        "Stilton",
+        "Dark chocolate",
+        "Christmas pudding",
+        "Walnuts"
+      ],
+      "why_picked": "Top Pick #2. 95pt Decanter. Benchmark ruby Port. Crowd-safe for Port newcomers.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "CRITICAL -- Top Pick #2 in TopPicksInline. Article: aha20fvmjxlslz3dhtrl | Live: aha20fvmjxlslz3dhthw (last 2 chars rl->hw)"
+    },
+    {
+      "rank_suggestion": 17,
+      "name": "Sandeman 10 Year Old Tawny",
+      "vintage": "NV",
+      "url": "https://www.wine.com/product/sandeman-10-year-old-tawny/110730",
+      "product_id": "110730",
+      "image_cloudinary_id": "quqd57iptchsdgyt3oin",
+      "image_cloudinary_id_in_article": "quqd57iptchsdgyt3orp",
+      "image_url": "https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/quqd57iptchsdgyt3oin.jpg",
+      "critic_scores": [
+        {
+          "critic": "Decanter",
+          "score": 92
+        },
+        {
+          "critic": "James Suckling",
+          "score": 91
+        },
+        {
+          "critic": "Wine Spectator",
+          "score": 91
+        },
+        {
+          "critic": "Wine Enthusiast",
+          "score": 90
+        }
+      ],
+      "region": "Douro, Portugal",
+      "grape": "Touriga Nacional, Tinta Roriz",
+      "style_bucket": "Dessert / Port",
+      "food_pairings": [
+        "Christmas cake",
+        "Pecan pie",
+        "Blue cheese",
+        "Dried fruit and nuts"
+      ],
+      "why_picked": "92pt Decanter. Ten years oxidative aging. ~$37.97. Gift Port for knowledgeable recipients.",
+      "verification": {
+        "url_live": true,
+        "image_id_match": false,
+        "scores_match": true
+      },
+      "image_mismatch_note": "Article: quqd57iptchsdgyt3orp | Live: quqd57iptchsdgyt3oin (last 2 chars rp->in)"
+    }
+  ],
+  "skipped_candidates": [],
+  "image_mismatch_summary": {
+    "total_wines": 17,
+    "urls_live": 17,
+    "image_id_matches": 8,
+    "image_id_mismatches": 9,
+    "mismatched_wines": [
+      {
+        "wine": "Graham's Six Grapes Reserve Ruby Port (Top Pick #2)",
+        "article_id": "aha20fvmjxlslz3dhtrl",
+        "live_id": "aha20fvmjxlslz3dhthw"
+      },
+      {
+        "wine": "St. Supery Sauvignon Blanc 2023",
+        "article_id": "wk9ihhqfevucvu4bkrlr",
+        "live_id": "wk9ihhqfevucvu4bkrgn"
+      },
+      {
+        "wine": "Kim Crawford Sauvignon Blanc 2025",
+        "article_id": "zwich78zgrepaaqjlmgu",
+        "live_id": "zwich78zgrepaaqjlmlw"
+      },
+      {
+        "wine": "Chateau Montaud Cotes de Provence Rose 2024",
+        "article_id": "vwckwhradvydafevsa0j",
+        "live_id": "vwckwhradvydafevsauy"
+      },
+      {
+        "wine": "E. Guigal Cotes du Rhone Rouge 2022",
+        "article_id": "gaixg3arjgwbeh9zu8jh",
+        "live_id": "gaixg3arjgwbeh9zu8aa"
+      },
+      {
+        "wine": "CVNE Rioja Reserva 2020",
+        "article_id": "xtbmbny0dlgyo4qycj3j",
+        "live_id": "xtbmbny0dlgyo4qycjrq"
+      },
+      {
+        "wine": "Frescobaldi Nipozzano Chianti Rufina Riserva 2022",
+        "article_id": "b7f12caobgigotyelwpg",
+        "live_id": "b7f12caobgigotyelw6b"
+      },
+      {
+        "wine": "Banfi Rosa Regale Brachetto d'Acqui Rose 2022",
+        "article_id": "c37gtdb42xvzm1xnlkaj",
+        "live_id": "c37gtdb42xvzm1xnlkln"
+      },
+      {
+        "wine": "Sandeman 10 Year Old Tawny NV",
+        "article_id": "quqd57iptchsdgyt3orp",
+        "live_id": "quqd57iptchsdgyt3oin"
+      }
+    ]
+  }
+}

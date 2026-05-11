@@ -1,0 +1,112 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import CategoryBadge from '../components/ui/CategoryBadge.astro';
+import TableOfContents from '../components/ui/TableOfContents.astro';
+import TopPicks from '../components/ui/TopPicks.astro';
+import RelatedArticles from '../components/ui/RelatedArticles.astro';
+import AffiliateDisclosure from '../components/ui/AffiliateDisclosure.astro';
+import AuthorByline from '../components/ui/AuthorByline.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface TopPick {
+  rank: number;
+  label: string;
+  slug: string;
+  highlight: string;
+  image: string;
+  href: string;
+}
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  headings?: { depth: number; slug: string; text: string }[];
+  topPicks?: TopPick[];
+}
+
+const { article, headings = [], topPicks = [] } = Astro.props;
+const { title, description, category, publishDate, modifiedDate, ogImage, affiliateDisclosure, relatedArticles } = article.data;
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), href: `/${category}/` },
+  { label: title },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: publishDate.toISOString(),
+  dateModified: (modifiedDate ?? publishDate).toISOString(),
+  author: { '@type': 'Organization', name: 'The Wine Guide' },
+  publisher: { '@type': 'Organization', name: 'The Wine Guide', url: 'https://thewine.guide' },
+};
+
+const readingTime = Math.ceil((article.body?.length ?? 0) / 1400);
+---
+
+<BaseLayout
+  {title}
+  {description}
+  {ogImage}
+  publishDate={publishDate}
+  modifiedDate={modifiedDate}
+  type="article"
+  {schema}
+>
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <div class="lg:grid lg:grid-cols-[1fr_18rem] lg:gap-12">
+      <!-- Main content -->
+      <article>
+        <!-- Header -->
+        <header class="mb-12 mt-8" style="max-width: var(--w-prose);">
+          <div class="mb-4">
+            <AuthorByline
+              name="Claire Bennett"
+              role="Wine Editor"
+              avatar="/images/author-claire.webp"
+              readingTime={readingTime}
+            />
+          </div>
+          <h1 class="text-4xl md:text-5xl font-heading font-bold text-primary leading-tight mb-4">
+            {title}
+          </h1>
+          <p class="text-xl text-text-muted leading-relaxed">
+            {description}
+          </p>
+          <div class="mt-4 text-sm text-text-muted">
+            <time datetime={publishDate.toISOString()}>
+              {publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+          </div>
+        </header>
+        {affiliateDisclosure && <AffiliateDisclosure class="mb-6" />}
+
+        <div class="prose">
+          <slot />
+        </div>
+
+        {relatedArticles.length > 0 && (
+          <div class="mt-16 pt-8 border-t border-border">
+            <h2 class="text-2xl font-heading font-bold text-primary mb-8">Keep Reading</h2>
+            <RelatedArticles slugs={relatedArticles} />
+          </div>
+        )}
+      </article>
+
+      <!-- TOC sidebar -->
+      {headings.length > 2 && (
+        <aside class="hidden lg:block">
+          <div class="sticky top-28 bg-bg-alt rounded-[var(--twg-radius-lg)] p-8">
+            <TableOfContents {headings} />
+            <TopPicks picks={topPicks} />
+          </div>
+        </aside>
+      )}
+    </div>
+  </div>
+</BaseLayout>

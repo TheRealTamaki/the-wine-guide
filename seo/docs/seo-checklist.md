@@ -9,7 +9,7 @@ Use this checklist before marking any article as SEO-optimized.
 - [ ] Primary keyword appears in first 100 words
 - [ ] Primary keyword in H1
 - [ ] Secondary keywords in H2/H3 subheadings
-- [ ] SERP-recommended terms woven in naturally (via `/neuronwriter-seo` or `/beuron-seo`)
+- [ ] SERP-recommended terms woven in naturally (via `/beuron-seo` — the only SEO term tool used on this site)
 - [ ] Content matches search intent (informational, transactional, comparison)
 - [ ] Word count meets target for content type
 

@@ -1,0 +1,86 @@
+{
+  "slug": "best-buttery-chardonnay",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Rombauer Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 2,
+      "sweetness": 2,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Article states 14.6% ABV", "Carneros full-MLF buttery benchmark"]
+    },
+    {
+      "name": "Kendall-Jackson Vintner's Reserve Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 2,
+      "sweetness": 2,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Article states 13.5% ABV", "Softer, fruit-forward California style"]
+    },
+    {
+      "name": "La Crema Sonoma Coast Chardonnay 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Article states 13.5% ABV", "Cooler Sonoma Coast, brighter acidity threading"]
+    },
+    {
+      "name": "Cambria Katherine's Vineyard Chardonnay 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Article states 13.8% ABV", "Santa Maria Valley cool-climate balanced style"]
+    },
+    {
+      "name": "Sonoma-Cutrer The Cutrer Chardonnay 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Article states 13.8% ABV", "Russian River Valley extended oak ageing"]
+    },
+    {
+      "name": "Jordan Chardonnay 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 2,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Article states 12.7% ABV (unusually low)", "Restrained, elegant, medium-bodied style"]
+    },
+    {
+      "name": "Stags' Leap Winery Napa Valley Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 2,
+      "sweetness": 2,
+      "alcohol": 4,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Article states 14.1% ABV", "Napa Valley rich, full-body white style"]
+    },
+    {
+      "name": "Frank Family Vineyards Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 2,
+      "sweetness": 2,
+      "alcohol": 4,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Article states 14.4% ABV", "Los Carneros full MLF, Rombauer-adjacent"]
+    }
+  ]
+}

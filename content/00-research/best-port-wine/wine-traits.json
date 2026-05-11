@@ -1,0 +1,254 @@
+{
+  "slug": "best-port-wine",
+  "target_keyword": "best port wine",
+  "research_date": "2026-04-19",
+  "candidate_source": "content/00-research/best-port-wine/products-verified.json",
+  "wines": [
+    {
+      "name": "Graham's Six Grapes Reserve Ruby Port",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/grahams-six-grapes-reserve-ruby-port/5968",
+        "ABV 19.5% confirmed on Wine.com product page — Alcohol 5",
+        "Winemaker notes: 'very full-bodied, luscious wine' — Body 5",
+        "Decanter 95: 'well balanced tannins and freshness' — Tannin 3 (balanced, not high-grip); Sweetness 5 (fortified Ruby, ~100g/L RS standard)",
+        "Wilfred Wong 91: 'Deep, rich, and satiny' — confirms full body and sweet fortified profile",
+        "Cross-reference: matched trait profile in best-wines-for-valentines-day wine-traits.json (verified)"
+      ]
+    },
+    {
+      "name": "Fonseca Bin No. 27 Port",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/fonseca-bin-no-27-port/1515",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Winemaker notes: 'full-bodied and round, with a soft and velvety texture, balanced by firm tannins' — Body 5, Tannin 3",
+        "Decanter 93: 'firm tannic grip' — medium tannin grip for Ruby Reserve → Tannin 3; Sweetness 5 (~100g/L RS Ruby Reserve standard)",
+        "Wine & Spirits 92: 'freshness firmed up by schist tannins' — Acidity 3 (medium, mineral-driven freshness)",
+        "Cross-reference: matched trait profile in best-wines-for-valentines-day wine-traits.json (verified)"
+      ]
+    },
+    {
+      "name": "Fonseca Late Bottled Vintage 2016",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/fonseca-late-bottled-vintage-2016/1013570",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Robert Parker 90: '102 grams of residual sugar' — Sweetness 5 (102g/L is squarely in the sweet fortified tier; same order of magnitude as Ruby Reserve)",
+        "Robert Parker: 'accessible, easy fashion without big tannins' — Tannin 3 (medium; LBV has structure but not Vintage Port-level grip)",
+        "Winemaker notes: 'concentrated, structured wine has great volume and mouthfeel, with fine length' — Body 5; Acidity 3 (Douro red base, medium acidity)"
+      ]
+    },
+    {
+      "name": "Croft 10 Year Old Tawny Porto",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/croft-10-year-old-tawny-porto/1847285",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Winemaker notes: 'silky and round, full of ripe fig flavors' — Tannin 2 (oxidative 10yr aging softens grip significantly vs Ruby); Sweetness 5 (standard fortified Port sweetness)",
+        "Winemaker notes: 'complex aromas of mellow spices along with walnut, butterscotch and fine oak notes against a background of rich, jammy fruit' — Body 5 (full; fortified concentration retained through oxidative aging)",
+        "Wine Spectator 92: 'hints of hazelnut and licorice root' — confirmed aged Tawny profile; Acidity 3 (medium, balanced by sweetness)"
+      ]
+    },
+    {
+      "name": "Sandeman 10 Year Old Tawny",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/sandeman-10-year-old-tawny/110730",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Winemaker notes: 'full-bodied and appealing, with a persistent finish' — Body 5",
+        "Wine & Spirits 90: 'substantial tannins, balancing the wine with density, firmness and length' — Tannin 2 (substantial for an aged Tawny, still Low vs Ruby baseline of 3)",
+        "Wine Enthusiast 90: 'fine acidity follows the sweet initial taste' — Acidity 3; Sweetness 5 (standard fortified Port sweetness)",
+        "James Suckling 91: 'full-bodied, velvety, very round and pleasant' — confirms Body 5"
+      ]
+    },
+    {
+      "name": "Croft Reserve Tawny Porto",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/croft-reserve-tawny-porto/156469",
+        "ABV 19.9% confirmed on Wine.com product page — Alcohol 5 (boundary rounds up)",
+        "Tasting Panel 92: 'smooth, soft and nutty with bright, sweet fruit and mild rancio; silky, balanced and long' — Tannin 2 (silky, no age statement NV Tawny); Sweetness 5 (standard fortified Port sweetness)",
+        "Winemaker notes: 'smooth and round on the palate, full of luscious strawberry jam flavors with an elegant finish' — Body 4 (NV Tawny without the oxidative concentration of aged 10yr/20yr)",
+        "Wine Spectator 90: 'burst of cherry and blackberry cobbler notes' — Acidity 3 (medium, approachable NV style)"
+      ]
+    },
+    {
+      "name": "Fonseca 10 Year Old Tawny",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/fonseca-10-year-old-tawny/1519",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Robert Parker 90: '106.7 grams per liter of residual sugar' — Sweetness 5",
+        "Winemaker notes: 'smooth, silky texture and subtle oak nuances are balanced by a fresh acidity and tannic grip that culminate in a long, elegant, plummy finish' — Tannin 2 (silky; grip present but characteristic of aged Tawny, not Ruby), Acidity 3",
+        "Wine Spectator 90: 'Refined, with bright flavors... Very creamy on the finish, which features chocolate mousse' — Body 5 (creamy, full concentration of 10yr aging)"
+      ]
+    },
+    {
+      "name": "Sandeman 20 Year Old Tawny",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/sandeman-20-year-old-tawny/1547",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Robert Parker 92: '129 grams per liter of residual sugar' — Sweetness 5 (129g/L is firmly sweet); 'lively acidity lifts the fruit' — Acidity 3",
+        "James Suckling 95: 'Full. Very sweet. Silky and attractively woody' — Body 5, Tannin 2 (20yr oxidation fully softens grip), Sweetness 5",
+        "Wine Spectator 93: 'Broad, rich and elegant, with creamy, supple flavors of butterscotch, toasted coconut and hazelnut. Luscious finish' — confirms Body 5"
+      ]
+    },
+    {
+      "name": "Fonseca 20 Year Old Tawny",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/fonseca-20-year-old-tawny/1520",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Robert Parker 92: '111.6 grams per liter of residual sugar' — Sweetness 5",
+        "Winemaker notes: 'Full-bodied and voluminous on the palate, its smooth, velvety texture' — Body 5",
+        "Wine & Spirits 92: 'supple texture with just a touch of grip' — Tannin 2 (minimal after 20yr oxidative aging)",
+        "Wine Spectator 93: 'Bright and fresh in feel... racy finish' — Acidity 3"
+      ]
+    },
+    {
+      "name": "Niepoort 10 Years Old Tawny Port",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/niepoort-10-years-old-tawny-port/147390",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Winemaker notes: 'vibrant acidity balancing its sweet character... giving the wine a superb structure' — Acidity 4 (notably higher than standard house-style Tawnies; Niepoort uses smaller 550L casks that preserve freshness)",
+        "Decanter 94: 'light on its feet, with an elegant, uplifting finish' — Body 4 (lighter than full-concentration Tawnies from larger houses); 'appetizing, salty edge' — confirms elevated Acidity 4",
+        "James Suckling 93: 'underlying freshness and a long, persistent, textural finish' — Acidity 4 confirmed",
+        "Wine Enthusiast 90: 'fine balanced wine that combines rich red fruit flavors with acidity' — Acidity 4; Sweetness 5 (standard fortified Port); Tannin 2 (oxidative 10yr)"
+      ]
+    },
+    {
+      "name": "Fonseca Siroco White Port",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 5,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/fonseca-siroco-white-port/13538",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Winemaker notes: 'lightly sweet with a vibrant acidity and round, velvety texture' — Sweetness 4 (lightly sweet; below full Ruby sweetness of 5, above off-dry); Acidity 4 (vibrant, confirmed)",
+        "White grape base (Rabigato, Malvasia Fina, Viosinho) — no skin tannin contribution → Tannin 1",
+        "Body 3: 'round, velvety texture' — medium body; white grape fortified base lacks the concentration of red Port styles; served chilled as aperitif confirms lighter profile vs Ruby/Tawny"
+      ]
+    },
+    {
+      "name": "Niepoort Dry White Port",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 2,
+      "alcohol": 5,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/niepoort-dry-white-port/147394",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Product name explicitly 'Dry' White Port — Sweetness 2 (dry fortified; low RS for Port style ~30-50g/L); Robert Parker 93+: 'aged in an oxidative way... nutty notes... extract from contact with the skins... this is a fairly recent wine, they wanted to show white Port could be serious, not something to make a fresh drink'",
+        "White grape base (Rabigato, Viosinho, Gouveio) — no skin tannin contribution → Tannin 1",
+        "Robert Parker: 'concentration and power, with a classical style' — Body 3 (structured for a white, medium body); oxidative aging moderates acidity → Acidity 3",
+        "Wine Spectator 89: 'burst of succulent peach and apricot fruit laced with honeysuckle' — confirms aromatic white profile"
+      ]
+    },
+    {
+      "name": "Yalumba Antique Tawny Port (375ML half-bottle)",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/yalumba-antique-tawny-port-375ml-half-bottle/15677",
+        "ABV 19% confirmed on Wine.com product page — Alcohol 5 (fortified; >14.5% threshold)",
+        "Robert Parker 92: 'intense, ripe, and very sweet, it will finish off your meal in style' — Sweetness 5",
+        "Vinous 93: 'viscous texture, riot of sweet nutty fruit flavors in conjunction with a viscous texture. The finish is enlivened by refreshing acids' — Body 5 (viscous, concentrated aged Australian Tawny), Acidity 3, Tannin 2 (oxidative aged)",
+        "Wine Enthusiast 92: 'rich and sweet, with great intensity on the finish' — confirms Body 5"
+      ]
+    },
+    {
+      "name": "Sandeman Founders Reserve Ruby Port",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/sandeman-founders-reserve-ruby-port/1544",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Decanter 90: 'concentration, structure and freshness. Sweet finish with a dusting of tannins' — Sweetness 5; Tannin 3 ('dusting of tannins' = medium, not high-grip)",
+        "Winemaker notes: 'rich red fruit aromas with a touch of age... fruit and fire characteristic of young classic Porto balanced with the finesse of age' — Body 4 (Founders Reserve is an entry-tier Ruby; full concentration of Reserve Rubies like Six Grapes not yet reached)",
+        "Wilfred Wong 90: 'bright and sassy, with a nice combination of fruit and wood' — Acidity 3"
+      ]
+    },
+    {
+      "name": "Fonseca Ruby Port",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/fonseca-ruby-port/1517",
+        "ABV 20% confirmed on Wine.com product page — Alcohol 5",
+        "Winemaker notes: 'well-knit structure, with a velvety, luscious mouthfeel and smooth tannins' — Tannin 3 (smooth; entry Ruby, not as grippy as Reserve tier), Body 4 (velvety and structured but entry-level concentration)",
+        "Winemaker notes: 'sweet wine, fresh rich black cherry and cassis' — Sweetness 5; Acidity 3 (fresh but standard Ruby Port medium acidity)",
+        "Made to be consumed immediately — confirms approachable, medium-full body profile"
+      ]
+    }
+  ]
+}

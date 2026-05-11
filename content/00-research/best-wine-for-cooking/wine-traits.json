@@ -1,0 +1,250 @@
+{
+  "slug": "best-wine-for-cooking",
+  "target_keyword": "best wine for cooking",
+  "research_date": "2026-04-19",
+  "candidate_source": "content/00-research/best-wine-for-cooking/products-verified.json",
+  "wines": [
+    {
+      "name": "Oberon Merlot 2023",
+      "tannin": 3,
+      "acidity": 2,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/oberon-merlot-2023/2554394",
+        "ABV 13.7% confirmed on Wine.com product page — Alcohol 4",
+        "Winemaker notes: 'supple tannins'; JS: 'soft and supple, firmly framed tannins'; WS: 'medium-grained tannins' — Tannin 3",
+        "Warm Napa Valley Merlot, warm-vintage low-acid red style — Acidity 2",
+        "Winemaker notes: 'dense, rich'; JS: full, round profile — Body 4"
+      ]
+    },
+    {
+      "name": "Schug Sonoma Coast Pinot Noir 2023",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/schug-sonoma-coast-pinot-noir-2023/2283884",
+        "ABV 13.8% confirmed on Wine.com product page — Alcohol 4",
+        "JS: 'light-bodied with bright acidity and a slight spritz'; winemaker: 'lively acidity on the finish' — Acidity 4",
+        "JS: 'light-bodied'; Tasting Panel: no grip signal — Tannin 2, Body 2",
+        "Sonoma Coast cool-climate Pinot Noir style confirms low tannin, light body, bright acidity"
+      ]
+    },
+    {
+      "name": "Lemelson Thea's Selection Pinot Noir 2022",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/lemelson-theas-selection-pinot-noir-2022/2560816",
+        "ABV 13.5% confirmed on Wine.com product page — Alcohol 4 (boundary rounds up)",
+        "Winemaker notes: 'rich, silky tannins'; Vinous: 'gently tannic'; JD: 'chalky tannins' — Tannin 2",
+        "WS: 'snappy and vibrant'; JD: 'snappy freshness, lifted finish' — Acidity 4",
+        "Vinous: 'medium in length'; JD: 'bright and medium-bodied' — Body 3"
+      ]
+    },
+    {
+      "name": "Chehalem Estate Grown Chehalem Mountains Pinot Noir 2022",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chehalem-estate-grown-chehalem-mountains-pinot-noir-2022/2175259",
+        "ABV 14% confirmed on Wine.com product page — Alcohol 4 (boundary rounds up)",
+        "Winemaker notes: 'dusty tannin structure'; WS: 'refined tannins'; JS: 'velvety tannins' — Tannin 3 (more structured than typical Pinot)",
+        "No explicit high-acid signal; warm 2022 vintage, medium acidity for Oregon PN — Acidity 3",
+        "Winemaker notes: 'medium body'; JD: 'medium-bodied' — Body 3"
+      ]
+    },
+    {
+      "name": "Migration Sonoma Coast Pinot Noir 2022",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/migration-sonoma-coast-pinot-noir-2022/2105424",
+        "ABV 14.2% confirmed on Wine.com product page — Alcohol 4",
+        "JD: 'refined, ripe tannins'; JS: 'fine tannins' — Tannin 3 (riper style given warm 2022 vintage)",
+        "JS: 'bright acidity'; JD: 'even acidity' — Acidity 3 (even/balanced, not laser-bright for warm vintage)",
+        "JD: 'medium-bodied frame'; JS: 'medium-bodied' — Body 3"
+      ]
+    },
+    {
+      "name": "Astrolabe Marlborough Sauvignon Blanc 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/astrolabe-marlborough-sauvignon-blanc-2024/2632694",
+        "ABV 13.5% confirmed on Wine.com product page — Alcohol 4 (boundary rounds up)",
+        "Marlborough Sauvignon Blanc varietal baseline: no tannin — Tannin 1",
+        "Vinous: 'fresh, balanced acidity'; winemaker: 'refreshingly smooth, dry and persistent finish'; Marlborough high-acid signature — Acidity 5",
+        "Winemaker notes: 'medium-bodied'; RP: 'maritime freshness and levity' — Body 2"
+      ]
+    },
+    {
+      "name": "Schug Sauvignon Blanc 2023",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/schug-sauvignon-blanc-2023/2046967",
+        "ABV 13.5% confirmed on Wine.com product page — Alcohol 4 (boundary rounds up)",
+        "Sauvignon Blanc varietal baseline: no tannin — Tannin 1",
+        "Tasting Panel: 'striking acidity'; WE: 'lively acidity'; winemaker: 'zesty acidity' — Acidity 4 (California SB slightly lower than Marlborough)",
+        "JS: 'medium-bodied' confirmed — Body 2"
+      ]
+    },
+    {
+      "name": "Banshee Sonoma Coast Chardonnay 2022",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/banshee-sonoma-coast-chardonnay-2022/1917429",
+        "ABV 14.2% confirmed on Wine.com product page — Alcohol 4",
+        "Chardonnay varietal baseline: no tannin — Tannin 1",
+        "Winemaker: 'bright acidity'; but also 'lush and viscous', 'caramel and vanilla' from partial oak — Acidity 3 (oak tempers acidity)",
+        "JS: 'full body'; winemaker: 'lush and viscous' — Body 4"
+      ]
+    },
+    {
+      "name": "Neyers Sonoma 304 Chardonnay 2023",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/neyers-sonoma-304-chardonnay-2023/2759868",
+        "ABV 13.6% confirmed on Wine.com product page — Alcohol 4",
+        "Chardonnay varietal baseline: no tannin — Tannin 1",
+        "JS: 'good acidity and refreshing qualities'; WS: 'juicy and sleek' — Acidity 4 (steel-fermented, no oak to round acidity)",
+        "Steel-fermented, lees-aged, mid-weight Sonoma Chardonnay — Body 3"
+      ]
+    },
+    {
+      "name": "Diatom Santa Barbara Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/diatom-santa-barbara-chardonnay-2024/3747388",
+        "inference: ABV not listed on Wine.com product page; stainless-steel-only Santa Barbara Chardonnay, unoaked coastal style — typical ABV 13.0–13.5%; assigned 13.0% → Alcohol 3",
+        "Chardonnay varietal baseline: no tannin — Tannin 1",
+        "WS: 'mouthwatering thread of acidity'; WE: 'zippy'; RP: 'high-toned, cleansing quality'; JD: 'crisp' — Acidity 4",
+        "JD: 'medium to light gold hue', 'puts on weight with time in glass'; JS: 'succulent texture' — Body 2 (unoaked stainless, lighter frame)"
+      ]
+    },
+    {
+      "name": "Attems Pinot Grigio 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/attems-pinot-grigio-2023/2004520",
+        "ABV 12.5% confirmed on Wine.com product page — Alcohol 3",
+        "Pinot Grigio varietal baseline: no tannin — Tannin 1",
+        "Winemaker: 'perfect balance between citrus acidity and velvety structure'; JS: 'juicy and polished' — Acidity 3",
+        "JS: 'medium-bodied, juicy' — Body 2 (Italian Pinot Grigio is typically light)"
+      ]
+    },
+    {
+      "name": "St. Michael-Eppan Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/st-michael-eppan-pinot-grigio-2024/3326658",
+        "ABV 13% confirmed on Wine.com product page — Alcohol 3",
+        "Pinot Grigio varietal baseline: no tannin — Tannin 1",
+        "Winemaker: 'nice acidity'; WW: 'fresh structure and vibrant energy' — Acidity 3",
+        "JS: 'medium body'; Alto Adige PG style slightly fuller than Friuli but still light — Body 2"
+      ]
+    },
+    {
+      "name": "Terlan Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/terlan-pinot-grigio-2024/2987364",
+        "ABV 13.5% confirmed on Wine.com product page — Alcohol 4 (boundary rounds up)",
+        "Pinot Grigio varietal baseline: no tannin — Tannin 1",
+        "Vinous: 'brisk acidity'; RP: 'bright and crisp'; WE: 'tension between richness and precision' — Acidity 4 (Terlano benchmarked higher acidity than typical PG)",
+        "JS: 'light-bodied but superjuicy'; WS: 'sleek' — Body 2"
+      ]
+    },
+    {
+      "name": "Florio Vecchioflorio Sweet Marsala Superiore 2020",
+      "tannin": 1,
+      "acidity": 2,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/florio-vecchioflorio-sweet-marsala-superiore-2020/2610358",
+        "ABV 18% confirmed on Wine.com product page — Alcohol 5",
+        "Marsala Superiore (Grillo/Catarratto base), white-grape-based fortified: no tannin — Tannin 1",
+        "Sweet Marsala Superiore: 'rum-soaked raisins', 'vanilla', explicit 'Sweet' designation — Sweetness 5",
+        "Oxidative oak-aged fortified; WE: warm, lush profile; lower free acidity typical for barrel-aged sweet Marsala — Acidity 2",
+        "Fortified, medium weight for style — Body 3"
+      ]
+    },
+    {
+      "name": "Lustau Solera Los Arcos Dry Amontillado Sherry",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/lustau-solera-los-arcos-dry-amontillado-sherry/40768",
+        "ABV 18.5% confirmed on Wine.com product page — Alcohol 5",
+        "Amontillado Sherry (Palomino): no tannin — Tannin 1",
+        "RP: 'great acid'; Decanter: 'lively salty tang'; WS: 'nice focus and zip on the finish' — Acidity 4",
+        "Explicit 'Dry' in product name and all tasting notes; RP: 'dry personality' — Sweetness 1",
+        "JS: 'medium-bodied Amontillado' — Body 3"
+      ]
+    }
+  ]
+}

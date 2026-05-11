@@ -49,7 +49,7 @@ research/
 | `/info-gain` | **Starting research on any new topic.** Surfaces stats, forum insights, myths. | `/info-gain [wine topic]` — run before writing any brief |
 | `/reddit-research` | **Need audience perspective on a wine topic.** Pain points, questions, preferences. | `/reddit-research [topic]` — check what real people ask about |
 | `/dataforseo` | **Need keyword volume, difficulty, SERP data.** | `/dataforseo` — query search volume and competition |
-| `/neuronwriter-seo` | **Need SERP-based term recommendations for a keyword.** | `/neuronwriter-seo [keyword]` — get terms to target |
+| `/beuron-seo` | **Need SERP-based term recommendations for a keyword.** Only SEO term tool used on this site — `neuronwriter-seo` is NOT used. | `/beuron-seo [keyword]` — get terms to target |
 | Web search | **Fact-checking wine regions, producers, vintages.** | Use for verifiable wine facts |
 
 ---

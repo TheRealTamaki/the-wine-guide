@@ -1,0 +1,86 @@
+{
+  "slug": "best-wines-under-15",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Sur de los Andes Reserva Malbec 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Mendoza Malbec Reserva — firm tannins, dark fruit, ~14% ABV"]
+    },
+    {
+      "name": "Vinos de Arganza Flavium Seleccion Mencia 2021",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Bierzo Mencia — red cherry, slate minerality, 13-13.5% ABV"]
+    },
+    {
+      "name": "Jadix Cabernet Sauvignon 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Pays d'Oc Cabernet Sauvignon — ripe, soft tannins, ~13.5-14% ABV"]
+    },
+    {
+      "name": "Ziobaffa Organic Toscana 2020",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Tuscany Sangiovese — bright cherry, high acidity, ~13% ABV"]
+    },
+    {
+      "name": "Chateau Montaud Cotes de Provence Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Cotes de Provence Rosé — dry, mineral, light body, ~13% ABV"]
+    },
+    {
+      "name": "Chateau La Freynelle Blanc 2025",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Bordeaux Blanc (Sauvignon Blanc-Semillon) — citrus, rounded texture, ~12.5-13% ABV"]
+    },
+    {
+      "name": "Ziobaffa Organic Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Puglia Pinot Grigio — warmer climate, more body than northern PG, 12.5-13% ABV"]
+    },
+    {
+      "name": "Sur de los Andes Malbec 2024",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Mendoza Malbec entry tier — ripe plum, softer tannins than Reserva, ~13.5-14% ABV"]
+    }
+  ]
+}

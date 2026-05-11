@@ -1,0 +1,96 @@
+---
+interface Props {
+  prompt: string;
+  alt: string;
+  caption?: string;
+  hero?: boolean;
+}
+const { prompt, alt, caption, hero = false } = Astro.props;
+---
+
+<figure class={`guide-placeholder${hero ? ' guide-placeholder--hero' : ''}`}>
+  <div class="gp-box" role="img" aria-label={alt}>
+    <div class="gp-inner">
+      <div class="gp-tag">Image Placeholder</div>
+      <div class="gp-prompt-label">AI Prompt</div>
+      <p class="gp-prompt">{prompt}</p>
+    </div>
+  </div>
+  {caption && <figcaption class="gp-caption">{caption}</figcaption>}
+</figure>
+
+<style>
+.guide-placeholder {
+  margin: 36px 0;
+}
+
+.guide-placeholder--hero {
+  margin: 0 0 40px;
+}
+
+.gp-box {
+  width: 100%;
+  background: #ebe3d3;
+  border: 1.5px dashed #8a8177;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 7;
+}
+
+.guide-placeholder--hero .gp-box {
+  aspect-ratio: 16 / 6;
+}
+
+.guide-placeholder:not(.guide-placeholder--hero) .gp-box {
+  aspect-ratio: 16 / 9;
+}
+
+.gp-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 24px 32px;
+  max-width: 600px;
+}
+
+.gp-tag {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8a8177;
+  background: #f4efe6;
+  border: 1px solid #8a8177;
+  padding: 4px 10px;
+}
+
+.gp-prompt-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5a1a2b;
+  margin-top: 4px;
+}
+
+.gp-prompt {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #3a3530;
+  font-style: italic;
+  margin: 0;
+}
+
+.gp-caption {
+  margin-top: 10px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a8177;
+  text-align: center;
+}
+</style>

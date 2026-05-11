@@ -1,0 +1,10 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<aside class={`text-xs text-text-muted bg-bg-alt border border-border px-4 py-3 max-w-[var(--w-prose)] ${className}`}>
+  <strong class="font-medium">Heads up:</strong> Some links in this article are affiliate links. If you buy through them, we earn a small commission. It doesn't cost you anything extra, and we'd never recommend something we wouldn't buy ourselves.
+</aside>

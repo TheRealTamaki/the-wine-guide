@@ -1,0 +1,42 @@
+---
+interface Props {
+  type?: 'tip' | 'note' | 'warning';
+  title?: string;
+}
+
+const { type = 'tip', title } = Astro.props;
+
+const styles = {
+  tip: {
+    container: 'bg-accent-light border border-accent/40',
+    icon: 'lightbulb',
+    label: 'tip',
+    color: 'text-accent',
+  },
+  note: {
+    container: 'bg-green-light border border-green/40',
+    icon: 'info',
+    label: 'note',
+    color: 'text-green',
+  },
+  warning: {
+    container: 'bg-amber-50 border border-amber-400/50',
+    icon: 'warning',
+    label: 'heads up',
+    color: 'text-amber-700',
+  },
+};
+
+const s = styles[type];
+---
+
+<aside class={`not-prose my-6 px-6 py-5 ${s.container}`}>
+  {title && (
+    <div class={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-2 ${s.color}`}>
+      {title}
+    </div>
+  )}
+  <div class="text-sm text-text leading-relaxed">
+    <slot />
+  </div>
+</aside>

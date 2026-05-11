@@ -1,0 +1,14 @@
+{
+  "slug": "best-light-red-wines",
+  "date": "2026-04-19",
+  "wines": [
+    { "name": "Louis Latour Bourgogne Pinot Noir 2022", "tannin": 2, "acidity": 4, "sweetness": 1, "alcohol": 2, "body": 2, "confidence": "inferred", "sources": ["Burgundy regional Pinot Noir, 12.5% ABV light style"] },
+    { "name": "Domaine Gilles Coperet Fleurie Les Roches 2023", "tannin": 2, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Beaujolais Cru (Gamay) varietal quick-ref"] },
+    { "name": "Alois Lageder Schiava 2024", "tannin": 1, "acidity": 4, "sweetness": 1, "alcohol": 2, "body": 1, "confidence": "inferred", "sources": ["Alto Adige Schiava, lightest mainstream red"] },
+    { "name": "Donnafugata Bell'Assai Vittoria 2023", "tannin": 2, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Sicilian Frappato, light-medium Mediterranean red"] },
+    { "name": "Lincourt Rancho Santa Rosa Pinot Noir 2023", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Sta. Rita Hills Pinot Noir, light-medium California cool-climate"] },
+    { "name": "Guimaro Camino Real Mencia 2022", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Ribeira Sacra Mencia, light-medium slate-driven Spanish"] },
+    { "name": "Domaine Gilles Coperet Morgon 2023", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Beaujolais Cru Morgon, most structured Gamay"] },
+    { "name": "Folk Machine Charbono 2023", "tannin": 2, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["California Charbono (Bonarda), light low-alcohol style"] }
+  ]
+}

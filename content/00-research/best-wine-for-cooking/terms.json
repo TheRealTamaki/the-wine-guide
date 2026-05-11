@@ -1,0 +1,323 @@
+{
+  "query_id": "400b930ed16e283d",
+  "keyword": "best wine for cooking",
+  "slug": "best-wine-for-cooking",
+  "pulled_at": "2026-04-19",
+  "credit_spend": 0,
+  "notes": "Existing query reused — no credits spent.",
+
+  "basic": [
+    "wine",
+    "best wine for cooking",
+    "wine for cooking",
+    "white wine",
+    "best wine",
+    "cooking wine",
+    "sauce",
+    "sauvignon blanc",
+    "pinot",
+    "dry white",
+    "chardonnay",
+    "savory"
+  ],
+  "basic_ranges": {
+    "wine": "4-55x",
+    "best wine for cooking": "1x",
+    "wine for cooking": "1-2x",
+    "white wine": "1-8x",
+    "best wine": "1-2x",
+    "cooking wine": "1-3x",
+    "sauce": "1-13x",
+    "sauvignon blanc": "1-3x",
+    "pinot": "1-4x",
+    "dry white": "1x",
+    "chardonnay": "1-3x",
+    "savory": "1-2x"
+  },
+
+  "extended": [
+    "red wine",
+    "cook with wine",
+    "white wine for cooking",
+    "white wine sauce",
+    "sweet wine",
+    "dry white wine",
+    "sherry",
+    "crisp white wine",
+    "marsala",
+    "fortified wine",
+    "cooking process",
+    "pinot grigio",
+    "madeira",
+    "acidity",
+    "wine like",
+    "dry wine",
+    "mussel",
+    "choose a wine",
+    "white cooking wine",
+    "rice wine",
+    "wine in cooking",
+    "types of cooking",
+    "cooking wine",
+    "america's test kitchen",
+    "bottle of wine",
+    "cabernet",
+    "pasta sauce",
+    "pan sauce",
+    "drinking wine",
+    "wine to cook",
+    "splash of wine",
+    "white wine like chardonnay",
+    "style of wine",
+    "vermouth",
+    "chinese cooking wine",
+    "tannin",
+    "use red",
+    "merlot",
+    "varietals",
+    "use red or white",
+    "beef stew",
+    "wine reduction sauce",
+    "white and red",
+    "shaoxing wine",
+    "leftover wine",
+    "pinot noir",
+    "chicken or vegetable stock",
+    "dry sherry",
+    "scallop",
+    "like chardonnay",
+    "risotto",
+    "seafood dishes",
+    "style of white",
+    "oaky",
+    "chicken marsala",
+    "full-bodied",
+    "marinate",
+    "tenderize",
+    "steamed mussels",
+    "deglazing",
+    "sauté",
+    "create a rich",
+    "beurre",
+    "coq",
+    "wine is perfectly",
+    "tannic",
+    "contain salt",
+    "unwanted sweetness",
+    "caramelize",
+    "savory dish",
+    "linguine",
+    "unoaked chardonnay",
+    "higher abv",
+    "complete guide",
+    "tenderizing",
+    "deglaze",
+    "delicate flavors",
+    "subtle nuances",
+    "better tasting",
+    "sommelier",
+    "aperitif",
+    "dry marsala"
+  ],
+
+  "entity": [
+    "Wine",
+    "Cooking",
+    "White wine",
+    "Sauvignon blanc",
+    "Taste",
+    "Recipe",
+    "Chardonnay",
+    "Cabernet Sauvignon",
+    "Alcoholic beverage",
+    "Phenolic content in wine",
+    "Grape",
+    "Sauce",
+    "Umami",
+    "Red wine",
+    "Pasta",
+    "Sweetness of wine",
+    "Beef",
+    "Meat",
+    "Marination",
+    "Fortified wine",
+    "Merlot",
+    "Bottle",
+    "Dessert",
+    "Chef",
+    "Aroma of wine",
+    "Pinot noir",
+    "Madeira wine",
+    "Sherry",
+    "Marsala wine",
+    "Pinot gris",
+    "Varietal",
+    "Chinese cuisine",
+    "Protein",
+    "Vermouth",
+    "Port wine",
+    "Acids in wine",
+    "Braising",
+    "Poaching (cooking)",
+    "Deglazing (cooking)",
+    "Food",
+    "Ingredient",
+    "Stew",
+    "Soup",
+    "Fish",
+    "Meal",
+    "Shaoxing wine",
+    "United States",
+    "Restaurant",
+    "Chicken as food",
+    "Liquor",
+    "Vegetable",
+    "Sutter Home Winery",
+    "Ragù",
+    "Juice",
+    "Lemon",
+    "Sautéing",
+    "Mussel",
+    "Tomato sauce",
+    "Edible mushroom",
+    "Fruit",
+    "Grocery store",
+    "Sugar",
+    "Kitchen",
+    "Seafood",
+    "Salt",
+    "Caramelization",
+    "Mouthfeel",
+    "Drinking",
+    "Dish (food)",
+    "Shaoxing",
+    "Citrus",
+    "Italy",
+    "Wine and food pairing",
+    "Wine tasting descriptors",
+    "Cook's Illustrated",
+    "Chicken",
+    "China",
+    "Oak (wine)",
+    "Wine bottle",
+    "Vinegar",
+    "Riesling",
+    "Syrah"
+  ],
+
+  "paa_questions": [
+    "What wine is best for GERD?",
+    "Is pinot or sauvignon better for cooking?",
+    "Is Merlot or Cabernet Sauvignon better for cooking?",
+    "Is wine good for cardiac patients?"
+  ],
+
+  "voice_banned_skips": [],
+
+  "absorption_zone_plan": {
+    "intro_slot": "ALWAYS EMPTY — never propose intro absorption",
+
+    "faq_slots": [
+      {
+        "suggested_question": "Is Merlot or Cabernet Sauvignon better for cooking?",
+        "source": "PAA",
+        "terms": ["merlot", "cabernet", "Cabernet Sauvignon", "Merlot", "tannin", "tannic", "full-bodied", "beef stew", "use red or white"]
+      },
+      {
+        "suggested_question": "Is pinot grigio or sauvignon blanc better for cooking?",
+        "source": "PAA (expanded)",
+        "terms": ["pinot grigio", "sauvignon blanc", "crisp white wine", "white wine for cooking", "acidity", "Sauvignon blanc", "Pinot gris", "delicate flavors", "seafood dishes", "pan sauce", "white wine sauce"]
+      },
+      {
+        "suggested_question": "Can I use any wine for cooking, or does it need to be a special cooking wine?",
+        "source": "PAA (implied) + extended terms",
+        "terms": ["cooking wine", "drinking wine", "white cooking wine", "contain salt", "unwanted sweetness", "america's test kitchen", "bottle of wine"]
+      },
+      {
+        "suggested_question": "What wine is best for cooking pasta sauce?",
+        "source": "Extended terms cluster",
+        "terms": ["pasta sauce", "tomato sauce", "Pasta", "Tomato sauce", "Ragù", "red wine", "use red", "white and red", "Italy"]
+      },
+      {
+        "suggested_question": "What wine should I use for beef stew and braises?",
+        "source": "Extended terms cluster",
+        "terms": ["beef stew", "Beef", "Braising", "Stew", "wine reduction sauce", "Meat", "Protein", "create a rich", "coq", "leftover wine"]
+      },
+      {
+        "suggested_question": "What is the best wine for cooking risotto?",
+        "source": "Extended terms cluster",
+        "terms": ["risotto", "dry white wine", "Chardonnay", "white wine like chardonnay", "unoaked chardonnay", "subtle nuances", "better tasting"]
+      },
+      {
+        "suggested_question": "What wine is best for GERD?",
+        "source": "PAA",
+        "terms": ["acidity", "Acids in wine", "sweet wine", "dry wine", "higher abv"]
+      }
+    ],
+
+    "wine_description_slots": [
+      {
+        "wine_type": "Sauvignon Blanc",
+        "terms": ["sauvignon blanc", "Sauvignon blanc", "crisp white wine", "acidity", "white wine sauce", "pan sauce", "mussel", "Mussel", "steamed mussels", "scallop", "Seafood", "seafood dishes", "Fish", "delicate flavors", "wine like", "dry wine", "style of white", "oaky"]
+      },
+      {
+        "wine_type": "Chardonnay",
+        "terms": ["chardonnay", "Chardonnay", "white wine like chardonnay", "unoaked chardonnay", "oaky", "Oak (wine)", "risotto", "like chardonnay", "style of white", "subtle nuances", "Taste", "Mouthfeel", "Aroma of wine"]
+      },
+      {
+        "wine_type": "Pinot Grigio",
+        "terms": ["pinot grigio", "Pinot gris", "dry white wine", "crisp white wine", "white wine for cooking", "delicate flavors", "seafood dishes", "linguine", "Pasta", "subtle nuances"]
+      },
+      {
+        "wine_type": "Dry Sherry",
+        "terms": ["sherry", "Sherry", "dry sherry", "fortified wine", "Fortified wine", "aperitif", "Umami", "caramelize", "Caramelization", "savory dish", "sauté", "Sautéing", "pan sauce", "Vermouth", "vermouth"]
+      },
+      {
+        "wine_type": "Marsala",
+        "terms": ["marsala", "Marsala wine", "dry marsala", "chicken marsala", "fortified wine", "Fortified wine", "Dessert", "full-bodied", "marinate", "Marination", "sauté", "Sautéing", "Umami", "Mushroom", "Edible mushroom"]
+      },
+      {
+        "wine_type": "Pinot Noir",
+        "terms": ["pinot noir", "Pinot noir", "red wine", "Red wine", "full-bodied", "tannic", "tannin", "marinate", "tenderize", "tenderizing", "Marination", "Protein", "Meat", "Beef", "coq", "Braising", "Stew"]
+      },
+      {
+        "wine_type": "Cabernet Sauvignon",
+        "terms": ["cabernet", "Cabernet Sauvignon", "merlot", "Merlot", "tannic", "tannin", "full-bodied", "beef stew", "Braising", "Stew", "Syrah", "wine reduction sauce", "create a rich"]
+      },
+      {
+        "wine_type": "Vermouth / Madeira",
+        "terms": ["vermouth", "Vermouth", "madeira", "Madeira wine", "fortified wine", "Fortified wine", "Port wine", "aperitif", "savory dish", "splash of wine", "leftover wine", "Phenolic content in wine", "Acids in wine"]
+      },
+      {
+        "wine_type": "Shaoxing / Rice wine (Chinese cooking)",
+        "terms": ["shaoxing wine", "Shaoxing wine", "Shaoxing", "rice wine", "chinese cooking wine", "Chinese cuisine", "China", "marinate", "Marination", "Ingredient", "Meal", "Dish (food)", "Chicken as food"]
+      }
+    ],
+
+    "secondary_sections": [
+      {
+        "suggested_heading": "Red vs White: Which Wine to Use and When",
+        "terms": ["use red or white", "white and red", "wine in cooking", "cook with wine", "types of cooking", "cooking process", "choose a wine", "style of wine", "varietals", "Varietal", "Wine and food pairing", "drinking wine", "wine to cook", "Wine tasting descriptors"]
+      },
+      {
+        "suggested_heading": "How Wine Changes Your Food (The Science)",
+        "terms": ["acidity", "Acids in wine", "tannin", "Phenolic content in wine", "Sweetness of wine", "Umami", "Caramelization", "caramelize", "Mouthfeel", "Aroma of wine", "deglazing", "Deglazing (cooking)", "deglaze", "tenderize", "tenderizing", "Marination", "marinate", "Braising", "Poaching (cooking)", "beurre", "wine reduction sauce", "pan sauce", "sauté", "Sautéing", "Protein", "contain salt"]
+      },
+      {
+        "suggested_heading": "What About Cooking Wine from the Grocery Store?",
+        "terms": ["cooking wine", "white cooking wine", "america's test kitchen", "contain salt", "unwanted sweetness", "Grocery store", "Sutter Home Winery", "drinking wine", "bottle of wine", "better tasting", "sommelier", "Cook's Illustrated"]
+      },
+      {
+        "suggested_heading": "Best Wine for Specific Dishes",
+        "terms": ["pasta sauce", "Pasta", "Ragù", "Tomato sauce", "risotto", "chicken marsala", "chicken or vegetable stock", "linguine", "beef stew", "Stew", "Soup", "mussel", "steamed mussels", "scallop", "seafood dishes", "Seafood", "Fish", "Chicken", "coq", "Poaching (cooking)", "Vegetable", "Lemon", "Citrus", "Juice", "Edible mushroom", "Salt", "Sugar"]
+      }
+    ],
+
+    "winetip_slots": [
+      {
+        "tip_type": "WineTip #2 (practical advice)",
+        "terms": ["splash of wine", "leftover wine", "higher abv", "wine is perfectly", "unwanted sweetness", "contain salt", "white cooking wine", "dry wine", "style of wine", "complete guide", "better tasting", "Rice wine", "Vinegar", "Juice", "aperitif", "Liquor", "United States", "Restaurant"]
+      }
+    ]
+  }
+}

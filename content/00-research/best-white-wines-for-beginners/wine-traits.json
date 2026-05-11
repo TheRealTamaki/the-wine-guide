@@ -1,0 +1,86 @@
+{
+  "slug": "best-white-wines-for-beginners",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Santa Margherita Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Trentino Alto Adige Pinot Grigio, crisp dry style", "category guidance"]
+    },
+    {
+      "name": "Grand Napa Vineyards Sauvignon Blanc 2025",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["Napa Spring Mountain SB, riper than NZ per article", "varietal defaults (warmer climate SB)"]
+    },
+    {
+      "name": "Eroica Riesling 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 3,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Washington off-dry Riesling, ~12% ABV", "article notes off-dry with zingy acidity"]
+    },
+    {
+      "name": "Grand Napa Vineyards Los Carneros Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["Carneros cool-climate Chardonnay, ~13.5% ABV", "varietal defaults (Chardonnay oaked)"]
+    },
+    {
+      "name": "Damilano Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Moscato d'Asti DOCG (5.5% ABV per article)", "category guidance"]
+    },
+    {
+      "name": "Dog Point Vineyard Sauvignon Blanc 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Marlborough NZ SB benchmark", "category guidance (Sauvignon Blanc NZ)"]
+    },
+    {
+      "name": "Calculated Risk Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["Russian River cool-climate Chardonnay, touch of oak per article", "varietal defaults"]
+    },
+    {
+      "name": "Ziobaffa Organic Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["Puglia organic Pinot Grigio, slightly richer than northern per article", "varietal defaults"]
+    }
+  ]
+}

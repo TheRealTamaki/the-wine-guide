@@ -1,0 +1,52 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import AffiliateDisclosure from '../components/ui/AffiliateDisclosure.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+}
+
+const { article } = Astro.props;
+const { title, description, publishDate, modifiedDate, ogImage, affiliateDisclosure } = article.data;
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Products', href: '/products/' },
+  { label: title },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: title,
+  description,
+  url: Astro.url.href,
+  brand: { '@type': 'Organization', name: 'The Wine Guide' },
+};
+---
+
+<BaseLayout
+  {title}
+  {description}
+  {ogImage}
+  publishDate={publishDate}
+  modifiedDate={modifiedDate}
+  {schema}
+>
+  <div class="max-w-[52rem] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={breadcrumbs} />
+
+    <header class="mt-8 mb-10 text-center">
+      <h1 class="text-[2.25rem] font-heading font-bold text-primary leading-tight mb-4">{title}</h1>
+      <p class="text-lg text-secondary leading-relaxed max-w-[38rem] mx-auto">{description}</p>
+    </header>
+
+    {affiliateDisclosure && <AffiliateDisclosure class="mb-8" />}
+
+    <div class="prose mx-auto">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

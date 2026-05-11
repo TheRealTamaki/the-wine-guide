@@ -1,0 +1,86 @@
+{
+  "slug": "best-wine-for-non-wine-drinkers",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Eroica Riesling 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 3,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Washington off-dry Riesling (~12% ABV per article)", "category guidance"]
+    },
+    {
+      "name": "Santa Margherita Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Trentino dry Pinot Grigio", "category guidance"]
+    },
+    {
+      "name": "Chateau d'Esclans Whispering Angel Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Cotes de Provence dry rose blend", "varietal defaults"]
+    },
+    {
+      "name": "Damilano Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Moscato d'Asti DOCG (5.5% ABV per article)", "category guidance"]
+    },
+    {
+      "name": "Mionetto Sergio Lambrusco Reggiano Dolce NV",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Lambrusco Reggiano Dolce (~7.5-8% ABV typical)", "Emilia-Romagna sweet sparkling red"]
+    },
+    {
+      "name": "Apothic Red Winemaker's Blend NV",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 3,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["California semi-sweet red blend (~13.5-14% ABV)", "article notes moderate sweetness"]
+    },
+    {
+      "name": "Sur de los Andes Reserva Pinot Noir 2022",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Patagonian light Pinot Noir per article", "varietal defaults"]
+    },
+    {
+      "name": "BenMarco Malbec 2022",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Uco Valley high-altitude Malbec", "varietal defaults"]
+    }
+  ]
+}

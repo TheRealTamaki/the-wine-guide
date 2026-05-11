@@ -1,0 +1,5291 @@
+{
+  "keyword": "orange wine guide",
+  "analysis_date": "2026-04-27",
+  "competitor_count": 3,
+  "competitors": [
+    {
+      "url": "https://www.coravin.com/blogs/community/what-is-orange-wine-a-beginners-guide",
+      "title": "shop.app is blocked",
+      "file": "orange-wine-guide_competitor-1.md"
+    },
+    {
+      "url": "https://winefolly.com/deep-dive/orange-wine/",
+      "title": "Everything You Want to Know About Orange Wine",
+      "file": "orange-wine-guide_competitor-2.md"
+    },
+    {
+      "url": "https://vinepair.com/articles/orange-wine-guide/",
+      "title": "",
+      "file": "orange-wine-guide_competitor-3.md"
+    }
+  ],
+  "basic_terms": [
+    {
+      "term": "orange wine",
+      "term_lemma": "orange wine",
+      "importance": 100,
+      "suggested_range": [
+        17,
+        55
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 33,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        55,
+        19,
+        17
+      ]
+    },
+    {
+      "term": "made",
+      "term_lemma": "make",
+      "importance": 78,
+      "suggested_range": [
+        4,
+        12
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        12,
+        4,
+        8
+      ]
+    },
+    {
+      "term": "wine taste",
+      "term_lemma": "wine taste",
+      "importance": 72,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "taste like",
+      "term_lemma": "taste like",
+      "importance": 68,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "comes",
+      "term_lemma": "come",
+      "importance": 66,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "skin",
+      "term_lemma": "skin",
+      "importance": 64,
+      "suggested_range": [
+        3,
+        33
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        33,
+        3,
+        7
+      ]
+    },
+    {
+      "term": "flavors",
+      "term_lemma": "flavor",
+      "importance": 62,
+      "suggested_range": [
+        1,
+        13
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        13,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "known",
+      "term_lemma": "know",
+      "importance": 62,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 33,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "grape varieties",
+      "term_lemma": "grape variety",
+      "importance": 62,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "used",
+      "term_lemma": "use",
+      "importance": 61,
+      "suggested_range": [
+        2,
+        8
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        8,
+        2,
+        3
+      ]
+    },
+    {
+      "term": "contact",
+      "term_lemma": "contact",
+      "importance": 59,
+      "suggested_range": [
+        1,
+        23
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        23,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "regions",
+      "term_lemma": "region",
+      "importance": 58,
+      "suggested_range": [
+        2,
+        8
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        8,
+        4,
+        2
+      ]
+    },
+    {
+      "term": "natural wines",
+      "term_lemma": "natural wine",
+      "importance": 57,
+      "suggested_range": [
+        1,
+        9
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        9,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "producers",
+      "term_lemma": "producer",
+      "importance": 56,
+      "suggested_range": [
+        2,
+        8
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        8,
+        7,
+        2
+      ]
+    },
+    {
+      "term": "australia",
+      "term_lemma": "australia",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "france",
+      "term_lemma": "france",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "italy",
+      "term_lemma": "italy",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "california",
+      "term_lemma": "california",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "winemaking",
+      "term_lemma": "winemaking",
+      "importance": 55,
+      "suggested_range": [
+        4,
+        7
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        7,
+        4,
+        4
+      ]
+    },
+    {
+      "term": "style",
+      "term_lemma": "style",
+      "importance": 55,
+      "suggested_range": [
+        2,
+        7
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        6,
+        2,
+        7
+      ]
+    },
+    {
+      "term": "cheese",
+      "term_lemma": "cheese",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "color",
+      "term_lemma": "color",
+      "importance": 54,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        2,
+        6
+      ]
+    },
+    {
+      "term": "fermentation",
+      "term_lemma": "fermentation",
+      "importance": 54,
+      "suggested_range": [
+        4,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        4,
+        4
+      ]
+    },
+    {
+      "term": "red wines",
+      "term_lemma": "red wine",
+      "importance": 54,
+      "suggested_range": [
+        1,
+        7
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        7,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "georgia",
+      "term_lemma": "georgia",
+      "importance": 53,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "term": "produced",
+      "term_lemma": "produce",
+      "importance": 53,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "term": "fruit",
+      "term_lemma": "fruit",
+      "importance": 53,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "jura",
+      "term_lemma": "jura",
+      "importance": 53,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        6,
+        2
+      ]
+    },
+    {
+      "term": "white grapes",
+      "term_lemma": "white grape",
+      "importance": 53,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "seeds",
+      "term_lemma": "seed",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "amber",
+      "term_lemma": "amber",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "sauvignon",
+      "term_lemma": "sauvignon",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "qvevri",
+      "term_lemma": "qvevri",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "temperature",
+      "term_lemma": "temperature",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "term": "process",
+      "term_lemma": "process",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "called",
+      "term_lemma": "call",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "left",
+      "term_lemma": "leave",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "term": "rkatsiteli",
+      "term_lemma": "rkatsiteli",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "different",
+      "term_lemma": "different",
+      "importance": 52,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "oxidative",
+      "term_lemma": "oxidative",
+      "importance": 52,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "dry",
+      "term_lemma": "dry",
+      "importance": 52,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "tannin",
+      "term_lemma": "tannin",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "similar",
+      "term_lemma": "similar",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "ribolla gialla",
+      "term_lemma": "ribolla gialla",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "white wine",
+      "term_lemma": "white wine",
+      "importance": 52,
+      "suggested_range": [
+        5,
+        18
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        18,
+        0,
+        5
+      ]
+    },
+    {
+      "term": "hue",
+      "term_lemma": "hue",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "found",
+      "term_lemma": "find",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "guide",
+      "term_lemma": "guide",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "back",
+      "term_lemma": "back",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "years",
+      "term_lemma": "year",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "buried",
+      "term_lemma": "bury",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "georgian",
+      "term_lemma": "georgian",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "method",
+      "term_lemma": "method",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "work",
+      "term_lemma": "work",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "citrus",
+      "term_lemma": "citrus",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "honey",
+      "term_lemma": "honey",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "particularly",
+      "term_lemma": "particularly",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "experimenting",
+      "term_lemma": "experiment",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "ramato",
+      "term_lemma": "ramato",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pinot grigio",
+      "term_lemma": "pinot grigio",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pinot gris",
+      "term_lemma": "pinot gris",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "clay vessels",
+      "term_lemma": "clay vessel",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pair",
+      "term_lemma": "pair",
+      "importance": 49,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "world",
+      "term_lemma": "world",
+      "importance": 49,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "food",
+      "term_lemma": "food",
+      "importance": 48,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "common",
+      "term_lemma": "common",
+      "importance": 46,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "history",
+      "term_lemma": "history",
+      "importance": 45,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "try",
+      "term_lemma": "try",
+      "importance": 44,
+      "suggested_range": [
+        1,
+        7
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        7,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "perfect",
+      "term_lemma": "perfect",
+      "importance": 41,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "extended_terms": [
+    {
+      "term": "orange wine made",
+      "term_lemma": "orange wine make",
+      "importance": 56,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "orange wine taste",
+      "term_lemma": "orange wine taste",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine taste like",
+      "term_lemma": "wine taste like",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "orange wine taste like",
+      "term_lemma": "orange wine taste like",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "notes",
+      "term_lemma": "note",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine natural wine",
+      "term_lemma": "wine natural wine",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "slovenia",
+      "term_lemma": "slovenia",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "vineyards",
+      "term_lemma": "vineyard",
+      "importance": 38,
+      "suggested_range": [
+        2,
+        7
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        7,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "juice",
+      "term_lemma": "juice",
+      "importance": 38,
+      "suggested_range": [
+        4,
+        5
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        0,
+        4
+      ]
+    },
+    {
+      "term": "glass",
+      "term_lemma": "glass",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        8
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        8,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "best",
+      "term_lemma": "best",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "united states",
+      "term_lemma": "united state",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "orange wine natural",
+      "term_lemma": "orange wine natural",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "orange wine natural wine",
+      "term_lemma": "orange wine natural wine",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "minimal",
+      "term_lemma": "minimal",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        6,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "example",
+      "term_lemma": "example",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        7
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        7,
+        0
+      ]
+    },
+    {
+      "term": "emerging",
+      "term_lemma": "emerge",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "cheese charcuterie",
+      "term_lemma": "cheese charcuterie",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine orange wine",
+      "term_lemma": "wine orange wine",
+      "importance": 37,
+      "suggested_range": [
+        3,
+        5
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "orange wine producers",
+      "term_lemma": "orange wine producer",
+      "importance": 37,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        6,
+        0
+      ]
+    },
+    {
+      "term": "ancient",
+      "term_lemma": "ancient",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "winemakers",
+      "term_lemma": "winemaker",
+      "importance": 36,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "also",
+      "term_lemma": "also",
+      "importance": 36,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "though",
+      "term_lemma": "though",
+      "importance": 36,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "term": "quality",
+      "term_lemma": "quality",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "light",
+      "term_lemma": "light",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "sauvignon blanc",
+      "term_lemma": "sauvignon blanc",
+      "importance": 36,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "skin contact fermentation",
+      "term_lemma": "skin contact fermentation",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "new york",
+      "term_lemma": "new york",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "name",
+      "term_lemma": "name",
+      "importance": 35,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "choice",
+      "term_lemma": "choice",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "result",
+      "term_lemma": "result",
+      "importance": 35,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "robust",
+      "term_lemma": "robust",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "gap",
+      "term_lemma": "gap",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "experience",
+      "term_lemma": "experience",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "country",
+      "term_lemma": "country",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "parts",
+      "term_lemma": "part",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "keep",
+      "term_lemma": "keep",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "developed",
+      "term_lemma": "develop",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "tradition",
+      "term_lemma": "tradition",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "continue",
+      "term_lemma": "continue",
+      "importance": 35,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "creating",
+      "term_lemma": "create",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "across",
+      "term_lemma": "across",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "starts",
+      "term_lemma": "start",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "days",
+      "term_lemma": "day",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "even",
+      "term_lemma": "even",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "tannic",
+      "term_lemma": "tannic",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "structure",
+      "term_lemma": "structure",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "deeper",
+      "term_lemma": "deep",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "yeast",
+      "term_lemma": "yeast",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "little",
+      "term_lemma": "little",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "well",
+      "term_lemma": "well",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "floral",
+      "term_lemma": "floral",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "time",
+      "term_lemma": "time",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "intensity",
+      "term_lemma": "intensity",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "characteristics",
+      "term_lemma": "characteristic",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "might",
+      "term_lemma": "might",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "slow",
+      "term_lemma": "slow",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "generally",
+      "term_lemma": "generally",
+      "importance": 35,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "category",
+      "term_lemma": "category",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "climate",
+      "term_lemma": "climate",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "aromas",
+      "term_lemma": "aromas",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "bit",
+      "term_lemma": "bit",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "compounds",
+      "term_lemma": "compound",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "actually",
+      "term_lemma": "actually",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "defined",
+      "term_lemma": "define",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "helped",
+      "term_lemma": "help",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "first",
+      "term_lemma": "first",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "sicily",
+      "term_lemma": "sicily",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "rich",
+      "term_lemma": "rich",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "skins seeds",
+      "term_lemma": "skin seed",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wines often",
+      "term_lemma": "wine often",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "adelaide hills",
+      "term_lemma": "adelaide hill",
+      "importance": 35,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "orange wine production",
+      "term_lemma": "orange wine production",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "orange wine orange",
+      "term_lemma": "orange wine orange",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "natural wine orange",
+      "term_lemma": "natural wine orange",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "orange wine orange wines",
+      "term_lemma": "orange wine orange wine",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine natural wine orange",
+      "term_lemma": "wine natural wine orange",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "beer",
+      "term_lemma": "beer",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "lined",
+      "term_lemma": "line",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "bruised apple",
+      "term_lemma": "bruise apple",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "sealed beeswax",
+      "term_lemma": "seal beeswax",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "buried ground",
+      "term_lemma": "bury ground",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "vin jaune",
+      "term_lemma": "vin jaune",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "côtes du jura",
+      "term_lemma": "côtes du jura",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "austria",
+      "term_lemma": "austria",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "period",
+      "term_lemma": "period",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "tannins",
+      "term_lemma": "tannins",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "standard",
+      "term_lemma": "standard",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "historic",
+      "term_lemma": "historic",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "consistent",
+      "term_lemma": "consistent",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "today",
+      "term_lemma": "today",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "key",
+      "term_lemma": "key",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "pressing",
+      "term_lemma": "press",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "sometimes",
+      "term_lemma": "sometimes",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "stay",
+      "term_lemma": "stay",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "practice",
+      "term_lemma": "practice",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "ripe",
+      "term_lemma": "ripe",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "malvasia",
+      "term_lemma": "malvasia",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "plays",
+      "term_lemma": "play",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "role",
+      "term_lemma": "role",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "spice",
+      "term_lemma": "spice",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "described",
+      "term_lemma": "describe",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "less",
+      "term_lemma": "less",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "rare",
+      "term_lemma": "rare",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "depends",
+      "term_lemma": "depend",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "warmer",
+      "term_lemma": "warmer",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "affects",
+      "term_lemma": "affect",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "completely",
+      "term_lemma": "completely",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "specific",
+      "term_lemma": "specific",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "dishes",
+      "term_lemma": "dish",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "curry",
+      "term_lemma": "curry",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "nicely",
+      "term_lemma": "nicely",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "mean",
+      "term_lemma": "mean",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "deeper",
+      "term_lemma": "deeper",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "another",
+      "term_lemma": "another",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "maceration",
+      "term_lemma": "maceration",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "thing",
+      "term_lemma": "thing",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "principles",
+      "term_lemma": "principle",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "popularity",
+      "term_lemma": "popularity",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "valley",
+      "term_lemma": "valley",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "herbs",
+      "term_lemma": "herb",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "become",
+      "term_lemma": "become",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "central",
+      "term_lemma": "central",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "australian",
+      "term_lemma": "australian",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "bars",
+      "term_lemma": "bar",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "estate",
+      "term_lemma": "estate",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine technique",
+      "term_lemma": "wine technique",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "many producers",
+      "term_lemma": "many producer",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "finished wine",
+      "term_lemma": "finish wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine poured",
+      "term_lemma": "wine pour",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "fresh fruit",
+      "term_lemma": "fresh fruit",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine tannin",
+      "term_lemma": "wine tannin",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wines typically",
+      "term_lemma": "wine typically",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "producing wines",
+      "term_lemma": "produce wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "bold flavors",
+      "term_lemma": "bold flavor",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "languedoc roussillon",
+      "term_lemma": "languedoc roussillon",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "natural acidity",
+      "term_lemma": "natural acidity",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "stone fruit",
+      "term_lemma": "stone fruit",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine regions",
+      "term_lemma": "wine region",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "frank cornelissen",
+      "term_lemma": "frank cornelissen",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wines achieve",
+      "term_lemma": "wine achieve",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "channing daughters",
+      "term_lemma": "channing daughter",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine made using",
+      "term_lemma": "wine make use",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "vessels known qvevri",
+      "term_lemma": "vessel know qvevri",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "taste like orange",
+      "term_lemma": "taste like orange",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "like orange wine",
+      "term_lemma": "like orange wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "involved winemaking process",
+      "term_lemma": "involve winemaking process",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "complexity orange wines",
+      "term_lemma": "complexity orange wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "comes skin contact",
+      "term_lemma": "come skin contact",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "contact fermentation white",
+      "term_lemma": "contact fermentation white",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "fermentation white grapes",
+      "term_lemma": "fermentation white grape",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "red wine white",
+      "term_lemma": "red wine white",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "french orange wines",
+      "term_lemma": "french orange wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "grapes pinot gris",
+      "term_lemma": "grape pinot gris",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "pinot gris gewürztraminer",
+      "term_lemma": "pinot gris gewürztraminer",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine taste like orange",
+      "term_lemma": "wine taste like orange",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "taste like orange wine",
+      "term_lemma": "taste like orange wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "comes skin contact fermentation",
+      "term_lemma": "come skin contact fermentation",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "skin contact fermentation white",
+      "term_lemma": "skin contact fermentation white",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "contact fermentation white grapes",
+      "term_lemma": "contact fermentation white grape",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "natural wine orange wine",
+      "term_lemma": "natural wine orange wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine orange wine natural",
+      "term_lemma": "wine orange wine natural",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "grapes pinot gris gewürztraminer",
+      "term_lemma": "grape pinot gris gewürztraminer",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "rind",
+      "term_lemma": "rind",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "oxygen",
+      "term_lemma": "oxygen",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "amphora",
+      "term_lemma": "amphora",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "italian",
+      "term_lemma": "italian",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "see",
+      "term_lemma": "see",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "lives",
+      "term_lemma": "live",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "slightly",
+      "term_lemma": "slightly",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "northeastern italy",
+      "term_lemma": "northeastern italy",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wines qvevri",
+      "term_lemma": "wine qvevri",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "rkatsiteli grape",
+      "term_lemma": "rkatsiteli grape",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "jura region",
+      "term_lemma": "jura region",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "oxidative style",
+      "term_lemma": "oxidative style",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "orange wines primarily",
+      "term_lemma": "orange wine primarily",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Made",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Georgian",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Orange Wine",
+      "importance": 100,
+      "suggested_range": [
+        17,
+        55
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "France",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Italy",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot Grigio",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "World",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Wine",
+      "importance": 100,
+      "suggested_range": [
+        43,
+        127
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Australia",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Grigio",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Jura",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Ribolla Gialla",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Ribolla",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot Gris",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Georgia",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Sauvignon",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Gialla",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Orange",
+      "importance": 100,
+      "suggested_range": [
+        19,
+        60
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Rkatsiteli",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Slovenia",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Indian",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Italian",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Valley",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Venezia Giulia",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Languedoc Roussillon",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "California",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Gravner",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Australian",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "States",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Jaune",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Estate",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Another",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Josko Gravner",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "United Kingdom",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "French",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Spicy",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Taste",
+      "importance": 67,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "What Does Orange Wine Taste Like",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Guide",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Come",
+      "importance": 67,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Blanc",
+      "importance": 67,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Sauvignon Vert",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "History",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "York",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "New",
+      "importance": 67,
+      "suggested_range": [
+        3,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Josko",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Want",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "New York",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Around",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Vin",
+      "importance": 67,
+      "suggested_range": [
+        3,
+        10
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Sauvignon Blanc",
+      "importance": 67,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Unlike",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Vert",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Orange Wines",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Vin Jaune",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Adelaide Hills",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Orange Wine\n\nOrange",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "United",
+      "importance": 67,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Chardonnay",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Wines",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Giulia",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 67
+    }
+  ],
+  "heading_terms": {
+    "h1": [],
+    "h2h3": [
+      "orange wine",
+      "made",
+      "wine taste",
+      "taste like",
+      "comes",
+      "pair",
+      "world",
+      "food",
+      "orange wine made",
+      "orange wine taste",
+      "wine taste like",
+      "orange wine taste like"
+    ]
+  },
+  "target_word_count": {
+    "median": 866,
+    "range": [
+      809,
+      2265
+    ]
+  },
+  "summary": {
+    "basic_count": 69,
+    "extended_count": 177,
+    "entity_count": 62,
+    "h1_term_count": 0,
+    "h2h3_term_count": 12
+  }
+}

@@ -1,0 +1,2717 @@
+{
+  "keyword": "chicken wine pairing",
+  "analysis_date": "2026-04-27",
+  "competitor_count": 3,
+  "competitors": [
+    {
+      "url": "https://www.decanter.com/learn/food/how-to-pair-wines-with-chicken-432693/",
+      "title": "How to pair wines with chicken",
+      "file": "chicken-wine-pairing_competitor-1.md"
+    },
+    {
+      "url": "https://www.winespectrum.com/the-best-wine-to-pair-with-chicken/",
+      "title": "The Best Wine to Pair with Chicken",
+      "file": "chicken-wine-pairing_competitor-2.md"
+    },
+    {
+      "url": "https://www.gayot.com/wines/chicken-wine-pairing/",
+      "title": "Chicken Wine Pairing",
+      "file": "chicken-wine-pairing_competitor-3.md"
+    }
+  ],
+  "basic_terms": [
+    {
+      "term": "pair",
+      "term_lemma": "pair",
+      "importance": 85,
+      "suggested_range": [
+        3,
+        8
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": true,
+      "h2h3_recommended": true,
+      "h1_pct": 67,
+      "h2_pct": 67,
+      "competitor_body_counts": [
+        3,
+        8,
+        3
+      ]
+    },
+    {
+      "term": "dishes",
+      "term_lemma": "dish",
+      "importance": 64,
+      "suggested_range": [
+        4,
+        10
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        10,
+        9,
+        4
+      ]
+    },
+    {
+      "term": "roast chicken",
+      "term_lemma": "roast chicken",
+      "importance": 63,
+      "suggested_range": [
+        3,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "term": "rose",
+      "term_lemma": "rise",
+      "importance": 61,
+      "suggested_range": [
+        3,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "term": "chardonnay",
+      "term_lemma": "chardonnay",
+      "importance": 58,
+      "suggested_range": [
+        3,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        6,
+        3
+      ]
+    },
+    {
+      "term": "work",
+      "term_lemma": "work",
+      "importance": 58,
+      "suggested_range": [
+        6,
+        11
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        11,
+        6,
+        7
+      ]
+    },
+    {
+      "term": "spicy",
+      "term_lemma": "spicy",
+      "importance": 58,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "term": "coq au vin",
+      "term_lemma": "coq au vin",
+      "importance": 58,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "flavors",
+      "term_lemma": "flavor",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "garlic",
+      "term_lemma": "garlic",
+      "importance": 56,
+      "suggested_range": [
+        2,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        5,
+        2
+      ]
+    },
+    {
+      "term": "match",
+      "term_lemma": "match",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "styles",
+      "term_lemma": "style",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "acidity",
+      "term_lemma": "acidity",
+      "importance": 54,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        6,
+        3,
+        2
+      ]
+    },
+    {
+      "term": "lemon",
+      "term_lemma": "lemon",
+      "importance": 54,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "red wine",
+      "term_lemma": "red wine",
+      "importance": 54,
+      "suggested_range": [
+        2,
+        7
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        7,
+        2
+      ]
+    },
+    {
+      "term": "pinot noir",
+      "term_lemma": "pinot noir",
+      "importance": 53,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "term": "cooked",
+      "term_lemma": "cook",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "useful",
+      "term_lemma": "useful",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "fruit",
+      "term_lemma": "fruit",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "freshness",
+      "term_lemma": "freshness",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "mushrooms",
+      "term_lemma": "mushroom",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "burgundy",
+      "term_lemma": "burgundy",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "riesling",
+      "term_lemma": "riesling",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "enough",
+      "term_lemma": "enough",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "light",
+      "term_lemma": "light",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "many",
+      "term_lemma": "many",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "includes",
+      "term_lemma": "include",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "help",
+      "term_lemma": "help",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "sweet",
+      "term_lemma": "sweet",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "residual sugar",
+      "term_lemma": "residual sugar",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "aromatic white wines",
+      "term_lemma": "aromatic white wine",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wine pairing",
+      "term_lemma": "wine pair",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 33,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "best",
+      "term_lemma": "best",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 33,
+      "h2_pct": 33,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wine chicken",
+      "term_lemma": "wine chicken",
+      "importance": 48,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 33,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "chicken dishes",
+      "term_lemma": "chicken dish",
+      "importance": 41,
+      "suggested_range": [
+        4,
+        6
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        6,
+        0
+      ]
+    },
+    {
+      "term": "spicy chicken",
+      "term_lemma": "spicy chicken",
+      "importance": 41,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        2
+      ]
+    }
+  ],
+  "extended_terms": [
+    {
+      "term": "herbs",
+      "term_lemma": "herb",
+      "importance": 39,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "dry white wine",
+      "term_lemma": "dry white wine",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "served",
+      "term_lemma": "serve",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "au vin chicken",
+      "term_lemma": "au vin chicken",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "coq au vin chicken",
+      "term_lemma": "coq au vin chicken",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "earthy",
+      "term_lemma": "earthy",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "champagne fried chicken",
+      "term_lemma": "champagne fry chicken",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "lemon garlic",
+      "term_lemma": "lemon garlic",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "herbs",
+      "term_lemma": "herbs",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        4
+      ]
+    },
+    {
+      "term": "also work",
+      "term_lemma": "also work",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "white burgundy",
+      "term_lemma": "white burgundy",
+      "importance": 36,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "especially",
+      "term_lemma": "especially",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "lighter",
+      "term_lemma": "lighter",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "makes",
+      "term_lemma": "make",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "richer",
+      "term_lemma": "rich",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "pie",
+      "term_lemma": "pie",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "complement",
+      "term_lemma": "complement",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "choice",
+      "term_lemma": "choice",
+      "importance": 35,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "bigger",
+      "term_lemma": "big",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "oregon",
+      "term_lemma": "oregon",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "gruner veltliner",
+      "term_lemma": "gruner veltliner",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine rose",
+      "term_lemma": "wine rise",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "simple",
+      "term_lemma": "simple",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "keeping",
+      "term_lemma": "keep",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "tomato",
+      "term_lemma": "tomato",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "sweetness",
+      "term_lemma": "sweetness",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "grenache",
+      "term_lemma": "grenache",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "roasted chicken pair",
+      "term_lemma": "roast chicken pair",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "chardonnay pinot noir",
+      "term_lemma": "chardonnay pinot noir",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "food",
+      "term_lemma": "food",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "handle",
+      "term_lemma": "handle",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "little",
+      "term_lemma": "little",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "basic",
+      "term_lemma": "basic",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "richer",
+      "term_lemma": "richer",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "butter",
+      "term_lemma": "butter",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "olive",
+      "term_lemma": "olive",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "oaked",
+      "term_lemma": "oaked",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "difficult",
+      "term_lemma": "difficult",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "spices",
+      "term_lemma": "spice",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "cut",
+      "term_lemma": "cut",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "spanish",
+      "term_lemma": "spanish",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "california",
+      "term_lemma": "california",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "work well",
+      "term_lemma": "work well",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "often cooked",
+      "term_lemma": "often cook",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "mushrooms work",
+      "term_lemma": "mushroom work",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "work chicken",
+      "term_lemma": "work chicken",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "riesling gewurztraminer",
+      "term_lemma": "riesling gewurztraminer",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "chicken spicy",
+      "term_lemma": "chicken spicy",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine work",
+      "term_lemma": "wine work",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "enough body",
+      "term_lemma": "enough body",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "fried chicken",
+      "term_lemma": "fried chicken",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "chicken flavors",
+      "term_lemma": "chicken flavor",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "chicken chardonnay",
+      "term_lemma": "chicken chardonnay",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "work red",
+      "term_lemma": "work red",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "santa barbara",
+      "term_lemma": "santa barbara",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "lift chicken",
+      "term_lemma": "lift chicken",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "sweet smoky",
+      "term_lemma": "sweet smoky",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "light red wines",
+      "term_lemma": "light red wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "principle avoid overpowering",
+      "term_lemma": "principle avoid overpower",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "avoid overpowering meat",
+      "term_lemma": "avoid overpower meat",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "overpowering meat dish",
+      "term_lemma": "overpower meat dish",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "meat dish wine",
+      "term_lemma": "meat dish wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "fruit decent acidity",
+      "term_lemma": "fruit decent acidity",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "dishes much tannin",
+      "term_lemma": "dish much tannin",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "much tannin mask",
+      "term_lemma": "much tannin mask",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "roast chicken roast",
+      "term_lemma": "roast chicken roast",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "chicken roast chicken",
+      "term_lemma": "chicken roast chicken",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "white wines riesling",
+      "term_lemma": "white wine riesling",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "needs wine enough",
+      "term_lemma": "need wine enough",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wines high acidity",
+      "term_lemma": "wine high acidity",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "principle avoid overpowering meat",
+      "term_lemma": "principle avoid overpower meat",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "avoid overpowering meat dish",
+      "term_lemma": "avoid overpower meat dish",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "overpowering meat dish wine",
+      "term_lemma": "overpower meat dish wine",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "dishes much tannin mask",
+      "term_lemma": "dish much tannin mask",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "roast chicken roast chicken",
+      "term_lemma": "roast chicken roast chicken",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "aromatic white wines riesling",
+      "term_lemma": "aromatic white wine riesling",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "heat",
+      "term_lemma": "heat",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "preparation",
+      "term_lemma": "preparation",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "shiraz",
+      "term_lemma": "shiraz",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "zinfandel",
+      "term_lemma": "zinfandel",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "black",
+      "term_lemma": "black",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "cherry",
+      "term_lemma": "cherry",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "anchovy",
+      "term_lemma": "anchovy",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "side dishes",
+      "term_lemma": "side dish",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wines fruit",
+      "term_lemma": "wine fruit",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "sauce chicken",
+      "term_lemma": "sauce chicken",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "chicken barbecue",
+      "term_lemma": "chicken barbecue",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "work sauvignon blanc",
+      "term_lemma": "work sauvignon blanc",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Burgundy",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot Noir",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Chicken",
+      "importance": 100,
+      "suggested_range": [
+        23,
+        27
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Chardonnay",
+      "importance": 100,
+      "suggested_range": [
+        4,
+        6
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Wine",
+      "importance": 100,
+      "suggested_range": [
+        14,
+        19
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Riesling",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "White",
+      "importance": 100,
+      "suggested_range": [
+        6,
+        8
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Noir",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Sauvignon",
+      "importance": 67,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Grenache",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Wines",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Fried",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Sauvignon Blanc",
+      "importance": 67,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Blanc",
+      "importance": 67,
+      "suggested_range": [
+        3,
+        4
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Champagne",
+      "importance": 67,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Roast",
+      "importance": 67,
+      "suggested_range": [
+        3,
+        6
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Coq",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Santa",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Oregon",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Zinfandel",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Shiraz",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Spanish",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Pair",
+      "importance": 67,
+      "suggested_range": [
+        3,
+        9
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Aromatic",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Lighter",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Gruner",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Best",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Gewurztraminer",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Veltliner",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Spicy",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Barbara",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Chicken\n\nChicken",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 67
+    },
+    {
+      "entity": "Gruner Veltliner",
+      "importance": 67,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 67
+    }
+  ],
+  "heading_terms": {
+    "h1": [
+      "pair"
+    ],
+    "h2h3": [
+      "pair",
+      "dishes",
+      "roast chicken",
+      "spicy",
+      "coq au vin",
+      "spicy chicken"
+    ]
+  },
+  "target_word_count": {
+    "median": 459,
+    "range": [
+      347,
+      499
+    ]
+  },
+  "summary": {
+    "basic_count": 36,
+    "extended_count": 88,
+    "entity_count": 34,
+    "h1_term_count": 1,
+    "h2h3_term_count": 6
+  }
+}

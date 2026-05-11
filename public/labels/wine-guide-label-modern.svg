@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4in" height="5in" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">The Wine Guide modern wine label</title>
+  <desc id="desc">A clean modern wine bottle label for The Wine Guide.</desc>
+  <rect width="1200" height="1500" fill="#f4efe6"/>
+  <rect x="58" y="58" width="1084" height="1384" rx="0" fill="none" stroke="#1f1f1f" stroke-width="6"/>
+  <rect x="98" y="98" width="1004" height="1304" rx="0" fill="none" stroke="#1f1f1f" stroke-width="2"/>
+
+  <g fill="#1f1f1f">
+    <text x="600" y="180" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle" letter-spacing="8">THE WINE GUIDE</text>
+    <text x="600" y="238" font-family="JetBrains Mono, Consolas, monospace" font-size="22" text-anchor="middle" letter-spacing="4">BOTTLE SHOP CONFIDENCE</text>
+  </g>
+
+  <g transform="translate(600 498)">
+    <circle cx="0" cy="0" r="138" fill="#570013"/>
+    <path d="M-34 -84h68v248h-68z" fill="#f4efe6"/>
+    <path d="M-84 -52c54 24 114 24 168 0v48c-54 28-114 28-168 0z" fill="#f4efe6"/>
+    <circle cx="0" cy="-10" r="28" fill="#570013"/>
+  </g>
+
+  <rect x="212" y="768" width="776" height="4" fill="#1f1f1f"/>
+  <text x="600" y="884" font-family="Playfair Display, Georgia, serif" font-size="118" font-weight="700" text-anchor="middle" fill="#570013">Table Wine</text>
+  <text x="600" y="954" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#1f1f1f" letter-spacing="3">HOUSE PICK</text>
+  <text x="600" y="1040" font-family="Inter, Arial, sans-serif" font-size="36" text-anchor="middle" fill="#3a3530">Open when dinner needs a better idea.</text>
+
+  <g font-family="JetBrains Mono, Consolas, monospace" font-size="24" fill="#1f1f1f" letter-spacing="2">
+    <text x="180" y="1256">RED</text>
+    <text x="600" y="1256" text-anchor="middle">750 ML</text>
+    <text x="1020" y="1256" text-anchor="end">13.5%</text>
+  </g>
+  <rect x="180" y="1304" width="840" height="3" fill="#1f1f1f"/>
+  <text x="600" y="1362" font-family="Inter, Arial, sans-serif" font-size="24" text-anchor="middle" fill="#3a3530">wineguide.co</text>
+</svg>

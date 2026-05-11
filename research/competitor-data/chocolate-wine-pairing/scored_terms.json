@@ -1,0 +1,5785 @@
+{
+  "keyword": "chocolate wine pairing",
+  "analysis_date": "2026-04-27",
+  "competitor_count": 5,
+  "competitors": [
+    {
+      "url": "https://www.lamaisonduchocolat.com/en_us/chocolate-wine-pairing",
+      "title": "Wine & Chocolate Pairing Guide",
+      "file": "chocolate-wine-pairing_competitor-1.md"
+    },
+    {
+      "url": "https://www.eataly.com/us_en/magazine/how-to/how-to-taste/how-to-pair-wine-and-chocolate",
+      "title": "How to Pair Wine and Chocolate: Our Definitive Guide",
+      "file": "chocolate-wine-pairing_competitor-2.md"
+    },
+    {
+      "url": "https://gertrudehawkchocolates.com/discover-goodness/wine-chocolate-pairing-guide",
+      "title": "Plan the Perfect Wine and Chocolate Tasting: Pairing Tips and Ideas",
+      "file": "chocolate-wine-pairing_competitor-3.md"
+    },
+    {
+      "url": "https://www.thenibble.com/reviews/main/chocolate/pairing-wine2.asp",
+      "title": "Pairing Chocolates & Wines: From Mint To Nuts, There's A Perfect Wine For Every Chocolate",
+      "file": "chocolate-wine-pairing_competitor-4.md"
+    },
+    {
+      "url": "https://www.thechocolateroombrooklyn.com/blogs/chocboard-blog/the-art-of-chocolate-and-wine-pairing-a-tasting-adventure",
+      "title": "The Art of Chocolate and Wine Pairing: A Tasting Adventure",
+      "file": "chocolate-wine-pairing_competitor-5.md"
+    }
+  ],
+  "basic_terms": [
+    {
+      "term": "wine",
+      "term_lemma": "wine",
+      "importance": 94,
+      "suggested_range": [
+        11,
+        20
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": true,
+      "h2h3_recommended": true,
+      "h1_pct": 100,
+      "h2_pct": 60,
+      "competitor_body_counts": [
+        16,
+        11,
+        11,
+        21,
+        12
+      ]
+    },
+    {
+      "term": "pairing",
+      "term_lemma": "pair",
+      "importance": 93,
+      "suggested_range": [
+        9,
+        22
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": true,
+      "h2h3_recommended": true,
+      "h1_pct": 80,
+      "h2_pct": 40,
+      "competitor_body_counts": [
+        9,
+        6,
+        17,
+        23,
+        10
+      ]
+    },
+    {
+      "term": "pairings",
+      "term_lemma": "pairing",
+      "importance": 76,
+      "suggested_range": [
+        2,
+        14
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 20,
+      "h2_pct": 60,
+      "competitor_body_counts": [
+        3,
+        2,
+        2,
+        17,
+        6
+      ]
+    },
+    {
+      "term": "milk chocolate",
+      "term_lemma": "milk chocolate",
+      "importance": 65,
+      "suggested_range": [
+        3,
+        10
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 40,
+      "competitor_body_counts": [
+        3,
+        1,
+        12,
+        6,
+        4
+      ]
+    },
+    {
+      "term": "dark chocolate",
+      "term_lemma": "dark chocolate",
+      "importance": 64,
+      "suggested_range": [
+        3,
+        10
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 40,
+      "competitor_body_counts": [
+        2,
+        2,
+        10,
+        5,
+        8
+      ]
+    },
+    {
+      "term": "perfect",
+      "term_lemma": "perfect",
+      "importance": 62,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 40,
+      "h2_pct": 40,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "fruit",
+      "term_lemma": "fruit",
+      "importance": 57,
+      "suggested_range": [
+        1,
+        14
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        1,
+        16,
+        8
+      ]
+    },
+    {
+      "term": "wine pairing",
+      "term_lemma": "wine pair",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 20,
+      "h2_pct": 40,
+      "competitor_body_counts": [
+        3,
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "sweetness",
+      "term_lemma": "sweetness",
+      "importance": 55,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        6,
+        5,
+        2
+      ]
+    },
+    {
+      "term": "notes",
+      "term_lemma": "note",
+      "importance": 55,
+      "suggested_range": [
+        2,
+        14
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        2,
+        16,
+        6
+      ]
+    },
+    {
+      "term": "match",
+      "term_lemma": "match",
+      "importance": 55,
+      "suggested_range": [
+        2,
+        7
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        3,
+        8,
+        3
+      ]
+    },
+    {
+      "term": "complements",
+      "term_lemma": "complement",
+      "importance": 54,
+      "suggested_range": [
+        2,
+        8
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        6,
+        8,
+        2
+      ]
+    },
+    {
+      "term": "sweet",
+      "term_lemma": "sweet",
+      "importance": 54,
+      "suggested_range": [
+        2,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        1,
+        2,
+        7,
+        5
+      ]
+    },
+    {
+      "term": "caramel",
+      "term_lemma": "caramel",
+      "importance": 54,
+      "suggested_range": [
+        3,
+        15
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        1,
+        11,
+        15,
+        3
+      ]
+    },
+    {
+      "term": "like",
+      "term_lemma": "like",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "zinfandel",
+      "term_lemma": "zinfandel",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        6,
+        2
+      ]
+    },
+    {
+      "term": "riesling",
+      "term_lemma": "riesling",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "cocoa",
+      "term_lemma": "cocoa",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        5,
+        2
+      ]
+    },
+    {
+      "term": "pinot noir",
+      "term_lemma": "pinot noir",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "cabernet sauvignon",
+      "term_lemma": "cabernet sauvignon",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        7,
+        1
+      ]
+    },
+    {
+      "term": "create",
+      "term_lemma": "create",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "flavors chocolate",
+      "term_lemma": "flavor chocolate",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "red",
+      "term_lemma": "red",
+      "importance": 50,
+      "suggested_range": [
+        4,
+        5
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        4,
+        1,
+        0,
+        5,
+        4
+      ]
+    },
+    {
+      "term": "nuts",
+      "term_lemma": "nut",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 20,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        6,
+        1
+      ]
+    },
+    {
+      "term": "white chocolate",
+      "term_lemma": "white chocolate",
+      "importance": 50,
+      "suggested_range": [
+        3,
+        7
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        3,
+        2,
+        0,
+        6,
+        7
+      ]
+    },
+    {
+      "term": "wine chocolate",
+      "term_lemma": "wine chocolate",
+      "importance": 49,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": true,
+      "h2h3_recommended": false,
+      "h1_pct": 60,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "taste",
+      "term_lemma": "taste",
+      "importance": 48,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 20,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "try",
+      "term_lemma": "try",
+      "importance": 48,
+      "suggested_range": [
+        1,
+        11
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        1,
+        0,
+        11,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "soft",
+      "term_lemma": "soft",
+      "importance": 48,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "port",
+      "term_lemma": "port",
+      "importance": 46,
+      "suggested_range": [
+        3,
+        17
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        5,
+        17,
+        3
+      ]
+    },
+    {
+      "term": "nutty",
+      "term_lemma": "nutty",
+      "importance": 44,
+      "suggested_range": [
+        1,
+        11
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        11,
+        1
+      ]
+    },
+    {
+      "term": "dessert wine",
+      "term_lemma": "dessert wine",
+      "importance": 44,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        1,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "light",
+      "term_lemma": "light",
+      "importance": 44,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "balance",
+      "term_lemma": "balance",
+      "importance": 43,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "fruity",
+      "term_lemma": "fruity",
+      "importance": 43,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        3,
+        6,
+        1
+      ]
+    },
+    {
+      "term": "well",
+      "term_lemma": "well",
+      "importance": 43,
+      "suggested_range": [
+        1,
+        7
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        7,
+        3
+      ]
+    },
+    {
+      "term": "intensity",
+      "term_lemma": "intensity",
+      "importance": 43,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "beautifully",
+      "term_lemma": "beautifully",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "acidity",
+      "term_lemma": "acidity",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "term": "tannins",
+      "term_lemma": "tannin",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "dry",
+      "term_lemma": "dry",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        4,
+        2
+      ]
+    },
+    {
+      "term": "best",
+      "term_lemma": "best",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "varieties",
+      "term_lemma": "variety",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "works",
+      "term_lemma": "work",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        7
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        7,
+        1
+      ]
+    },
+    {
+      "term": "creamy",
+      "term_lemma": "creamy",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "sparkling",
+      "term_lemma": "sparkle",
+      "importance": 42,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "chocolate pair",
+      "term_lemma": "chocolate pair",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "rich",
+      "term_lemma": "rich",
+      "importance": 42,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "berry",
+      "term_lemma": "berry",
+      "importance": 42,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "term": "malbec",
+      "term_lemma": "malbec",
+      "importance": 41,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "bring",
+      "term_lemma": "bring",
+      "importance": 41,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "sweet wines",
+      "term_lemma": "sweet wine",
+      "importance": 41,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "extended_terms": [
+    {
+      "term": "chocolate wine pairing",
+      "term_lemma": "chocolate wine pair",
+      "importance": 46,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 20,
+      "h2_pct": 40,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "coffee",
+      "term_lemma": "coffee",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "salt",
+      "term_lemma": "salt",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        1,
+        0,
+        4,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "raspberry",
+      "term_lemma": "raspberry",
+      "importance": 37,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "term": "almond",
+      "term_lemma": "almond",
+      "importance": 37,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "term": "guide",
+      "term_lemma": "guide",
+      "importance": 37,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 40,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "chocolate flavor",
+      "term_lemma": "chocolate flavor",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "principles",
+      "term_lemma": "principle",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        2,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "complex",
+      "term_lemma": "complex",
+      "importance": 35,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "spice",
+      "term_lemma": "spice",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "term": "champagne",
+      "term_lemma": "champagne",
+      "importance": 34,
+      "suggested_range": [
+        2,
+        8
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        8,
+        3
+      ]
+    },
+    {
+      "term": "sherry",
+      "term_lemma": "sherry",
+      "importance": 34,
+      "suggested_range": [
+        2,
+        7
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "term": "experts",
+      "term_lemma": "expert",
+      "importance": 33,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "consider",
+      "term_lemma": "consider",
+      "importance": 33,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "ganache",
+      "term_lemma": "ganache",
+      "importance": 33,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "additional",
+      "term_lemma": "additional",
+      "importance": 33,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "making",
+      "term_lemma": "make",
+      "importance": 33,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "term": "sauternes",
+      "term_lemma": "sauterne",
+      "importance": 33,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "term": "tropical",
+      "term_lemma": "tropical",
+      "importance": 33,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "combining",
+      "term_lemma": "combine",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "combinations",
+      "term_lemma": "combination",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "truffles",
+      "term_lemma": "truffle",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "sweeter",
+      "term_lemma": "sweeter",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "featuring",
+      "term_lemma": "feature",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "term": "moscato",
+      "term_lemma": "moscato",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "merlot",
+      "term_lemma": "merlot",
+      "importance": 32,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "brachetto",
+      "term_lemma": "brachetto",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "pair well",
+      "term_lemma": "pair well",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "enhancing",
+      "term_lemma": "enhance",
+      "importance": 32,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "buttery",
+      "term_lemma": "buttery",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "madeira",
+      "term_lemma": "madeira",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "term": "floral",
+      "term_lemma": "floral",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "term": "profile",
+      "term_lemma": "profile",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "containing",
+      "term_lemma": "contain",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "bitter",
+      "term_lemma": "bitter",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "rather",
+      "term_lemma": "rather",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "options",
+      "term_lemma": "option",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "experience",
+      "term_lemma": "experience",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "selecting",
+      "term_lemma": "select",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "lighter",
+      "term_lemma": "lighter",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "rosé",
+      "term_lemma": "rosé",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "chocolate type",
+      "term_lemma": "chocolate type",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "silky",
+      "term_lemma": "silky",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "overwhelming",
+      "term_lemma": "overwhelm",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "palate",
+      "term_lemma": "palate",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "characteristics",
+      "term_lemma": "characteristic",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "gewurztraminer",
+      "term_lemma": "gewurztraminer",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "hazelnut",
+      "term_lemma": "hazelnut",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pair nicely",
+      "term_lemma": "pair nicely",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "classic",
+      "term_lemma": "classic",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "enhances",
+      "term_lemma": "enhances",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "toffee",
+      "term_lemma": "toffee",
+      "importance": 31,
+      "suggested_range": [
+        4,
+        6
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        4,
+        6,
+        0
+      ]
+    },
+    {
+      "term": "introduction",
+      "term_lemma": "introduction",
+      "importance": 29,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 40,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "coconut",
+      "term_lemma": "coconut",
+      "importance": 28,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "pairing chocolate",
+      "term_lemma": "pair chocolate",
+      "importance": 28,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 20,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "taste pair",
+      "term_lemma": "taste pair",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 20,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "butter",
+      "term_lemma": "butter",
+      "importance": 27,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "bold",
+      "term_lemma": "bold",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "also try",
+      "term_lemma": "also try",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        11
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        11,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "salt caramels",
+      "term_lemma": "salt caramel",
+      "importance": 26,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "chocolate raspberry",
+      "term_lemma": "chocolate raspberry",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "unexpected",
+      "term_lemma": "unexpected",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "soft wines",
+      "term_lemma": "soft wine",
+      "importance": 25,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "decadent",
+      "term_lemma": "decadent",
+      "importance": 25,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "chocolate softer",
+      "term_lemma": "chocolate soft",
+      "importance": 25,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 20,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "chardonnay",
+      "term_lemma": "chardonnay",
+      "importance": 24,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        6,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "blanc",
+      "term_lemma": "blanc",
+      "importance": 24,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        6,
+        0
+      ]
+    },
+    {
+      "term": "velvety",
+      "term_lemma": "velvety",
+      "importance": 24,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "richness",
+      "term_lemma": "richness",
+      "importance": 24,
+      "suggested_range": [
+        3,
+        4
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        0,
+        4
+      ]
+    },
+    {
+      "term": "bittersweet",
+      "term_lemma": "bittersweet",
+      "importance": 24,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "levels",
+      "term_lemma": "level",
+      "importance": 23,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "choose",
+      "term_lemma": "choose",
+      "importance": 23,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "considerations",
+      "term_lemma": "consideration",
+      "importance": 23,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "match intensity",
+      "term_lemma": "match intensity",
+      "importance": 23,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "cherry",
+      "term_lemma": "cherry",
+      "importance": 23,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "term": "tart",
+      "term_lemma": "tart",
+      "importance": 23,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        3,
+        3
+      ]
+    },
+    {
+      "term": "fine",
+      "term_lemma": "fine",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "right",
+      "term_lemma": "right",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "requires",
+      "term_lemma": "require",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "two",
+      "term_lemma": "two",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "bitterness",
+      "term_lemma": "bitterness",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "offers",
+      "term_lemma": "offer",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "pralines",
+      "term_lemma": "praline",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "dry red",
+      "term_lemma": "dry red",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "pairs best",
+      "term_lemma": "pair best",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "chocolate desserts",
+      "term_lemma": "chocolate dessert",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "intense",
+      "term_lemma": "intense",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "styles",
+      "term_lemma": "style",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "without",
+      "term_lemma": "without",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "beaujolais",
+      "term_lemma": "beaujolais",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "perfectly",
+      "term_lemma": "perfectly",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "natural",
+      "term_lemma": "natural",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "smooth",
+      "term_lemma": "smooth",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "blends",
+      "term_lemma": "blend",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "deep",
+      "term_lemma": "deep",
+      "importance": 22,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "complexity",
+      "term_lemma": "complexity",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "exotic",
+      "term_lemma": "exotic",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "adding",
+      "term_lemma": "add",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "layers",
+      "term_lemma": "layer",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "strong",
+      "term_lemma": "strong",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        4,
+        0
+      ]
+    },
+    {
+      "term": "creamy texture",
+      "term_lemma": "creamy texture",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "sweetness acidity",
+      "term_lemma": "sweetness acidity",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "sweetness complements",
+      "term_lemma": "sweetness complement",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "contrast",
+      "term_lemma": "contrast",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "orange",
+      "term_lemma": "orange",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "highlight",
+      "term_lemma": "highlight",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "apricot",
+      "term_lemma": "apricot",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "fruit notes",
+      "term_lemma": "fruit note",
+      "importance": 22,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "brachetto acqui",
+      "term_lemma": "brachetto acqui",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "term": "tawny port pairing",
+      "term_lemma": "tawny port pair",
+      "importance": 22,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "together",
+      "term_lemma": "together",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "similarly",
+      "term_lemma": "similarly",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "result",
+      "term_lemma": "result",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "fruitiness",
+      "term_lemma": "fruitiness",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wonderfully",
+      "term_lemma": "wonderfully",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "effectively",
+      "term_lemma": "effectively",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "darker",
+      "term_lemma": "darker",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "prosecco",
+      "term_lemma": "prosecco",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "experts note",
+      "term_lemma": "expert note",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "chocolate dry",
+      "term_lemma": "chocolate dry",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "overly sweet",
+      "term_lemma": "overly sweet",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine works",
+      "term_lemma": "wine work",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wines complement",
+      "term_lemma": "wine complement",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "complement dark",
+      "term_lemma": "complement dark",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "particularly well",
+      "term_lemma": "particularly well",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "sweeter chocolate",
+      "term_lemma": "sweeter chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "like nuts",
+      "term_lemma": "like nut",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "fortified wines",
+      "term_lemma": "fortify wine",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wines like",
+      "term_lemma": "wine like",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "like port",
+      "term_lemma": "like port",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "pair dark chocolate",
+      "term_lemma": "pair dark chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "red wine pairs",
+      "term_lemma": "red wine pair",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "paired white chocolate",
+      "term_lemma": "pair white chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "harmonious",
+      "term_lemma": "harmonious",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "key",
+      "term_lemma": "key",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "guidance",
+      "term_lemma": "guidance",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "friend",
+      "term_lemma": "friend",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "reds",
+      "term_lemma": "reds",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "ripe",
+      "term_lemma": "ripe",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "specifically",
+      "term_lemma": "specifically",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "overwhelm palate",
+      "term_lemma": "overwhelm palate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "cocoa notes",
+      "term_lemma": "cocoa note",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "fruit flavors",
+      "term_lemma": "fruit flavor",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "berry notes",
+      "term_lemma": "berry note",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "chocolates pair well",
+      "term_lemma": "chocolate pair well",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "nuts dried fruit",
+      "term_lemma": "nut dry fruit",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "notes recommended pairings",
+      "term_lemma": "note recommend pairing",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "dark chocolate zinfandel",
+      "term_lemma": "dark chocolate zinfandel",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "romantic",
+      "term_lemma": "romantic",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "needs",
+      "term_lemma": "need",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "treats",
+      "term_lemma": "treat",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "firm",
+      "term_lemma": "firm",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "tannins",
+      "term_lemma": "tannins",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "shiraz",
+      "term_lemma": "shiraz",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "character",
+      "term_lemma": "character",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "grenache",
+      "term_lemma": "grenache",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "mirror",
+      "term_lemma": "mirror",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "slight",
+      "term_lemma": "slight",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "fresh",
+      "term_lemma": "fresh",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "cut",
+      "term_lemma": "cut",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "bubbles",
+      "term_lemma": "bubble",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "roasted",
+      "term_lemma": "roast",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "espresso",
+      "term_lemma": "espresso",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "experience chocolate",
+      "term_lemma": "experience chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "soft tannins",
+      "term_lemma": "soft tannin",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "perfect match",
+      "term_lemma": "perfect match",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "pairs beautifully",
+      "term_lemma": "pair beautifully",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "combining milk",
+      "term_lemma": "combine milk",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "port wine",
+      "term_lemma": "port wine",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "complex flavors",
+      "term_lemma": "complex flavor",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "light sparkling",
+      "term_lemma": "light sparkle",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "raspberry making",
+      "term_lemma": "raspberry make",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "note complements",
+      "term_lemma": "note complement",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "pair cabernet sauvignon",
+      "term_lemma": "pair cabernet sauvignon",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "pinot noir milk",
+      "term_lemma": "pinot noir milk",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "noir milk chocolate",
+      "term_lemma": "noir milk chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wine milk chocolate",
+      "term_lemma": "wine milk chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "pinot noir milk chocolate",
+      "term_lemma": "pinot noir milk chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "tannic",
+      "term_lemma": "tannic",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "naturally",
+      "term_lemma": "naturally",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "piedmont",
+      "term_lemma": "piedmont",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "subtle",
+      "term_lemma": "subtle",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "specific",
+      "term_lemma": "specific",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pedro",
+      "term_lemma": "pedro",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "champagne pairs",
+      "term_lemma": "champagne pair",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "wine match",
+      "term_lemma": "wine match",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "dances beautifully",
+      "term_lemma": "dance beautifully",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "chocolate ganache",
+      "term_lemma": "chocolate ganache",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "chocolate cinnamon",
+      "term_lemma": "chocolate cinnamon",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "beautifully chocolate",
+      "term_lemma": "beautifully chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "works well",
+      "term_lemma": "work well",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pairings cabernet",
+      "term_lemma": "pairing cabernet",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "higher cacao content",
+      "term_lemma": "high cacao content",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "match milk chocolate",
+      "term_lemma": "match milk chocolate",
+      "importance": 21,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Pairing",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        15
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot Noir",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Cabernet",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Chocolate",
+      "importance": 100,
+      "suggested_range": [
+        22,
+        52
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Wine",
+      "importance": 100,
+      "suggested_range": [
+        11,
+        20
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Zinfandel",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Riesling",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Noir",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Sauvignon",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Port",
+      "importance": 80,
+      "suggested_range": [
+        3,
+        17
+      ],
+      "competitor_usage_pct": 80
+    },
+    {
+      "entity": "Perfect",
+      "importance": 80,
+      "suggested_range": [
+        2,
+        5
+      ],
+      "competitor_usage_pct": 80
+    },
+    {
+      "entity": "Milk",
+      "importance": 80,
+      "suggested_range": [
+        4,
+        12
+      ],
+      "competitor_usage_pct": 80
+    },
+    {
+      "entity": "Dark",
+      "importance": 80,
+      "suggested_range": [
+        5,
+        11
+      ],
+      "competitor_usage_pct": 80
+    },
+    {
+      "entity": "White",
+      "importance": 80,
+      "suggested_range": [
+        5,
+        10
+      ],
+      "competitor_usage_pct": 80
+    },
+    {
+      "entity": "Malbec",
+      "importance": 80,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 80
+    },
+    {
+      "entity": "Merlot",
+      "importance": 60,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Pairings",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Milk Chocolate",
+      "importance": 60,
+      "suggested_range": [
+        4,
+        10
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Wines",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Champagne",
+      "importance": 60,
+      "suggested_range": [
+        2,
+        8
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Gewurztraminer",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Cabernet Sauvignon",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Madeira",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Sauternes",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Moscato",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Brachetto",
+      "importance": 60,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "Sherry",
+      "importance": 60,
+      "suggested_range": [
+        2,
+        7
+      ],
+      "competitor_usage_pct": 60
+    },
+    {
+      "entity": "White Chocolate",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        7
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Dark Chocolate",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        10
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Grenache",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Coffee",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Beaujolais",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Pair",
+      "importance": 40,
+      "suggested_range": [
+        13,
+        36
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Dessert",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        4
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Try",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        11
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Prosecco",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Blanc",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Hazelnut",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Consider",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Guide",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Shiraz",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Pedro",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Lighter",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Soft",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Fruit",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        20
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Raspberry",
+      "importance": 40,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Additional",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Tawny",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        8
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Coconut",
+      "importance": 40,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Chardonnay",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Toffee",
+      "importance": 40,
+      "suggested_range": [
+        4,
+        6
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Introduction",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Acqui",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Wine Pairing",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Recommended",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Almond",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        4
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Tawny Port",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        8
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Sweet",
+      "importance": 40,
+      "suggested_range": [
+        6,
+        16
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Piedmont",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 40
+    },
+    {
+      "entity": "Caramel",
+      "importance": 40,
+      "suggested_range": [
+        3,
+        15
+      ],
+      "competitor_usage_pct": 40
+    }
+  ],
+  "heading_terms": {
+    "h1": [
+      "wine",
+      "pairing",
+      "wine chocolate"
+    ],
+    "h2h3": [
+      "wine",
+      "pairing",
+      "pairings",
+      "milk chocolate",
+      "dark chocolate",
+      "perfect",
+      "wine pairing",
+      "chocolate wine pairing",
+      "introduction"
+    ]
+  },
+  "target_word_count": {
+    "median": 600,
+    "range": [
+      267,
+      633
+    ]
+  },
+  "summary": {
+    "basic_count": 52,
+    "extended_count": 194,
+    "entity_count": 61,
+    "h1_term_count": 3,
+    "h2h3_term_count": 9
+  }
+}

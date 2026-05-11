@@ -1,0 +1,106 @@
+{
+  "slug": "best-red-wine-under-20",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "J. Lohr Estates Seven Oaks Cabernet Sauvignon 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Paso Robles Cabernet Sauvignon — ripe, softer tannins than Napa, ~13.9% ABV typical"]
+    },
+    {
+      "name": "Castellani Chianti Classico Riserva 2019",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Chianti Classico Riserva — Sangiovese, high acidity, medium body, ~13-13.5% ABV"]
+    },
+    {
+      "name": "BenMarco Malbec 2022",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Uco Valley Mendoza Malbec — ~14% ABV, structured, dark fruit"]
+    },
+    {
+      "name": "Sur de los Andes Reserva Pinot Noir 2022",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Patagonia Pinot Noir — cool-climate, Burgundy-style, bright acidity, 13-13.5% ABV"]
+    },
+    {
+      "name": "Frescobaldi Nipozzano Chianti Rufina Riserva 2022",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Chianti Rufina Riserva — Sangiovese, high acidity, medium body, 13-13.5% ABV"]
+    },
+    {
+      "name": "Vinos de Arganza Alvarez de Toledo Mencia 2021",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Bierzo Mencia — medium body, dark fruit, fresh acidity, 13-13.5% ABV"]
+    },
+    {
+      "name": "Baron Philippe de Rothschild Escudo Rojo Gran Reserva Pinot Noir 2023",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Casablanca Valley Chile Pinot Noir — cool Pacific-influenced, precise, 13.5% ABV typical"]
+    },
+    {
+      "name": "Schug Sonoma Coast Pinot Noir 2023",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Sonoma Coast Pinot Noir — cool-climate, bright acidity, 13.5-14% ABV"]
+    },
+    {
+      "name": "Bodegas Manzanos Reino De Altuzarra Cabernet Sauvignon 2021",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Spanish Rioja-area Cabernet Sauvignon — dense, concentrated, 13.5-14% ABV"]
+    },
+    {
+      "name": "Lincourt Rancho Santa Rosa Pinot Noir 2023",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Sta. Rita Hills Pinot Noir — cool marine air, fine tannins, 13.5-14% ABV"]
+    }
+  ]
+}

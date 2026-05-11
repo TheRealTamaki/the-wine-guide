@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chardonnay — An Interactive Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:       #ede8dc;
+    --bg-2:     #e4ddd0;
+    --ink:      #0f0e0d;
+    --ink-2:    #2e2b27;
+    --muted:    #7a7268;
+    --line:     #cdc6b8;
+    --card:     #e8e2d6;
+    --accent:   #8b1929;      /* always keep */
+    --dark:     #3c0c1b;      /* always keep */
+    --wine:     #e4c56a;
+    --wine-deep:#b8913a;
+    --wine-pale:#f3e4ad;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif; }
+
+  .wrap{ max-width:1280px; margin:0 auto; padding: 0 40px 60px; }
+
+  .stage{ display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid var(--line); }
+
+  .glass-col{
+    position:relative; border-right:1px solid var(--line);
+    padding: 40px 36px 40px 0; display:flex; flex-direction:column; align-items:flex-start;
+  }
+  .section-label{
+    font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted);
+    display:flex; align-items:center; gap:10px; margin-bottom:28px; align-self:stretch;
+  }
+  .section-label::after{ content:""; flex:1; height:1px; background:var(--line) }
+
+  .glass-wrap{ position:relative; width:100%; flex:1; display:flex; align-items:center; justify-content:center; }
+  svg.glass{ width:320px; max-width:100%; height:auto; filter: drop-shadow(0 18px 34px rgba(15,14,13,0.22)); }
+
+  .callouts{ position:absolute; inset:0; pointer-events:none; }
+  .callout{
+    position:absolute; pointer-events:auto; display:flex; align-items:center; gap:10px;
+    font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-2); cursor:pointer;
+  }
+  .callout .dot{ width:7px; height:7px; border-radius:50%; background:var(--bg); border:1.5px solid var(--accent); transition:all .2s ease; flex-shrink:0; }
+  .callout:hover .dot{ background:var(--accent); transform:scale(1.3) }
+  .callout .line{ height:1px; width:32px; background:var(--line); flex-shrink:0; }
+  .callout .txt b{ color:var(--ink); font-weight:500; display:block; font-size:10.5px; letter-spacing:0.14em; font-family:'Inter',sans-serif }
+  .callout .txt span{ color:var(--muted); text-transform:none; letter-spacing:0; font-size:12px; font-style:italic; font-family:'Playfair Display',serif }
+
+  .co-1{ top:16%; left:2%; }
+  .co-2{ top:36%; left:2%; }
+  .co-3{ top:54%; right:2%; flex-direction:row-reverse; text-align:right; }
+  .co-4{ bottom:18%; right:2%; flex-direction:row-reverse; text-align:right; }
+
+  .swatch-row{ display:flex; gap:0; margin-top:28px; border:1px solid var(--line); align-self:stretch; }
+  .chip{ flex:1; display:flex; flex-direction:column; gap:6px; padding:10px 12px; border-right:1px solid var(--line); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); font-family:'Inter',sans-serif; }
+  .chip:last-child{ border-right:0 }
+  .chip .sw{ width:100%; height:6px; }
+
+  .card{ padding: 40px 0 40px 36px; position:sticky; top:0; }
+  .card .kicker{ font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:10px; margin-bottom:20px; align-self:stretch; }
+  .card .kicker::after{ content:""; flex:1; height:1px; background:var(--line) }
+
+  .card h2{ font-family:'Playfair Display',serif; font-weight:900; font-size:clamp(36px,4.2vw,62px); line-height:1.0; margin:0 0 6px; letter-spacing:-0.02em; color:var(--ink); }
+  .card h2 em{ font-style:italic; color:var(--accent); font-weight:700 }
+  .card .pronounce{ font-family:'Playfair Display',serif; font-style:italic; color:var(--muted); font-size:17px; margin-bottom:18px; }
+  .card .lede{ font-size:14px; line-height:1.65; color:var(--ink-2); margin:0 0 24px; max-width:44ch; text-wrap:pretty; }
+  .card .lede em{ font-style:italic; color:var(--accent) }
+
+  .tabs{ display:flex; gap:0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:24px; }
+  .tab{ appearance:none; background:none; border:0; padding:12px 14px; font-family:'Inter',sans-serif; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-1px; transition:all .15s ease; white-space:nowrap; }
+  .tab:hover{ color:var(--ink-2) }
+  .tab.active{ color:var(--ink); border-bottom-color:var(--ink); font-weight:500 }
+
+  .panel{ display:none; animation:fade .2s ease }
+  .panel.active{ display:block }
+  @keyframes fade{ from{ opacity:0; transform:translateY(3px) } to{ opacity:1; transform:none } }
+
+  .grape-head{ display:flex; gap:18px; align-items:center; margin-bottom:16px }
+  .grape-icon{ width:80px; height:80px; border-radius:50%; flex-shrink:0; background:var(--dark); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .grape-head h3{ font-family:'Playfair Display',serif; font-weight:700; font-size:22px; margin:0 0 4px; color:var(--ink); }
+  .grape-head p{ margin:0; font-size:13px; color:var(--muted); font-style:italic; font-family:'Playfair Display',serif }
+
+  dl.facts{ display:grid; grid-template-columns:100px 1fr; gap:9px 16px; margin:16px 0 0; font-size:13px; }
+  dl.facts dt{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); padding-top:2px; }
+  dl.facts dd{ margin:0; color:var(--ink-2); line-height:1.5 }
+
+  ol.stages{ list-style:none; padding:0; margin:0; counter-reset:step; }
+  ol.stages li{ position:relative; padding:13px 0 13px 44px; border-bottom:1px solid var(--line); counter-increment:step; cursor:pointer; }
+  ol.stages li:last-child{ border-bottom:0 }
+  ol.stages li::before{ content:"§ " counter(step, decimal-leading-zero); position:absolute; left:0; top:14px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
+  ol.stages li h4{ margin:0 0 3px; font-family:'Playfair Display',serif; font-weight:700; font-size:17px; color:var(--ink); }
+  ol.stages li h4 em{ font-style:italic; color:var(--accent) }
+  ol.stages li p{ margin:0; font-size:13px; line-height:1.55; color:var(--ink-2); max-width:46ch; }
+  ol.stages li:hover h4, ol.stages li.on h4{ color:var(--accent) }
+
+  .regions{ display:grid; grid-template-columns:1fr 1fr; gap:0 }
+  .region{ border:1px solid var(--line); margin:-1px 0 0 -1px; padding:14px 16px; cursor:pointer; transition:background .15s ease; }
+  .region:hover{ background:#fff }
+  .region .flag{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  .region h4{ font-family:'Playfair Display',serif; font-weight:700; font-size:18px; margin:0 0 5px; color:var(--ink); }
+  .region h4 em{ font-style:italic; color:var(--accent) }
+  .region p{ margin:0; font-size:12.5px; line-height:1.5; color:var(--ink-2) }
+  .region .tag{ display:inline-block; margin-top:6px; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); }
+
+  .taste-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:22px }
+  .taste-row{ display:flex; align-items:center; gap:14px; font-size:13px }
+  .taste-row .label{ width:80px; flex-shrink:0; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
+  .taste-row .bar{ flex:1; height:2px; background:var(--line); position:relative; }
+  .taste-row .bar::after{ content:""; position:absolute; left:0; top:0; bottom:0; background:var(--ink); width:var(--v,50%); }
+  .taste-row .val{ width:36px; text-align:right; font-size:11px; letter-spacing:0.06em; color:var(--muted); text-transform:uppercase; }
+
+  .flavors{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px; }
+  .flavor{ font-size:11.5px; padding:5px 11px; background:transparent; border:1px solid var(--line); color:var(--ink-2); letter-spacing:0.03em; }
+  .flavor b{ color:var(--accent); font-weight:500; margin-right:4px; font-style:italic; font-family:'Playfair Display',serif }
+
+  .pairing{ padding:16px; background:var(--dark); color:#fff; }
+  .pairing .kicker{ font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:8px; }
+  .pairing p{ margin:0; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.8) }
+  .pairing p b{ color:#fff }
+
+  footer{ margin-top:0; padding: 16px 0; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); display:flex; justify-content:space-between; border-top:1px solid var(--line); }
+
+  @media (max-width: 960px){
+    .wrap{ padding: 0 20px 40px }
+    .stage{ grid-template-columns:1fr }
+    .glass-col{ border-right:0; border-bottom:1px solid var(--line); padding:32px 0 }
+    .card{ padding:32px 0; position:static }
+    svg.glass{ width:240px }
+    .co-1,.co-2{ left:1% }
+    .co-3,.co-4{ right:1% }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="stage">
+
+    <!-- GLASS COLUMN -->
+    <section class="glass-col" aria-label="Illustration of a glass of Chardonnay">
+      <div class="section-label">§ 02 &nbsp; Fig. 1 — Served at 10–13°C, tulip glass</div>
+
+      <div class="glass-wrap">
+        <div class="callouts">
+          <div class="callout co-1" data-tab="taste">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Aroma</b><span>apple, vanilla, toasted oak</span></div>
+          </div>
+          <div class="callout co-2" data-tab="grape">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Color</b><span>pale gold, straw, golden</span></div>
+          </div>
+          <div class="callout co-3" data-tab="stages">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Body</b><span>full, creamy</span></div>
+          </div>
+          <div class="callout co-4" data-tab="regions">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Serve</b><span>10–13°C, tulip glass</span></div>
+          </div>
+        </div>
+
+        <!-- SVG WINE GLASS — tulip bowl, white wine palette -->
+        <svg class="glass" viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="wine" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#f7e7ad"></stop>
+              <stop offset="30%"  stop-color="#ecd07a"></stop>
+              <stop offset="70%"  stop-color="#d9a858"></stop>
+              <stop offset="100%" stop-color="#b8823a"></stop>
+            </linearGradient>
+            <radialGradient id="wineGlow" cx="50%" cy="35%" r="55%">
+              <stop offset="0%"  stop-color="#fff4c9" stop-opacity="0.85"></stop>
+              <stop offset="60%" stop-color="#ecd07a" stop-opacity="0.0"></stop>
+            </radialGradient>
+            <linearGradient id="wineRim" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#fff2b8" stop-opacity="0.95"></stop>
+              <stop offset="100%" stop-color="#ecd07a" stop-opacity="0"></stop>
+            </linearGradient>
+            <linearGradient id="glassBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.6"></stop>
+              <stop offset="45%"  stop-color="#ffffff" stop-opacity="0.03"></stop>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"></stop>
+            </linearGradient>
+            <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"   stop-color="#c8bea8"></stop>
+              <stop offset="50%"  stop-color="#ede4cf"></stop>
+              <stop offset="100%" stop-color="#b8ae98"></stop>
+            </linearGradient>
+            <linearGradient id="stem" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"   stop-color="#b0a890" stop-opacity="0.9"></stop>
+              <stop offset="50%"  stop-color="#f0e8d4"></stop>
+              <stop offset="100%" stop-color="#a0987e" stop-opacity="0.9"></stop>
+            </linearGradient>
+            <!-- Tulip bowl clip path -->
+            <clipPath id="bowlClip">
+              <path d="M 110 90 C 110 230,130 330,200 340 C 270 330,290 230,290 90 Z"></path>
+            </clipPath>
+            <radialGradient id="tableShadow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="rgba(15,14,13,0.22)"></stop>
+              <stop offset="100%" stop-color="rgba(15,14,13,0)"></stop>
+            </radialGradient>
+          </defs>
+
+          <!-- table shadow -->
+          <ellipse cx="200" cy="600" rx="130" ry="10" fill="url(#tableShadow)"></ellipse>
+          <ellipse cx="200" cy="585" rx="95"  ry="6"  fill="#b8823a" opacity="0.22"></ellipse>
+
+          <!-- glass bowl outline — tulip shape -->
+          <path d="M 92 80 C 92 240,118 355,200 360 C 282 355,308 240,308 80 Z" fill="url(#glassBody)" stroke="url(#glassEdge)" stroke-width="1.4"></path>
+
+          <!-- wine fill -->
+          <g clip-path="url(#bowlClip)">
+            <rect x="80" y="170" width="240" height="200" fill="url(#wine)"></rect>
+            <ellipse cx="200" cy="195" rx="115" ry="70" fill="url(#wineGlow)"></ellipse>
+            <ellipse cx="200" cy="338" rx="120" ry="18" fill="#b8823a" opacity="0.45"></ellipse>
+            <rect x="110" y="168" width="180" height="5" fill="url(#wineRim)"></rect>
+            <ellipse cx="200" cy="174" rx="120" ry="6" fill="#fff4c9" opacity="0.4"></ellipse>
+          </g>
+
+          <!-- glass highlight strokes -->
+          <path d="M 110 90 C 110 230,130 330,200 340 C 270 330,290 230,290 90 Z" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"></path>
+          <path d="M 118 95 C 116 200,128 300,165 330"  fill="none" stroke="rgba(255,255,255,0.82)" stroke-width="2"   stroke-linecap="round" opacity="0.5"></path>
+          <path d="M 126 95 C 124 195,134 295,168 326" fill="none" stroke="rgba(255,255,255,0.4)"  stroke-width="0.8" stroke-linecap="round"></path>
+          <path d="M 282 95 C 284 200,272 300,240 330" fill="none" stroke="rgba(255,255,255,0.42)" stroke-width="1.2" stroke-linecap="round" opacity="0.6"></path>
+
+          <!-- rim ring -->
+          <ellipse cx="200" cy="80" rx="108" ry="7" fill="none" stroke="rgba(255,255,255,0.82)" stroke-width="1.2"></ellipse>
+          <ellipse cx="200" cy="80" rx="108" ry="7" fill="rgba(255,255,255,0.05)"></ellipse>
+
+          <!-- wine surface bubbles -->
+          <circle cx="162" cy="170" r="1.6" fill="#fff9e0" opacity="0.8"></circle>
+          <circle cx="222" cy="168" r="1.2" fill="#fff9e0" opacity="0.72"></circle>
+          <circle cx="240" cy="172" r="0.9" fill="#fff9e0" opacity="0.58"></circle>
+          <ellipse cx="148"  cy="258" rx="2"   ry="3"   fill="rgba(255,255,255,0.72)"></ellipse>
+          <ellipse cx="252" cy="282" rx="1.5" ry="2.5" fill="rgba(255,255,255,0.62)"></ellipse>
+
+          <!-- stem -->
+          <rect x="196" y="360" width="8" height="170" fill="url(#stem)"></rect>
+          <rect x="197.5" y="362" width="1.5" height="166" fill="rgba(255,255,255,0.75)" opacity="0.65"></rect>
+
+          <!-- base -->
+          <ellipse cx="200" cy="540" rx="85" ry="10"  fill="url(#stem)"></ellipse>
+          <ellipse cx="200" cy="540" rx="85" ry="10"  fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="0.8"></ellipse>
+          <ellipse cx="200" cy="537" rx="70" ry="5"   fill="rgba(255,255,255,0.45)"></ellipse>
+          <ellipse cx="200" cy="545" rx="85" ry="4"   fill="rgba(0,0,0,0.1)"></ellipse>
+        </svg>
+      </div>
+
+      <!-- COLOR SWATCHES — sibling of .glass-wrap, NOT inside it -->
+      <div class="swatch-row">
+        <div class="chip"><div class="sw" style="background:#f7e7ad"></div>Pale Straw</div>
+        <div class="chip"><div class="sw" style="background:#ecd07a"></div>Lemon</div>
+        <div class="chip"><div class="sw" style="background:#d9a858"></div>Golden</div>
+        <div class="chip"><div class="sw" style="background:#d9a978"></div>Copper</div>
+      </div>
+    </section>
+
+    <!-- INFO CARD -->
+    <aside class="card">
+      <div class="kicker">§ 03 &nbsp; A beginner's field guide</div>
+      <h2>Chardon<em>nay</em></h2>
+      <div class="pronounce">/ˌʃɑːrdəˈneɪ/ &nbsp;·&nbsp; "shar-doh-nay"</div>
+      <p class="lede">The world's most recognisable white grape. It wears two very different faces: the lean, mineral crispness of <em>unoaked Chablis</em> and the lush, buttery richness of <em>oaked Napa Valley</em>.</p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-panel="grape">Grape</button>
+        <button class="tab" data-panel="stages">How it's made</button>
+        <button class="tab" data-panel="regions">Regions</button>
+        <button class="tab" data-panel="taste">Taste</button>
+      </div>
+
+      <!-- GRAPE -->
+      <div class="panel active" id="grape">
+        <div class="grape-head">
+          <div class="grape-icon">
+            <!-- Grape cluster SVG — golden straw tones for white wine -->
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+              <!-- Row 1 bottom: 2 circles -->
+              <circle cx="32" cy="52" r="11" fill="#d9a858" opacity="0.90"></circle>
+              <circle cx="48" cy="52" r="11" fill="#c89040" opacity="0.88"></circle>
+              <!-- Row 2: 3 circles -->
+              <circle cx="26" cy="38" r="10" fill="#e4b860" opacity="0.92"></circle>
+              <circle cx="40" cy="38" r="11" fill="#d4a050" opacity="0.90"></circle>
+              <circle cx="54" cy="38" r="10" fill="#c89040" opacity="0.88"></circle>
+              <!-- Row 3: 2 circles -->
+              <circle cx="33" cy="25" r="9" fill="#ecc870" opacity="0.93"></circle>
+              <circle cx="47" cy="25" r="9" fill="#dab060" opacity="0.90"></circle>
+              <!-- Row 4 top: 1 circle -->
+              <circle cx="40" cy="13" r="8" fill="#f0d880" opacity="0.95"></circle>
+              <!-- Stem -->
+              <line x1="40" y1="5" x2="40" y2="13" stroke="#3a5a1a" stroke-width="1.8" stroke-linecap="round"></line>
+              <!-- Tendril -->
+              <path d="M 40 8 Q 50 4 55 8" fill="none" stroke="#4a6b2a" stroke-width="1.2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>The grape itself</h3>
+            <p>The world's most planted white.</p>
+          </div>
+        </div>
+        <p style="font-size:13.5px;line-height:1.65;color:var(--ink-2);max-width:50ch;margin:0 0 14px">Originating in Burgundy, Chardonnay is a genetic cross of Pinot Noir and Gouais Blanc. Its neutral character makes it a winemaker's canvas: climate and oak shape every bottle differently.</p>
+        <dl class="facts">
+          <dt>Family</dt><dd>Burgundy — cross of Pinot Noir &amp; Gouais Blanc</dd>
+          <dt>Skin color</dt><dd>Green-gold, thin-skinned</dd>
+          <dt>Ripening</dt><dd>Early to mid; frost-sensitive</dd>
+          <dt>Climate</dt><dd>Cool to warm — highly adaptable</dd>
+          <dt>Also called</dt><dd>Chablis (France), Bourgogne Blanc, Beaunois</dd>
+        </dl>
+      </div>
+
+      <!-- STAGES -->
+      <div class="panel" id="stages">
+        <ol class="stages">
+          <li><h4>Growing</h4><p>Chardonnay buds early, making it vulnerable to spring frosts. It thrives in well-drained limestone and chalk soils, which preserve acidity and mineral expression in the final wine.</p></li>
+          <li><h4>Harvest</h4><p>Timing is everything. Picking early (cool climates) retains green apple and citrus freshness; picking later (warm climates) develops tropical fruit and higher sugar for fuller-bodied wines.</p></li>
+          <li><h4>Pressing</h4><p>Whole-cluster or gentle pressing separates juice from skins quickly, keeping the wine pale and clean. Minimal skin contact avoids tannin pickup, preserving the variety's characteristic softness.</p></li>
+          <li><h4>Fermentation</h4><p>Fermented in stainless steel (for crisp, fruit-forward styles) or in oak barrels (for richness and spice). Wild-yeast ferments add textural complexity and are common in Burgundy and premium New World wines.</p></li>
+          <li><h4>Aging &amp; Lees</h4><p>Sur lie aging — resting on spent yeast cells — builds a creamy, bread-dough texture called autolysis. Lees stirring (bâtonnage) intensifies this effect, a hallmark of quality white Burgundy.</p></li>
+          <li><h4>Oak Aging</h4><p>New French oak contributes vanilla, butterscotch, and toasted notes. Unoaked versions use stainless steel or large neutral vessels, keeping the wine fresh and mineral. Malolactic fermentation softens acidity into a buttery roundness.</p></li>
+        </ol>
+      </div>
+
+      <!-- REGIONS -->
+      <div class="panel" id="regions">
+        <div class="regions">
+          <div class="region">
+            <div class="flag">France</div>
+            <h4>Bur<em>gundy</em></h4>
+            <p>The spiritual home of Chardonnay. Meursault, Puligny-Montrachet, and Chassagne-Montrachet produce the world's most sought-after whites: mineral, complex, and built to age.</p>
+            <span class="tag">Mineral · Nutty · Aged</span>
+          </div>
+          <div class="region">
+            <div class="flag">France</div>
+            <h4>Cha<em>blis</em></h4>
+            <p>The purest expression of unoaked Chardonnay. Kimmeridgian limestone soils produce wines of electric acidity, green apple, and a distinctive flinty, oyster-shell salinity.</p>
+            <span class="tag">Unoaked · Flinty · Crisp</span>
+          </div>
+          <div class="region">
+            <div class="flag">USA — California</div>
+            <h4>Napa &amp; <em>Sonoma</em></h4>
+            <p>California's signature white: ripe peach and mango fruit amplified by generous oak and full malolactic fermentation. Rich and round, with a creamy texture that defines the "New World" style.</p>
+            <span class="tag">Oaked · Buttery · Tropical</span>
+          </div>
+          <div class="region">
+            <div class="flag">Australia</div>
+            <h4>Mar<em>garet River</em></h4>
+            <p>Western Australia's benchmark. Retains Burgundy-like structure with nectarine and white peach fruit. Margaret River Chardonnay is among the country's most collectible whites.</p>
+            <span class="tag">Elegant · Structured · Peachy</span>
+          </div>
+          <div class="region">
+            <div class="flag">New Zealand</div>
+            <h4>Marl<em>borough</em></h4>
+            <p>Known more for Sauvignon Blanc, Marlborough also grows restrained, citrus-driven Chardonnay with fine acidity. Hawke's Bay adds riper stone fruit and judicious oak.</p>
+            <span class="tag">Citrus · Fresh · Fine</span>
+          </div>
+          <div class="region">
+            <div class="flag">Chile</div>
+            <h4>Casi<em>blanco</em></h4>
+            <p>Chile's cool coastal valleys — Casablanca and San Antonio — yield Chardonnays with fresh acidity, green apple, and subtle oak. Outstanding value at every price point.</p>
+            <span class="tag">Value · Cool-climate · Apple</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TASTE -->
+      <div class="panel" id="taste">
+        <div class="taste-grid">
+          <div class="taste-row"><span class="label">Sweetness</span><div class="bar" style="--v:15%"></div><span class="val">Dry</span></div>
+          <div class="taste-row"><span class="label">Acidity</span><div class="bar" style="--v:65%"></div><span class="val">Med+</span></div>
+          <div class="taste-row"><span class="label">Body</span><div class="bar" style="--v:78%"></div><span class="val">Full</span></div>
+          <div class="taste-row"><span class="label">Tannin</span><div class="bar" style="--v:8%"></div><span class="val">Low</span></div>
+          <div class="taste-row"><span class="label">Alcohol</span><div class="bar" style="--v:72%"></div><span class="val">13–14%</span></div>
+        </div>
+        <div class="flavors">
+          <span class="flavor"><b>fruit</b>green apple</span>
+          <span class="flavor"><b>fruit</b>lemon curd</span>
+          <span class="flavor"><b>fruit</b>white peach</span>
+          <span class="flavor"><b>fruit</b>mango</span>
+          <span class="flavor"><b>floral</b>white blossom</span>
+          <span class="flavor"><b>spice</b>vanilla</span>
+          <span class="flavor"><b>spice</b>toasted oak</span>
+          <span class="flavor"><b>earth</b>wet stone</span>
+          <span class="flavor"><b>other</b>butter</span>
+        </div>
+        <div class="pairing">
+          <div class="kicker">Food pairing</div>
+          <p>Serve at <b>10–13°C in a tulip glass</b>. Unoaked Chardonnay is brilliant with <b>oysters, grilled fish, and sushi</b>. Oaked styles shine alongside <b>roast chicken, lobster with butter, and creamy pasta</b>. Avoid heavy red-meat dishes.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <span>The Wine Guide &nbsp;·&nbsp; Chardonnay</span>
+    <span>An interactive field guide</span>
+  </footer>
+
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  function activate(name){
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.panel === name));
+    panels.forEach(p => p.classList.toggle('active', p.id === name));
+  }
+  tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.panel)));
+
+  document.querySelectorAll('.callout').forEach(c => {
+    c.addEventListener('click', () => {
+      activate(c.dataset.tab);
+      c.querySelector('.dot').animate(
+        [{transform:'scale(1)'},{transform:'scale(1.8)'},{transform:'scale(1)'}],
+        {duration:350, easing:'ease-out'}
+      );
+      document.querySelector('.card').scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  });
+
+  document.querySelectorAll('ol.stages li').forEach(li => {
+    li.addEventListener('click', () => {
+      document.querySelectorAll('ol.stages li').forEach(x => x.classList.remove('on'));
+      li.classList.add('on');
+    });
+  });
+</script>
+</body>
+</html>

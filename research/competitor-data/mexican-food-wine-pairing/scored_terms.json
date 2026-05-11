@@ -1,0 +1,1845 @@
+{
+  "keyword": "mexican food wine pairing",
+  "analysis_date": "2026-04-27",
+  "competitor_count": 4,
+  "competitors": [
+    {
+      "url": "https://archive.shine.cn/feature/ideal/Wine-to-pair-with-Mexican-food/shdaily.shtml",
+      "title": "Wine to Pair with Mexican Food",
+      "file": "mexican-food-wine-pairing_competitor-1.md"
+    },
+    {
+      "url": "https://www.sunset.com/food-wine/kitchen-assistant/mexican-food-wine-pairings",
+      "title": "Wine Pairings for Mexican Food: Expert Tips from Vintner Caren Rideau",
+      "file": "mexican-food-wine-pairing_competitor-2.md"
+    },
+    {
+      "url": "https://www.coravin.se/blogs/community/taco-wine-pairings-recipes",
+      "title": "The Best 4 Taco Wine Pairings (with Recipes!) 2023",
+      "file": "mexican-food-wine-pairing_competitor-3.md"
+    },
+    {
+      "url": "https://winenowlounge.com/what-wine-to-drink-with-mexican-food/",
+      "title": "What Wine To Drink With Mexican Food?",
+      "file": "mexican-food-wine-pairing_competitor-4.md"
+    }
+  ],
+  "basic_terms": [
+    {
+      "term": "pairings",
+      "term_lemma": "pairing",
+      "importance": 82,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": true,
+      "h2h3_recommended": true,
+      "h1_pct": 50,
+      "h2_pct": 75,
+      "competitor_body_counts": [
+        3,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "pairs",
+      "term_lemma": "pair",
+      "importance": 66,
+      "suggested_range": [
+        3,
+        6
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 25,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "term": "food",
+      "term_lemma": "food",
+      "importance": 63,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": true,
+      "h2h3_recommended": false,
+      "h1_pct": 75,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        6
+      ]
+    },
+    {
+      "term": "red",
+      "term_lemma": "red",
+      "importance": 58,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        3,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "flavors",
+      "term_lemma": "flavor",
+      "importance": 57,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "term": "dishes",
+      "term_lemma": "dish",
+      "importance": 57,
+      "suggested_range": [
+        3,
+        9
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        6,
+        3,
+        1,
+        9
+      ]
+    },
+    {
+      "term": "white wines",
+      "term_lemma": "white wine",
+      "importance": 56,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "well",
+      "term_lemma": "well",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "complement",
+      "term_lemma": "complement",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "term": "acidity",
+      "term_lemma": "acidity",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "term": "wine pairing",
+      "term_lemma": "wine pairing",
+      "importance": 52,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": true,
+      "h2h3_recommended": true,
+      "h1_pct": 50,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "work",
+      "term_lemma": "work",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "mexican cuisine",
+      "term_lemma": "mexican cuisine",
+      "importance": 51,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "red wines",
+      "term_lemma": "red wine",
+      "importance": 44,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "feature",
+      "term_lemma": "feature",
+      "importance": 44,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "tacos",
+      "term_lemma": "taco",
+      "importance": 43,
+      "suggested_range": [
+        1,
+        10
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 25,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        0,
+        0,
+        10,
+        1
+      ]
+    },
+    {
+      "term": "sauvignon",
+      "term_lemma": "sauvignon",
+      "importance": 41,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "blanc",
+      "term_lemma": "blanc",
+      "importance": 41,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "like",
+      "term_lemma": "like",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "meat",
+      "term_lemma": "meat",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "tannins",
+      "term_lemma": "tannin",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        4,
+        1,
+        0
+      ]
+    }
+  ],
+  "extended_terms": [
+    {
+      "term": "sauce",
+      "term_lemma": "sauce",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "chili",
+      "term_lemma": "chili",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "palate",
+      "term_lemma": "palate",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "lime",
+      "term_lemma": "lime",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "notes",
+      "term_lemma": "note",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "recipe",
+      "term_lemma": "recipe",
+      "importance": 39,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 25,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        0,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "match",
+      "term_lemma": "match",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "fruity",
+      "term_lemma": "fruity",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "carne",
+      "term_lemma": "carne",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "overview",
+      "term_lemma": "overview",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "principles",
+      "term_lemma": "principle",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "recommendations",
+      "term_lemma": "recommendation",
+      "importance": 36,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 0,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine pairing",
+      "term_lemma": "wine pair",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 25,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "steak",
+      "term_lemma": "steak",
+      "importance": 33,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        0,
+        1,
+        4,
+        0
+      ]
+    },
+    {
+      "term": "ingredients",
+      "term_lemma": "ingredient",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        1,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "term": "key",
+      "term_lemma": "key",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "zinfandel",
+      "term_lemma": "zinfandel",
+      "importance": 29,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "sauvignon blanc",
+      "term_lemma": "sauvignon blanc",
+      "importance": 29,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "pinot noir",
+      "term_lemma": "pinot noir",
+      "importance": 29,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "balance",
+      "term_lemma": "balance",
+      "importance": 28,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "spicy",
+      "term_lemma": "spicy",
+      "importance": 28,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "term": "tacos",
+      "term_lemma": "tacos",
+      "importance": 28,
+      "suggested_range": [
+        1,
+        5
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        5,
+        0
+      ]
+    },
+    {
+      "term": "corn",
+      "term_lemma": "corn",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "term": "mexican dishes",
+      "term_lemma": "mexican dish",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "beer",
+      "term_lemma": "beer",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "complex",
+      "term_lemma": "complex",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "similar",
+      "term_lemma": "similar",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "create",
+      "term_lemma": "create",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "seafood",
+      "term_lemma": "seafood",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "tomato",
+      "term_lemma": "tomato",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "acidic",
+      "term_lemma": "acidic",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "robust",
+      "term_lemma": "robust",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "recommends",
+      "term_lemma": "recommend",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "cheese",
+      "term_lemma": "cheese",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "chilies",
+      "term_lemma": "chilies",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "work well",
+      "term_lemma": "work well",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "meat dishes",
+      "term_lemma": "meat dish",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "high tannins",
+      "term_lemma": "high tannin",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "salt",
+      "term_lemma": "salt",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "medium",
+      "term_lemma": "medium",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "spice",
+      "term_lemma": "spice",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "grilled",
+      "term_lemma": "grill",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "traditional",
+      "term_lemma": "traditional",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "con",
+      "term_lemma": "con",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "blend",
+      "term_lemma": "blend",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "enhanced",
+      "term_lemma": "enhance",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "dishes like",
+      "term_lemma": "dish like",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "berry notes",
+      "term_lemma": "berry note",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "tannins complement",
+      "term_lemma": "tannin complement",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "tequila",
+      "term_lemma": "tequila",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "enchiladas",
+      "term_lemma": "enchiladas",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "bean",
+      "term_lemma": "bean",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "fish",
+      "term_lemma": "fish",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "salsas",
+      "term_lemma": "salsa",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "cilantro",
+      "term_lemma": "cilantro",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "term": "bold",
+      "term_lemma": "bold",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "citrusy",
+      "term_lemma": "citrusy",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "cream",
+      "term_lemma": "cream",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "blanc wines",
+      "term_lemma": "blanc wine",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "notes complement",
+      "term_lemma": "note complement",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "term": "acidity cuts richness",
+      "term_lemma": "acidity cut richness",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Wine",
+      "importance": 100,
+      "suggested_range": [
+        6,
+        11
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Mexican",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        7
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Sauvignon",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Pairing",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Pinot Noir",
+      "importance": 50,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Recommendations",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Steak",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Principles",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Mexican Food",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Dishes",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Noir",
+      "importance": 50,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Pairings",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Zinfandel",
+      "importance": 50,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Blanc",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Overview",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Pinot",
+      "importance": 50,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50
+    }
+  ],
+  "heading_terms": {
+    "h1": [
+      "pairings",
+      "food",
+      "wine pairing"
+    ],
+    "h2h3": [
+      "pairings",
+      "wine pairing",
+      "overview",
+      "principles",
+      "recommendations"
+    ]
+  },
+  "target_word_count": {
+    "median": 294,
+    "range": [
+      212,
+      406
+    ]
+  },
+  "summary": {
+    "basic_count": 21,
+    "extended_count": 61,
+    "entity_count": 16,
+    "h1_term_count": 3,
+    "h2h3_term_count": 5
+  }
+}

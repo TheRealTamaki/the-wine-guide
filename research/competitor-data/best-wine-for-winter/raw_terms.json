@@ -1,0 +1,6155 @@
+{
+  "keyword": "best wine for winter",
+  "competitor_count": 5,
+  "competitors": [
+    {
+      "url": "https://wine365.com/winter-wine-essentials-best-bottles-to-sip-during-the-coldest-months/",
+      "title": "Winter Wine Essentials: Best Bottles to Sip During the Coldest Months",
+      "file": "best-wine-for-winter_competitor-1.md"
+    },
+    {
+      "url": "https://brewsnspirits.in/best-indian-wines-to-warm-your-hearts-in-winter",
+      "title": "Best Indian Wines to Warm Your Winters",
+      "file": "best-wine-for-winter_competitor-2.md"
+    },
+    {
+      "url": "https://fromthevinetowine.com/2022/12/12/wonderful-winter-wines-for-cozy-evenings/",
+      "title": "Wonderful Winter wines for cozy evenings",
+      "file": "best-wine-for-winter_competitor-3.md"
+    },
+    {
+      "url": "https://nicoboston.com/the-best-wines-for-winter/",
+      "title": "The Best Wines for Winter",
+      "file": "best-wine-for-winter_competitor-4.md"
+    },
+    {
+      "url": "https://blackstarfarms.com/blog/winter-wine-ideas/",
+      "title": "Winter Wine Ideas",
+      "file": "best-wine-for-winter_competitor-5.md"
+    }
+  ],
+  "word_counts": [
+    417,
+    343,
+    320,
+    139,
+    483
+  ],
+  "terms": [
+    {
+      "term_lemma": "winter",
+      "term_display": "winter",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        5,
+        1,
+        4,
+        3,
+        3
+      ],
+      "competitor_in_h1": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "competitors_using": 5
+    },
+    {
+      "term_lemma": "season",
+      "term_display": "season",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 5
+    },
+    {
+      "term_lemma": "wine",
+      "term_display": "wine",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        9,
+        13,
+        6,
+        5,
+        12
+      ],
+      "competitor_in_h1": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "competitor_in_h2": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "competitors_using": 5
+    },
+    {
+      "term_lemma": "red",
+      "term_display": "red",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        3,
+        4,
+        3,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 5
+    },
+    {
+      "term_lemma": "offer",
+      "term_display": "offers",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        1,
+        4,
+        1,
+        2
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 5
+    },
+    {
+      "term_lemma": "flavor",
+      "term_display": "flavors",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        3,
+        1,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "ideal",
+      "term_display": "ideal",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        1,
+        2,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "pair",
+      "term_display": "pairing",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        1,
+        3,
+        3,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "well",
+      "term_display": "well",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "grape",
+      "term_display": "grape",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        2,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "month",
+      "term_display": "months",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "white",
+      "term_display": "white",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        2,
+        2,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "favorite",
+      "term_display": "favorite",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "reserve",
+      "term_display": "reserve",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        3,
+        2,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 4
+    },
+    {
+      "term_lemma": "cold",
+      "term_display": "cold",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        3,
+        0,
+        0,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "perfect",
+      "term_display": "perfect",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "provide",
+      "term_display": "provide",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "comfort",
+      "term_display": "comfort",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "cabernet",
+      "term_display": "cabernet",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        5,
+        3,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "sauvignon",
+      "term_display": "sauvignon",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        5,
+        3,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "showcase",
+      "term_display": "showcases",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "vanilla",
+      "term_display": "vanilla",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        3,
+        2,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "spice",
+      "term_display": "spice",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        6,
+        2,
+        2,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "feature",
+      "term_display": "featured",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        5,
+        2,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "bottle",
+      "term_display": "bottles",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        6,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "characteristic",
+      "term_display": "characteristics",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        3,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "meat",
+      "term_display": "meats",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "chardonnay",
+      "term_display": "chardonnay",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        4,
+        0,
+        3,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "age",
+      "term_display": "aged",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        2,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "suit",
+      "term_display": "suits",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "make",
+      "term_display": "making",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "vintage",
+      "term_display": "vintage",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "select",
+      "term_display": "selecting",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "whether",
+      "term_display": "whether",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "dark chocolate",
+      "term_display": "dark chocolate",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "italian",
+      "term_display": "italian",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "black",
+      "term_display": "black",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        3
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "food",
+      "term_display": "food",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "winery",
+      "term_display": "winery",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "red wine",
+      "term_display": "red wines",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        0,
+        4,
+        0,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 3
+    },
+    {
+      "term_lemma": "stretch",
+      "term_display": "stretches",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "warmth",
+      "term_display": "warmth",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        3,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "highlight",
+      "term_display": "highlights",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "across",
+      "term_display": "across",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "category",
+      "term_display": "categories",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "bold",
+      "term_display": "bold",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "night",
+      "term_display": "nights",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "rich",
+      "term_display": "rich",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        4,
+        0,
+        2,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "warm",
+      "term_display": "warming",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        4,
+        0,
+        0,
+        0,
+        2
+      ],
+      "competitor_in_h1": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "depth",
+      "term_display": "depth",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "evening",
+      "term_display": "evenings",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "blackberry",
+      "term_display": "blackberry",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "plum",
+      "term_display": "plum",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "hearty",
+      "term_display": "hearty",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "fare",
+      "term_display": "fare",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "like",
+      "term_display": "like",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "braise",
+      "term_display": "braised",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "roast",
+      "term_display": "roasted",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        5,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "stew",
+      "term_display": "stews",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "valley",
+      "term_display": "valley",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        4,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "feel",
+      "term_display": "feels",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "embrace",
+      "term_display": "embrace",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "alongside",
+      "term_display": "alongside",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "pepper",
+      "term_display": "pepper",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "smoke",
+      "term_display": "smoke",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "complement",
+      "term_display": "complements",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "beautifully",
+      "term_display": "beautifully",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "range",
+      "term_display": "range",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "cozy",
+      "term_display": "cozy",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "oaked",
+      "term_display": "oaked",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "toast",
+      "term_display": "toasted",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "buttery",
+      "term_display": "buttery",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "profile",
+      "term_display": "profile",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "suitable",
+      "term_display": "suitable",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "spirit",
+      "term_display": "spirits",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "represent",
+      "term_display": "represents",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "portuguese",
+      "term_display": "portuguese",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "dry",
+      "term_display": "dried",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "fruit",
+      "term_display": "fruit",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "nutty",
+      "term_display": "nutty",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "create",
+      "term_display": "creates",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "cheese",
+      "term_display": "cheese",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "article",
+      "term_display": "article",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "enjoy",
+      "term_display": "enjoy",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        0,
+        4
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "fireplace",
+      "term_display": "fireplace",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "cabernet sauvignon",
+      "term_display": "cabernet sauvignon",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        5,
+        3,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "wine showcase",
+      "term_display": "wine showcases",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "vanilla spice",
+      "term_display": "vanilla spice",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "cold month",
+      "term_display": "cold months",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "layer complexity",
+      "term_display": "layered complexity",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "spice note",
+      "term_display": "spice notes",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "dark berry",
+      "term_display": "dark berries",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "alcohol content",
+      "term_display": "alcohol content",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "ruby port",
+      "term_display": "ruby port",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "tawny port",
+      "term_display": "tawny port",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "fortify wine",
+      "term_display": "fortified wines",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "pair exceptionally well",
+      "term_display": "pairs exceptionally well",
+      "ngram_size": 3,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "late bottle vintage",
+      "term_display": "late bottled vintage",
+      "ngram_size": 3,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "introduction",
+      "term_display": "introduction",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "go",
+      "term_display": "goes",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "year",
+      "term_display": "year",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        3
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "local",
+      "term_display": "local",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "opportunity",
+      "term_display": "opportunity",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "explore",
+      "term_display": "explore",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "premium",
+      "term_display": "premium",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "quality",
+      "term_display": "quality",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "value",
+      "term_display": "value",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "glass",
+      "term_display": "glass",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "enjoyment",
+      "term_display": "enjoyment",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "blend",
+      "term_display": "blends",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        3,
+        4,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "combine",
+      "term_display": "combines",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "aromatics",
+      "term_display": "aromatics",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "appeal",
+      "term_display": "appeals",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "style",
+      "term_display": "styles",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "similar",
+      "term_display": "similar",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "present",
+      "term_display": "presents",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "cherry",
+      "term_display": "cherry",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "aromas",
+      "term_display": "aromas",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "approachable",
+      "term_display": "approachable",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "either",
+      "term_display": "either",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "balance",
+      "term_display": "balances",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "approachability",
+      "term_display": "approachability",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "available",
+      "term_display": "available",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "among",
+      "term_display": "among",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "barrel",
+      "term_display": "barrels",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "meal",
+      "term_display": "meals",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "several",
+      "term_display": "several",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "start",
+      "term_display": "start",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "option",
+      "term_display": "options",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "sparkle",
+      "term_display": "sparkling",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        3
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "outside",
+      "term_display": "outside",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "call",
+      "term_display": "call",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "character",
+      "term_display": "character",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "wine selection",
+      "term_display": "wine selections",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "holiday season",
+      "term_display": "holiday season",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "pinot noir",
+      "term_display": "pinot noir",
+      "ngram_size": 2,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "invite",
+      "term_display": "inviting",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "locate",
+      "term_display": "located",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    },
+    {
+      "term_lemma": "visitor",
+      "term_display": "visitors",
+      "ngram_size": 1,
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "competitor_in_h1": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h2": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_h3": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitor_in_title": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "competitors_using": 2
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Winter",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "competitor_body_counts": [
+        5,
+        1,
+        4,
+        4,
+        3
+      ],
+      "competitors_using": 4
+    },
+    {
+      "entity": "Italian",
+      "competitor_presence": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "competitors_using": 3
+    },
+    {
+      "entity": "Cabernet",
+      "competitor_presence": [
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "competitor_body_counts": [
+        5,
+        3,
+        0,
+        0,
+        1
+      ],
+      "competitors_using": 3
+    },
+    {
+      "entity": "Wines",
+      "competitor_presence": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "competitors_using": 3
+    },
+    {
+      "entity": "Sauvignon",
+      "competitor_presence": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        5,
+        3,
+        1,
+        0,
+        0
+      ],
+      "competitors_using": 3
+    },
+    {
+      "entity": "Chardonnay",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "competitor_body_counts": [
+        4,
+        0,
+        3,
+        0,
+        1
+      ],
+      "competitors_using": 3
+    },
+    {
+      "entity": "Best",
+      "competitor_presence": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "competitors_using": 3
+    },
+    {
+      "entity": "Black",
+      "competitor_presence": [
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "competitor_body_counts": [
+        2,
+        3,
+        1,
+        0,
+        3
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Sip",
+      "competitor_presence": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Whites",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Tawny",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Portuguese",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Noir",
+      "competitor_presence": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Pinot",
+      "competitor_presence": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        3,
+        2,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Featured",
+      "competitor_presence": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Wine",
+      "competitor_presence": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "competitor_body_counts": [
+        9,
+        14,
+        8,
+        5,
+        13
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Bottled",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Reserve",
+      "competitor_presence": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        3,
+        2,
+        1,
+        0,
+        1
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Introduction",
+      "competitor_presence": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Late",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        3,
+        2,
+        2,
+        0,
+        0
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Vintage",
+      "competitor_presence": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Red",
+      "competitor_presence": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "competitor_body_counts": [
+        3,
+        5,
+        3,
+        1,
+        2
+      ],
+      "competitors_using": 2
+    },
+    {
+      "entity": "Whether",
+      "competitor_presence": [
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "competitors_using": 2
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+[
+  {
+    "name": "Chateau Lajarre Bordeaux",
+    "vintage": null,
+    "url": "https://www.wine.com/search/chateau lajarre bordeaux/0",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": null,
+    "price_display": "~$15",
+    "critic_scores": [],
+    "customer_rating": null,
+    "customer_review_count": null,
+    "region": "Bordeaux, France",
+    "grape": "Bordeaux Red Blend",
+    "style_bucket": "red",
+    "why_picked": "Existing candidate — Bordeaux style anchor for the red lineup",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": null
+    }
+  },
+  {
+    "name": "Domaine Laroque Cite de Carcassonne Pinot Noir",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/domaine-laroque-cite-de-carcassonne-pinot-noir-2023/3036255",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": 17.97,
+    "price_display": "$17.97",
+    "critic_scores": [
+      { "critic": "Wine Enthusiast", "score": 91 }
+    ],
+    "customer_rating": 4.3,
+    "customer_review_count": 123,
+    "region": "Languedoc, South of France",
+    "grape": "Pinot Noir",
+    "style_bucket": "red",
+    "why_picked": "Existing candidate — Languedoc Pinot Noir at excellent value, strong customer approval",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Jadix Cabernet Sauvignon",
+    "vintage": null,
+    "url": "https://www.wine.com/search/jadix cabernet sauvignon/0",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": null,
+    "price_display": "~$15",
+    "critic_scores": [],
+    "customer_rating": null,
+    "customer_review_count": null,
+    "region": "California",
+    "grape": "Cabernet Sauvignon",
+    "style_bucket": "red",
+    "why_picked": "Existing candidate — California Cab anchor for the red lineup",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": null
+    }
+  },
+  {
+    "name": "BenMarco Malbec",
+    "vintage": "2022",
+    "url": "https://www.wine.com/product/benmarco-malbec-2022/2669489",
+    "product_id": "2669489",
+    "image_cloudinary_id": "csragcjypok3dxolfnnf",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/csragcjypok3dxolfnnf.jpg",
+    "price_sale": 19.99,
+    "price_display": "$19.99",
+    "critic_scores": [
+      { "critic": "James Suckling", "score": 93 },
+      { "critic": "Vinous", "score": 91 },
+      { "critic": "Wine Spectator", "score": 90 }
+    ],
+    "customer_rating": 4.2,
+    "customer_review_count": 104,
+    "region": "Uco Valley, Mendoza, Argentina",
+    "grape": "Malbec",
+    "style_bucket": "red",
+    "why_picked": "Top-scoring Malbec under $20; 93 JS, 91 Vinous, 90 WS. Strong regional representation and value (was $24.99). Adds Argentina/Malbec diversity to the lineup.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "CVNE Rioja Reserva",
+    "vintage": "2020",
+    "url": "https://www.wine.com/product/cvne-rioja-reserva-2020/2609673",
+    "product_id": "2609673",
+    "image_cloudinary_id": "xtbmbny0dlgyo4qycjrq",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/xtbmbny0dlgyo4qycjrq.jpg",
+    "price_sale": 19.97,
+    "price_display": "$19.97",
+    "critic_scores": [
+      { "critic": "Vinous", "score": 92 },
+      { "critic": "James Suckling", "score": 92 },
+      { "critic": "Wine Spectator", "score": 91 },
+      { "critic": "Robert Parker", "score": 91 },
+      { "critic": "Decanter", "score": 90 }
+    ],
+    "customer_rating": 4.1,
+    "customer_review_count": 8,
+    "region": "Rioja, Spain",
+    "grape": "Tempranillo",
+    "style_bucket": "red",
+    "why_picked": "Five-critic consensus (92 Vinous/JS, 91 WS/RP/Decanter). Rioja Reserva for under $20 is outstanding value (was $29). Classic Spanish Tempranillo covers an important style slot.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Frescobaldi Nipozzano Chianti Rufina Riserva",
+    "vintage": "2022",
+    "url": "https://www.wine.com/product/frescobaldi-nipozzano-chianti-rufina-riserva-2022/3871328",
+    "product_id": "3871328",
+    "image_cloudinary_id": "b7f12caobgigotyelw6b",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/b7f12caobgigotyelw6b.jpg",
+    "price_sale": 18.99,
+    "price_display": "$18.99",
+    "critic_scores": [
+      { "critic": "James Suckling", "score": 92 },
+      { "critic": "Wine Spectator", "score": 90 },
+      { "critic": "Vinous", "score": 90 }
+    ],
+    "customer_rating": 3.9,
+    "customer_review_count": 21,
+    "region": "Chianti Rufina, Tuscany, Italy",
+    "grape": "Sangiovese",
+    "style_bucket": "red",
+    "why_picked": "Wine.com Top 100 of 2025. 92 JS, 90 WS/Vinous. Reputable Frescobaldi estate, Chianti Rufina (not generic Chianti). Sangiovese adds Italian diversity to the red lineup.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Bodegas Luzon Verde",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/bodegas-luzon-verde-2024/3985068",
+    "product_id": "3985068",
+    "image_cloudinary_id": "tm7cxedwoji08n4ixc7t",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/tm7cxedwoji08n4ixc7t.jpg",
+    "price_sale": 12.97,
+    "price_display": "$12.97",
+    "critic_scores": [
+      { "critic": "Wine Enthusiast", "score": 91 },
+      { "critic": "Wilfred Wong of Wine.com", "score": 91 }
+    ],
+    "customer_rating": 4.8,
+    "customer_review_count": 29,
+    "region": "Jumilla, Spain",
+    "grape": "Mourvedre",
+    "style_bucket": "red",
+    "why_picked": "Best-value red in the lineup at $13. Exceptional 4.8-star customer rating (29 reviews). Organic certified. Mourvedre from Jumilla is a distinctive Spanish style. 91 WE/91 WW.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "The Horologist Sauvignon Blanc",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/the-horologist-sauvignon-blanc-2024/existing",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": 17.99,
+    "price_display": "$17.99",
+    "critic_scores": [
+      { "critic": "Wine Enthusiast", "score": 90 },
+      { "critic": "Wilfred Wong of Wine.com", "score": 90 }
+    ],
+    "customer_rating": 4.4,
+    "customer_review_count": 64,
+    "region": "New Zealand",
+    "grape": "Sauvignon Blanc",
+    "style_bucket": "white",
+    "why_picked": "Existing candidate — NZ Sauvignon Blanc style anchor, strong customer approval",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Domaine Laroque Chardonnay",
+    "vintage": null,
+    "url": "https://www.wine.com/search/domaine laroque chardonnay/0",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": null,
+    "price_display": "~$17",
+    "critic_scores": [],
+    "customer_rating": null,
+    "customer_review_count": null,
+    "region": "Languedoc, France",
+    "grape": "Chardonnay",
+    "style_bucket": "white",
+    "why_picked": "Existing candidate — Languedoc Chardonnay value pick",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": null
+    }
+  },
+  {
+    "name": "Ziobaffa Organic Pinot Grigio",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/ziobaffa-organic-pinot-grigio-2024/existing",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": 15.97,
+    "price_display": "$15.97",
+    "critic_scores": [
+      { "critic": "Wilfred Wong of Wine.com", "score": 90 }
+    ],
+    "customer_rating": 4.4,
+    "customer_review_count": 60,
+    "region": "Puglia, Italy",
+    "grape": "Pinot Grigio",
+    "style_bucket": "white",
+    "why_picked": "Existing candidate — organic Pinot Grigio, strong customer rating",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Chalk Hill Sonoma Coast Chardonnay",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/chalk-hill-sonoma-coast-chardonnay-2024/3485964",
+    "product_id": "3485964",
+    "image_cloudinary_id": "yzydr4pewpurzxy3aqpn",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/yzydr4pewpurzxy3aqpn.jpg",
+    "price_sale": 19.99,
+    "price_display": "$19.99",
+    "critic_scores": [
+      { "critic": "James Suckling", "score": 93 },
+      { "critic": "Tasting Panel", "score": 93 }
+    ],
+    "customer_rating": 3.1,
+    "customer_review_count": 18,
+    "region": "Sonoma Coast, Sonoma County, California",
+    "grape": "Chardonnay",
+    "style_bucket": "white",
+    "why_picked": "Wine.com Top 100 of 2025. Highest-scoring California Chardonnay under $20 (93 JS / 93 TP). Sonoma Coast prestigious appellation. Was $26 — strong discount appeal.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Ceretto Arneis Blange",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/ceretto-arneis-blange-2023/3395102",
+    "product_id": "3395102",
+    "image_cloudinary_id": "xgxe3naeltvwobi9rhaq",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/xgxe3naeltvwobi9rhaq.jpg",
+    "price_sale": 18.97,
+    "price_display": "$18.97",
+    "critic_scores": [
+      { "critic": "Wine Enthusiast", "score": 91 },
+      { "critic": "James Suckling", "score": 90 }
+    ],
+    "customer_rating": 4.5,
+    "customer_review_count": 52,
+    "region": "Piedmont, Italy",
+    "grape": "Arneis",
+    "style_bucket": "white",
+    "why_picked": "Distinctive grape (Arneis) adds editorial interest vs. commodity Pinot Grigio. 91 WE / 90 JS, 4.5-star customer rating. Organic certified. Ceretto is a respected Piedmont estate.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Catena Appellation Lujan de Cuyo White Clay Semillon-Chenin Blanc",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/catena-appellation-lujan-de-cuyo-white-clay-semillon-chenin-blanc-2024/3648036",
+    "product_id": "3648036",
+    "image_cloudinary_id": "b5u12qrgmh4y1rs1yh4z",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/b5u12qrgmh4y1rs1yh4z.jpg",
+    "price_sale": 19.97,
+    "price_display": "$19.97",
+    "critic_scores": [
+      { "critic": "James Suckling", "score": 94 },
+      { "critic": "Robert Parker", "score": 91 },
+      { "critic": "Wine Spectator", "score": 91 }
+    ],
+    "customer_rating": 4.4,
+    "customer_review_count": 12,
+    "region": "Lujan de Cuyo, Mendoza, Argentina",
+    "grape": "Semillon-Chenin Blanc",
+    "style_bucket": "white",
+    "why_picked": "Highest critic score of all white candidates (94 JS). Three-critic consensus (94 JS / 91 RP / 91 WS). Catena prestige brand. Unique terroir-specific white blend from Mendoza — unexpected editorial angle.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Chateau Montaud Cotes de Provence Rose",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/chateau-montaud-cotes-de-provence-rose-2024/existing",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": 15.97,
+    "price_display": "$15.97",
+    "critic_scores": [
+      { "critic": "Wilfred Wong of Wine.com", "score": 91 },
+      { "critic": "Wine Enthusiast", "score": 90 }
+    ],
+    "customer_rating": 4.5,
+    "customer_review_count": 50,
+    "region": "Cotes de Provence, France",
+    "grape": "Provence Rosé Blend",
+    "style_bucket": "rose",
+    "why_picked": "Existing candidate — classic Provence rosé anchor",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Miraval Rose",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/miraval-rose-2024/3036255",
+    "product_id": "3036255",
+    "image_cloudinary_id": "mrfbwld3nwqfxc1hrvzd",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/mrfbwld3nwqfxc1hrvzd.jpg",
+    "price_sale": 19.97,
+    "price_display": "$19.97",
+    "critic_scores": [
+      { "critic": "Decanter", "score": 92 },
+      { "critic": "James Suckling", "score": 92 },
+      { "critic": "Robert Parker", "score": 90 }
+    ],
+    "customer_rating": 4.0,
+    "customer_review_count": 19,
+    "region": "Cotes de Provence, France",
+    "grape": "Provence Rosé Blend",
+    "style_bucket": "rose",
+    "why_picked": "Top-scoring rosé in category (92 Decanter / 92 JS / 90 RP). Miraval has celebrity estate recognition. Was $25, now $19.97 — strong value narrative. Premier Provence producer.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Marchesini Marcello Chiaretto di Bardolino Classico Rose",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/marchesini-marcello-chiaretto-di-bardolino-classico-rose-2023/3878672",
+    "product_id": "3878672",
+    "image_cloudinary_id": "oivchiratn8g74gsckzx",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/oivchiratn8g74gsckzx.jpg",
+    "price_sale": 16.97,
+    "price_display": "$16.97",
+    "critic_scores": [
+      { "critic": "Wine Enthusiast", "score": 93 }
+    ],
+    "customer_rating": null,
+    "customer_review_count": null,
+    "region": "Veneto, Italy",
+    "grape": "Corvina / Garganega Blend",
+    "style_bucket": "rose",
+    "why_picked": "Highest single critic score of all rosé candidates (93 WE). Chiaretto di Bardolino is a distinctive Italian rosé style — adds geographic diversity vs. the Provence-heavy field. Good price at $17.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Crios de Susana Balbo Rose of Malbec",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/crios-de-susana-balbo-rose-of-malbec-2024/3376590",
+    "product_id": "3376590",
+    "image_cloudinary_id": "qauhgzbjc4vxkkjqttsa",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/qauhgzbjc4vxkkjqttsa.jpg",
+    "price_sale": 13.97,
+    "price_display": "$13.97",
+    "critic_scores": [
+      { "critic": "Vinous", "score": 90 },
+      { "critic": "Wilfred Wong of Wine.com", "score": 90 }
+    ],
+    "customer_rating": 4.8,
+    "customer_review_count": 33,
+    "region": "Mendoza, Argentina",
+    "grape": "Malbec",
+    "style_bucket": "rose",
+    "why_picked": "Best-value rosé at $14. Exceptional 4.8-star customer rating (33 reviews). Rose of Malbec is a distinct style from Mendoza — adds Argentina + grape diversity to the rosé section.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "La Marca Prosecco",
+    "vintage": null,
+    "url": "https://www.wine.com/product/la-marca-prosecco/existing",
+    "product_id": "existing",
+    "image_cloudinary_id": null,
+    "image_url": null,
+    "price_sale": 17.97,
+    "price_display": "$17.97",
+    "critic_scores": [
+      { "critic": "Wilfred Wong of Wine.com", "score": 90 },
+      { "critic": "James Suckling", "score": 90 }
+    ],
+    "customer_rating": 4.2,
+    "customer_review_count": 2087,
+    "region": "Prosecco, Italy",
+    "grape": "Glera",
+    "style_bucket": "sparkling",
+    "why_picked": "Existing candidate — flagship Prosecco pick, 2087 customer reviews (most social proof in lineup)",
+    "verification": {
+      "url_live": true,
+      "image_id_match": null,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Gruet Brut",
+    "vintage": null,
+    "url": "https://www.wine.com/product/gruet-brut/12333",
+    "product_id": "12333",
+    "image_cloudinary_id": "wpk1dic8tuvxywsm8ycb",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/wpk1dic8tuvxywsm8ycb.jpg",
+    "price_sale": 17.97,
+    "price_display": "$17.97",
+    "critic_scores": [
+      { "critic": "Tasting Panel", "score": 91 },
+      { "critic": "Wilfred Wong of Wine.com", "score": 91 },
+      { "critic": "Wine Spectator", "score": 90 }
+    ],
+    "customer_rating": 4.1,
+    "customer_review_count": 606,
+    "region": "New Mexico, USA",
+    "grape": "Champagne Blend (Traditional Method)",
+    "style_bucket": "sparkling",
+    "why_picked": "91 TP / 91 WW / 90 WS. Traditional method sparkling from New Mexico — strong editorial angle as the American alternative to Champagne. 606 customer reviews. Best sparkling value at $18.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  },
+  {
+    "name": "Mionetto Prosecco Brut",
+    "vintage": null,
+    "url": "https://www.wine.com/product/mionetto-prosecco-brut/114238",
+    "product_id": "114238",
+    "image_cloudinary_id": "lahbbrm1dz0kym2taquw",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_600,h_400,dpr_2.0,c_fit,q_auto:good,fl_progressive/lahbbrm1dz0kym2taquw.jpg",
+    "price_sale": 15.97,
+    "price_display": "$15.97",
+    "critic_scores": [
+      { "critic": "Wine Enthusiast", "score": 90 }
+    ],
+    "customer_rating": 4.0,
+    "customer_review_count": 587,
+    "region": "Prosecco, Italy",
+    "grape": "Glera",
+    "style_bucket": "sparkling",
+    "why_picked": "90 WE, 4.0★ (587 reviews). Recognizable mass-market brand with strong social proof. Best-price sparkling at $16. Covers mainstream Prosecco alongside La Marca.",
+    "verification": {
+      "url_live": true,
+      "image_id_match": true,
+      "scores_match": true
+    }
+  }
+]

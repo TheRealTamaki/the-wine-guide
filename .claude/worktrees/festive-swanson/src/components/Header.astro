@@ -1,0 +1,160 @@
+---
+import { navGroups } from '../data/navigation';
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="fixed top-0 w-full z-50 bg-bg/80 glass-nav">
+  <div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
+    <!-- Wordmark -->
+    <a
+      href="/"
+      class="text-2xl font-bold font-heading text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
+      aria-label="The Wine Guide: Home"
+    >
+      The Wine Guide
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-8">
+      {navGroups.map((group) => (
+        <div class="relative group">
+          <button
+            class="text-text font-heading text-lg tracking-tight hover:text-accent transition-colors duration-300 cursor-pointer flex items-center gap-1"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {group.label}
+            <span class="material-symbols-outlined text-sm mt-0.5 transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+          </button>
+
+          <!-- Dropdown -->
+          <div
+            class="absolute left-0 top-full pt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+            role="menu"
+          >
+            <div class="bg-surface-white rounded-[var(--twg-radius-lg)] shadow-[var(--twg-shadow-lg)] border border-border overflow-hidden py-2">
+              {group.items.map((item) => (
+                <a
+                  href={item.href}
+                  class="block px-5 py-3 hover:bg-bg-alt transition-colors duration-200 cursor-pointer group/item"
+                  role="menuitem"
+                >
+                  <div class="text-sm font-semibold text-primary group-hover/item:text-accent transition-colors duration-200">
+                    {item.label}
+                  </div>
+                  {item.description && (
+                    <div class="text-xs text-text-muted mt-0.5 leading-snug">
+                      {item.description}
+                    </div>
+                  )}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Right side -->
+    <div class="flex items-center gap-4">
+      <!-- Search (desktop) -->
+      <div class="hidden md:flex bg-bg-alt rounded-full px-4 py-2 items-center">
+        <span class="material-symbols-outlined text-text-muted text-sm">search</span>
+        <input
+          class="bg-transparent border-none focus:ring-0 focus:outline-none text-sm placeholder:text-text-muted ml-2 w-32"
+          placeholder="Search..."
+          type="text"
+        />
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-toggle"
+        class="md:hidden p-2 text-primary hover:text-accent transition-colors duration-200 cursor-pointer"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer for fixed nav -->
+<div class="h-20"></div>
+
+<!-- Mobile drawer -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-40 hidden"
+  aria-hidden="true"
+>
+  <!-- Backdrop -->
+  <div id="mobile-backdrop" class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+
+  <!-- Drawer -->
+  <nav
+    class="absolute right-0 top-0 h-full w-80 bg-bg shadow-xl overflow-y-auto"
+    aria-label="Mobile navigation"
+  >
+    <div class="p-8 pt-24">
+      {navGroups.map((group) => (
+        <div class="mb-8">
+          <div class="text-xs font-bold text-text-muted uppercase tracking-widest mb-3 font-body">
+            {group.label}
+          </div>
+          <ul class="space-y-1">
+            {group.items.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="block px-4 py-3 rounded-xl text-sm font-medium text-text hover:text-primary hover:bg-bg-alt transition-colors duration-200 cursor-pointer"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </nav>
+</div>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('mobile-backdrop');
+  const icon = document.getElementById('menu-icon');
+
+  function openMenu() {
+    menu?.classList.remove('hidden');
+    menu?.setAttribute('aria-hidden', 'false');
+    toggle?.setAttribute('aria-expanded', 'true');
+    toggle?.setAttribute('aria-label', 'Close navigation menu');
+    if (icon) icon.textContent = 'close';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu?.classList.add('hidden');
+    menu?.setAttribute('aria-hidden', 'true');
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Open navigation menu');
+    if (icon) icon.textContent = 'menu';
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.contains('hidden') === false;
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  backdrop?.addEventListener('click', closeMenu);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

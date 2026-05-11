@@ -1,0 +1,261 @@
+{
+  "slug": "best-wines-under-20",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Chateau Lajarre Bordeaux Superieur 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Bordeaux Superieur — Right Bank Merlot-dominant blend, firm tannins, 13-13.5% ABV"]
+    },
+    {
+      "name": "The Horologist Sauvignon Blanc 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: NZ Sauvignon Blanc — zippy, high acidity, 12.5-13% ABV"]
+    },
+    {
+      "name": "Domaine Laroque Cite de Carcassonne Chardonnay 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Languedoc Chardonnay — partial oak, medium body, 13% ABV"]
+    },
+    {
+      "name": "Domaine Laroque Cite de Carcassonne Pinot Noir 2023",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Languedoc Pinot Noir — light-bodied, red berry, 12.5-13% ABV"]
+    },
+    {
+      "name": "Chateau Montaud Cotes de Provence Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Cotes de Provence Rosé — dry Grenache-Cinsault, light body, 13% ABV"]
+    },
+    {
+      "name": "Jadix Cabernet Sauvignon 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Pays d'Oc Cabernet Sauvignon — firm, dark fruit, 13.5-14% ABV"]
+    },
+    {
+      "name": "La Marca Prosecco NV",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 3,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Prosecco Extra Dry (La Marca) — off-dry with 12-17g/L RS, 11% ABV"]
+    },
+    {
+      "name": "Ziobaffa Organic Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Puglia Pinot Grigio — warmer, fuller body, 12.5-13% ABV"]
+    },
+    {
+      "name": "BenMarco Malbec",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/benmarco-malbec-2022/2669489 — ABV 14.5% confirmed",
+        "James Suckling 93: 'medium to full body and tightly wound tannins. Fresh, pristine'",
+        "Vinous 91: 'vibrant purple... expressive fruit... slightly rough tannins characteristic of Los Chacayes'",
+        "Wine Spectator 90: 'Prominent acidity and minerality'"
+      ]
+    },
+    {
+      "name": "CVNE Rioja Reserva",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/cvne-rioja-reserva-2020/2609673 — ABV 14% confirmed",
+        "James Suckling 92: 'medium-bodied palate with juicy, plummy fruit and fine-grained tannins'",
+        "Robert Parker 91: 'abundant, fine, slightly dusty tannins... good freshness and balance'",
+        "Wine Spectator 91: 'integrates creamy-edged tannins and orange peel acidity'"
+      ]
+    },
+    {
+      "name": "Frescobaldi Nipozzano Chianti Rufina Riserva",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/frescobaldi-nipozzano-chianti-rufina-riserva-2022/3871328 — ABV 13.5% confirmed (boundary rounds up to alcohol 4)",
+        "James Suckling 92: 'Medium-bodied with very fine tannins and crispness giving it tension and brightness'",
+        "Wine Spectator 90: 'solid tannins and bright acidity for support'",
+        "Vinous 90: 'soft, open-knit... plush contours'"
+      ]
+    },
+    {
+      "name": "Bodegas Luzon Verde",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/bodegas-luzon-verde-2024/3985068 — ABV 14% confirmed",
+        "Wine Enthusiast 91: 'relaxed tannins that bolster the bottling'",
+        "Wilfred Wong 91: 'supple, rounded texture... generous dark berry flavors... touch of richness'"
+      ]
+    },
+    {
+      "name": "Chalk Hill Sonoma Coast Chardonnay",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chalk-hill-sonoma-coast-chardonnay-2024/3485964 — ABV 14.5% confirmed (boundary rounds up to alcohol 5)",
+        "James Suckling 93: 'mouth-filling, weighty, full-bodied wine. Generous and satisfying'",
+        "Tasting Panel 93: 'body and weight but is lively and bright; the oak is merely a whisper'"
+      ]
+    },
+    {
+      "name": "Ceretto Arneis Blange",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/ceretto-arneis-blange-2023/3395102 — ABV 13% confirmed",
+        "Wine Enthusiast 91: 'lively mix of juicy pear and a hint of almond'",
+        "James Suckling 90: 'focused, medium-bodied white... lemon rind, almond and white pear. Nicely compact and lightly chalky'"
+      ]
+    },
+    {
+      "name": "Catena Appellation Lujan de Cuyo White Clay Semillon-Chenin Blanc",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/catena-appellation-lujan-de-cuyo-white-clay-semillon-chenin-blanc-2024/3648036 — ABV not listed on page",
+        "inference: Catena high-altitude Luján de Cuyo whites typically 13–13.5% ABV; scoring at 13% (alcohol 3) without confirmation",
+        "James Suckling 94: 'medium- to full-bodied, crunchy and textured... persistent freshness'",
+        "Wine Spectator 91: 'vibrant acidity, crushed rock and salt drive the palate'",
+        "Robert Parker 91: 'oily and rich before transitioning to a vibrant, succulent and gently tensile finish'"
+      ]
+    },
+    {
+      "name": "Miraval Rose",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/miraval-rose-2024/3036255 — ABV 13% confirmed",
+        "James Suckling 92: 'medium-bodied palate is sleek and finely textured, driven by bright acidity and highlighted by a clear mineral backbone'",
+        "Decanter 92: 'Fresh, crisp and mineral, with silky red berry fruit'",
+        "Robert Parker 90: 'moderately weighted, juicy and round wine with lot of energy'"
+      ]
+    },
+    {
+      "name": "Marchesini Marcello Chiaretto di Bardolino Classico Rose",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/marchesini-marcello-chiaretto-di-bardolino-classico-rose-2023/3878672 — ABV 13.5% confirmed (boundary rounds up to alcohol 4)",
+        "Wine Enthusiast 93: 'tart red fruits... serious depth and structure with a texture that fills every corner of your mouth'",
+        "Winemaker notes: 'Full bodied flavor and structure... full bodied and lingering'"
+      ]
+    },
+    {
+      "name": "Crios de Susana Balbo Rose of Malbec",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/crios-de-susana-balbo-rose-of-malbec-2024/3376590 — ABV 13.5% confirmed (boundary rounds up to alcohol 4)",
+        "Vinous 90: 'dry and taut, with medium tension and a lightly malic profile'",
+        "Wilfred Wong 90: 'bright, tart red fruit flavors and a lively, zesty finish'"
+      ]
+    },
+    {
+      "name": "Gruet Brut",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/gruet-brut/12333 — ABV 12% confirmed",
+        "Wine Spectator 90: 'crisp, layered flavors of lime and mineral'",
+        "Tasting Panel 91: 'fresh, juicy, and clean with a tangy style'",
+        "inference: traditional method (méthode champenoise, 24 months on tirage) drives acidity to 5 — Champagne-equivalent production method"
+      ]
+    },
+    {
+      "name": "Mionetto Prosecco Brut",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/mionetto-prosecco-brut/114238 — ABV 11% confirmed",
+        "Wine Enthusiast 90: 'zippy palate... loads of fresh apples and a touch of minerality'",
+        "Winemaker notes: 'well-balanced acidity provides a fresh and lively mouthfeel with a clean dry finish'"
+      ]
+    }
+  ]
+}

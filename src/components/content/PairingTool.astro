@@ -1,0 +1,1174 @@
+---
+// PairingTool.astro
+// Interactive wine + cheese pairing tool. Vanilla Astro + small client script.
+// Server-renders the initial state (mode=wine, selected=Pinot Noir) so there
+// is no flash of empty content.
+
+const WINES = [
+  { id: 'cab', name: 'Cabernet Sauvignon', cat: 'red', region: 'Bordeaux · Napa', body: 5, intensity: 5,
+    notes: 'Black currant, cedar, firm tannins', serve: '60-65°F', tags: ['tannic', 'bold', 'oak', 'fruit-black'],
+    blurb: 'A heavyweight. Loves fat, salt, and a long sit by the fire.' },
+  { id: 'pinot', name: 'Pinot Noir', cat: 'red', region: 'Burgundy · Oregon', body: 3, intensity: 3,
+    notes: 'Cherry, forest floor, soft tannins', serve: '55-60°F', tags: ['earthy', 'silky', 'fruit-red', 'low-tannin'],
+    blurb: 'The diplomat. Slips between cheeses without ever raising its voice.' },
+  { id: 'malbec', name: 'Malbec', cat: 'red', region: 'Mendoza', body: 4, intensity: 4,
+    notes: 'Plum, cocoa, violet', serve: '60-65°F', tags: ['fruit-black', 'smoky', 'velvety'],
+    blurb: 'Plush and a little smoky. Made for evening meat boards.' },
+  { id: 'chianti', name: 'Chianti Classico', cat: 'red', region: 'Tuscany', body: 3, intensity: 4,
+    notes: 'Sour cherry, leather, herb', serve: '60°F', tags: ['acid', 'savory', 'rustic'],
+    blurb: 'Bright acidity that makes salty, aged cheeses sing.' },
+
+  { id: 'chard', name: 'Chardonnay (Oaked)', cat: 'white', region: 'Burgundy · Sonoma', body: 4, intensity: 4,
+    notes: 'Apple, butter, vanilla', serve: '50-55°F', tags: ['creamy', 'oak', 'rich'],
+    blurb: 'Buttery and broad. Echoes creamy cheeses like a duet.' },
+  { id: 'sauv', name: 'Sauvignon Blanc', cat: 'white', region: 'Loire · Marlborough', body: 2, intensity: 3,
+    notes: 'Grapefruit, grass, gooseberry', serve: '45-50°F', tags: ['acid', 'crisp', 'herbaceous'],
+    blurb: 'A clean knife through anything rich, fresh, or grassy.' },
+  { id: 'ries', name: 'Riesling (Off-Dry)', cat: 'white', region: 'Mosel · Alsace', body: 2, intensity: 3,
+    notes: 'Lime, peach, petrol, honey', serve: '45°F', tags: ['acid', 'sweet', 'aromatic'],
+    blurb: 'Sweetness plus acid is the secret weapon against funk and heat.' },
+  { id: 'gruner', name: 'Grüner Veltliner', cat: 'white', region: 'Austria', body: 2, intensity: 3,
+    notes: 'White pepper, lime, celery', serve: '45-50°F', tags: ['crisp', 'mineral', 'herbaceous'],
+    blurb: 'Peppery, mineral, refreshing. A green-apple bite.' },
+
+  { id: 'rose', name: 'Provençal Rosé', cat: 'rose', region: 'Provence', body: 2, intensity: 2,
+    notes: 'Strawberry, melon, sea salt', serve: '45°F', tags: ['crisp', 'fruit-red', 'mineral'],
+    blurb: 'A long pale afternoon. Plays nicely with almost everything mild.' },
+
+  { id: 'champ', name: 'Brut Champagne', cat: 'sparkling', region: 'Champagne', body: 3, intensity: 4,
+    notes: 'Brioche, lemon, almond, fine bead', serve: '45°F', tags: ['acid', 'creamy', 'mineral', 'effervescent'],
+    blurb: 'Bubbles plus acid scrub the palate clean. Pairs with nearly anything.' },
+  { id: 'prosecco', name: 'Prosecco', cat: 'sparkling', region: 'Veneto', body: 2, intensity: 2,
+    notes: 'Pear, white flowers, almond', serve: '45°F', tags: ['crisp', 'fruit-white', 'effervescent'],
+    blurb: 'Lighter, fruitier sparkle. Friendly and forgiving.' },
+
+  { id: 'port', name: 'Tawny Port', cat: 'dessert', region: 'Douro', body: 5, intensity: 5,
+    notes: 'Walnut, caramel, dried fig', serve: '60°F', tags: ['sweet', 'rich', 'oxidative', 'nutty'],
+    blurb: 'The classic blue-cheese partner. Sweetness tames salt and funk.' },
+  { id: 'saut', name: 'Sauternes', cat: 'dessert', region: 'Bordeaux', body: 4, intensity: 5,
+    notes: 'Apricot, honey, botrytis', serve: '50°F', tags: ['sweet', 'rich', 'aromatic'],
+    blurb: 'Honeyed and lush. A famous handshake with Roquefort.' },
+];
+
+const CHEESES = [
+  { id: 'brie', name: 'Brie', style: 'Soft-ripened', region: 'Île-de-France', body: 2, intensity: 2,
+    milk: 'Cow', age: '4-8 weeks', veg: false,
+    notes: 'Buttery, mushroomy, thin bloomy rind', tags: ['creamy', 'rich', 'mild', 'mushroom'],
+    blurb: 'A pillow. Wants something bright and bubbly.' },
+  { id: 'cam', name: 'Camembert', style: 'Soft-ripened', region: 'Normandy', body: 3, intensity: 3,
+    milk: 'Cow', age: '4-6 weeks', veg: false,
+    notes: 'Earthy, garlicky, deeper than Brie', tags: ['creamy', 'earthy', 'mushroom', 'funk-soft'],
+    blurb: 'Brie’s moodier cousin. Funkier, more confident.' },
+  { id: 'chev', name: 'Fresh Chèvre', style: 'Fresh goat', region: 'Loire', body: 1, intensity: 2,
+    milk: 'Goat', age: '1-2 weeks', veg: true,
+    notes: 'Tangy, lemony, chalky', tags: ['acid', 'fresh', 'tangy', 'herbaceous'],
+    blurb: 'Bright and chalky. Lives for a squeeze of acid.' },
+  { id: 'mozz', name: 'Buffalo Mozzarella', style: 'Fresh', region: 'Campania', body: 1, intensity: 1,
+    milk: 'Buffalo', age: 'Days', veg: true,
+    notes: 'Milky, sweet, lactic', tags: ['fresh', 'mild', 'creamy', 'milky'],
+    blurb: 'Silky and shy. Match its gentleness.' },
+
+  { id: 'manch', name: 'Manchego (12mo)', style: 'Aged sheep', region: 'La Mancha', body: 4, intensity: 4,
+    milk: 'Sheep', age: '12 months', veg: false,
+    notes: 'Nutty, lanolin, caramel', tags: ['nutty', 'rich', 'savory', 'sheep'],
+    blurb: 'Nutty and proud. Built for reds with a bit of leather.' },
+  { id: 'gruy', name: 'Gruyère', style: 'Alpine', region: 'Switzerland', body: 4, intensity: 4,
+    milk: 'Cow', age: '10-12 months', veg: false,
+    notes: 'Brothy, hazelnut, savory crystals', tags: ['nutty', 'savory', 'rich', 'oak'],
+    blurb: 'Savory and crystalline. Loves oak and apple.' },
+  { id: 'comte', name: 'Comté (24mo)', style: 'Alpine', region: 'Jura', body: 4, intensity: 4,
+    milk: 'Cow', age: '24 months', veg: false,
+    notes: 'Brown butter, toasted nut, pineapple', tags: ['nutty', 'savory', 'rich', 'fruit-white'],
+    blurb: 'Long, complex, beloved. The diplomat of cheeses.' },
+  { id: 'parm', name: 'Parmigiano-Reggiano', style: 'Hard aged', region: 'Emilia-Romagna', body: 5, intensity: 5,
+    milk: 'Cow', age: '24 months', veg: false,
+    notes: 'Crystalline, pineapple, broth', tags: ['savory', 'umami', 'salty', 'crystalline'],
+    blurb: 'The king. Salt, umami, and crunch all at once.' },
+  { id: 'ched', name: 'Aged Cheddar (3yr)', style: 'Aged', region: 'Somerset', body: 5, intensity: 5,
+    milk: 'Cow', age: '3 years', veg: true,
+    notes: 'Sharp, buttery, tangy', tags: ['sharp', 'rich', 'savory', 'tangy'],
+    blurb: 'Sharp enough to cut through a Cabernet without flinching.' },
+
+  { id: 'gouda', name: 'Aged Gouda', style: 'Aged', region: 'Netherlands', body: 4, intensity: 4,
+    milk: 'Cow', age: '2 years', veg: false,
+    notes: 'Butterscotch, caramel, crystals', tags: ['nutty', 'sweet', 'caramel', 'crystalline'],
+    blurb: 'Butterscotch in cheese form. Made for sweet, dark wines.' },
+
+  { id: 'roq', name: 'Roquefort', style: 'Blue', region: 'Aveyron', body: 5, intensity: 5,
+    milk: 'Sheep', age: '3 months', veg: false,
+    notes: 'Salty, peppery, lanolin', tags: ['blue', 'salty', 'funk-strong', 'sheep'],
+    blurb: 'Sharp and saline. The textbook Sauternes match.' },
+  { id: 'stil', name: 'Stilton', style: 'Blue', region: 'England', body: 5, intensity: 5,
+    milk: 'Cow', age: '3 months', veg: false,
+    notes: 'Buttery, mineral, gentle blue', tags: ['blue', 'rich', 'funk-strong', 'salty'],
+    blurb: 'England’s blue. Port is its lifelong dance partner.' },
+  { id: 'gorg', name: 'Gorgonzola Dolce', style: 'Blue', region: 'Lombardy', body: 4, intensity: 4,
+    milk: 'Cow', age: '2 months', veg: false,
+    notes: 'Spoonable, sweet, mildly funky', tags: ['blue', 'creamy', 'sweet', 'funk-soft'],
+    blurb: 'The gateway blue. Soft, sweet, surprisingly approachable.' },
+
+  { id: 'epoi', name: 'Époisses', style: 'Washed-rind', region: 'Burgundy', body: 4, intensity: 5,
+    milk: 'Cow', age: '6 weeks', veg: false,
+    notes: 'Pungent, meaty, washed in Marc', tags: ['funk-strong', 'rich', 'washed', 'meaty'],
+    blurb: 'Loud, ripe, glorious. Save it for a wine that can shout back.' },
+  { id: 'taleg', name: 'Taleggio', style: 'Washed-rind', region: 'Lombardy', body: 3, intensity: 4,
+    milk: 'Cow', age: '6-10 weeks', veg: false,
+    notes: 'Fruity, beefy, tangy rind', tags: ['funk-soft', 'fruit-red', 'washed', 'tangy'],
+    blurb: 'Funky on the outside, sweet on the inside.' },
+
+  { id: 'humb', name: 'Humboldt Fog', style: 'Aged goat', region: 'California', body: 3, intensity: 3,
+    milk: 'Goat', age: '2 months', veg: false,
+    notes: 'Ash line, lemon, mushroom', tags: ['tangy', 'creamy', 'mushroom', 'goat'],
+    blurb: 'Layered cake of goat cheese. Photogenic and friendly.' },
+  { id: 'pec', name: 'Pecorino Romano', style: 'Hard sheep', region: 'Lazio', body: 5, intensity: 5,
+    milk: 'Sheep', age: '8 months', veg: false,
+    notes: 'Salty, sharp, grassy', tags: ['salty', 'sharp', 'sheep', 'savory'],
+    blurb: 'A salt cannon. Best with bright, structured wines.' },
+];
+
+const ANCHORS: Record<string, { score: number; why: string }> = {
+  'port:stil':   { score: 98, why: 'The textbook handshake. Port’s sweetness wraps around Stilton’s salt; the result is dessert.' },
+  'saut:roq':    { score: 98, why: 'A 200-year-old marriage. Honeyed botrytis melts into Roquefort’s peppery salt.' },
+  'saut:stil':   { score: 94, why: 'Sweet wine plus salty blue is a universal law. Sauternes brings apricot to Stilton’s mineral edge.' },
+  'port:roq':    { score: 92, why: 'Tawny Port’s walnut and caramel meet Roquefort’s lanolin in deep harmony.' },
+  'port:gouda':  { score: 95, why: 'Both taste like butterscotch crystals. Like meeting your twin at a dinner party.' },
+
+  'champ:brie':  { score: 96, why: 'Bubbles slice through Brie’s cream; both share a yeasty, brioche-like soul.' },
+  'champ:parm':  { score: 92, why: 'Parmigiano’s crystalline umami plus Champagne’s acid equals endless palate refresh.' },
+  'champ:cam':   { score: 90, why: 'Mushroomy Camembert finds a yeasty echo in Champagne’s autolytic notes.' },
+  'prosecco:mozz': { score: 88, why: 'Both are gentle and milky-fresh. A summer afternoon in two ingredients.' },
+
+  'cab:ched':    { score: 96, why: 'Cabernet’s tannins find their match in aged Cheddar’s fat and bite.' },
+  'cab:gouda':   { score: 88, why: 'Aged Gouda’s caramel softens Cab’s grip. A cozy fireplace pairing.' },
+  'malbec:manch':{ score: 92, why: 'Malbec’s plush plum cradles Manchego’s lanolin nuttiness.' },
+  'chianti:pec': { score: 95, why: 'Italy in a bite. Chianti’s acid balances Pecorino’s salt and grass.' },
+  'chianti:parm':{ score: 94, why: 'Born in neighboring regions and they taste like it. Savory, bright, ancient.' },
+
+  'pinot:comte': { score: 96, why: 'Silky Pinot meets long-aged Comté’s brown-butter depth. Quiet perfection.' },
+  'pinot:gruy':  { score: 92, why: 'Earthy Pinot answers Gruyère’s broth. Alpine in a glass.' },
+  'pinot:humb':  { score: 88, why: 'Forest-floor Pinot meets Humboldt’s ash and lemon. A woodland walk.' },
+  'pinot:epoi':  { score: 90, why: 'Burgundy’s grape meets Burgundy’s cheese. They were raised together.' },
+
+  'chard:brie':  { score: 92, why: 'Buttery Chardonnay echoes Brie’s cream. A pillow on a pillow.' },
+  'chard:gruy':  { score: 90, why: 'Oak in the wine, oak in the cellar. They share a vocabulary.' },
+  'chard:comte': { score: 91, why: 'Both nutty, both rich, both patient. A long, generous pairing.' },
+
+  'sauv:chev':   { score: 98, why: 'The Loire River runs through both. Acid plus acid creates lift, not collision.' },
+  'sauv:mozz':   { score: 86, why: 'Crisp herbaceous wine plus milky cheese equals a caprese in liquid form.' },
+  'sauv:humb':   { score: 90, why: 'Grapefruit and goat’s lemon, with a thread of grass between them.' },
+
+  'ries:gorg':   { score: 92, why: 'Off-dry Riesling sweetens Gorgonzola’s tang. Surprising and addictive.' },
+  'ries:taleg':  { score: 90, why: 'Petrol-and-peach Riesling tames Taleggio’s funk like a lullaby.' },
+  'ries:epoi':   { score: 88, why: 'Sweetness plus acid is the only real defense against Époisses. Spectacular.' },
+
+  'gruner:chev': { score: 90, why: 'Peppery Grüner with chalky chèvre. A green, snappy bite.' },
+  'gruner:gruy': { score: 86, why: 'Alpine wine, alpine cheese. Built in the same mountains, served together.' },
+
+  'rose:chev':   { score: 88, why: 'Pale rosé and fresh chèvre. A Provençal terrace in two sips.' },
+  'rose:mozz':   { score: 86, why: 'Both mild, both sun-soaked. Lunch, basically.' },
+  'rose:taleg':  { score: 84, why: 'Strawberry and washed rind. Fruit cuts the funk just enough.' },
+};
+
+type Wine = typeof WINES[number];
+type Cheese = typeof CHEESES[number];
+
+function pairScore(wine: Wine, cheese: Cheese) {
+  const key = `${wine.id}:${cheese.id}`;
+  if (ANCHORS[key]) return ANCHORS[key];
+
+  let score = 50;
+  const bodyDiff = Math.abs(wine.body - cheese.body);
+  score += (3 - Math.min(3, bodyDiff)) * 6;
+  const overlap = wine.tags.filter((t) => cheese.tags.includes(t)).length;
+  score += overlap * 5;
+
+  const wt = new Set(wine.tags), ct = new Set(cheese.tags);
+  if (wt.has('sweet') && (ct.has('blue') || ct.has('salty'))) score += 18;
+  if (wt.has('acid') && (ct.has('creamy') || ct.has('rich'))) score += 8;
+  if (wt.has('acid') && ct.has('fresh')) score += 10;
+  if (wt.has('tannic') && ct.has('rich')) score += 10;
+  if (wt.has('tannic') && ct.has('fresh')) score -= 12;
+  if (wt.has('effervescent') && ct.has('creamy')) score += 10;
+  if (wt.has('effervescent') && ct.has('rich')) score += 6;
+  if (wine.cat === 'red' && ct.has('fresh')) score -= 10;
+  if (wine.cat === 'red' && ct.has('blue') && !wt.has('sweet')) score -= 8;
+  if (wt.has('aromatic') && ct.has('funk-strong')) score += 8;
+
+  if (wine.region.split(' ')[0] === cheese.region.split(' ')[0]) score += 4;
+  score = Math.max(38, Math.min(94, Math.round(score)));
+
+  let why: string;
+  if (wt.has('sweet') && ct.has('blue')) why = 'Sweet wine and blue cheese is a universal rule. Sugar tames salt.';
+  else if (wt.has('acid') && ct.has('creamy')) why = 'Acidity cuts richness and keeps every bite feeling fresh.';
+  else if (wt.has('tannic') && ct.has('rich')) why = 'Tannin needs fat to soften, and this cheese has it in spades.';
+  else if (wt.has('effervescent')) why = 'Bubbles scrub the palate clean between bites. The great resetter.';
+  else if (bodyDiff <= 1) why = 'Matched body and intensity. Neither one shouts over the other.';
+  else if (overlap > 0) {
+    const shared = wine.tags.find((t) => cheese.tags.includes(t));
+    why = `Both share a ${shared} character that ties them together.`;
+  }
+  else why = 'A reliable middle-ground pairing. Pleasant, balanced, no fireworks.';
+
+  return { score, why };
+}
+
+function topPairings(item: Wine | Cheese, list: (Wine | Cheese)[], n = 4) {
+  const isWine = 'cat' in item;
+  const scored = list.map((other) => {
+    const { score, why } = isWine
+      ? pairScore(item as Wine, other as Cheese)
+      : pairScore(other as Wine, item as Cheese);
+    return { item: other, score, why };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, n);
+}
+
+const catLabels: Record<string, string> = {
+  red: 'Reds', white: 'Whites', rose: 'Rosé', sparkling: 'Sparkling', dessert: 'Dessert & Fortified',
+};
+const catLabel = (c: string) => catLabels[c] || c;
+
+// ─── Server-side initial render ─────────────────────────────────────────────
+const initialWine = WINES.find((w) => w.id === 'pinot')!;
+const initialTop = topPairings(initialWine, CHEESES, 4);
+
+function dotRow(filled: number, total = 5) {
+  return '●'.repeat(filled) + '○'.repeat(total - filled);
+}
+
+function starsHTML(score: number) {
+  const filled = Math.round(score / 20);
+  const empty = 5 - filled;
+  return `<span class="pt-stars-row">${'★'.repeat(filled)}<span class="pt-stars-empty">${'★'.repeat(empty)}</span></span><span class="pt-stars-label">${score}/100</span>`;
+}
+
+// Group helpers for server picker
+const wineGroups: Record<string, Wine[]> = {};
+WINES.forEach((w) => {
+  const k = catLabel(w.cat);
+  (wineGroups[k] = wineGroups[k] || []).push(w);
+});
+
+const dataBlob = JSON.stringify({ WINES, CHEESES, ANCHORS });
+---
+
+<section class="pairing-tool" data-component="pairing-tool" data-mode="wine" data-wine="pinot" data-cheese="comte" data-cat="red">
+  <header class="pt-header">
+    <div class="pt-header-text">
+      <p class="pt-eyebrow">Try it</p>
+      <h2 class="pt-title">Find Your Match</h2>
+      <p class="pt-subtitle">Pick a wine, get the four cheeses it loves. Or flip it: pick a cheese, get the wines that meet it best.</p>
+    </div>
+    <div class="pt-header-controls">
+      <div class="pt-toggle" role="tablist" aria-label="Pairing mode">
+        <button class="pt-toggle-btn is-active" data-mode-btn="wine" role="tab" aria-selected="true">
+          <span class="pt-toggle-eyebrow">I have</span>
+          <span class="pt-toggle-label">Wine</span>
+        </button>
+        <button class="pt-toggle-btn" data-mode-btn="cheese" role="tab" aria-selected="false">
+          <span class="pt-toggle-eyebrow">I have</span>
+          <span class="pt-toggle-label">Cheese</span>
+        </button>
+      </div>
+      <label class="pt-veg">
+        <input type="checkbox" data-veg-toggle />
+        <span>Vegetarian rennet only</span>
+      </label>
+    </div>
+  </header>
+
+  <div class="pt-grid">
+    <aside class="pt-picker" data-picker>
+      <p class="pt-picker-title">Choose your wine</p>
+      {Object.entries(wineGroups).map(([group, list]) => (
+        <div class="pt-group" data-group>
+          <p class="pt-group-label">{group}</p>
+          {list.map((w) => (
+            <button
+              class={`pt-pick-btn${w.id === 'pinot' ? ' is-selected' : ''}`}
+              data-pick-id={w.id}
+              type="button"
+            >
+              <span class="pt-pick-name">{w.name}</span>
+              <span class="pt-pick-region">{w.region}</span>
+            </button>
+          ))}
+        </div>
+      ))}
+    </aside>
+
+    <div class="pt-dossier" data-dossier>
+      <article class="pt-hero">
+        <div class="pt-hero-main">
+          <p class="pt-hero-eyebrow" data-hero-eyebrow>{catLabel(initialWine.cat)} · {initialWine.region}</p>
+          <h3 class="pt-hero-name" data-hero-name>{initialWine.name}</h3>
+          <p class="pt-hero-blurb" data-hero-blurb>{initialWine.blurb}</p>
+        </div>
+        <dl class="pt-hero-stats" data-hero-stats>
+          <div><dt>Body</dt><dd>{dotRow(initialWine.body)}</dd></div>
+          <div><dt>Intensity</dt><dd>{dotRow(initialWine.intensity)}</dd></div>
+          <div><dt>Serve</dt><dd>{initialWine.serve}</dd></div>
+        </dl>
+        <p class="pt-hero-notes" data-hero-notes><span>Tasting notes.</span> {initialWine.notes}</p>
+      </article>
+
+      <div class="pt-section-title">
+        <span class="pt-section-italic">Pours best with</span>
+        <span class="pt-rule"></span>
+        <span class="pt-section-count" data-pairing-count>4 suggestions</span>
+      </div>
+
+      <ol class="pt-pairings" data-pairings>
+        {initialTop.map((p, idx) => {
+          const c = p.item as Cheese;
+          return (
+            <li class="pt-pairing">
+              <span class={`pt-rank pt-rank-${idx + 1}`}>{['My top pick', '2nd pick', '3rd pick', '4th pick'][idx] || `${idx + 1}th pick`}</span>
+              <div class="pt-pairing-body">
+                <p class="pt-pairing-eyebrow">{c.style} · {c.region}</p>
+                <h4 class="pt-pairing-name">{c.name}</h4>
+                <p class="pt-pairing-why">"{p.why}"</p>
+                <p class="pt-pairing-notes">{c.notes}</p>
+                <button class="pt-board-btn" data-board-add={c.id} type="button">+ add to board</button>
+              </div>
+              <div class="pt-score" set:html={starsHTML(p.score)}></div>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </div>
+
+  <div class="pt-board" data-board>
+    <div class="pt-board-empty" data-board-empty>
+      <p>Build a board around <strong data-board-empty-name>{initialWine.name}</strong>. Add cheeses from the list above.</p>
+    </div>
+    <div class="pt-board-full" data-board-full hidden>
+      <div class="pt-board-head">
+        <div>
+          <p class="pt-board-eyebrow">Your board</p>
+          <p class="pt-board-name">A board for <span data-board-wine-name>{initialWine.name}</span></p>
+        </div>
+        <button class="pt-board-clear" data-board-clear type="button">Clear</button>
+      </div>
+      <ul class="pt-board-list" data-board-list></ul>
+      <p class="pt-board-tip">
+        <span class="pt-tip-mark">Sommelier tip.</span>
+        Serve cheeses 30 minutes from the fridge, mildest to strongest. Open the wine 20 minutes before pouring.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ dataBlob }}>
+  (function () {
+    const root = document.querySelector('[data-component="pairing-tool"]');
+    if (!root) return;
+    const { WINES, CHEESES, ANCHORS } = JSON.parse(dataBlob);
+
+    const catLabels = { red: 'Reds', white: 'Whites', rose: 'Rosé', sparkling: 'Sparkling', dessert: 'Dessert & Fortified' };
+    const catLabel = (c) => catLabels[c] || c;
+
+    function pairScore(wine, cheese) {
+      const key = `${wine.id}:${cheese.id}`;
+      if (ANCHORS[key]) return ANCHORS[key];
+      let score = 50;
+      const bodyDiff = Math.abs(wine.body - cheese.body);
+      score += (3 - Math.min(3, bodyDiff)) * 6;
+      const overlap = wine.tags.filter((t) => cheese.tags.includes(t)).length;
+      score += overlap * 5;
+      const wt = new Set(wine.tags), ct = new Set(cheese.tags);
+      if (wt.has('sweet') && (ct.has('blue') || ct.has('salty'))) score += 18;
+      if (wt.has('acid') && (ct.has('creamy') || ct.has('rich'))) score += 8;
+      if (wt.has('acid') && ct.has('fresh')) score += 10;
+      if (wt.has('tannic') && ct.has('rich')) score += 10;
+      if (wt.has('tannic') && ct.has('fresh')) score -= 12;
+      if (wt.has('effervescent') && ct.has('creamy')) score += 10;
+      if (wt.has('effervescent') && ct.has('rich')) score += 6;
+      if (wine.cat === 'red' && ct.has('fresh')) score -= 10;
+      if (wine.cat === 'red' && ct.has('blue') && !wt.has('sweet')) score -= 8;
+      if (wt.has('aromatic') && ct.has('funk-strong')) score += 8;
+      if (wine.region.split(' ')[0] === cheese.region.split(' ')[0]) score += 4;
+      score = Math.max(38, Math.min(94, Math.round(score)));
+      let why;
+      if (wt.has('sweet') && ct.has('blue')) why = 'Sweet wine and blue cheese is a universal rule. Sugar tames salt.';
+      else if (wt.has('acid') && ct.has('creamy')) why = 'Acidity cuts richness and keeps every bite feeling fresh.';
+      else if (wt.has('tannic') && ct.has('rich')) why = 'Tannin needs fat to soften, and this cheese has it in spades.';
+      else if (wt.has('effervescent')) why = 'Bubbles scrub the palate clean between bites. The great resetter.';
+      else if (bodyDiff <= 1) why = 'Matched body and intensity. Neither one shouts over the other.';
+      else if (overlap > 0) {
+        const shared = wine.tags.find((t) => cheese.tags.includes(t));
+        why = 'Both share a ' + shared + ' character that ties them together.';
+      } else why = 'A reliable middle-ground pairing. Pleasant, balanced, no fireworks.';
+      return { score, why };
+    }
+
+    function topPairings(item, list, n) {
+      const isWine = 'cat' in item;
+      const scored = list.map((other) => {
+        const r = isWine ? pairScore(item, other) : pairScore(other, item);
+        return { item: other, score: r.score, why: r.why };
+      });
+      scored.sort((a, b) => b.score - a.score);
+      return scored.slice(0, n);
+    }
+
+    function dotRow(filled, total) {
+      total = total || 5;
+      return '●'.repeat(filled) + '○'.repeat(total - filled);
+    }
+
+    function escapeHTML(s) {
+      return String(s).replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+    }
+
+    function starsHTML(score) {
+      const filled = Math.round(score / 20);
+      const empty = 5 - filled;
+      return '<span class="pt-stars-row">' + '★'.repeat(filled) +
+        '<span class="pt-stars-empty">' + '★'.repeat(empty) + '</span></span>' +
+        '<span class="pt-stars-label">' + score + '/100</span>';
+    }
+
+    // ─── State ───
+    const state = {
+      mode: root.dataset.mode || 'wine',
+      wineId: root.dataset.wine || 'pinot',
+      cheeseId: root.dataset.cheese || 'comte',
+      veg: false,
+      board: [],
+    };
+
+    // ─── DOM refs ───
+    const $ = (sel) => root.querySelector(sel);
+    const $$ = (sel) => Array.from(root.querySelectorAll(sel));
+    const picker = $('[data-picker]');
+    const dossier = $('[data-dossier]');
+    const heroEyebrow = $('[data-hero-eyebrow]');
+    const heroName = $('[data-hero-name]');
+    const heroBlurb = $('[data-hero-blurb]');
+    const heroStats = $('[data-hero-stats]');
+    const heroNotes = $('[data-hero-notes]');
+    const pairingsList = $('[data-pairings]');
+    const pairingCount = $('[data-pairing-count]');
+    const board = $('[data-board]');
+    const boardEmpty = $('[data-board-empty]');
+    const boardFull = $('[data-board-full]');
+    const boardEmptyName = $('[data-board-empty-name]');
+    const boardWineName = $('[data-board-wine-name]');
+    const boardList = $('[data-board-list]');
+
+    // ─── Render picker ───
+    function renderPicker() {
+      const items = state.mode === 'wine' ? WINES : CHEESES;
+      const filtered = state.mode === 'cheese' && state.veg ? items.filter((i) => i.veg) : items;
+      const groups = {};
+      filtered.forEach((i) => {
+        const k = state.mode === 'wine' ? catLabel(i.cat) : i.style;
+        (groups[k] = groups[k] || []).push(i);
+      });
+      const selectedId = state.mode === 'wine' ? state.wineId : state.cheeseId;
+      let html = '<p class="pt-picker-title">Choose your ' + state.mode + '</p>';
+      Object.entries(groups).forEach(([group, list]) => {
+        html += '<div class="pt-group">';
+        html += '<p class="pt-group-label">' + escapeHTML(group) + '</p>';
+        list.forEach((i) => {
+          const sel = i.id === selectedId ? ' is-selected' : '';
+          html += '<button class="pt-pick-btn' + sel + '" data-pick-id="' + i.id + '" type="button">';
+          html += '<span class="pt-pick-name">' + escapeHTML(i.name) + '</span>';
+          html += '<span class="pt-pick-region">' + escapeHTML(i.region) + '</span>';
+          html += '</button>';
+        });
+        html += '</div>';
+      });
+      picker.innerHTML = html;
+    }
+
+    // ─── Render dossier ───
+    function renderDossier() {
+      const source = state.mode === 'wine'
+        ? WINES.find((w) => w.id === state.wineId)
+        : CHEESES.find((c) => c.id === state.cheeseId);
+      if (!source) return;
+
+      heroEyebrow.textContent = state.mode === 'wine'
+        ? catLabel(source.cat) + ' · ' + source.region
+        : source.style + ' · ' + source.region;
+      heroName.textContent = source.name;
+      heroBlurb.textContent = source.blurb;
+
+      let statsHTML = '';
+      statsHTML += '<div><dt>Body</dt><dd>' + dotRow(source.body) + '</dd></div>';
+      statsHTML += '<div><dt>Intensity</dt><dd>' + dotRow(source.intensity) + '</dd></div>';
+      if (state.mode === 'wine') {
+        statsHTML += '<div><dt>Serve</dt><dd>' + escapeHTML(source.serve) + '</dd></div>';
+      } else {
+        statsHTML += '<div><dt>Milk</dt><dd>' + escapeHTML(source.milk) + '</dd></div>';
+        statsHTML += '<div><dt>Aged</dt><dd>' + escapeHTML(source.age) + '</dd></div>';
+      }
+      heroStats.innerHTML = statsHTML;
+      heroNotes.innerHTML = '<span>Tasting notes.</span> ' + escapeHTML(source.notes);
+
+      const otherList = state.mode === 'wine' ? CHEESES : WINES;
+      const filteredOthers = state.mode === 'wine' && state.veg ? otherList.filter((c) => c.veg) : otherList;
+      const top = topPairings(source, filteredOthers, 4);
+      pairingCount.textContent = top.length + ' suggestions';
+
+      let pHTML = '';
+      top.forEach((p, idx) => {
+        const o = p.item;
+        const eyebrow = state.mode === 'wine'
+          ? escapeHTML(o.style) + ' · ' + escapeHTML(o.region)
+          : catLabel(o.cat) + ' · ' + escapeHTML(o.region);
+        pHTML += '<li class="pt-pairing">';
+        const rankLabel = ['My top pick', '2nd pick', '3rd pick', '4th pick'][idx] || ((idx + 1) + 'th pick');
+        pHTML += '<span class="pt-rank pt-rank-' + (idx + 1) + '">' + rankLabel + '</span>';
+        pHTML += '<div class="pt-pairing-body">';
+        pHTML += '<p class="pt-pairing-eyebrow">' + eyebrow + '</p>';
+        pHTML += '<h4 class="pt-pairing-name">' + escapeHTML(o.name) + '</h4>';
+        pHTML += '<p class="pt-pairing-why">"' + escapeHTML(p.why) + '"</p>';
+        pHTML += '<p class="pt-pairing-notes">' + escapeHTML(o.notes) + '</p>';
+        if (state.mode === 'wine') {
+          const onBoard = state.board.indexOf(o.id) !== -1;
+          pHTML += '<button class="pt-board-btn' + (onBoard ? ' is-on' : '') + '" data-board-add="' + o.id + '" type="button">';
+          pHTML += onBoard ? '✓ on the board' : '+ add to board';
+          pHTML += '</button>';
+        }
+        pHTML += '</div>';
+        pHTML += '<div class="pt-score">' + starsHTML(p.score) + '</div>';
+        pHTML += '</li>';
+      });
+      pairingsList.innerHTML = pHTML;
+    }
+
+    // ─── Render board ───
+    function renderBoard() {
+      if (state.mode !== 'wine') {
+        board.hidden = true;
+        return;
+      }
+      board.hidden = false;
+      const wine = WINES.find((w) => w.id === state.wineId);
+      if (!wine) return;
+      if (state.board.length === 0) {
+        boardEmpty.hidden = false;
+        boardFull.hidden = true;
+        boardEmptyName.textContent = wine.name;
+        return;
+      }
+      boardEmpty.hidden = true;
+      boardFull.hidden = false;
+      boardWineName.textContent = wine.name;
+      const cheeses = state.board.map((id) => CHEESES.find((c) => c.id === id)).filter(Boolean);
+      let html = '';
+      cheeses.forEach((c) => {
+        html += '<li class="pt-board-item">';
+        html += '<div><p class="pt-board-item-name">' + escapeHTML(c.name) + '</p>';
+        html += '<p class="pt-board-item-style">' + escapeHTML(c.style) + '</p></div>';
+        html += '<button class="pt-board-remove" data-board-remove="' + c.id + '" type="button" aria-label="Remove">×</button>';
+        html += '</li>';
+      });
+      boardList.innerHTML = html;
+    }
+
+    function syncCat() {
+      if (state.mode === 'wine') {
+        const w = WINES.find((x) => x.id === state.wineId);
+        root.dataset.cat = w ? w.cat : 'red';
+      } else {
+        root.dataset.cat = 'cheese';
+      }
+    }
+
+    function renderAll() {
+      syncCat();
+      renderPicker();
+      renderDossier();
+      renderBoard();
+    }
+
+    // ─── Events ───
+    root.addEventListener('click', (e) => {
+      const t = e.target.closest('[data-mode-btn], [data-pick-id], [data-board-add], [data-board-remove], [data-board-clear]');
+      if (!t) return;
+
+      if (t.dataset.modeBtn) {
+        state.mode = t.dataset.modeBtn;
+        $$('[data-mode-btn]').forEach((b) => {
+          const active = b.dataset.modeBtn === state.mode;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        renderAll();
+        return;
+      }
+      if (t.dataset.pickId) {
+        if (state.mode === 'wine') state.wineId = t.dataset.pickId;
+        else state.cheeseId = t.dataset.pickId;
+        renderAll();
+        return;
+      }
+      if (t.dataset.boardAdd) {
+        const id = t.dataset.boardAdd;
+        if (state.board.indexOf(id) !== -1) {
+          state.board = state.board.filter((x) => x !== id);
+        } else {
+          state.board.push(id);
+        }
+        renderDossier();
+        renderBoard();
+        return;
+      }
+      if (t.dataset.boardRemove) {
+        state.board = state.board.filter((x) => x !== t.dataset.boardRemove);
+        renderDossier();
+        renderBoard();
+        return;
+      }
+      if (t.hasAttribute('data-board-clear')) {
+        state.board = [];
+        renderDossier();
+        renderBoard();
+        return;
+      }
+    });
+
+    const vegInput = root.querySelector('[data-veg-toggle]');
+    if (vegInput) {
+      vegInput.addEventListener('change', (e) => {
+        state.veg = !!e.target.checked;
+        renderAll();
+      });
+    }
+  })();
+</script>
+
+<style is:global>
+  .pairing-tool h1,
+  .pairing-tool h2,
+  .pairing-tool h3,
+  .pairing-tool h4,
+  .pairing-tool h5,
+  .pairing-tool h6 {
+    font-family: var(--font-body);
+  }
+
+  .pairing-tool {
+    /* Break out of prose width but stay article-card sized */
+    position: relative;
+    width: min(880px, 100%);
+    margin: 3rem auto;
+    padding: 1.75rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--twg-radius-lg);
+    box-shadow: var(--twg-shadow-md);
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+
+  /* When inside a .prose container, escape the narrow column */
+  :global(.prose) .pairing-tool {
+    max-width: 880px;
+    width: 100%;
+  }
+
+  /* ─── Header ─── */
+  .pt-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .pt-header-text { flex: 1 1 280px; min-width: 0; }
+  .pt-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+  }
+  .pt-title {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .pt-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin: 0.5rem 0 0;
+    max-width: 38ch;
+  }
+
+  .pt-header-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6rem;
+  }
+  .pt-toggle {
+    display: inline-flex;
+    border: 1px solid var(--color-border);
+    border-radius: var(--twg-radius);
+    background: var(--color-surface-white);
+    overflow: hidden;
+  }
+  .pt-toggle-btn {
+    padding: 0.55rem 1.1rem;
+    background: transparent;
+    color: var(--color-primary);
+    border: 0;
+    cursor: pointer;
+    font-family: var(--font-body);
+    text-align: center;
+    min-width: 100px;
+    transition: background 150ms ease, color 150ms ease;
+  }
+  .pt-toggle-btn.is-active {
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+  .pt-toggle-eyebrow {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    opacity: 0.7;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .pt-toggle-label {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .pt-veg {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+  }
+  .pt-veg input { accent-color: var(--color-accent); }
+
+  /* ─── Grid ─── */
+  .pt-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 720px) {
+    .pt-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .pt-header { flex-direction: column; align-items: flex-start; }
+    .pt-header-controls { align-items: flex-start; width: 100%; }
+    .pairing-tool { padding: 1.25rem; }
+    .pt-title { font-size: 1.65rem; }
+  }
+
+  /* ─── Picker ─── */
+  .pt-picker { min-width: 0; }
+  .pt-picker-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    font-weight: 600;
+  }
+  .pt-group { margin-bottom: 1.1rem; }
+  .pt-group-label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin: 0 0 0.35rem;
+    letter-spacing: 0.02em;
+  }
+  .pt-pick-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.45rem 0.6rem;
+    margin: 0.15rem 0;
+    background: transparent;
+    color: var(--color-text);
+    border: 0;
+    border-left: 3px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+  }
+  .pt-pick-btn:hover {
+    background: var(--color-surface-high);
+  }
+  .pt-pick-btn.is-selected {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-left-color: var(--color-accent);
+  }
+  .pt-pick-name {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .pt-pick-region {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-top: 2px;
+  }
+
+  /* ─── Hero card ─── */
+  /* ─── Category-driven color theming ─── */
+  .pairing-tool { --pt-hero-bg: #570013; --pt-cat-accent: #800020; }
+  .pairing-tool[data-cat="white"]     { --pt-hero-bg: #6b5520; --pt-cat-accent: #8a6e2c; }
+  .pairing-tool[data-cat="rose"]      { --pt-hero-bg: #883246; --pt-cat-accent: #a8455d; }
+  .pairing-tool[data-cat="sparkling"] { --pt-hero-bg: #5a4a1c; --pt-cat-accent: #806a2a; }
+  .pairing-tool[data-cat="dessert"]   { --pt-hero-bg: #4a2210; --pt-cat-accent: #6b3a1f; }
+  .pairing-tool[data-cat="cheese"]    { --pt-hero-bg: #3d2618; --pt-cat-accent: #6e4a30; }
+  .pairing-tool .pt-picker-title {
+    color: var(--pt-cat-accent);
+    border-bottom-color: var(--pt-cat-accent);
+  }
+
+  .pt-hero {
+    background: var(--pt-hero-bg);
+    color: var(--color-bg);
+    padding: 1.4rem 1.5rem 1.3rem;
+    border-radius: var(--twg-radius);
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.75rem 1.5rem;
+    box-shadow: var(--twg-shadow-md);
+  }
+  .pt-hero-main { grid-column: 1; }
+  .pt-hero-stats { grid-column: 2; grid-row: 1; margin: 0; min-width: 130px; }
+  .pt-hero-notes { grid-column: 1 / -1; margin: 0; padding-top: 0.85rem; border-top: 1px solid rgba(255, 248, 239, 0.18); }
+  @media (max-width: 560px) {
+    .pt-hero { grid-template-columns: 1fr; }
+    .pt-hero-stats { grid-column: 1; grid-row: auto; }
+  }
+  .pt-hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin: 0 0 0.4rem;
+    font-weight: 600;
+  }
+  .pt-hero-name {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0;
+    color: var(--color-bg);
+    letter-spacing: -0.01em;
+  }
+  .pt-hero-blurb {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0.65rem 0 0;
+    opacity: 0.92;
+    line-height: 1.45;
+  }
+  .pt-hero-stats div {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  .pt-hero-stats dt {
+    opacity: 0.55;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.65rem;
+    align-self: center;
+  }
+  .pt-hero-stats dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+  }
+  .pt-hero-notes {
+    font-size: 0.8rem;
+    opacity: 0.88;
+    line-height: 1.55;
+  }
+  .pt-hero-notes span {
+    opacity: 0.6;
+    font-style: italic;
+    margin-right: 0.3rem;
+  }
+
+  /* ─── Section title ─── */
+  .pt-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.85rem;
+  }
+  .pt-section-italic {
+    font-family: var(--font-body);
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--color-primary);
+  }
+  .pt-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+  .pt-section-count {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  /* ─── Pairings list ─── */
+  .pt-pairings {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pt-pairing {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "rank score"
+      "body body";
+    column-gap: 1rem;
+    row-gap: 0.65rem;
+    padding: 1.25rem 0.25rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .pt-pairing:first-child { border-top: 0; padding-top: 0.5rem; }
+  .pt-rank {
+    grid-area: rank;
+    align-self: center;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    line-height: 1.1;
+  }
+  .pt-rank-1 {
+    color: var(--pt-cat-accent, var(--color-accent));
+    font-weight: 700;
+  }
+  .pt-pairing-body { grid-area: body; min-width: 0; }
+  .pt-pairing-eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 0.2rem;
+  }
+  .pt-pairing-name {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0 0 0.35rem;
+    line-height: 1.2;
+  }
+  .pt-pairing-why {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    font-style: italic;
+    margin: 0 0 0.4rem;
+  }
+  .pt-pairing-notes {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .pt-board-btn {
+    margin-top: 0.6rem;
+    padding: 0.35rem 0.85rem;
+    background: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background 150ms ease, color 150ms ease;
+  }
+  .pt-board-btn:hover { background: var(--color-accent); color: var(--color-bg); }
+  .pt-board-btn.is-on {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  /* ─── Score (stars) ─── */
+  .pt-score {
+    grid-area: score;
+    align-self: center;
+    text-align: right;
+    color: var(--color-accent);
+    line-height: 1;
+  }
+  .pt-stars-row {
+    display: block;
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+  }
+  .pt-stars-empty { opacity: 0.25; }
+  .pt-stars-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+    opacity: 0.65;
+    color: var(--color-text-muted);
+  }
+
+  /* ─── Board ─── */
+  .pt-board { margin-top: 1.5rem; }
+  .pt-board-empty {
+    padding: 1rem 1.25rem;
+    background: var(--color-surface-high);
+    border: 1px dashed var(--color-border-dark);
+    border-radius: var(--twg-radius);
+    text-align: center;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+  .pt-board-empty p { margin: 0; }
+  .pt-board-empty strong { color: var(--color-primary); font-weight: 600; }
+
+  .pt-board-full {
+    padding: 1.1rem 1.25rem;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-radius: var(--twg-radius);
+  }
+  .pt-board-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.85rem;
+    gap: 1rem;
+  }
+  .pt-board-eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin: 0;
+    font-weight: 600;
+  }
+  .pt-board-name {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0.15rem 0 0;
+    color: var(--color-bg);
+  }
+  .pt-board-clear {
+    background: transparent;
+    border: 1px solid rgba(255, 248, 239, 0.4);
+    color: var(--color-bg);
+    padding: 0.35rem 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .pt-board-clear:hover { background: rgba(255, 248, 239, 0.1); }
+
+  .pt-board-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .pt-board-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 248, 239, 0.08);
+    border: 1px solid rgba(255, 248, 239, 0.2);
+    border-radius: 4px;
+  }
+  .pt-board-item-name {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    margin: 0;
+    color: var(--color-bg);
+  }
+  .pt-board-item-style {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin: 0;
+  }
+  .pt-board-remove {
+    background: transparent;
+    border: 0;
+    color: var(--color-bg);
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    padding: 0;
+    line-height: 1;
+  }
+  .pt-board-remove:hover { opacity: 1; }
+  .pt-board-tip {
+    margin-top: 0.85rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 248, 239, 0.15);
+    font-size: 0.75rem;
+    font-style: italic;
+    opacity: 0.78;
+    line-height: 1.5;
+  }
+  .pt-tip-mark { font-style: normal; font-weight: 600; opacity: 0.9; margin-right: 0.3rem; }
+</style>

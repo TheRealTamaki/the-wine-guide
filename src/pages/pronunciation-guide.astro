@@ -1,0 +1,756 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Wine Pronunciation Guide"
+  description="How to say Grüner Veltliner, Gewürztraminer, Côtes du Rhône, and every other wine word that trips you up. Phonetic guides, no IPA required."
+>
+  <div class="pg-wrap">
+
+    <header class="pg-header">
+      <div class="pg-kicker">Pronunciation Guide</div>
+      <h1>Say it right. <em>Every time.</em></h1>
+      <p class="pg-intro">Nobody wants to be the one who says "Geh-wurtz-TRAM-in-er" and watches the sommelier's face flicker. This guide covers every wine word that trips people up: grapes, regions, and winemaking terms. All phonetic, no linguistics degree required.</p>
+    </header>
+
+    <nav class="pg-nav" aria-label="Jump to section">
+      <a href="#red-grapes">Red Grapes</a>
+      <a href="#white-grapes">White Grapes</a>
+      <a href="#france">France</a>
+      <a href="#italy">Italy</a>
+      <a href="#spain">Spain</a>
+      <a href="#other-regions">Other Regions</a>
+      <a href="#terms">Wine Terms</a>
+    </nav>
+
+    <div class="pg-key">
+      <strong>How to read this guide:</strong> syllables are written as they sound. CAPS = the stressed syllable. Hyphens separate syllables.
+    </div>
+
+    <section class="pg-section" id="red-grapes">
+      <h2>Red grape varieties</h2>
+
+      <div class="pg-table">
+        <div class="pg-row pg-row-header">
+          <span>Name</span>
+          <span>Say it like this</span>
+          <span>Quick note</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Cabernet Sauvignon</span>
+          <span class="pg-phon">cab-er-NAY saw-veen-YAWN</span>
+          <span class="pg-note">The "t" in Cabernet is silent.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Merlot</span>
+          <span class="pg-phon">mair-LOH</span>
+          <span class="pg-note">The "t" is silent. Never "mer-LOT."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Pinot Noir</span>
+          <span class="pg-phon">PEE-noh NWAH</span>
+          <span class="pg-note">Both final consonants are silent.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Syrah / Shiraz</span>
+          <span class="pg-phon">sih-RAH / shih-RAZ</span>
+          <span class="pg-note">Same grape. Syrah = French/European. Shiraz = Australian.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Grenache</span>
+          <span class="pg-phon">greh-NASH</span>
+          <span class="pg-note">Spanish name: Garnacha (gar-NAH-cha).</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Malbec</span>
+          <span class="pg-phon">MAL-beck</span>
+          <span class="pg-note">Straightforward. Stress the first syllable.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Tempranillo</span>
+          <span class="pg-phon">tem-pra-NEE-yo</span>
+          <span class="pg-note">The double "ll" in Spanish makes a "y" sound.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Sangiovese</span>
+          <span class="pg-phon">san-joh-VAY-zeh</span>
+          <span class="pg-note">Italy's most planted red grape. Base of Chianti.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Nebbiolo</span>
+          <span class="pg-phon">neb-ee-OH-loh</span>
+          <span class="pg-note">The grape behind Barolo and Barbaresco.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Barbera</span>
+          <span class="pg-phon">bar-BEAR-ah</span>
+          <span class="pg-note">Italian red. Common in Piedmont.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Zinfandel</span>
+          <span class="pg-phon">ZIN-fan-del</span>
+          <span class="pg-note">American. Same as Italian Primitivo.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Cabernet Franc</span>
+          <span class="pg-phon">cab-er-NAY FRONK</span>
+          <span class="pg-note">The "c" at the end of Franc is silent.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Mourvèdre</span>
+          <span class="pg-phon">moor-VED-ruh</span>
+          <span class="pg-note">French name. Spanish: Monastrell (mo-nas-TREL).</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Gamay</span>
+          <span class="pg-phon">gam-AY</span>
+          <span class="pg-note">The grape of Beaujolais.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Tannat</span>
+          <span class="pg-phon">tah-NAH</span>
+          <span class="pg-note">Final "t" is silent. Native to southwest France and Uruguay.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Carménère</span>
+          <span class="pg-phon">car-meh-NAIR</span>
+          <span class="pg-note">Chile's signature red grape.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Petit Verdot</span>
+          <span class="pg-phon">peh-TEE vair-DOH</span>
+          <span class="pg-note">Blending grape. "Petit" and "Verdot" both have silent final consonants.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pg-section" id="white-grapes">
+      <h2>White grape varieties</h2>
+
+      <div class="pg-table">
+        <div class="pg-row pg-row-header">
+          <span>Name</span>
+          <span>Say it like this</span>
+          <span>Quick note</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Chardonnay</span>
+          <span class="pg-phon">shar-doh-NAY</span>
+          <span class="pg-note">The most planted white grape in the world.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Sauvignon Blanc</span>
+          <span class="pg-phon">saw-veen-YAWN BLON</span>
+          <span class="pg-note">"Blanc" rhymes with "on" in French, not "blank."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Riesling</span>
+          <span class="pg-phon">REEZ-ling</span>
+          <span class="pg-note">German. The "ie" sounds like "ee."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Pinot Grigio / Gris</span>
+          <span class="pg-phon">PEE-noh GREE-joh / GREE</span>
+          <span class="pg-note">Same grape. Grigio = Italian. Gris = French.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Gewürztraminer</span>
+          <span class="pg-phon">geh-VURTZ-tram-ee-ner</span>
+          <span class="pg-note">The hardest one. "Gewürz" means spice in German.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Grüner Veltliner</span>
+          <span class="pg-phon">GROO-ner FELT-lee-ner</span>
+          <span class="pg-note">Austria's signature white. Worth learning.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Viognier</span>
+          <span class="pg-phon">vee-oh-NYAY</span>
+          <span class="pg-note">Aromatic white. Native to France's Northern Rhône.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Albariño</span>
+          <span class="pg-phon">al-bah-REEN-yo</span>
+          <span class="pg-note">Spanish. The "ñ" makes a "ny" sound.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Chenin Blanc</span>
+          <span class="pg-phon">SHEH-nan BLON</span>
+          <span class="pg-note">Loire Valley. "n" at the end of Chenin is softened.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Marsanne</span>
+          <span class="pg-phon">mar-SAN</span>
+          <span class="pg-note">Rhône white. Often blended with Roussanne.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Roussanne</span>
+          <span class="pg-phon">roo-SAN</span>
+          <span class="pg-note">Aromatic Rhône white. Often blended with Marsanne.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Verdejo</span>
+          <span class="pg-phon">ver-DAY-ho</span>
+          <span class="pg-note">Spanish "j" sounds like English "h."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Torrontés</span>
+          <span class="pg-phon">tor-ron-TESS</span>
+          <span class="pg-note">Argentina's aromatic signature white.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Muscat / Moscato</span>
+          <span class="pg-phon">MUS-cat / mos-KAH-toh</span>
+          <span class="pg-note">Same family. French = Muscat. Italian = Moscato.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pg-section" id="france">
+      <h2>French wine regions</h2>
+
+      <div class="pg-table">
+        <div class="pg-row pg-row-header">
+          <span>Name</span>
+          <span>Say it like this</span>
+          <span>Quick note</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Bordeaux</span>
+          <span class="pg-phon">bor-DOH</span>
+          <span class="pg-note">The "x" is silent.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Burgundy (Bourgogne)</span>
+          <span class="pg-phon">BUR-gun-dee (boor-GOHN-yuh)</span>
+          <span class="pg-note">English vs. French names for the same region.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Champagne</span>
+          <span class="pg-phon">sham-PAN-yuh</span>
+          <span class="pg-note">The French pronunciation has a subtle "yuh" at the end.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Côtes du Rhône</span>
+          <span class="pg-phon">COAT doo RONE</span>
+          <span class="pg-note">The "s" in Côtes is silent.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Châteauneuf-du-Pape</span>
+          <span class="pg-phon">sha-toh-NUF doo POP</span>
+          <span class="pg-note">Literally "new castle of the Pope."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Alsace</span>
+          <span class="pg-phon">al-ZAS</span>
+          <span class="pg-note">The "c" at the end is silent. "Al-ZAS," not "Al-SASS."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Chablis</span>
+          <span class="pg-phon">sha-BLEE</span>
+          <span class="pg-note">The "s" is silent. Unoaked Chardonnay from northern Burgundy.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Pouilly-Fumé</span>
+          <span class="pg-phon">poo-ee foo-MAY</span>
+          <span class="pg-note">Loire Valley Sauvignon Blanc. The double "l" in Pouilly is silent.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Sancerre</span>
+          <span class="pg-phon">son-SAIR</span>
+          <span class="pg-note">Loire Sauvignon Blanc. Rhymes with "air."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Muscadet</span>
+          <span class="pg-phon">moos-kah-DAY</span>
+          <span class="pg-note">Loire white. Crisp, mineral, great with oysters.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Saint-Émilion</span>
+          <span class="pg-phon">san tay-MEEL-yon</span>
+          <span class="pg-note">Right Bank Bordeaux. Merlot-dominant.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Pomerol</span>
+          <span class="pg-phon">pom-uh-ROL</span>
+          <span class="pg-note">Home of Pétrus. Right Bank Bordeaux.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Beaujolais</span>
+          <span class="pg-phon">boh-zhoh-LAY</span>
+          <span class="pg-note">"j" is the French soft "zh" sound, like the "s" in "measure."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Languedoc</span>
+          <span class="pg-phon">LONG-doh</span>
+          <span class="pg-note">The "c" is silent. Large southern French wine region.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pg-section" id="italy">
+      <h2>Italian wine regions &amp; wines</h2>
+
+      <div class="pg-table">
+        <div class="pg-row pg-row-header">
+          <span>Name</span>
+          <span>Say it like this</span>
+          <span>Quick note</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Barolo</span>
+          <span class="pg-phon">ba-ROH-loh</span>
+          <span class="pg-note">Nebbiolo from Piedmont. "The king of Italian wine."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Barbaresco</span>
+          <span class="pg-phon">bar-ba-RES-koh</span>
+          <span class="pg-note">Also Nebbiolo. Piedmont. More approachable young than Barolo.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Brunello di Montalcino</span>
+          <span class="pg-phon">broo-NEL-oh dee mon-tal-CHEE-noh</span>
+          <span class="pg-note">Tuscan Sangiovese. The "c" before "i" sounds like "ch."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Chianti</span>
+          <span class="pg-phon">kee-ON-tee</span>
+          <span class="pg-note">"Ch" in Italian sounds like "k."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Amarone</span>
+          <span class="pg-phon">ah-ma-ROH-neh</span>
+          <span class="pg-note">Rich, dried-grape red from Veneto.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Valpolicella</span>
+          <span class="pg-phon">val-poh-lee-CHEL-ah</span>
+          <span class="pg-note">Veneto red. Lighter style made with same grapes as Amarone.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Prosecco</span>
+          <span class="pg-phon">pro-SEK-oh</span>
+          <span class="pg-note">Italian sparkling. Not the same as Champagne.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Soave</span>
+          <span class="pg-phon">SWAH-veh</span>
+          <span class="pg-note">White wine from Veneto. Made from Garganega.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Pinot Grigio</span>
+          <span class="pg-phon">PEE-noh GREE-joh</span>
+          <span class="pg-note">The "g" before "i" sounds like "j" in Italian.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Montepulciano</span>
+          <span class="pg-phon">mon-teh-pul-CHAH-noh</span>
+          <span class="pg-note">Both a grape and a town. Different wines — context matters.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pg-section" id="spain">
+      <h2>Spanish wine regions &amp; wines</h2>
+
+      <div class="pg-table">
+        <div class="pg-row pg-row-header">
+          <span>Name</span>
+          <span>Say it like this</span>
+          <span>Quick note</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Rioja</span>
+          <span class="pg-phon">ree-OH-ha</span>
+          <span class="pg-note">The "j" is like an English "h." Never "ree-OH-ja."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Ribera del Duero</span>
+          <span class="pg-phon">ree-BEAR-ah del DWAY-roh</span>
+          <span class="pg-note">Tempranillo region. Spain's answer to Bordeaux.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Priorat</span>
+          <span class="pg-phon">pree-oh-RAT</span>
+          <span class="pg-note">Catalan name. Intense Garnacha and Cariñena reds.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Cava</span>
+          <span class="pg-phon">KAH-vah</span>
+          <span class="pg-note">Spanish sparkling wine. Straightforward pronunciation.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Jerez (Sherry)</span>
+          <span class="pg-phon">heh-RETH</span>
+          <span class="pg-note">The Spanish "j" sounds like "h." The "z" is lisped in Castilian Spanish.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Rias Baixas</span>
+          <span class="pg-phon">REE-as BY-shas</span>
+          <span class="pg-note">Galician. Home of Albariño. "x" in Galician sounds like "sh."</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pg-section" id="other-regions">
+      <h2>Other regions worth knowing</h2>
+
+      <div class="pg-table">
+        <div class="pg-row pg-row-header">
+          <span>Name</span>
+          <span>Say it like this</span>
+          <span>Quick note</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Mosel</span>
+          <span class="pg-phon">MOH-zel</span>
+          <span class="pg-note">German river and wine region. Home of great Riesling.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Rheingau</span>
+          <span class="pg-phon">RINE-gow</span>
+          <span class="pg-note">"ow" rhymes with "cow." German Riesling region.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Wachau</span>
+          <span class="pg-phon">VAH-how</span>
+          <span class="pg-note">Austrian wine region. "W" is pronounced as "V" in German.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Marlborough</span>
+          <span class="pg-phon">MARL-bruh</span>
+          <span class="pg-note">New Zealand's Sauvignon Blanc heartland.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Condrieu</span>
+          <span class="pg-phon">kon-dree-UH</span>
+          <span class="pg-note">Northern Rhône. Famous for Viognier.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Pfalz</span>
+          <span class="pg-phon">FALTZ</span>
+          <span class="pg-note">German "Pf" sounds like "F." Warm German region.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Mendoza</span>
+          <span class="pg-phon">men-DOH-sah</span>
+          <span class="pg-note">Argentina's main wine region. Malbec country.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Maipo Valley</span>
+          <span class="pg-phon">MY-poh</span>
+          <span class="pg-note">Chile's best-known red wine region.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pg-section" id="terms">
+      <h2>Wine terms that trip people up</h2>
+
+      <div class="pg-table">
+        <div class="pg-row pg-row-header">
+          <span>Name</span>
+          <span>Say it like this</span>
+          <span>Quick note</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Terroir</span>
+          <span class="pg-phon">teh-RWAH</span>
+          <span class="pg-note">The "r" is slightly rolled. One of wine's most-mispronounced words.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Sommelier</span>
+          <span class="pg-phon">som-el-YAY</span>
+          <span class="pg-note">The wine professional at a restaurant. French origin.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Cru</span>
+          <span class="pg-phon">KROO</span>
+          <span class="pg-note">Means "growth" in French. Refers to a classified vineyard or village.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Crémant</span>
+          <span class="pg-phon">kreh-MON</span>
+          <span class="pg-note">French sparkling wine made outside Champagne by the same method.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Brut</span>
+          <span class="pg-phon">BROOT</span>
+          <span class="pg-note">Dry sparkling wine. The "t" is silent in French; either works in English.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Demi-sec</span>
+          <span class="pg-phon">dem-ee-SEK</span>
+          <span class="pg-note">Semi-sweet sparkling. Literally "half-dry."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Mousseux</span>
+          <span class="pg-phon">moo-SUH</span>
+          <span class="pg-note">French for sparkling (frothy). The "x" is silent.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Pétillant naturel</span>
+          <span class="pg-phon">pet-ee-YON nat-oo-REL</span>
+          <span class="pg-note">Lightly sparkling natural wine. Often called "pét-nat."</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Mis en bouteille</span>
+          <span class="pg-phon">mee zon boo-TAY</span>
+          <span class="pg-note">"Bottled at." You'll see this on French labels.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Château</span>
+          <span class="pg-phon">sha-TOH</span>
+          <span class="pg-note">French for castle. On Bordeaux labels it usually just means a winery.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Domaine</span>
+          <span class="pg-phon">doh-MAIN</span>
+          <span class="pg-note">French for estate. Common on Burgundy labels.</span>
+        </div>
+        <div class="pg-row">
+          <span class="pg-name">Appellation</span>
+          <span class="pg-phon">ap-el-AY-shun</span>
+          <span class="pg-note">A legally defined wine region with specific rules about what can be grown and how.</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="pg-next">
+      <p>Pronunciation sorted. Now learn what all the tasting descriptors actually mean — acidity, tannins, body, finish — explained the same way.</p>
+      <a href="/tasting-vocabulary/" class="pg-next-link">Wine tasting vocabulary &rarr;</a>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .pg-wrap {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  /* Header */
+  .pg-kicker {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8a4a2f;
+    margin-bottom: 16px;
+  }
+
+  .pg-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #1a1713;
+    margin: 0 0 20px;
+  }
+
+  .pg-header h1 em {
+    font-style: italic;
+  }
+
+  .pg-intro {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #4a4540;
+    max-width: 48ch;
+    margin: 0 0 40px;
+  }
+
+  /* Nav */
+  .pg-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px 0;
+    border-top: 1.5px solid #e8e0d4;
+    border-bottom: 1.5px solid #e8e0d4;
+    margin-bottom: 24px;
+  }
+
+  .pg-nav a {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #5c3d2e;
+    text-decoration: none;
+    padding: 5px 12px;
+    border: 1px solid #d4c9b8;
+    border-radius: 2px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .pg-nav a:hover {
+    background: #5c3d2e;
+    color: #f4efe6;
+    border-color: #5c3d2e;
+  }
+
+  /* Key */
+  .pg-key {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: #6a6560;
+    background: #f4efe6;
+    border-left: 3px solid #8a4a2f;
+    padding: 12px 16px;
+    margin-bottom: 48px;
+  }
+
+  .pg-key strong {
+    color: #3a3530;
+  }
+
+  /* Sections */
+  .pg-section {
+    margin-bottom: 64px;
+    scroll-margin-top: 80px;
+  }
+
+  .pg-section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1713;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #8a4a2f;
+  }
+
+  /* Table */
+  .pg-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e8e0d4;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .pg-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+
+  .pg-row:last-child {
+    border-bottom: none;
+  }
+
+  .pg-row-header {
+    background: #1a1713;
+    color: #f4efe6;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .pg-row-header span,
+  .pg-row span {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .pg-row:not(.pg-row-header):nth-child(even) {
+    background: #faf7f3;
+  }
+
+  .pg-row:not(.pg-row-header):hover {
+    background: #f0ebe2;
+  }
+
+  .pg-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1713;
+    border-right: 1px solid #e8e0d4;
+  }
+
+  .pg-phon {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12.5px;
+    color: #8a4a2f;
+    border-right: 1px solid #e8e0d4;
+    letter-spacing: 0.02em;
+  }
+
+  .pg-note {
+    font-size: 13px;
+    color: #6a6560;
+    line-height: 1.4;
+  }
+
+  /* Next step */
+  .pg-next {
+    margin-top: 64px;
+    padding: 32px;
+    background: #1a1713;
+    color: #f4efe6;
+    border-radius: 2px;
+  }
+
+  .pg-next p {
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0 0 20px;
+  }
+
+  .pg-next-link {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f4efe6;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .pg-next-link:hover {
+    color: #d4a574;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .pg-wrap {
+      padding: 40px 16px 64px;
+    }
+
+    .pg-row {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pg-note {
+      display: none;
+    }
+
+    .pg-row-header span:last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pg-row {
+      grid-template-columns: 1fr;
+    }
+
+    .pg-phon {
+      border-right: none;
+      border-top: 1px solid #e8e0d4;
+    }
+
+    .pg-row-header span:nth-child(2) {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,86 @@
+{
+  "slug": "best-cheap-wine-that-tastes-expensive",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Chateau Bourdieu No.1 2018",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Blaye Cotes de Bordeaux Cab-Merlot blend — dark fruit, leather, structured, 13.5-14% ABV"]
+    },
+    {
+      "name": "Chateau Saint-Andre Corbin 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: St. Emilion Bordeaux — Merlot-dominant, plush, fine tannins, 13.5-14% ABV"]
+    },
+    {
+      "name": "Goldschmidt Vineyard Stonemason Hill Cabernet Sauvignon 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Alexander Valley Cabernet — dark cherry, cedar, fine tannins, 14-14.5% ABV"]
+    },
+    {
+      "name": "Frescobaldi Nipozzano Chianti Rufina Riserva 2022",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Chianti Rufina Riserva — Sangiovese, dried cherry, leather, 13-13.5% ABV"]
+    },
+    {
+      "name": "Grand Napa Vineyards Sauvignon Blanc 2025",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Spring Mountain Napa Sauvignon Blanc — grapefruit, citrus zest, mineral, 13.5% ABV"]
+    },
+    {
+      "name": "Diatom Santa Barbara Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Santa Barbara Chardonnay — minimal intervention, low oak, white peach, 13-13.5% ABV"]
+    },
+    {
+      "name": "Chateau d'Esclans Whispering Angel Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Cotes de Provence Rosé — pale salmon, dry, chalky finish, 13% ABV"]
+    },
+    {
+      "name": "Graham Beck Brut Methode Cap Classique",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: South Africa MCC Chardonnay-Pinot Noir — Champagne method, brioche, citrus, 12% ABV"]
+    }
+  ]
+}

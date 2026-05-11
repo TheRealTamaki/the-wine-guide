@@ -1,0 +1,9 @@
+Good to know. When you're ready to turn affiliate on, here's exactly where to do it in Cloudflare Pages:
+
+1. Go to your Pages project → **Settings** → **Environment variables**
+2. Click **Add variable**
+3. Name: `SHOW_AFFILIATE`, Value: `true`
+4. Make sure it's set for **Production** (you can also add a separate one for Preview if you want to test it on a staging deploy first)
+5. Trigger a new deploy — either push a commit or hit **Retry deployment**
+
+That's it. No code changes, no touching `.env`. The build picks it up automatically.

@@ -1,42 +1,143 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ui/ArticleCard.astro';
-import { getCollection } from 'astro:content';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TableOfContents from '../../components/ui/TableOfContents.astro';
+import AuthorByline from '../../components/ui/AuthorByline.astro';
+import { getCollection, getEntry, render } from 'astro:content';
 
-const articles = (await getCollection('articles', (a) =>
-  a.data.category === 'types-of-wine' && !a.data.draft
+// Fetch the hub pillar article
+const pillarEntry = await getEntry('articles', 'types-of-wine/types-of-wine');
+
+// Render the MDX content if the pillar exists
+const rendered = pillarEntry ? await render(pillarEntry) : null;
+const Content = rendered?.Content;
+const headings = rendered?.headings ?? [];
+
+// Child articles: same category, not draft, exclude the pillar itself
+const childArticles = (await getCollection('articles', (a) =>
+  a.data.category === 'types-of-wine' &&
+  !a.data.draft &&
+  a.id !== 'types-of-wine/types-of-wine'
 )).sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Types of Wine' },
+];
+
+const pageTitle = pillarEntry?.data.title ?? 'Types of Wine';
+const pageDescription = pillarEntry?.data.description ?? 'Red, white, rosé, sparkling, dessert: a clear guide to every major wine style.';
+const readingTime = Math.ceil((pillarEntry?.body?.length ?? 0) / 1400);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: pageTitle,
+  description: pageDescription,
+  url: Astro.url.href,
+};
 ---
 
 <BaseLayout
-  title="Types Of Wine"
-  description="Red, white, rosé, sparkling, dessert: a clear guide to every major wine style."
+  title={pageTitle}
+  description={pageDescription}
+  schema={schema}
 >
-  <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <header class="max-w-[42rem] mb-10">
-      <span class="text-xs font-semibold uppercase tracking-wider text-accent">Types Of Wine</span>
-      <h1 class="mt-2 font-heading text-[2rem] font-bold text-primary leading-tight">Types Of Wine</h1>
-      <p class="mt-3 text-lg text-secondary leading-relaxed">Red, white, rosé, sparkling, dessert: a clear guide to every major wine style.</p>
-    </header>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Breadcrumbs items={breadcrumbs} />
 
-    {articles.length > 0 ? (
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((article) => {
-          const slug = article.id.replace('types-of-wine/', '').replace(/\.mdx?$/, '');
-          return (
-            <ArticleCard
-              title={article.data.title}
-              description={article.data.description}
-              href={`/types-of-wine/${slug}/`}
-              category={article.data.category}
-              date={article.data.publishDate}
-              ogImage={article.data.ogImage}
-            />
-          );
-        })}
+    {pillarEntry && Content ? (
+      <div class="lg:grid lg:grid-cols-[1fr_18rem] lg:gap-12 mt-6">
+        <!-- Pillar article prose -->
+        <article>
+          <header class="mb-10 mt-2" style="max-width: var(--w-prose);">
+            <div class="mb-4">
+              <AuthorByline
+                name="Claire Bennett"
+                role="Wine Editor"
+                avatar="/images/author-claire.webp"
+                readingTime={readingTime}
+              />
+            </div>
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-primary leading-tight mb-4">
+              {pillarEntry.data.title}
+            </h1>
+            <p class="text-xl text-text-muted leading-relaxed">
+              {pillarEntry.data.description}
+            </p>
+            <div class="mt-4 text-sm text-text-muted">
+              <time datetime={pillarEntry.data.publishDate.toISOString()}>
+                {pillarEntry.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </div>
+          </header>
+
+          <div class="prose">
+            <Content />
+          </div>
+
+          <!-- Explore Wine Types section -->
+          {childArticles.length > 0 && (
+            <section class="mt-16 pt-8 border-t border-border">
+              <h2 class="text-2xl font-heading font-bold text-primary mb-6">Explore Wine Types</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {childArticles.map((article) => {
+                  const slug = article.id.replace('types-of-wine/', '').replace(/\.mdx?$/, '');
+                  return (
+                    <ArticleCard
+                      title={article.data.title}
+                      description={article.data.description}
+                      href={`/types-of-wine/${slug}/`}
+                      category={article.data.category}
+                      date={article.data.publishDate}
+                      ogImage={article.data.ogImage}
+                    />
+                  );
+                })}
+              </div>
+            </section>
+          )}
+        </article>
+
+        <!-- TOC sidebar -->
+        {headings.length > 2 && (
+          <aside class="hidden lg:block">
+            <div class="sticky top-28 bg-bg-alt rounded-[var(--twg-radius-lg)] p-8">
+              <TableOfContents {headings} />
+            </div>
+          </aside>
+        )}
       </div>
     ) : (
-      <p class="text-text-muted">Guides coming soon.</p>
+      <!-- Fallback: no pillar entry yet -->
+      <div class="mt-6">
+        <header class="max-w-[42rem] mb-10">
+          <span class="text-xs font-semibold uppercase tracking-wider text-accent">Types Of Wine</span>
+          <h1 class="mt-2 font-heading text-[2rem] font-bold text-primary leading-tight">Types Of Wine</h1>
+          <p class="mt-3 text-lg text-secondary leading-relaxed">Red, white, rosé, sparkling, dessert: a clear guide to every major wine style.</p>
+        </header>
+
+        {childArticles.length > 0 ? (
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {childArticles.map((article) => {
+              const slug = article.id.replace('types-of-wine/', '').replace(/\.mdx?$/, '');
+              return (
+                <ArticleCard
+                  title={article.data.title}
+                  description={article.data.description}
+                  href={`/types-of-wine/${slug}/`}
+                  category={article.data.category}
+                  date={article.data.publishDate}
+                  ogImage={article.data.ogImage}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <p class="text-text-muted">Guides coming soon.</p>
+        )}
+      </div>
     )}
   </div>
 </BaseLayout>

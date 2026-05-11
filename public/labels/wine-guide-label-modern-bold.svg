@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4in" height="5in" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">The Wine Guide bold modern label</title>
+  <desc id="desc">A bold modern wine bottle label for The Wine Guide.</desc>
+  <rect width="1200" height="1500" fill="#f4efe6"/>
+  <rect x="0" y="0" width="1200" height="372" fill="#570013"/>
+  <rect x="0" y="1132" width="1200" height="368" fill="#1f1f1f"/>
+  <rect x="76" y="76" width="1048" height="1348" fill="none" stroke="#1f1f1f" stroke-width="6"/>
+
+  <text x="104" y="152" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900" fill="#f4efe6" letter-spacing="5">THE WINE GUIDE</text>
+  <text x="104" y="244" font-family="Playfair Display, Georgia, serif" font-size="104" font-weight="800" fill="#f4efe6">Weeknight</text>
+
+  <text x="104" y="544" font-family="Playfair Display, Georgia, serif" font-size="152" font-weight="800" fill="#1f1f1f">Red</text>
+  <text x="104" y="682" font-family="Playfair Display, Georgia, serif" font-size="152" font-weight="800" fill="#570013">Reset</text>
+  <text x="110" y="782" font-family="Inter, Arial, sans-serif" font-size="37" font-weight="800" fill="#1f1f1f" letter-spacing="2">FOR TAKEAWAY, ROAST CHICKEN, AND SECOND GLASSES</text>
+
+  <g transform="translate(936 590)" stroke="#1f1f1f" stroke-width="12" fill="none">
+    <circle cx="0" cy="0" r="106"/>
+    <path d="M-44 -70h88v198h-88z"/>
+    <path d="M-86 -28c52 24 120 24 172 0"/>
+  </g>
+
+  <rect x="104" y="900" width="992" height="5" fill="#1f1f1f"/>
+  <text x="104" y="1006" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#1f1f1f">Open it when the menu is loose.</text>
+  <text x="104" y="1218" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#f4efe6" letter-spacing="3">TABLE RED</text>
+  <text x="600" y="1218" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#f4efe6" text-anchor="middle" letter-spacing="3">750 ML</text>
+  <text x="1096" y="1218" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800" fill="#f4efe6" text-anchor="end" letter-spacing="3">13.5%</text>
+  <text x="600" y="1356" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#f4efe6" text-anchor="middle">wineguide.co</text>
+</svg>

@@ -1,0 +1,51 @@
+---
+interface Props {
+  headers: string[];
+  rows: string[][];
+  winnerRow?: number;
+  caption?: string;
+}
+
+const { headers, rows, winnerRow, caption } = Astro.props;
+---
+
+<div class="not-prose my-6 overflow-x-auto rounded-xl border border-border">
+  <table class="w-full text-sm border-collapse">
+    {caption && (
+      <caption class="text-xs text-text-muted text-left px-4 pt-3 pb-1 font-medium">
+        {caption}
+      </caption>
+    )}
+    <thead>
+      <tr class="bg-primary text-white">
+        {headers.map((header) => (
+          <th class="text-left px-4 py-3 font-semibold text-xs uppercase tracking-wider first:rounded-tl-xl last:rounded-tr-xl">
+            {header}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row, i) => (
+        <tr class={`border-b border-border last:border-0 transition-colors ${
+          winnerRow === i
+            ? 'bg-cta-light font-medium'
+            : i % 2 === 0 ? '' : 'bg-bg-alt/50'
+        }`}>
+          {row.map((cell, j) => (
+            <td class={`px-4 py-3 align-top ${j === 0 ? 'font-medium text-primary' : 'text-secondary'} ${winnerRow === i && j === 0 ? 'text-cta' : ''}`}>
+              {winnerRow === i && j === 0 && (
+                <span class="inline-block mr-1.5 text-cta" aria-label="Winner">
+                  <svg class="inline w-3.5 h-3.5 -mt-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </span>
+              )}
+              {cell}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

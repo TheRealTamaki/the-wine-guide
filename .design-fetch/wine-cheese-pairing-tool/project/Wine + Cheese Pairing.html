@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Pairing Cellar — Wine &amp; Cheese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #2a1518; }
+  body { font-family: "Crimson Text", Georgia, serif; -webkit-font-smoothing: antialiased; }
+  button { font-family: inherit; }
+  /* Hide scrollbars in horizontal pickers */
+  ::-webkit-scrollbar { height: 6px; width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(139,28,45,0.3); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="data.js"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="cellar.jsx"></script>
+<script type="text/babel" src="maison.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "palette": "burgundy",
+  "font": "modern",
+  "scoreVizCellar": "stars",
+  "scoreVizMaison": "num",
+  "cardLayoutCellar": "list",
+  "cardLayoutMaison": "list"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  const cellarTweaks = {
+    palette: tweaks.palette,
+    font: tweaks.font,
+    scoreViz: tweaks.scoreVizCellar,
+    cardLayout: tweaks.cardLayoutCellar,
+  };
+  const maisonTweaks = {
+    palette: tweaks.palette,
+    font: tweaks.font,
+    scoreViz: tweaks.scoreVizMaison,
+    cardLayout: tweaks.cardLayoutMaison,
+  };
+
+  return (
+    <>
+      <DesignCanvas background="#2a1518">
+        <DCSection id="dirs" title="Two directions" subtitle="Both follow the brief — old-world cellar, deep burgundy on cream, vintage typography, type-only imagery. Different layout DNA. Click any artboard to focus.">
+          <DCArtboard id="cellar" label="A · The Cellar — dossier &amp; sidebar" width={1280} height={1480}
+            data-screen-label="A — The Cellar">
+            <CellarApp tweaks={cellarTweaks} />
+          </DCArtboard>
+          <DCArtboard id="maison" label="B · Maison — magazine spread" width={1280} height={1700}
+            data-screen-label="B — Maison">
+            <MaisonApp tweaks={maisonTweaks} />
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+
+      <TweaksPanel title="Tweaks" defaultPosition={{ right: 24, bottom: 24 }}>
+        <TweakSection title="Palette &amp; Type — both directions">
+          <TweakRadio label="Palette" value={tweaks.palette}
+            onChange={(v) => setTweak('palette', v)}
+            options={[
+              { value: 'burgundy', label: 'Burgundy' },
+              { value: 'oak', label: 'Oak' },
+              { value: 'noir', label: 'Noir' },
+            ]} />
+          <TweakRadio label="Display font" value={tweaks.font}
+            onChange={(v) => setTweak('font', v)}
+            options={[
+              { value: 'classic', label: 'Classic SC' },
+              { value: 'humanist', label: 'Humanist' },
+              { value: 'modern', label: 'Modern' },
+            ]} />
+        </TweakSection>
+
+        <TweakSection title="A — The Cellar">
+          <TweakRadio label="Match score" value={tweaks.scoreVizCellar}
+            onChange={(v) => setTweak('scoreVizCellar', v)}
+            options={[
+              { value: 'wax', label: 'Wax seal' },
+              { value: 'stars', label: 'Stars' },
+              { value: 'bar', label: 'Bar' },
+            ]} />
+          <TweakRadio label="Card layout" value={tweaks.cardLayoutCellar}
+            onChange={(v) => setTweak('cardLayoutCellar', v)}
+            options={[
+              { value: 'list', label: 'List' },
+              { value: 'grid', label: 'Grid' },
+            ]} />
+        </TweakSection>
+
+        <TweakSection title="B — Maison">
+          <TweakRadio label="Match score" value={tweaks.scoreVizMaison}
+            onChange={(v) => setTweak('scoreVizMaison', v)}
+            options={[
+              { value: 'num', label: 'Numeral' },
+              { value: 'ring', label: 'Ring' },
+              { value: 'dots', label: 'Dot bar' },
+            ]} />
+          <TweakRadio label="Card layout" value={tweaks.cardLayoutMaison}
+            onChange={(v) => setTweak('cardLayoutMaison', v)}
+            options={[
+              { value: 'list', label: 'List' },
+              { value: 'grid', label: 'Grid' },
+            ]} />
+        </TweakSection>
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+</body>
+</html>

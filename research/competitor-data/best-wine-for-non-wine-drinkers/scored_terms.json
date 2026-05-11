@@ -1,0 +1,1976 @@
+{
+  "keyword": "best wine for non wine drinkers",
+  "analysis_date": "2026-04-17",
+  "competitor_count": 4,
+  "competitors": [
+    {
+      "url": "https://www.lexiswinelist.com/blog/best-wines-for-beginners",
+      "title": "11 Best Wines for Beginners Plus Tips on How to Start Drinking Wine",
+      "file": "best-wine-for-non-wine-drinkers_competitor-1.md"
+    },
+    {
+      "url": "https://pasowine.com/best-wines-for-non-wine-drinkers/",
+      "title": "",
+      "file": "best-wine-for-non-wine-drinkers_competitor-2.md"
+    },
+    {
+      "url": "https://calabasasstyle.com/food-wine/exploring-wine-for-non-wine-drinkers/",
+      "title": "",
+      "file": "best-wine-for-non-wine-drinkers_competitor-3.md"
+    },
+    {
+      "url": "https://www.quora.com/What-is-a-good-wine-for-people-that-do-not-drink-and-do-not-like-the-taste-of-alcohol-I-tasted-beer-once-and-hated-it-We-do-like-the-sparkling-juices",
+      "title": "",
+      "file": "best-wine-for-non-wine-drinkers_competitor-4.md"
+    }
+  ],
+  "basic_terms": [
+    {
+      "term": "start",
+      "term_lemma": "start",
+      "importance": 54,
+      "suggested_range": [
+        1,
+        6
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 25,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        6,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "drink",
+      "term_lemma": "drink",
+      "importance": 51,
+      "suggested_range": [
+        6,
+        10
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 25,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        6,
+        0,
+        0,
+        10
+      ]
+    },
+    {
+      "term": "beginners",
+      "term_lemma": "beginner",
+      "importance": 49,
+      "suggested_range": [
+        1,
+        11
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 25,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        11,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "best",
+      "term_lemma": "best",
+      "importance": 48,
+      "suggested_range": [
+        1,
+        10
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": true,
+      "h1_pct": 25,
+      "h2_pct": 50,
+      "competitor_body_counts": [
+        10,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "find",
+      "term_lemma": "find",
+      "importance": 45,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        4,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "red wine",
+      "term_lemma": "red wine",
+      "importance": 45,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        4,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "try",
+      "term_lemma": "try",
+      "importance": 44,
+      "suggested_range": [
+        1,
+        8
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        8,
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "term": "know",
+      "term_lemma": "know",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "even",
+      "term_lemma": "even",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "term": "make",
+      "term_lemma": "make",
+      "importance": 40,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "extended_terms": [
+    {
+      "term": "content",
+      "term_lemma": "content",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "consider",
+      "term_lemma": "consider",
+      "importance": 38,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 75,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "grape",
+      "term_lemma": "grape",
+      "importance": 35,
+      "suggested_range": [
+        2,
+        8
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        8,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "plus",
+      "term_lemma": "plus",
+      "importance": 34,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 25,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "perfect",
+      "term_lemma": "perfect",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        3,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "varieties",
+      "term_lemma": "variety",
+      "importance": 32,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        3,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "term": "get",
+      "term_lemma": "get",
+      "importance": 31,
+      "suggested_range": [
+        5,
+        7
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "term": "guide",
+      "term_lemma": "guide",
+      "importance": 31,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 25,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "notes",
+      "term_lemma": "note",
+      "importance": 30,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "questions",
+      "term_lemma": "question",
+      "importance": 30,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "use",
+      "term_lemma": "use",
+      "importance": 29,
+      "suggested_range": [
+        3,
+        5
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        5,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "always",
+      "term_lemma": "always",
+      "importance": 29,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "takes",
+      "term_lemma": "take",
+      "importance": 29,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "see",
+      "term_lemma": "see",
+      "importance": 28,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "term": "one",
+      "term_lemma": "one",
+      "importance": 28,
+      "suggested_range": [
+        3,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "without",
+      "term_lemma": "without",
+      "importance": 28,
+      "suggested_range": [
+        2,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "flavors",
+      "term_lemma": "flavor",
+      "importance": 28,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        4,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "money",
+      "term_lemma": "money",
+      "importance": 28,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "term": "cabernet sauvignon",
+      "term_lemma": "cabernet sauvignon",
+      "importance": 28,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "people",
+      "term_lemma": "people",
+      "importance": 28,
+      "suggested_range": [
+        1,
+        4
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "term": "way",
+      "term_lemma": "way",
+      "importance": 27,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "great",
+      "term_lemma": "great",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "often",
+      "term_lemma": "often",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "journey",
+      "term_lemma": "journey",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "alcoholic",
+      "term_lemma": "alcoholic",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "enjoy",
+      "term_lemma": "enjoy",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        3,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "high",
+      "term_lemma": "high",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "well",
+      "term_lemma": "well",
+      "importance": 27,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "pay",
+      "term_lemma": "pay",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "checking",
+      "term_lemma": "check",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "cranberry juice",
+      "term_lemma": "cranberry juice",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "verification",
+      "term_lemma": "verification",
+      "importance": 27,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "term": "compare",
+      "term_lemma": "compare",
+      "importance": 27,
+      "suggested_range": [
+        2,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "term": "cut",
+      "term_lemma": "cut",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "information",
+      "term_lemma": "information",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "buy",
+      "term_lemma": "buy",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "shop",
+      "term_lemma": "shop",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "helping",
+      "term_lemma": "help",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "many",
+      "term_lemma": "many",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "home",
+      "term_lemma": "home",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "whole",
+      "term_lemma": "whole",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "break",
+      "term_lemma": "break",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "could",
+      "term_lemma": "could",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "may",
+      "term_lemma": "may",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "terms",
+      "term_lemma": "term",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "beginning",
+      "term_lemma": "begin",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "earthy",
+      "term_lemma": "earthy",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "relative",
+      "term_lemma": "relative",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "basic",
+      "term_lemma": "basic",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "hope",
+      "term_lemma": "hope",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "time",
+      "term_lemma": "time",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "keep",
+      "term_lemma": "keep",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "wrong",
+      "term_lemma": "wrong",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "today",
+      "term_lemma": "today",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "discount",
+      "term_lemma": "discount",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "pinterest",
+      "term_lemma": "pinterest",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "enter",
+      "term_lemma": "enter",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "receive",
+      "term_lemma": "receive",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "addresss",
+      "term_lemma": "address",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "curated list",
+      "term_lemma": "curated list",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine good",
+      "term_lemma": "wine good",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "like wine",
+      "term_lemma": "like wine",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "exploring wine",
+      "term_lemma": "explore wine",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "term": "wine would",
+      "term_lemma": "wine would",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "sauvignon blanc",
+      "term_lemma": "sauvignon blanc",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "would like",
+      "term_lemma": "would like",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "term": "world wine",
+      "term_lemma": "world wine",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "dry wines",
+      "term_lemma": "dry wine",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "white wine wine",
+      "term_lemma": "white wine wine",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "term": "wine taste wine",
+      "term_lemma": "wine taste wine",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        1,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "term": "hard",
+      "term_lemma": "hard",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "right",
+      "term_lemma": "right",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "term": "skip content",
+      "term_lemma": "skip content",
+      "importance": 26,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50,
+      "h1_recommended": false,
+      "h2h3_recommended": false,
+      "h1_pct": 0,
+      "h2_pct": 0,
+      "competitor_body_counts": [
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "One",
+      "importance": 100,
+      "suggested_range": [
+        6,
+        11
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot",
+      "importance": 100,
+      "suggested_range": [
+        2,
+        4
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Pinot Grigio",
+      "importance": 100,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 100
+    },
+    {
+      "entity": "Wine",
+      "importance": 75,
+      "suggested_range": [
+        9,
+        66
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Pinot Noir",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Riesling",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Noir",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Grigio",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "New",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Even",
+      "importance": 75,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 75
+    },
+    {
+      "entity": "Wine Drinkers",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Typically",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Maybe",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Vineyards",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Sauvignon Blanc",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Italy",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Related",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Grenache Blanc",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Wines",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Share",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        2
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Valley",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Best Wines",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Best",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        10
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Try",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        9
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Though",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Estate",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        3
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Cabernet Sauvignon",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Start",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        7
+      ],
+      "competitor_usage_pct": 50
+    },
+    {
+      "entity": "Syrah",
+      "importance": 50,
+      "suggested_range": [
+        1,
+        1
+      ],
+      "competitor_usage_pct": 50
+    }
+  ],
+  "heading_terms": {
+    "h1": [],
+    "h2h3": [
+      "drink",
+      "beginners",
+      "best"
+    ]
+  },
+  "target_word_count": {
+    "median": 562,
+    "range": [
+      168,
+      1142
+    ]
+  },
+  "summary": {
+    "basic_count": 10,
+    "extended_count": 73,
+    "entity_count": 29,
+    "h1_term_count": 0,
+    "h2h3_term_count": 3
+  }
+}

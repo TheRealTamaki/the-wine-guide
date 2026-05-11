@@ -1,0 +1,86 @@
+{
+  "slug": "best-sweet-red-wine",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Mionetto Sergio Lambrusco Reggiano Dolce NV",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["Lambrusco Dolce style — lightly sparkling, 8% ABV typical, bright acidity"]
+    },
+    {
+      "name": "Apothic Red Winemaker's Blend NV",
+      "tannin": 2,
+      "acidity": 2,
+      "sweetness": 3,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Semi-sweet California blend, 13.5% ABV per producer", "Article calls it medium-bodied semi-sweet"]
+    },
+    {
+      "name": "Banfi Rosa Regale Brachetto d'Acqui 2023",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 7.5% ABV", "Brachetto d'Acqui DOCG sweet sparkling profile"]
+    },
+    {
+      "name": "Castello del Poggio Moscato Rosso NV",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states ~5.5% ABV, very sweet", "Moscato Rosso style"]
+    },
+    {
+      "name": "Jam Jar Sweet Shiraz 2022",
+      "tannin": 2,
+      "acidity": 2,
+      "sweetness": 4,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["South African sweet Shiraz, 13.5% ABV per producer", "Medium-sweet, jammy style"]
+    },
+    {
+      "name": "Sutter Home White Zinfandel 750ml",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["White Zin 9-10% ABV typical Sutter Home", "Blush style, no real tannin"]
+    },
+    {
+      "name": "Quady Winery Elysium Black Muscat 2022",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Article states 15% ABV fortified", "Dessert-style Black Muscat"]
+    },
+    {
+      "name": "Allegrini Recioto della Valpolicella Classico",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 4,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Recioto dried-grape sweet red ~13.5-14% ABV", "Rich concentrated dessert-level sweet"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "best-dry-red-wines",
+  "date": "2026-04-19",
+  "wines": [
+    { "name": "Chateau Bourdieu No.1 2018", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 3, "body": 4, "confidence": "inferred", "sources": ["Bordeaux blend (Merlot-led right-bank) varietal profile"] },
+    { "name": "Villa a Sesta Il Palei Chianti Classico 2019", "tannin": 4, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Chianti Classico (Sangiovese) varietal quick-ref"] },
+    { "name": "Beringer Knights Valley Cabernet Sauvignon 2022", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["California Cab Sauvignon varietal quick-ref"] },
+    { "name": "Matsu El Picaro 2024", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["Toro Tempranillo (high-altitude Spanish)"] },
+    { "name": "Penfolds Bin 28 Shiraz 2023", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["South Australian Shiraz varietal quick-ref"] },
+    { "name": "Chateau Du Caillau Cahors 2023", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 3, "body": 4, "confidence": "inferred", "sources": ["Cahors Malbec (French, structured) varietal profile"] },
+    { "name": "Lange Winery Classique Pinot Noir 2023", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Willamette Valley Pinot Noir varietal quick-ref"] },
+    { "name": "El Enemigo Cabernet Franc 2022", "tannin": 4, "acidity": 4, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["Mendoza Cabernet Franc, high-altitude structured"] }
+  ]
+}

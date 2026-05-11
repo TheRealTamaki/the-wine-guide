@@ -1,0 +1,86 @@
+{
+  "slug": "best-wines-under-30",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Calculated Risk Reserve Cabernet Sauvignon 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Sonoma County Reserve Cabernet — structured, cedar oak, 14-14.5% ABV"]
+    },
+    {
+      "name": "La Massa Toscana 2021",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Super Tuscan (Sangiovese-Cab-Merlot) — silky tannins, full body, 14% ABV"]
+    },
+    {
+      "name": "Villa a Sesta Il Palei Chianti Classico 2019",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Chianti Classico Sangiovese — bright cherry, high acidity, 13-13.5% ABV"]
+    },
+    {
+      "name": "Grand Napa Vineyards Los Carneros Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Carneros Chardonnay — cool climate, partial malo, medium body, 13.5% ABV"]
+    },
+    {
+      "name": "Dog Point Vineyard Sauvignon Blanc 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Marlborough Sauvignon Blanc — lime, passion fruit, flinty, 13% ABV"]
+    },
+    {
+      "name": "Grand Napa Vineyards Sauvignon Blanc 2025",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Spring Mountain Napa Sauvignon Blanc — mountain fruit, stone fruit, 13.5% ABV"]
+    },
+    {
+      "name": "Chateau d'Esclans Whispering Angel Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Cotes de Provence Rosé — dry, pale salmon, chalky mineral, 13% ABV"]
+    },
+    {
+      "name": "Hampton Water Bubbly Rose",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["varietal inference: French sparkling rosé — dry, fine bubbles, light body, 11.5-12% ABV"]
+    }
+  ]
+}

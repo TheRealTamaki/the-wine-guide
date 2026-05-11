@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Merlot — An Interactive Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:       #ede8dc;
+    --bg-2:     #e4ddd0;
+    --ink:      #0f0e0d;
+    --ink-2:    #2e2b27;
+    --muted:    #7a7268;
+    --line:     #cdc6b8;
+    --card:     #e8e2d6;
+    --accent:   #8b1929;
+    --dark:     #3c0c1b;
+    --wine:     #a82040;
+    --wine-deep:#6b0f26;
+    --wine-pale:#e8a4b8;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif; }
+
+  .wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding: 0 40px 60px;
+  }
+
+  .stage{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .glass-col{
+    position:relative;
+    border-right:1px solid var(--line);
+    padding: 40px 36px 40px 0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .section-label{
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:28px;
+    align-self:stretch;
+  }
+  .section-label::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .glass-wrap{
+    position:relative;
+    width:100%;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  svg.glass{
+    width:320px;max-width:100%;height:auto;
+    filter: drop-shadow(0 18px 34px rgba(60,12,27,0.22));
+  }
+
+  .callouts{ position:absolute;inset:0;pointer-events:none; }
+  .callout{
+    position:absolute;pointer-events:auto;
+    display:flex;align-items:center;gap:10px;
+    font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--ink-2);cursor:pointer;
+  }
+  .callout .dot{
+    width:7px;height:7px;border-radius:50%;
+    background:var(--bg);
+    border:1.5px solid var(--accent);
+    transition:all .2s ease;flex-shrink:0;
+  }
+  .callout:hover .dot{ background:var(--accent);transform:scale(1.3) }
+  .callout .line{ height:1px;width:32px;background:var(--line);flex-shrink:0; }
+  .callout .txt b{ color:var(--ink);font-weight:500;display:block;font-size:10.5px;letter-spacing:0.14em;font-family:'Inter',sans-serif }
+  .callout .txt span{ color:var(--muted);text-transform:none;letter-spacing:0;font-size:12px;font-style:italic;font-family:'Playfair Display',serif }
+
+  .co-1{ top:16%;left:2%; }
+  .co-2{ top:36%;left:2%; }
+  .co-3{ top:54%;right:2%;flex-direction:row-reverse;text-align:right; }
+  .co-4{ bottom:18%;right:2%;flex-direction:row-reverse;text-align:right; }
+
+  .swatch-row{
+    display:flex;gap:0;
+    margin-top:28px;
+    border:1px solid var(--line);
+    align-self:stretch;
+  }
+  .chip{
+    flex:1;
+    display:flex;flex-direction:column;gap:6px;
+    padding:10px 12px;
+    border-right:1px solid var(--line);
+    font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);
+    font-family:'Inter',sans-serif;
+  }
+  .chip:last-child{border-right:0}
+  .chip .sw{ width:100%;height:6px; }
+
+  .card{
+    padding: 40px 0 40px 36px;
+    position:sticky; top:0;
+  }
+  .card .kicker{
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:20px;
+    align-self:stretch;
+  }
+  .card .kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .card h2{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:clamp(44px,4.5vw,68px);
+    line-height:1.0;
+    margin:0 0 6px;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+  }
+  .card h2 em{font-style:italic;color:var(--accent);font-weight:700}
+  .card .pronounce{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:18px;
+  }
+  .card .lede{
+    font-size:14px;line-height:1.65;color:var(--ink-2);
+    margin:0 0 24px;max-width:44ch;text-wrap:pretty;
+  }
+  .card .lede em{font-style:italic;color:var(--accent)}
+
+  .tabs{
+    display:flex;gap:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    margin-bottom:24px;
+  }
+  .tab{
+    appearance:none;background:none;border:0;
+    padding:12px 14px;
+    font-family:'Inter',sans-serif;font-size:10.5px;
+    letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);cursor:pointer;
+    border-bottom:2px solid transparent;
+    margin-bottom:-1px;
+    transition:all .15s ease;
+    white-space:nowrap;
+  }
+  .tab:hover{color:var(--ink-2)}
+  .tab.active{color:var(--ink);border-bottom-color:var(--ink);font-weight:500}
+
+  .panel{display:none;animation:fade .2s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+
+  .grape-head{display:flex;gap:18px;align-items:center;margin-bottom:16px}
+  .grape-icon{
+    width:80px;height:80px;border-radius:50%;flex-shrink:0;
+    background:var(--dark);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .grape-head h3{
+    font-family:'Playfair Display',serif;
+    font-weight:700;font-size:22px;margin:0 0 4px;
+    color:var(--ink);
+  }
+  .grape-head p{margin:0;font-size:13px;color:var(--muted);font-style:italic;font-family:'Playfair Display',serif}
+
+  dl.facts{
+    display:grid;grid-template-columns:100px 1fr;
+    gap:9px 16px;margin:16px 0 0;font-size:13px;
+  }
+  dl.facts dt{
+    font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);padding-top:2px;
+  }
+  dl.facts dd{margin:0;color:var(--ink-2);line-height:1.5}
+
+  ol.stages{
+    list-style:none;padding:0;margin:0;
+    counter-reset:step;
+  }
+  ol.stages li{
+    position:relative;
+    padding:13px 0 13px 44px;
+    border-bottom:1px solid var(--line);
+    counter-increment:step;
+    cursor:pointer;
+  }
+  ol.stages li:last-child{border-bottom:0}
+  ol.stages li::before{
+    content:"§ " counter(step, decimal-leading-zero);
+    position:absolute;left:0;top:14px;
+    font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  ol.stages li h4{
+    margin:0 0 3px;
+    font-family:'Playfair Display',serif;
+    font-weight:700;font-size:17px;color:var(--ink);
+  }
+  ol.stages li h4 em{font-style:italic;color:var(--accent)}
+  ol.stages li p{
+    margin:0;font-size:13px;line-height:1.55;color:var(--ink-2);max-width:46ch;
+  }
+  ol.stages li:hover h4{color:var(--accent)}
+  ol.stages li.on h4{color:var(--accent)}
+
+  .regions{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .region{
+    border:1px solid var(--line);
+    margin:-1px 0 0 -1px;
+    padding:14px 16px;
+    cursor:pointer;
+    transition:background .15s ease;
+  }
+  .region:hover{background:#fff}
+  .region .flag{
+    font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:4px;
+  }
+  .region h4{
+    font-family:'Playfair Display',serif;
+    font-weight:700;font-size:18px;
+    margin:0 0 5px;color:var(--ink);
+  }
+  .region h4 em{font-style:italic;color:var(--accent)}
+  .region p{margin:0;font-size:12.5px;line-height:1.5;color:var(--ink-2)}
+  .region .tag{
+    display:inline-block;margin-top:6px;
+    font-size:10px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  .taste-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:22px}
+  .taste-row{display:flex;align-items:center;gap:14px;font-size:13px}
+  .taste-row .label{
+    width:80px;flex-shrink:0;
+    font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);
+  }
+  .taste-row .bar{
+    flex:1;height:2px;background:var(--line);position:relative;
+  }
+  .taste-row .bar::after{
+    content:"";position:absolute;left:0;top:0;bottom:0;
+    background:var(--ink);
+    width:var(--v,50%);
+  }
+  .taste-row .val{
+    width:36px;text-align:right;font-size:11px;letter-spacing:0.06em;color:var(--muted);text-transform:uppercase;
+  }
+
+  .flavors{
+    display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;
+  }
+  .flavor{
+    font-size:11.5px;padding:5px 11px;
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--ink-2);
+    letter-spacing:0.03em;
+  }
+  .flavor b{color:var(--accent);font-weight:500;margin-right:4px;font-style:italic;font-family:'Playfair Display',serif}
+
+  .pairing{
+    padding:16px;
+    background:var(--dark);
+    color:#fff;
+  }
+  .pairing .kicker{
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:rgba(255,255,255,0.5);margin-bottom:8px;
+  }
+  .pairing p{margin:0;font-size:13px;line-height:1.6;color:rgba(255,255,255,0.8)}
+  .pairing p b{color:#fff}
+
+  footer{
+    margin-top:0;
+    padding: 16px 0;
+    font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--muted);
+    display:flex;justify-content:space-between;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width: 960px){
+    .wrap{ padding: 0 20px 40px }
+    .stage{ grid-template-columns:1fr }
+    .glass-col{ border-right:0;border-bottom:1px solid var(--line);padding:32px 0 }
+    .card{ padding:32px 0;position:static }
+    svg.glass{ width:240px }
+    .co-1,.co-2{ left:1% }
+    .co-3,.co-4{ right:1% }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ── MAIN STAGE ─────────────────────────────── -->
+  <div class="stage">
+
+    <!-- Glass column -->
+    <section class="glass-col" aria-label="Illustration of a glass of Merlot">
+      <div class="section-label">§ 02 &nbsp; Fig. 1 — Served at 17°C, large Bordeaux glass</div>
+
+      <div class="glass-wrap">
+        <div class="callouts">
+          <div class="callout co-1" data-tab="taste">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Aroma</b><span>plum, dark cherry, violets</span></div>
+          </div>
+          <div class="callout co-2" data-tab="grape">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Color</b><span>deep ruby, garnet</span></div>
+          </div>
+          <div class="callout co-3" data-tab="stages">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Body</b><span>full, velvety</span></div>
+          </div>
+          <div class="callout co-4" data-tab="regions">
+            <div class="dot"></div><div class="line"></div>
+            <div class="txt"><b>Serve</b><span>16–18°C, wide bowl</span></div>
+          </div>
+        </div>
+
+        <svg class="glass" viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <!-- Wider bowl for Bordeaux glass -->
+            <linearGradient id="wine" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c0294a"></stop>
+              <stop offset="30%" stop-color="#9b1e38"></stop>
+              <stop offset="70%" stop-color="#6e0f22"></stop>
+              <stop offset="100%" stop-color="#4a0815"></stop>
+            </linearGradient>
+            <radialGradient id="wineGlow" cx="50%" cy="30%" r="55%">
+              <stop offset="0%" stop-color="#e85070" stop-opacity="0.6"></stop>
+              <stop offset="60%" stop-color="#9b1e38" stop-opacity="0.0"></stop>
+            </radialGradient>
+            <linearGradient id="wineRim" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#d4405e" stop-opacity="0.9"></stop>
+              <stop offset="100%" stop-color="#8b1929" stop-opacity="0"></stop>
+            </linearGradient>
+            <linearGradient id="glassBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"></stop>
+              <stop offset="45%" stop-color="#ffffff" stop-opacity="0.03"></stop>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"></stop>
+            </linearGradient>
+            <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#c8bea8"></stop>
+              <stop offset="50%" stop-color="#ede4cf"></stop>
+              <stop offset="100%" stop-color="#b8ae98"></stop>
+            </linearGradient>
+            <linearGradient id="stem" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#b0a890" stop-opacity="0.9"></stop>
+              <stop offset="50%" stop-color="#f0e8d4"></stop>
+              <stop offset="100%" stop-color="#a0987e" stop-opacity="0.9"></stop>
+            </linearGradient>
+            <!-- Wider Bordeaux bowl clip path -->
+            <clipPath id="bowlClip">
+              <path d="M 95 85 C 88 230,118 328,200 338 C 282 328,312 230,305 85 Z"></path>
+            </clipPath>
+            <radialGradient id="tableShadow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(60,12,27,0.28)"></stop>
+              <stop offset="100%" stop-color="rgba(60,12,27,0)"></stop>
+            </radialGradient>
+          </defs>
+
+          <ellipse cx="200" cy="600" rx="130" ry="10" fill="url(#tableShadow)"></ellipse>
+          <ellipse cx="200" cy="585" rx="95" ry="6" fill="#6e0f22" opacity="0.25"></ellipse>
+
+          <!-- Wider bowl outline for Bordeaux glass -->
+          <path d="M 78 78 C 72 238,110 353,200 360 C 290 353,328 238,322 78 Z" fill="url(#glassBody)" stroke="url(#glassEdge)" stroke-width="1.4"></path>
+
+          <g clip-path="url(#bowlClip)">
+            <rect x="70" y="155" width="260" height="210" fill="url(#wine)"></rect>
+            <ellipse cx="200" cy="225" rx="120" ry="70" fill="url(#wineGlow)"></ellipse>
+            <ellipse cx="200" cy="338" rx="120" ry="18" fill="#4a0815" opacity="0.45"></ellipse>
+            <rect x="88" y="153" width="224" height="5" fill="url(#wineRim)"></rect>
+            <ellipse cx="200" cy="157" rx="100" ry="6" fill="#e85070" opacity="0.35"></ellipse>
+            <ellipse cx="200" cy="157" rx="100" ry="6" fill="none" stroke="#8b1929" stroke-width="0.6" opacity="0.5"></ellipse>
+          </g>
+
+          <path d="M 95 85 C 88 230,118 328,200 338 C 282 328,312 230,305 85" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"></path>
+
+          <!-- Glass highlights -->
+          <path d="M 100 105 C 88 200,100 295,132 340" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" opacity="0.5"></path>
+          <path d="M 114 115 C 106 205,116 290,142 332" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-linecap="round"></path>
+          <path d="M 300 115 C 312 210,298 308,268 342" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-linecap="round" opacity="0.6"></path>
+
+          <!-- Rim highlights -->
+          <ellipse cx="200" cy="78" rx="122" ry="7" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.2"></ellipse>
+          <ellipse cx="200" cy="78" rx="122" ry="7" fill="rgba(255,255,255,0.05)"></ellipse>
+          <ellipse cx="200" cy="315" rx="28" ry="8" fill="#3d0a18" opacity="0.2"></ellipse>
+
+          <!-- Bubble highlights on wine surface -->
+          <circle cx="162" cy="159" r="1.6" fill="#f08090" opacity="0.75"></circle>
+          <circle cx="220" cy="157" r="1.2" fill="#f08090" opacity="0.7"></circle>
+          <circle cx="238" cy="160" r="0.9" fill="#f08090" opacity="0.55"></circle>
+          <ellipse cx="112" cy="250" rx="2" ry="3" fill="rgba(255,255,255,0.7)"></ellipse>
+          <ellipse cx="290" cy="278" rx="1.5" ry="2.5" fill="rgba(255,255,255,0.6)"></ellipse>
+
+          <!-- Stem -->
+          <rect x="196" y="360" width="8" height="170" fill="url(#stem)"></rect>
+          <rect x="197.5" y="362" width="1.5" height="166" fill="rgba(255,255,255,0.75)" opacity="0.65"></rect>
+
+          <!-- Base -->
+          <ellipse cx="200" cy="540" rx="85" ry="10" fill="url(#stem)"></ellipse>
+          <ellipse cx="200" cy="540" rx="85" ry="10" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="0.8"></ellipse>
+          <ellipse cx="200" cy="537" rx="70" ry="5" fill="rgba(255,255,255,0.45)"></ellipse>
+          <ellipse cx="200" cy="545" rx="85" ry="4" fill="rgba(0,0,0,0.1)"></ellipse>
+        </svg>
+      </div>
+
+      <!-- Color swatches -->
+      <div class="swatch-row">
+        <div class="chip"><div class="sw" style="background:#c0294a"></div>Ruby</div>
+        <div class="chip"><div class="sw" style="background:#9b1e38"></div>Garnet</div>
+        <div class="chip"><div class="sw" style="background:#6e0f22"></div>Deep red</div>
+        <div class="chip"><div class="sw" style="background:#4a0815"></div>Maroon</div>
+      </div>
+    </section>
+
+    <!-- Info card -->
+    <aside class="card">
+      <div class="kicker">§ 03 &nbsp; A beginner's field guide</div>
+      <h2>Mer<em>lot</em></h2>
+      <div class="pronounce">/mɛrˈloʊ/ &nbsp;·&nbsp; "mair-loh"</div>
+      <p class="lede">
+        A smooth, full-bodied red wine from a blue-black Bordeaux grape. Softer than <em>Cabernet Sauvignon,</em> rounder than <em>Pinot Noir</em> — with plush dark fruit, velvety tannins, and an effortless drinkability that made it one of the world's most planted grapes.
+      </p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-panel="grape">Grape</button>
+        <button class="tab" data-panel="stages">How it's made</button>
+        <button class="tab" data-panel="regions">Regions</button>
+        <button class="tab" data-panel="taste">Taste</button>
+      </div>
+
+      <!-- GRAPE -->
+      <div class="panel active" id="grape">
+        <div class="grape-head">
+          <div class="grape-icon">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+              <circle cx="32" cy="52" r="11" fill="#6e0f22" opacity="0.9"></circle>
+              <circle cx="48" cy="52" r="11" fill="#7a1228" opacity="0.85"></circle>
+              <circle cx="40" cy="38" r="11" fill="#8b1929" opacity="0.9"></circle>
+              <circle cx="26" cy="38" r="10" fill="#6e0f22" opacity="0.8"></circle>
+              <circle cx="54" cy="38" r="10" fill="#7a1228" opacity="0.8"></circle>
+              <circle cx="33" cy="25" r="9" fill="#8b1929" opacity="0.85"></circle>
+              <circle cx="47" cy="25" r="9" fill="#9b1e38" opacity="0.8"></circle>
+              <circle cx="40" cy="13" r="8" fill="#a82040" opacity="0.85"></circle>
+              <line x1="40" y1="5" x2="40" y2="13" stroke="#4a6b2a" stroke-width="1.5" stroke-linecap="round"></line>
+              <path d="M 40 8 Q 50 4 55 8" fill="none" stroke="#4a6b2a" stroke-width="1.2"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>The grape itself</h3>
+            <p>Blue-black and thin-skinned, Bordeaux's workhorse.</p>
+          </div>
+        </div>
+        <p style="font-size:13.5px;line-height:1.65;color:var(--ink-2);max-width:50ch;margin:0 0 14px">
+          Merlot berries are blue-black with thin skins — the thinner skin means fewer tannins than Cabernet Sauvignon, giving the wine its signature soft, velvety texture. The name comes from <em>merle,</em> the French word for blackbird, likely a nod to the grape's deep color.
+        </p>
+        <dl class="facts">
+          <dt>Family</dt><dd>Bordeaux — sibling of Cabernet Franc, cousin of Cabernet Sauvignon</dd>
+          <dt>Skin color</dt><dd>Blue-black, thin-skinned</dd>
+          <dt>Ripening</dt><dd>Early; vulnerable to spring frost</dd>
+          <dt>Climate</dt><dd>Cool to moderate — clay soils suit it best</dd>
+          <dt>Also called</dt><dd>Merlot (universal); sometimes labeled under regional AOC names</dd>
+        </dl>
+      </div>
+
+      <!-- STAGES -->
+      <div class="panel" id="stages">
+        <ol class="stages">
+          <li><h4>Growing</h4><p>An early ripener sensitive to spring frost. Thrives in clay soils that retain moisture. Warm days build plummy richness; cool nights hold freshness.</p></li>
+          <li><h4>Harvest</h4><p>Picked in early-to-mid autumn — timing is critical. Too early = green, thin wine. Too late = jammy and flat. The window is narrow.</p></li>
+          <li><h4>Crushing <em>&amp; destemming</em></h4><p>Grapes are crushed and stems removed. The juice (must) stays in contact with the skins — this is where red wine's color and tannin come from.</p></li>
+          <li><h4>Maceration</h4><p>Skins steep in the fermenting juice for 7–14 days. Gentle extraction is key for Merlot — too long and you lose its signature softness.</p></li>
+          <li><h4>Fermentation</h4><p>Yeast converts sugar to alcohol at 22–28°C. Warmer than whites, which helps extract color and flavor from the skins.</p></li>
+          <li><h4>Oak aging</h4><p>12–18 months in French oak barrels softens tannins and adds cedar, vanilla, and spice. Premium bottles age longer — top Pomerol can need a decade.</p></li>
+        </ol>
+      </div>
+
+      <!-- REGIONS -->
+      <div class="panel" id="regions">
+        <div class="regions">
+          <div class="region">
+            <div class="flag">France</div>
+            <h4>Pomerol <em>&amp; Saint-Émilion</em></h4>
+            <p>The world benchmark. Dense, velvety, truffle-scented. Pétrus is the pinnacle.</p>
+            <span class="tag">Velvety · Complex</span>
+          </div>
+          <div class="region">
+            <div class="flag">United States</div>
+            <h4>Napa <em>Valley</em></h4>
+            <p>Bold, jammy plum and dark cherry. Richer and more full-bodied than European styles.</p>
+            <span class="tag">Bold · Jammy</span>
+          </div>
+          <div class="region">
+            <div class="flag">Italy</div>
+            <h4>Tuscany <em>(Super Tuscans)</em></h4>
+            <p>Blended with Sangiovese or Cabernet. Savory, earthy, great structure.</p>
+            <span class="tag">Structured</span>
+          </div>
+          <div class="region">
+            <div class="flag">United States</div>
+            <h4>Washington <em>State</em></h4>
+            <p>Dark fruit with firm acidity. One of America's best-kept Merlot secrets.</p>
+            <span class="tag">Bright · Firm</span>
+          </div>
+          <div class="region">
+            <div class="flag">Chile</div>
+            <h4>Colchagua <em>Valley</em></h4>
+            <p>Plummy and smooth with chocolate notes. Excellent value from warm Andean slopes.</p>
+            <span class="tag">Smooth · Value</span>
+          </div>
+          <div class="region">
+            <div class="flag">New Zealand</div>
+            <h4>Hawke's <em>Bay</em></h4>
+            <p>Silky, bright red cherry with a leafy herbal lift. A cooler, more elegant style.</p>
+            <span class="tag">Silky · Elegant</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TASTE -->
+      <div class="panel" id="taste">
+        <div class="taste-grid">
+          <div class="taste-row"><span class="label">Sweetness</span><div class="bar" style="--v:12%"></div><span class="val">Dry</span></div>
+          <div class="taste-row"><span class="label">Acidity</span><div class="bar" style="--v:52%"></div><span class="val">Med</span></div>
+          <div class="taste-row"><span class="label">Body</span><div class="bar" style="--v:82%"></div><span class="val">Full</span></div>
+          <div class="taste-row"><span class="label">Tannin</span><div class="bar" style="--v:56%"></div><span class="val">Med</span></div>
+          <div class="taste-row"><span class="label">Alcohol</span><div class="bar" style="--v:68%"></div><span class="val">13–15%</span></div>
+        </div>
+        <div class="flavors">
+          <span class="flavor"><b>fruit</b>black plum</span>
+          <span class="flavor"><b>fruit</b>dark cherry</span>
+          <span class="flavor"><b>fruit</b>blackcurrant</span>
+          <span class="flavor"><b>fruit</b>blueberry</span>
+          <span class="flavor"><b>floral</b>violet</span>
+          <span class="flavor"><b>earth</b>cedar</span>
+          <span class="flavor"><b>spice</b>clove</span>
+          <span class="flavor"><b>other</b>dark chocolate</span>
+          <span class="flavor"><b>other</b>leather</span>
+        </div>
+        <div class="pairing">
+          <div class="kicker">Food pairing</div>
+          <p>Roast lamb, beef tenderloin, duck breast, mushroom risotto, aged cheddar, dark chocolate. Serve at <b>16–18°C</b> in a large-bowled Bordeaux glass.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <span>The Wine Guide &nbsp;·&nbsp; Merlot</span>
+    <span>An interactive field guide</span>
+  </footer>
+
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  function activate(name){
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.panel === name));
+    panels.forEach(p => p.classList.toggle('active', p.id === name));
+  }
+  tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.panel)));
+
+  document.querySelectorAll('.callout').forEach(c => {
+    c.addEventListener('click', () => {
+      activate(c.dataset.tab);
+      c.querySelector('.dot').animate(
+        [{transform:'scale(1)'},{transform:'scale(1.8)'},{transform:'scale(1)'}],
+        {duration:350, easing:'ease-out'}
+      );
+      document.querySelector('.card').scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  });
+
+  document.querySelectorAll('ol.stages li').forEach(li => {
+    li.addEventListener('click', () => {
+      document.querySelectorAll('ol.stages li').forEach(x => x.classList.remove('on'));
+      li.classList.add('on');
+    });
+  });
+</script>
+
+</body>
+</html>

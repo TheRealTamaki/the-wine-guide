@@ -1,0 +1,14 @@
+{
+  "slug": "best-non-alcoholic-wines",
+  "date": "2026-04-19",
+  "wines": [
+    { "name": "Josef Leitz Zero Point Five Pinot Noir (Non-Alcoholic)", "tannin": 3, "acidity": 4, "sweetness": 2, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["German Pinot Noir (Baden) base, dealcoholized; varietal quick-ref"] },
+    { "name": "Missing Thorn Alcohol-Removed Red (Non-Alcoholic)", "tannin": 3, "acidity": 3, "sweetness": 2, "alcohol": 1, "body": 4, "confidence": "inferred", "sources": ["California Malbec base, dealcoholized"] },
+    { "name": "Waterbrook Clean Cabernet Sauvignon (Non-Alcoholic)", "tannin": 4, "acidity": 3, "sweetness": 2, "alcohol": 1, "body": 4, "confidence": "inferred", "sources": ["Washington Cabernet base, dealcoholized"] },
+    { "name": "Loosen Bros. Dr. Lo Alcohol-Removed Riesling (Non-Alcoholic)", "tannin": 1, "acidity": 5, "sweetness": 3, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["Mosel Riesling base (off-dry), dealcoholized"] },
+    { "name": "Josef Leitz Eins Zwei Zero Sparkling Rose (Non-Alcoholic)", "tannin": 1, "acidity": 4, "sweetness": 2, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["Rheingau sparkling rosé base, dealcoholized"] },
+    { "name": "Kylie Minogue Alcohol Free Sparkling Rose (Non-Alcoholic)", "tannin": 1, "acidity": 4, "sweetness": 2, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["Italian sparkling rosé base, dealcoholized"] },
+    { "name": "Prima Pave Rose Brut (Non-Alcoholic)", "tannin": 1, "acidity": 4, "sweetness": 2, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["Friuli sparkling rosé brut base, dealcoholized"] },
+    { "name": "French Bloom Le Blanc Organic Bubbly (Non-Alcoholic)", "tannin": 1, "acidity": 4, "sweetness": 2, "alcohol": 1, "body": 2, "confidence": "inferred", "sources": ["French sparkling Chardonnay base, dealcoholized"] }
+  ]
+}

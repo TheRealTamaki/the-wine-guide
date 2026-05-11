@@ -1,0 +1,462 @@
+# Brief: best-wine-for-cooking
+
+## Slug
+best-wine-for-cooking
+
+## Template contract
+Match structure + tone of /best-wines/best-cheap-red-wine/ exactly.
+
+## Voice (hard rules)
+- No em-dashes anywhere.
+- No "not X, just Y" / "this isn't X. It's Y." patterns.
+- Full guide: content/docs/voice-guide.md (read before writing any reader-facing string).
+
+## Wines to promote
+
+```json
+[
+  {
+    "rank_suggestion": 1,
+    "name": "Oberon Merlot 2023",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/oberon-merlot-2023/2554394",
+    "product_id": "2554394",
+    "image_cloudinary_id": "me6shxayheh0drtkeuqd",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/me6shxayheh0drtkeuqd.jpg",
+    "price_sale": 25.97,
+    "price_regular": 25.97,
+    "price_display": "$25.97",
+    "critic_scores": [
+      {"critic": "James Suckling", "score": 91},
+      {"critic": "Wine Spectator", "score": 91}
+    ],
+    "customer_rating": 4.4,
+    "customer_review_count": 31,
+    "region": "Paso Robles, California",
+    "grape": "Merlot",
+    "style_bucket": "Dry Red",
+    "food_pairings": ["braised short ribs", "beef bourguignon", "red pasta sauce", "lamb"],
+    "why_picked": "Highest customer rating among the reds (4.4/31); dual critic signal JS+WS 91; Paso Robles soft-tannin style is the ideal cooking Merlot — braising reds anchor slot",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 2,
+    "name": "Schug Sonoma Coast Pinot Noir 2023",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/schug-sonoma-coast-pinot-noir-2023/2283884",
+    "product_id": "2283884",
+    "image_cloudinary_id": "ts9mst70tdpadiyreome",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/ts9mst70tdpadiyreome.jpg",
+    "price_sale": 19.99,
+    "price_regular": 32.00,
+    "price_display": "$19.99",
+    "critic_scores": [
+      {"critic": "James Suckling", "score": 91},
+      {"critic": "Tasting Panel", "score": 91}
+    ],
+    "customer_rating": 3.6,
+    "customer_review_count": 79,
+    "region": "Sonoma Coast, California",
+    "grape": "Pinot Noir",
+    "style_bucket": "Dry Red",
+    "food_pairings": ["coq au vin", "duck confit", "mushroom risotto", "salmon"],
+    "why_picked": "Most-reviewed PN in search (79); Top 100 of 2025; on sale 38% off — best-value cooking PN slot; 91 JS+TP at $19.99 is exceptional",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 3,
+    "name": "Lemelson Thea's Selection Pinot Noir 2022",
+    "vintage": "2022",
+    "url": "https://www.wine.com/product/lemelson-theas-selection-pinot-noir-2022/2560816",
+    "product_id": "2560816",
+    "image_cloudinary_id": "nt73llcz20ilvgputf5h",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/nt73llcz20ilvgputf5h.jpg",
+    "price_sale": 29.99,
+    "price_regular": 40.00,
+    "price_display": "$29.99",
+    "critic_scores": [
+      {"critic": "Decanter", "score": 93},
+      {"critic": "Wine Spectator", "score": 91},
+      {"critic": "Vinous", "score": 91}
+    ],
+    "customer_rating": 3.6,
+    "customer_review_count": 35,
+    "region": "Willamette Valley, Oregon",
+    "grape": "Pinot Noir",
+    "style_bucket": "Dry Red",
+    "food_pairings": ["duck breast", "wild mushroom sauce", "salmon", "pork tenderloin"],
+    "why_picked": "93 Decanter + 91 WS + 91 Vinous at $29.99 (on sale from $40); earthy Willamette style suits delicate dishes; French-style character distinct from Schug's California profile",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 4,
+    "name": "Chehalem Estate Grown Chehalem Mountains Pinot Noir 2022",
+    "vintage": "2022",
+    "url": "https://www.wine.com/product/chehalem-estate-grown-chehalem-mountains-pinot-noir-2022/2175259",
+    "product_id": "2175259",
+    "image_cloudinary_id": "wbg4jfhbri8hu5bwwy73",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/wbg4jfhbri8hu5bwwy73.jpg",
+    "price_sale": 24.99,
+    "price_regular": 50.00,
+    "price_display": "$24.99",
+    "critic_scores": [
+      {"critic": "Wine Spectator", "score": 93},
+      {"critic": "James Suckling", "score": 91},
+      {"critic": "Jeb Dunnuck", "score": 90}
+    ],
+    "customer_rating": 3.8,
+    "customer_review_count": 19,
+    "region": "Chehalem Mountains, Willamette Valley, Oregon",
+    "grape": "Pinot Noir",
+    "style_bucket": "Dry Red",
+    "food_pairings": ["pork tenderloin", "salmon with red wine sauce", "lighter braises", "roast chicken"],
+    "why_picked": "93 WS, 91 JS, 90 JD — triple critic stack; exceptional value on sale from $50 to $24.99 (50% off); red-cherry Willamette style suits lighter cooking applications",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 5,
+    "name": "Migration Sonoma Coast Pinot Noir 2022",
+    "vintage": "2022",
+    "url": "https://www.wine.com/product/migration-sonoma-coast-pinot-noir-2022/2105424",
+    "product_id": "2105424",
+    "image_cloudinary_id": "izkhommockeyom97cmz2",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/izkhommockeyom97cmz2.jpg",
+    "price_sale": 32.97,
+    "price_regular": 46.00,
+    "price_display": "$32.97",
+    "critic_scores": [
+      {"critic": "Jeb Dunnuck", "score": 94},
+      {"critic": "James Suckling", "score": 93},
+      {"critic": "Wilfred Wong", "score": 92}
+    ],
+    "customer_rating": 3.8,
+    "customer_review_count": 8,
+    "region": "Sonoma Coast, California",
+    "grape": "Pinot Noir",
+    "style_bucket": "Dry Red",
+    "food_pairings": ["special-occasion braises", "duck with cherry sauce", "venison", "mushroom-forward dishes"],
+    "why_picked": "Premium red anchor — 94 JD, 93 JS at the top of the Pinot Noir stack; Duckhorn Migration brand recognition; on sale from $46 to $32.97; the 'splurge cooking red' slot",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 6,
+    "name": "Astrolabe Marlborough Sauvignon Blanc 2024",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/astrolabe-marlborough-sauvignon-blanc-2024/2632694",
+    "product_id": "2632694",
+    "image_cloudinary_id": "iwjvzzugmsbdim9d4bkk",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/iwjvzzugmsbdim9d4bkk.jpg",
+    "price_sale": 19.97,
+    "price_regular": 19.97,
+    "price_display": "$19.97",
+    "critic_scores": [
+      {"critic": "James Suckling", "score": 93},
+      {"critic": "Robert Parker", "score": 91},
+      {"critic": "Vinous", "score": 90},
+      {"critic": "Wine Spectator", "score": 90}
+    ],
+    "customer_rating": 3.6,
+    "customer_review_count": 19,
+    "region": "Marlborough, New Zealand",
+    "grape": "Sauvignon Blanc",
+    "style_bucket": "Dry White",
+    "food_pairings": ["sautéed shrimp", "white clam sauce", "lemon-butter pan sauce", "steamed mussels"],
+    "why_picked": "Four-critic sign-off (93 JS, 91 RP, 90 Vinous, 90 WS) at $19.97 — rare value; Marlborough high-acid style is functionally best for cutting through butter and cream in cooking",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 7,
+    "name": "Schug Sauvignon Blanc 2023",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/schug-sauvignon-blanc-2023/2046967",
+    "product_id": "2046967",
+    "image_cloudinary_id": "htgmurwoct29ra0lvdii",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/htgmurwoct29ra0lvdii.jpg",
+    "price_sale": 19.97,
+    "price_regular": 30.00,
+    "price_display": "$19.97",
+    "critic_scores": [
+      {"critic": "Tasting Panel", "score": 92},
+      {"critic": "James Suckling", "score": 90},
+      {"critic": "Wine Enthusiast", "score": 90}
+    ],
+    "customer_rating": 3.8,
+    "customer_review_count": 29,
+    "region": "Sonoma Coast, California",
+    "grape": "Sauvignon Blanc",
+    "style_bucket": "Dry White",
+    "food_pairings": ["risotto", "cream sauces", "chicken piccata", "pasta with white sauce"],
+    "why_picked": "92 TP, 90 JS, 90 WE; on sale 33% off; California SB's richer melon character suits cream sauces better than NZ style — functional contrast to the Astrolabe",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 8,
+    "name": "Banshee Sonoma Coast Chardonnay 2022",
+    "vintage": "2022",
+    "url": "https://www.wine.com/product/banshee-sonoma-coast-chardonnay-2022/1917429",
+    "product_id": "1917429",
+    "image_cloudinary_id": "fop2wzupgldilyc7h2hm",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/fop2wzupgldilyc7h2hm.jpg",
+    "price_sale": 17.97,
+    "price_regular": 28.00,
+    "price_display": "$17.97",
+    "critic_scores": [
+      {"critic": "James Suckling", "score": 93},
+      {"critic": "Wine & Spirits", "score": 90}
+    ],
+    "customer_rating": 3.5,
+    "customer_review_count": 35,
+    "region": "Sonoma Coast, California",
+    "grape": "Chardonnay",
+    "style_bucket": "Dry White",
+    "food_pairings": ["chicken in white wine", "beurre blanc", "pasta primavera", "pan-seared fish"],
+    "why_picked": "93 JS at $17.97 (on sale from $28, 36% off) — best-value cooking Chardonnay in the lineup; lean Sonoma Coast style holds acidity in the pan; everyday cooking Chardonnay slot",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 9,
+    "name": "Neyers Sonoma 304 Chardonnay 2023",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/neyers-sonoma-304-chardonnay-2023/2759868",
+    "product_id": "2759868",
+    "image_cloudinary_id": "os1qszktzekdihamuo3d",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/os1qszktzekdihamuo3d.jpg",
+    "price_sale": 22.97,
+    "price_regular": 25.00,
+    "price_display": "$22.97",
+    "critic_scores": [
+      {"critic": "Wine Spectator", "score": 92},
+      {"critic": "James Suckling", "score": 90}
+    ],
+    "customer_rating": 4.1,
+    "customer_review_count": 13,
+    "region": "Sonoma County, California",
+    "grape": "Chardonnay",
+    "style_bucket": "Dry White",
+    "food_pairings": ["creamy pasta", "chicken piccata", "carbonara-style sauces", "gratin dishes"],
+    "why_picked": "92 WS, 90 JS plus 4.1 customer rating (clears the 4.0 bar) — mid-weight Chardonnay slot; fuller than Banshee, suits richer cream-based cooking applications",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 10,
+    "name": "Diatom Santa Barbara Chardonnay 2024",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/diatom-santa-barbara-chardonnay-2024/3747388",
+    "product_id": "3747388",
+    "image_cloudinary_id": "wqdiykocrhilmutgljhr",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/wqdiykocrhilmutgljhr.jpg",
+    "price_sale": 24.97,
+    "price_regular": 27.00,
+    "price_display": "$24.97",
+    "critic_scores": [
+      {"critic": "Jeb Dunnuck", "score": 94},
+      {"critic": "Wine Spectator", "score": 93},
+      {"critic": "James Suckling", "score": 93},
+      {"critic": "Wine Enthusiast", "score": 92},
+      {"critic": "Robert Parker", "score": 90}
+    ],
+    "customer_rating": 3.7,
+    "customer_review_count": 32,
+    "region": "Santa Barbara, Central Coast, California",
+    "grape": "Chardonnay",
+    "style_bucket": "Dry White",
+    "food_pairings": ["steamed mussels", "beurre blanc", "white wine sauce for chicken", "pan-seared scallops"],
+    "why_picked": "Most-decorated white in the lineup (94 JD, 93 WS, 93 JS, 92 WE, 90 RP); Top 100 of 2025; Santa Barbara unoaked/lightly oaked style retains freshness in the pan — premium Chardonnay anchor",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 11,
+    "name": "Attems Pinot Grigio 2023",
+    "vintage": "2023",
+    "url": "https://www.wine.com/product/attems-pinot-grigio-2023/2004520",
+    "product_id": "2004520",
+    "image_cloudinary_id": "yzwbmpbm5mmxgdsqx9hr",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/yzwbmpbm5mmxgdsqx9hr.jpg",
+    "price_sale": 18.97,
+    "price_regular": 24.00,
+    "price_display": "$18.97",
+    "critic_scores": [
+      {"critic": "James Suckling", "score": 90}
+    ],
+    "customer_rating": 3.8,
+    "customer_review_count": 15,
+    "region": "Friuli-Venezia Giulia, Italy",
+    "grape": "Pinot Grigio",
+    "style_bucket": "Dry White",
+    "food_pairings": ["deglazing", "light pasta dishes", "shellfish", "risotto bianco"],
+    "why_picked": "90 JS; Friuli-Venezia Giulia style is the classic Italian recipe white; on sale from $24 to $18.97; the entry-level 'Italian dry white for cooking' slot — previously used in best-wine-for-sangria lineup with success",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 12,
+    "name": "St. Michael-Eppan Pinot Grigio 2024",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/st-michael-eppan-pinot-grigio-2024/3326658",
+    "product_id": "3326658",
+    "image_cloudinary_id": "ucd22qds9ipbxzakhkse",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/ucd22qds9ipbxzakhkse.jpg",
+    "price_sale": 24.97,
+    "price_regular": 24.97,
+    "price_display": "$24.97",
+    "critic_scores": [
+      {"critic": "James Suckling", "score": 93},
+      {"critic": "Wilfred Wong", "score": 91}
+    ],
+    "customer_rating": 4.4,
+    "customer_review_count": 50,
+    "region": "Alto Adige, Italy",
+    "grape": "Pinot Grigio",
+    "style_bucket": "Dry White",
+    "food_pairings": ["seafood risotto", "grilled fish", "clam sauce", "chicken in white wine"],
+    "why_picked": "Highest customer rating among all whites (4.4/50); 93 JS, 91 WW; Alto Adige style rounds out the Pinot Grigio bucket at the mid-price tier — $24.97 mid-weight Italian white",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 13,
+    "name": "Terlan Pinot Grigio 2024",
+    "vintage": "2024",
+    "url": "https://www.wine.com/product/terlan-pinot-grigio-2024/2987364",
+    "product_id": "2987364",
+    "image_cloudinary_id": "xn9pxvmkwerzjmm1xzyi",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/xn9pxvmkwerzjmm1xzyi.jpg",
+    "price_sale": 26.97,
+    "price_regular": 26.97,
+    "price_display": "$26.97",
+    "critic_scores": [
+      {"critic": "James Suckling", "score": 93},
+      {"critic": "Wine Enthusiast", "score": 92},
+      {"critic": "Robert Parker", "score": 91},
+      {"critic": "Vinous", "score": 90}
+    ],
+    "customer_rating": 3.8,
+    "customer_review_count": 40,
+    "region": "Alto Adige, Italy",
+    "grape": "Pinot Grigio",
+    "style_bucket": "Dry White",
+    "food_pairings": ["seafood risotto", "pan-seared white fish", "clams", "cream sauces"],
+    "why_picked": "93 JS, 92 WE, 91 RP, 90 Vinous — best-scored Pinot Grigio in the lineup; Terlaner is the benchmark Alto Adige name; 3.8/40 strong customer signal; premium Pinot Grigio anchor",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 14,
+    "name": "Florio Vecchioflorio Sweet Marsala Superiore 2020",
+    "vintage": "2020",
+    "url": "https://www.wine.com/product/florio-vecchioflorio-sweet-marsala-superiore-2020/2610358",
+    "product_id": "2610358",
+    "image_cloudinary_id": "h1lekkkujeknvillnjuu",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/h1lekkkujeknvillnjuu.jpg",
+    "price_sale": 15.97,
+    "price_regular": 17.00,
+    "price_display": "$15.97",
+    "critic_scores": [
+      {"critic": "Wine Enthusiast", "score": 90}
+    ],
+    "customer_rating": 4.7,
+    "customer_review_count": 28,
+    "region": "Sicily, Italy",
+    "grape": "Grillo, Catarratto",
+    "style_bucket": "Fortified (Marsala)",
+    "food_pairings": ["Chicken Marsala", "veal scallopini", "mushroom cream sauce", "tiramisu"],
+    "why_picked": "Highest customer rating in the entire lineup (4.7/28); 90 WE; most recognisable Marsala brand; lowest price point ($15.97); essential for any cooking wine article — Chicken Marsala anchor",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  },
+  {
+    "rank_suggestion": 15,
+    "name": "Lustau Solera Los Arcos Dry Amontillado Sherry",
+    "vintage": "NV",
+    "url": "https://www.wine.com/product/lustau-solera-los-arcos-dry-amontillado-sherry/40768",
+    "product_id": "40768",
+    "image_cloudinary_id": "pkfwqsvca5ith1myavub",
+    "image_url": "https://assets.wine.com/winecom/image/upload/w_560,q_auto,f_auto,fl_progressive/pkfwqsvca5ith1myavub.jpg",
+    "price_sale": 19.97,
+    "price_regular": 19.97,
+    "price_display": "$19.97",
+    "critic_scores": [
+      {"critic": "Robert Parker", "score": 93},
+      {"critic": "James Suckling", "score": 92},
+      {"critic": "Decanter", "score": 91},
+      {"critic": "Wine Spectator", "score": 90}
+    ],
+    "customer_rating": 3.6,
+    "customer_review_count": 186,
+    "region": "Jerez, Spain",
+    "grape": "Palomino",
+    "style_bucket": "Fortified (Dry Sherry)",
+    "food_pairings": ["French onion soup", "bisques", "mushroom sauces", "pan sauces for pork", "gazpacho"],
+    "why_picked": "Most-reviewed product in lineup (186 reviews = proven purchase volume); 93 RP, 92 JS, 91 Decanter, 90 WS; Amontillado is the canonical cooking sherry; Lustau is the SERP-standard brand for this style",
+    "verification": {"url_live": true, "image_id_match": true, "scores_match": true}
+  }
+]
+```
+
+## Wine traits
+
+| Wine | Tannin | Acidity | Sweetness | Alcohol | Body | Confidence |
+|---|---|---|---|---|---|---|
+| Oberon Merlot 2023 | 3 | 2 | 1 | 4 | 4 | verified |
+| Schug Sonoma Coast Pinot Noir 2023 | 2 | 4 | 1 | 4 | 2 | verified |
+| Lemelson Thea's Selection Pinot Noir 2022 | 2 | 4 | 1 | 4 | 3 | verified |
+| Chehalem Estate Grown Chehalem Mountains Pinot Noir 2022 | 3 | 3 | 1 | 4 | 3 | verified |
+| Migration Sonoma Coast Pinot Noir 2022 | 3 | 3 | 1 | 4 | 3 | verified |
+| Astrolabe Marlborough Sauvignon Blanc 2024 | 1 | 5 | 1 | 4 | 2 | verified |
+| Schug Sauvignon Blanc 2023 | 1 | 4 | 1 | 4 | 2 | verified |
+| Banshee Sonoma Coast Chardonnay 2022 | 1 | 3 | 1 | 4 | 4 | verified |
+| Neyers Sonoma 304 Chardonnay 2023 | 1 | 4 | 1 | 4 | 3 | verified |
+| Diatom Santa Barbara Chardonnay 2024 | 1 | 4 | 1 | 3 | 2 | inferred |
+| Attems Pinot Grigio 2023 | 1 | 3 | 1 | 3 | 2 | verified |
+| St. Michael-Eppan Pinot Grigio 2024 | 1 | 3 | 1 | 3 | 2 | verified |
+| Terlan Pinot Grigio 2024 | 1 | 4 | 1 | 4 | 2 | verified |
+| Florio Vecchioflorio Sweet Marsala Superiore 2020 | 1 | 2 | 5 | 5 | 3 | verified |
+| Lustau Solera Los Arcos Dry Amontillado Sherry | 1 | 4 | 1 | 5 | 3 | verified |
+
+## SEO terms (NeuronWriter)
+
+Basic: ["wine", "best wine for cooking", "wine for cooking", "white wine", "best wine", "cooking wine", "sauce", "sauvignon blanc", "pinot", "dry white", "chardonnay", "savory"]
+
+Extended: ["red wine", "cook with wine", "white wine for cooking", "white wine sauce", "sweet wine", "dry white wine", "sherry", "crisp white wine", "marsala", "fortified wine", "cooking process", "pinot grigio", "madeira", "acidity", "wine like", "dry wine", "mussel", "choose a wine", "white cooking wine", "rice wine", "wine in cooking", "types of cooking", "cooking wine", "america's test kitchen", "bottle of wine", "cabernet", "pasta sauce", "pan sauce", "drinking wine", "wine to cook", "splash of wine", "white wine like chardonnay", "style of wine", "vermouth", "chinese cooking wine", "tannin", "use red", "merlot", "varietals", "use red or white", "beef stew", "wine reduction sauce", "white and red", "shaoxing wine", "leftover wine", "pinot noir", "chicken or vegetable stock", "dry sherry", "scallop", "like chardonnay", "risotto", "seafood dishes", "style of white", "oaky", "chicken marsala", "full-bodied", "marinate", "tenderize", "steamed mussels", "deglazing", "sauté", "create a rich", "beurre", "coq", "wine is perfectly", "tannic", "contain salt", "unwanted sweetness", "caramelize", "savory dish", "linguine", "unoaked chardonnay", "higher abv", "complete guide", "tenderizing", "deglaze", "delicate flavors", "subtle nuances", "better tasting", "sommelier", "aperitif", "dry marsala"]
+
+Entity: ["Wine", "Cooking", "White wine", "Sauvignon blanc", "Taste", "Recipe", "Chardonnay", "Cabernet Sauvignon", "Alcoholic beverage", "Phenolic content in wine", "Grape", "Sauce", "Umami", "Red wine", "Pasta", "Sweetness of wine", "Beef", "Meat", "Marination", "Fortified wine", "Merlot", "Bottle", "Dessert", "Chef", "Aroma of wine", "Pinot noir", "Madeira wine", "Sherry", "Marsala wine", "Pinot gris", "Varietal", "Chinese cuisine", "Protein", "Vermouth", "Port wine", "Acids in wine", "Braising", "Poaching (cooking)", "Deglazing (cooking)", "Food", "Ingredient", "Stew", "Soup", "Fish", "Meal", "Shaoxing wine", "United States", "Restaurant", "Chicken as food", "Liquor", "Vegetable", "Sutter Home Winery", "Ragù", "Juice", "Lemon", "Sautéing", "Mussel", "Tomato sauce", "Edible mushroom", "Fruit", "Grocery store", "Sugar", "Kitchen", "Seafood", "Salt", "Caramelization", "Mouthfeel", "Drinking", "Dish (food)", "Shaoxing", "Citrus", "Italy", "Wine and food pairing", "Wine tasting descriptors", "Cook's Illustrated", "Chicken", "China", "Oak (wine)", "Wine bottle", "Vinegar", "Riesling", "Syrah"]
+
+PAA questions (FAQ candidates):
+- "What wine is best for GERD?"
+- "Is pinot or sauvignon better for cooking?"
+- "Is Merlot or Cabernet Sauvignon better for cooking?"
+- "Is wine good for cardiac patients?"
+
+## Absorption zones (from Dana)
+
+Intro: always empty — protected.
+
+**FAQ slots:**
+1. "Is Merlot or Cabernet Sauvignon better for cooking?" (PAA) — absorbs: merlot, cabernet, Cabernet Sauvignon, Merlot, tannin, tannic, full-bodied, beef stew, use red or white
+2. "Is pinot grigio or sauvignon blanc better for cooking?" (PAA expanded) — absorbs: pinot grigio, sauvignon blanc, crisp white wine, white wine for cooking, acidity, Sauvignon blanc, Pinot gris, delicate flavors, seafood dishes, pan sauce, white wine sauce
+3. "Can I use any wine for cooking, or does it need to be a special cooking wine?" (PAA implied + extended) — absorbs: cooking wine, drinking wine, white cooking wine, contain salt, unwanted sweetness, america's test kitchen, bottle of wine
+4. "What wine is best for cooking pasta sauce?" (extended cluster) — absorbs: pasta sauce, tomato sauce, Pasta, Tomato sauce, Ragù, red wine, use red, white and red, Italy
+5. "What wine should I use for beef stew and braises?" (extended cluster) — absorbs: beef stew, Beef, Braising, Stew, wine reduction sauce, Meat, Protein, create a rich, coq, leftover wine
+6. "What is the best wine for cooking risotto?" (extended cluster) — absorbs: risotto, dry white wine, Chardonnay, white wine like chardonnay, unoaked chardonnay, subtle nuances, better tasting
+7. "What wine is best for GERD?" (PAA) — absorbs: acidity, Acids in wine, sweet wine, dry wine, higher abv
+
+**Wine description slots:**
+- Sauvignon Blanc: sauvignon blanc, Sauvignon blanc, crisp white wine, acidity, white wine sauce, pan sauce, mussel, Mussel, steamed mussels, scallop, Seafood, seafood dishes, Fish, delicate flavors, wine like, dry wine, style of white, oaky
+- Chardonnay: chardonnay, Chardonnay, white wine like chardonnay, unoaked chardonnay, oaky, Oak (wine), risotto, like chardonnay, style of white, subtle nuances, Taste, Mouthfeel, Aroma of wine
+- Pinot Grigio: pinot grigio, Pinot gris, dry white wine, crisp white wine, white wine for cooking, delicate flavors, seafood dishes, linguine, Pasta, subtle nuances
+- Dry Sherry: sherry, Sherry, dry sherry, fortified wine, Fortified wine, aperitif, Umami, caramelize, Caramelization, savory dish, sauté, Sautéing, pan sauce, Vermouth, vermouth
+- Marsala: marsala, Marsala wine, dry marsala, chicken marsala, fortified wine, Fortified wine, Dessert, full-bodied, marinate, Marination, sauté, Sautéing, Umami, Mushroom, Edible mushroom
+- Pinot Noir: pinot noir, Pinot noir, red wine, Red wine, full-bodied, tannic, tannin, marinate, tenderize, tenderizing, Marination, Protein, Meat, Beef, coq, Braising, Stew
+- Cabernet Sauvignon / Merlot: cabernet, Cabernet Sauvignon, merlot, Merlot, tannic, tannin, full-bodied, beef stew, Braising, Stew, Syrah, wine reduction sauce, create a rich
+- Vermouth / Madeira: vermouth, Vermouth, madeira, Madeira wine, fortified wine, Fortified wine, Port wine, aperitif, savory dish, splash of wine, leftover wine, Phenolic content in wine, Acids in wine
+- Shaoxing / Rice wine (Chinese cooking): shaoxing wine, Shaoxing wine, Shaoxing, rice wine, chinese cooking wine, Chinese cuisine, China, marinate, Marination, Ingredient, Meal, Dish (food), Chicken as food
+
+**Secondary sections:**
+- "Red vs White: Which Wine to Use and When" — absorbs: use red or white, white and red, wine in cooking, cook with wine, types of cooking, cooking process, choose a wine, style of wine, varietals, Varietal, Wine and food pairing, drinking wine, wine to cook, Wine tasting descriptors
+- "How Wine Changes Your Food (The Science)" — absorbs: acidity, Acids in wine, tannin, Phenolic content in wine, Sweetness of wine, Umami, Caramelization, caramelize, Mouthfeel, Aroma of wine, deglazing, Deglazing (cooking), deglaze, tenderize, tenderizing, Marination, marinate, Braising, Poaching (cooking), beurre, wine reduction sauce, pan sauce, sauté, Sautéing, Protein, contain salt
+- "What About Cooking Wine from the Grocery Store?" — absorbs: cooking wine, white cooking wine, america's test kitchen, contain salt, unwanted sweetness, Grocery store, Sutter Home Winery, drinking wine, bottle of wine, better tasting, sommelier, Cook's Illustrated
+- "Best Wine for Specific Dishes" — absorbs: pasta sauce, Pasta, Ragù, Tomato sauce, risotto, chicken marsala, chicken or vegetable stock, linguine, beef stew, Stew, Soup, mussel, steamed mussels, scallop, seafood dishes, Seafood, Fish, Chicken, coq, Poaching (cooking), Vegetable, Lemon, Citrus, Juice, Edible mushroom, Salt, Sugar
+
+**WineTip slots:**
+- WineTip #2 (practical advice): splash of wine, leftover wine, higher abv, wine is perfectly, unwanted sweetness, contain salt, white cooking wine, dry wine, style of wine, complete guide, better tasting, Rice wine, Vinegar, Juice, aperitif, Liquor, United States, Restaurant
+
+## Source citations
+- Lena: content/00-research/best-wine-for-cooking/products-verified.json, 2026-04-19
+- Niko: content/00-research/best-wine-for-cooking/wine-traits.json, 2026-04-19, 14 verified / 1 inferred (Diatom Santa Barbara Chardonnay 2024 — ABV not listed on product page, assigned from style inference)
+- Dana: content/00-research/best-wine-for-cooking/terms.json, 2026-04-19, NW query ID 400b930ed16e283d (existing query reused, 0 credits spent)

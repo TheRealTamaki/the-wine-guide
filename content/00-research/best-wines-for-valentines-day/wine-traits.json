@@ -1,0 +1,240 @@
+{
+  "slug": "best-wines-for-valentines-day",
+  "target_keyword": "best wines for valentines day",
+  "research_date": "2026-04-19",
+  "candidate_source": "content/00-research/best-wines-for-valentines-day/products-verified.json",
+  "wines": [
+    {
+      "name": "La Marca Prosecco",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/la-marca-prosecco/24828",
+        "ABV 11.2% confirmed on Wine.com product page → Alcohol 2",
+        "Winemaker notes: 'light and refreshing', 'hint of sweetness' — Extra Dry Prosecco style, ~12g/L RS → Sweetness 2",
+        "James Suckling: 'Light body. Frothy and crisp' → Body 2, Acidity 4"
+      ]
+    },
+    {
+      "name": "La Marca Prosecco Rose 2023",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/la-marca-prosecco-rose-2023/1988560",
+        "inference: ABV not listed on Wine.com 2024 product page; same producer and Prosecco DOC as La Marca NV (ABV 11.2%) — sibling wine inferred at ~11.0% → Alcohol 2",
+        "inference: Prosecco Rosé sparkling, same house style as La Marca NV — crisp, Extra Dry style, light body → Tannin 1, Acidity 4, Sweetness 2, Body 2"
+      ]
+    },
+    {
+      "name": "Laurent-Perrier La Cuvee Brut (375ML half-bottle)",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/laurent-perrier-la-cuvee-brut-375ml-half-bottle/330992",
+        "ABV 12% confirmed on Wine.com product page → Alcohol 2",
+        "James Suckling 94: 'Medium-bodied and structured with solid intensity' — Champagne Brut style",
+        "Robert Parker 90: 'dry and silky textured, vivacious, and perfectly fresh' → Sweetness 1",
+        "Wine Spectator 91: 'finely honed acidity' — Champagne baseline → Acidity 5",
+        "Wine & Spirits 90: 'spicy, tight and formidable' — confirms Champagne structure"
+      ]
+    },
+    {
+      "name": "Iron Horse Wedding Cuvee 2019",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/iron-horse-wedding-cuvee-2019/1273434",
+        "ABV 13.5% confirmed on Wine.com product page → Alcohol 4 (boundary rounds up)",
+        "James Suckling 93: 'light-bodied but full-flavored', 'Nicely dry' → Body 2, Sweetness 1",
+        "Wine Spectator 93: 'Succulent and seductive' with 'creamy finish' — traditional method California sparkling → Acidity 5"
+      ]
+    },
+    {
+      "name": "Hampton Water Bubbly Rose",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/hampton-water-bubbly-rose/2206635",
+        "ABV 13% confirmed on Wine.com product page → Alcohol 3",
+        "Winemaker notes: 'fresh, well-balanced, and intense, with fine, persistent bubbles' — sparkling rosé, South of France",
+        "Wilfred Wong 91: 'refreshing and delicious' — tank-method sparkling rosé; Grenache/Pinot Noir/Chardonnay blend → Acidity 4 (not Champagne-level), Sweetness 2 (Brut dry style), Body 2"
+      ]
+    },
+    {
+      "name": "Miraval Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/miraval-rose-2024/3036255",
+        "ABV 13% confirmed on Wine.com product page → Alcohol 3",
+        "James Suckling 92: 'medium-bodied palate is sleek and finely textured, driven by bright acidity' → Body 2, Acidity 4",
+        "Robert Parker 90: 'moderately weighted, juicy and round' — confirms Côtes de Provence bone-dry style → Sweetness 1"
+      ]
+    },
+    {
+      "name": "Chateau d'Esclans Whispering Angel Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chateau-desclans-whispering-angel-rose-2024/2847780",
+        "ABV 13% confirmed on Wine.com product page → Alcohol 3",
+        "James Suckling 92: 'Medium-bodied with bright acidity. Balanced and driven' → Body 2, Acidity 4",
+        "Winemaker notes: 'Smooth and round finish' — Côtes de Provence dry rosé → Sweetness 1, Tannin 1"
+      ]
+    },
+    {
+      "name": "Chateau Montaud Cotes de Provence Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chateau-montaud-cotes-de-provence-rose-2024/3160572",
+        "ABV 13% confirmed on Wine.com product page → Alcohol 3",
+        "Winemaker notes: 'dry, crisp and refreshing' → Sweetness 1, Acidity 4",
+        "Wine Enthusiast 90: 'stony grapefruit flavors' — classic Provence rosé profile → Body 2, Tannin 1"
+      ]
+    },
+    {
+      "name": "Chateau D'Aqueria Tavel Rose 2024",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chateau-daqueria-tavel-rose-2024/3063489",
+        "ABV 14% confirmed on Wine.com product page → Alcohol 4",
+        "Robert Parker 91: 'medium- to full-bodied, round and enveloping wine with a structured mid-palate' → Body 3",
+        "Tasting Panel 94: 'wonderfully deep flavors... streak of acidity' → Acidity 4, slight Grenache/Syrah grip → Tannin 2",
+        "Wine.com region description: 'always dry' for Tavel appellation → Sweetness 1"
+      ]
+    },
+    {
+      "name": "Hampton Water Rose 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/hampton-water-rose-2024/2929745",
+        "inference: ABV not listed for 2024 vintage on Wine.com; prior vintages (2018–2023) consistently scored 90–91 pts from Decanter/WE/WS — Gérard Bertrand Languedoc Grenache/Cinsault house style = ~13% ABV → Alcohol 3",
+        "Winemaker notes: 'fresh and lively, with soft notes of strawberry, and citrus; aged in new French Oak barrels' — oak aging softens acidity vs Provence baseline → Acidity 3",
+        "inference: Languedoc Grenache/Cinsault dry rosé, bone dry Gérard Bertrand house style → Sweetness 1, Tannin 1, Body 2"
+      ]
+    },
+    {
+      "name": "Schug Sonoma Coast Pinot Noir 2023",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/schug-sonoma-coast-pinot-noir-2023/2283884",
+        "ABV 13.8% confirmed on Wine.com product page → Alcohol 4",
+        "James Suckling 91: 'The palate is light-bodied with bright acidity' → Body 2, Acidity 4",
+        "Winemaker notes: 'Lively acidity on the finish', neutral oak aging preserves fresh red-fruit character → Tannin 3 (Pinot Noir baseline), Sweetness 1"
+      ]
+    },
+    {
+      "name": "Chehalem Estate Grown Chehalem Mountains Pinot Noir 2022",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chehalem-estate-grown-chehalem-mountains-pinot-noir-2022/2175259",
+        "ABV 14% confirmed on Wine.com product page → Alcohol 4 (boundary rounds up)",
+        "Winemaker notes: 'medium body and dusty tannin structure' → Body 3, Tannin 3",
+        "Wine Spectator 93: 'refined tannins' — Chehalem Mountains cool-climate Willamette Valley → Acidity 4",
+        "Jeb Dunnuck 90: 'medium-bodied, with a snappy freshness' — confirms Body 3, Acidity 4"
+      ]
+    },
+    {
+      "name": "Lemelson Thea's Selection Pinot Noir 2022",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/lemelson-theas-selection-pinot-noir-2022/2560816",
+        "ABV 13.5% confirmed on Wine.com product page → Alcohol 4 (boundary rounds up)",
+        "Vinous 91: 'gently tannic, tapering off perfumed and fresh' → Tannin 3",
+        "Wine Spectator 91: 'Snappy and vibrant... sleek tannins' — Willamette Valley cool-climate → Acidity 4",
+        "Jeb Dunnuck 90: 'bright and medium-bodied' → Body 3",
+        "Winemaker notes: 'rich, silky tannins give in to a long and robust finish' — confirms medium tannin → Tannin 3"
+      ]
+    },
+    {
+      "name": "Fonseca Bin No. 27 Port",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/fonseca-bin-no-27-port/1515",
+        "ABV 20% confirmed on Wine.com product page → Alcohol 5",
+        "Winemaker notes: 'full-bodied and round, with a soft and velvety texture, balanced by firm tannins' → Body 5, Tannin 3, Sweetness 5 (Ruby Port fortified ~100g/L RS)",
+        "Decanter 93: 'firm tannic grip' — Ruby Reserve Port baseline → Tannin 3, Acidity 3",
+        "Wine & Spirits 92: 'freshness firmed up by schist tannins' — medium acidity for Port style"
+      ]
+    },
+    {
+      "name": "Graham's Six Grapes Reserve Ruby Port",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/grahams-six-grapes-reserve-ruby-port/5968",
+        "ABV 19.5% confirmed on Wine.com product page → Alcohol 5",
+        "Winemaker notes: 'very full-bodied, luscious wine' → Body 5",
+        "Decanter 95: 'well balanced tannins and freshness' → Tannin 3, Acidity 3",
+        "Wilfred Wong 91: 'Deep, rich, and satiny' — Ruby Reserve Port style → Sweetness 5 (fortified, ~100g/L RS)"
+      ]
+    }
+  ]
+}

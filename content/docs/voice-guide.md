@@ -4,6 +4,12 @@ Last updated: 2026-04-14
 
 **MANDATORY: Read this entire file before writing any content for the site.**
 
+**Article structure templates:**
+- Listicle pages (`best-wines/*`): read `content/docs/listicle-template.md`
+- Informational pages (compare, educational, pairing, region): read `content/docs/informational-template.md`
+
+Every informational article must open with: **TLDR block → hook paragraph → fascination bullets**. See `informational-template.md` for the exact format and rules.
+
 ---
 
 > **HARD RULE: NO EM-DASHES. EVER.**
@@ -92,6 +98,8 @@ Every headline, subheading, and bold line is prime real estate. Don't waste it o
 
 A good headline either promises a specific benefit, provokes curiosity, or calls out to the exact reader we want. Ideally all three.
 
+**For informational articles: H2s are questions, not topic labels.** Phrase every H2 as something a real person would type into ChatGPT or Google — "When Should I Use a Decanter?" not "When to Use a Decanter." This gets sections surfaced as AI search answers. See `content/docs/informational-template.md` for the full rule and examples.
+
 ### 8. Reader-centred, not "all about us"
 
 The copy is about YOU (the reader). Not about us, our expertise, our passion, our story. Everything we write should make the reader feel seen and served.
@@ -146,6 +154,7 @@ Examples of what NOT to write:
 - "We're not sommeliers. We're regular people who drink wine."
 - "It's not about the price tag. It's about what's in the glass."
 - "No jargon, no snobbery, just useful advice."
+- "That's not a price problem. It's a production problem."
 - Any variation of "not X. Just Y." / "no X, just Y" / "less X, more Y"
 
 Instead, just say the positive thing directly. "Here's a cheat sheet." "Straight talk about wine." Say what it IS without needing to contrast it against what it isn't.

@@ -1,0 +1,296 @@
+{
+  "slug": "best-wines-for-christmas",
+  "target_keyword": "best wines for christmas",
+  "research_date": "2026-04-19",
+  "candidate_source": "content/00-research/best-wines-for-christmas/products-verified.json",
+  "wines": [
+    {
+      "name": "La Marca Prosecco",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/la-marca-prosecco/24828",
+        "ABV 11.2% confirmed on Wine.com product page",
+        "inference: Glera NV Brut — standard Prosecco profile, lively effervescence, crisp acidity, slight RS (Brut style 6-12 g/L)"
+      ]
+    },
+    {
+      "name": "Mionetto Prosecco Brut",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/mionetto-prosecco-brut/114238",
+        "inference: Glera NV Brut — Prosecco Brut varietal baseline, ABV typically 11-11.5% for Treviso DOC, Brut style 6-12 g/L RS, acidity 4 per tank-method Prosecco standard"
+      ]
+    },
+    {
+      "name": "Banfi Rosa Regale Brachetto d'Acqui Rosé",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 1,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/banfi-rosa-regale-brachetto-dacqui-rose-2022/1391076",
+        "ABV 7% confirmed on Wine.com product page",
+        "inference: Brachetto d'Acqui DOCG — semi-sweet sparkling red (DOCG mandates 65-80 g/L RS = sweetness 4), high natural acidity of Brachetto grape, very light body and minimal tannin at 7% ABV"
+      ]
+    },
+    {
+      "name": "Adami Bosco di Gica Prosecco Superiore",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/adami-bosco-di-gica-prosecco-superiore/110627",
+        "inference: Glera NV Brut Valdobbiadene Superiore DOCG — same Prosecco varietal baseline as La Marca; DOCG sites produce slightly more mineral Prosecco but same 1-5 scale result; ABV typically 11-11.5% for Valdobbiadene Brut"
+      ]
+    },
+    {
+      "name": "Chateau Bourdieu No.1",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chateau-bourdieu-no1-2018/4122420",
+        "ABV 14.5% confirmed on Wine.com product page",
+        "Decanter 97: 'deep, round, ample and approachable on the palate, the primary plum and damson fruits; while the acidity is supple and fruit-packed' — body 5, acidity 3 (supple), tannin 4 (structured Merlot-dominant blend with 8% Cab Sauv)"
+      ]
+    },
+    {
+      "name": "La Rioja Alta Viña Ardanza Reserva",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/la-rioja-alta-vina-ardanza-reserva-2019/3024585",
+        "ABV 14.5% confirmed on Wine.com product page — Robert Parker notes: 'reaching the customary 14.5% alcohol and keeping a pH of 3.54 and 5.5 grams of acidity'",
+        "James Suckling 95: 'medium- to full-bodied with firm, fine-grained tannins' — tannin 4, body 4; acidity 3 per warm 2019 vintage and 5.5g/L acidity figure"
+      ]
+    },
+    {
+      "name": "CVNE Rioja Reserva",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/cvne-rioja-reserva-2020/2609673",
+        "ABV 14% confirmed on Wine.com product page — Robert Parker: '14% alcohol and good freshness and balance'",
+        "James Suckling 92: 'medium-bodied with juicy, plummy fruit and fine-grained tannins' — tannin 4 (Reserva-level structure), body 4; Vinous: 'dry, juicy and chalky on the palate'"
+      ]
+    },
+    {
+      "name": "BenMarco Malbec",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/benmarco-malbec-2022/2669489",
+        "ABV 14.5% confirmed on Wine.com product page",
+        "James Suckling 93: 'medium to full body and tightly wound tannins' — tannin 4, body 5; Wine Spectator: 'prominent acidity and minerality'; winemaker notes: 'pronounced acidity' — acidity 4 (Uco Valley high-altitude site is known for elevated acidity vs standard Mendoza floor)"
+      ]
+    },
+    {
+      "name": "Matsu El Picaro",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/matsu-el-picaro-2024/3532037",
+        "ABV 14.5% confirmed on Wine.com product page",
+        "inference: Toro Tempranillo (Tinta de Toro) — concentrated, full-flavoured, firm tannin structure; Toro wines are typically more intense than standard Rioja Tempranillo; body 4 (medium-full for young accessible entry-level Toro)"
+      ]
+    },
+    {
+      "name": "Frescobaldi Nipozzano Chianti Rufina Riserva",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/frescobaldi-nipozzano-chianti-rufina-riserva-2022/3871328",
+        "ABV 13.5% confirmed on Wine.com product page — Alcohol 4 (boundary value rounds up per Niko protocol)",
+        "James Suckling 92: 'very fine tannins and crispness giving it tension and brightness' — tannin 4, acidity 4; winemaker notes: 'dense and silky tannic texture, fresh, fruity and mineral'; Suckling: 'medium-bodied with lower alcohol' — body 3; Chianti Rufina Riserva is the coolest, most structured Chianti subzone"
+      ]
+    },
+    {
+      "name": "Lemelson Thea's Selection Pinot Noir",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/lemelson-theas-selection-pinot-noir-2022/2560816",
+        "ABV 13.5% confirmed on Wine.com product page",
+        "Wine Spectator 91: 'snappy and vibrant, with tart cherry, cranberry' — acidity 4; Jeb Dunnuck 90: 'chalky tannins' — tannin 3; Decanter 93: 'savoury and bright-fruited' — body 3 medium"
+      ]
+    },
+    {
+      "name": "Kim Crawford Sauvignon Blanc",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/kim-crawford-sauvignon-blanc-2025/4120242",
+        "inference: Marlborough New Zealand Sauvignon Blanc — classic varietal baseline: no tannin (white wine), high acidity (acidity 4 for Marlborough SB — hallmark of the region), bone dry, ABV typically 12.5-13% for Marlborough (alcohol 3), light body (body 2)"
+      ]
+    },
+    {
+      "name": "St. Supery Sauvignon Blanc",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/st-supery-sauvignon-blanc-2023/2794641",
+        "ABV 13.5% confirmed on Wine.com product page",
+        "Wine Enthusiast 93: 'vibrant and energetic, bursting with flavors of freshly squeezed citrus' — acidity 4; James Suckling 90: 'medium-bodied' — body 2; bone dry"
+      ]
+    },
+    {
+      "name": "Miraval Rosé",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/miraval-rose-2024/3036255",
+        "ABV 13% confirmed on Wine.com product page",
+        "James Suckling 92: 'sleek and finely textured, driven by bright acidity' — acidity 4; Robert Parker 90: 'mouthwatering finish' — bone dry; Decanter 92: 'fresh, crisp and mineral' — body 2 light"
+      ]
+    },
+    {
+      "name": "Chateau d'Esclans Whispering Angel Rosé",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/chateau-desclans-whispering-angel-rose-2024/2847780",
+        "ABV 13% confirmed on Wine.com product page",
+        "James Suckling 92: 'medium-bodied with bright acidity, balanced and driven' — acidity 4, body 2; bone dry Provence rosé"
+      ]
+    },
+    {
+      "name": "Graham's Six Grapes Reserve Ruby Port",
+      "tannin": 3,
+      "acidity": 2,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/grahams-six-grapes-reserve-ruby-port/5968",
+        "ABV 19.5% confirmed on Wine.com product page",
+        "Decanter 95: 'framed by well balanced tannins and freshness' — tannin 3 (ruby Port retains moderate tannin vs aged tawny); sweetness 5 (fortified; Ports typically 100-120 g/L RS); body 5 (very full-bodied, rich, luscious)"
+      ]
+    },
+    {
+      "name": "Sandeman 10 Year Old Tawny",
+      "tannin": 2,
+      "acidity": 2,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/sandeman-10-year-old-tawny/110730",
+        "inference: 10-Year Tawny Port — ABV standard ~20% for fortified tawny (alcohol 5); sweetness 5 (fortified, ~100 g/L RS); tannin 2 (10 years oxidative barrel aging breaks down tannins significantly vs ruby Port); acidity 2 (fortified, lower perceived acidity); body 4 (rich, nutty, dried-fruit character but lighter than ruby due to oxidative style)"
+      ]
+    },
+    {
+      "name": "Warre's Warrior Port",
+      "tannin": 3,
+      "acidity": 2,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/warres-warrior-port/10295",
+        "inference: Ruby Reserve Port — ABV standard ~20% for fortified ruby Port (alcohol 5); sweetness 5 (fortified, ~100+ g/L RS); tannin 3 (ruby Reserve style retains moderate tannin like Graham's Six Grapes); acidity 2 (fortified, lower perceived acidity); body 5 (full, rich ruby Port style)"
+      ]
+    },
+    {
+      "name": "Calculated Risk Reserve Cabernet Sauvignon",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/calculated-risk-reserve-cabernet-sauvignon-2023/3330902",
+        "ABV 13.8% confirmed on Wine.com product page",
+        "Wine Enthusiast 91: 'silky smooth tannins, rich, layered, plush tannins' — tannin 4 (Cab Sauv structure present but accessible); 'rich' — body 4 medium-full; warm Sonoma vintage, acidity 3"
+      ]
+    },
+    {
+      "name": "E. Guigal Côtes du Rhône Rouge",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": [
+        "https://www.wine.com/product/e-guigal-cotes-du-rhone-rouge-2022/3372328",
+        "ABV 15% confirmed on Wine.com product page",
+        "Jeb Dunnuck 90: 'medium-bodied, pretty, pure, juicy, absolutely delicious style' — body 4 (15% ABV and 50% Syrah pushes body up despite medium descriptor); tannin 3 (round, smooth per winemaker notes); acidity 3 (juicy but warm 2022 vintage)"
+      ]
+    },
+    {
+      "name": "Chateau Montaud Côtes de Provence Rosé",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": [
+        "https://www.wine.com/product/chateau-montaud-cotes-de-provence-rose-2024/3160572",
+        "inference: Côtes de Provence Rosé (Grenache, Cinsault, Syrah) — standard Provence rosé varietal baseline; bone dry, high acidity (acidity 4), no tannin (white), light body (body 2); ABV typically 13% for Côtes de Provence (alcohol 3)"
+      ]
+    }
+  ]
+}

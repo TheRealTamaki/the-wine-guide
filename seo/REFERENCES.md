@@ -12,7 +12,7 @@ Last updated: 2026-04-13
 
 - Master keyword list: `wine-site-seo-keywords.xlsx` (project root)
 - Use `/dataforseo` for live volume/difficulty checks
-- Use `/neuronwriter-seo` or `/beuron-seo` for SERP-based term extraction
+- Use `/beuron-seo` for SERP-based term extraction (the `neuronwriter-seo` skill is NOT used on this site for any article type)
 
 ## On-Page SEO Standards
 

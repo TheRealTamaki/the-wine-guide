@@ -42,7 +42,7 @@ const schema = {
   datePublished: publishDate.toISOString(),
   dateModified: (modifiedDate ?? publishDate).toISOString(),
   author: { '@type': 'Organization', name: 'The Wine Guide' },
-  publisher: { '@type': 'Organization', name: 'The Wine Guide', url: 'https://thewine.guide' },
+  publisher: { '@type': 'Organization', name: 'The Wine Guide', url: 'https://wineguide.co' },
 };
 
 const readingTime = Math.ceil((article.body?.length ?? 0) / 1400);

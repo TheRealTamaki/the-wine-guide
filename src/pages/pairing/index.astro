@@ -4,8 +4,14 @@ import ArticleCard from '../../components/ui/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 const articles = (await getCollection('articles', (a) =>
-  a.data.category === 'pairing' && !a.data.draft
+  ['pairing', 'food-wine-pairing'].includes(a.data.category) && !a.data.draft
 )).sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const articleHref = (article: (typeof articles)[number]) => {
+  const category = article.data.category;
+  const slug = article.id.replace(`${category}/`, '').replace(/\.mdx?$/, '');
+  return `/${category}/${slug}/`;
+};
 ---
 
 <BaseLayout
@@ -21,19 +27,16 @@ const articles = (await getCollection('articles', (a) =>
 
     {articles.length > 0 ? (
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((article) => {
-          const slug = article.id.replace('pairing/', '').replace(/\.mdx?$/, '');
-          return (
-            <ArticleCard
-              title={article.data.title}
-              description={article.data.description}
-              href={`/pairing/${slug}/`}
-              category={article.data.category}
-              date={article.data.publishDate}
-              ogImage={article.data.ogImage}
-            />
-          );
-        })}
+        {articles.map((article) => (
+          <ArticleCard
+            title={article.data.title}
+            description={article.data.description}
+            href={articleHref(article)}
+            category={article.data.category}
+            date={article.data.publishDate}
+            ogImage={article.data.ogImage}
+          />
+        ))}
       </div>
     ) : (
       <p class="text-text-muted">Guides coming soon.</p>

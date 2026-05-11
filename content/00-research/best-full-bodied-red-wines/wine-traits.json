@@ -1,0 +1,86 @@
+{
+  "slug": "best-full-bodied-red-wines",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Kenwood Six Ridges Cabernet Sauvignon 2021",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 5,
+      "confidence": "inferred",
+      "sources": ["Alexander Valley Cab varietal profile", "article ABV context 14%+"]
+    },
+    {
+      "name": "Girard Petite Sirah 2021",
+      "tannin": 5,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 5,
+      "confidence": "inferred",
+      "sources": ["Napa Petite Sirah (Durif) varietal profile — densest common variety"]
+    },
+    {
+      "name": "Susana Balbo Signature Malbec 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Article states ABV ~14.5%", "Uco Valley Malbec profile"]
+    },
+    {
+      "name": "Ravenswood Dry Creek Valley Zinfandel 2024",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 2,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Article states 14.5%+ ABV, noted slightly boozy finish", "Dry Creek old-vine Zin style"]
+    },
+    {
+      "name": "Torbreck Woodcutter's Shiraz 2023",
+      "tannin": 4,
+      "acidity": 2,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Article states 14.5-15% ABV typical", "Barossa Shiraz style"]
+    },
+    {
+      "name": "La Massa Toscana 2021",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["Super-Tuscan Sangiovese-Cab blend profile", "French oak ageing typical 14% ABV"]
+    },
+    {
+      "name": "Pecchenino Langhe Nebbiolo 2023",
+      "tannin": 5,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["Article notes high acidity, chewy tannin signature Nebbiolo", "Langhe Nebbiolo typical 13.5-14% ABV"]
+    },
+    {
+      "name": "Elena Fucci Aglianico del Vulture SCEG 2023",
+      "tannin": 5,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["Aglianico 'Barolo of the South' profile — high acidity, grippy tannin", "Typical 14% ABV"]
+    }
+  ]
+}

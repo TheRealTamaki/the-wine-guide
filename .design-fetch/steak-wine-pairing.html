@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steak & Wine Pairing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant+SC:wght@300;400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<template id="__bundler_thumbnail" data-bg-color="#0d0b0a">
+  <svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1280" height="800" fill="#0d0b0a"/>
+    <!-- Decorative border -->
+    <rect x="40" y="40" width="1200" height="720" rx="4" fill="none" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.3"/>
+    <!-- Title -->
+    <text x="640" y="200" font-family="Georgia, serif" font-size="28" font-weight="300" fill="#c9a84c" text-anchor="middle" letter-spacing="8">THE SOMMELIER'S GUIDE</text>
+    <text x="640" y="290" font-family="Georgia, serif" font-size="72" font-weight="300" fill="#f0e6d3" text-anchor="middle">Steak &amp; Wine</text>
+    <text x="640" y="360" font-family="Georgia, serif" font-size="42" font-weight="300" fill="#f0e6d3" text-anchor="middle" opacity="0.7">Pairing Guide</text>
+    <!-- Dots row -->
+    <circle cx="540" cy="460" r="18" fill="#c9a84c"/>
+    <circle cx="600" cy="460" r="14" fill="#7b5c8a"/>
+    <circle cx="655" cy="460" r="10" fill="#2e4a5a"/>
+    <circle cx="700" cy="460" r="6" fill="#c9a84c" opacity="0.3"/>
+    <!-- Divider -->
+    <line x1="480" y1="510" x2="800" y2="510" stroke="#c9a84c" stroke-width="0.5" stroke-opacity="0.4"/>
+    <text x="640" y="560" font-family="Georgia, serif" font-size="16" fill="#c9a84c" text-anchor="middle" letter-spacing="4" opacity="0.7">7 CUTS · 8 WINES</text>
+  </svg>
+</template>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0b0a;
+    --bg2: #141110;
+    --bg3: #1c1816;
+    --border: rgba(180,140,90,0.18);
+    --gold: #c9a84c;
+    --gold-light: #e2c47a;
+    --burgundy: #7b1d34;
+    --burgundy-bright: #a82848;
+    --cream: #f0e6d3;
+    --muted: rgba(240,230,211,0.45);
+    --perfect: #c9a84c;
+    --good: #7b5c8a;
+    --ok: #2e4a5a;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay — pure CSS radial dots */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 3px 3px;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  #root { min-height: 100vh; }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .fade-up { animation: fadeUp 0.6s ease forwards; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+// ─── DATA ──────────────────────────────────────────────────────────────────
+
+const STEAKS = [
+  {
+    id: 'ribeye',
+    name: 'Ribeye',
+    subtitle: 'Rich & Well-Marbled',
+    fat: 5,
+    tenderness: 4,
+    flavour: 5,
+    desc: 'The king of steaks. Heavy marbling delivers extraordinary richness and depth. Best cooked medium-rare to medium to let the fat render fully.',
+    cook: 'Medium-Rare to Medium',
+    icon: '🥩',
+  },
+  {
+    id: 'filet',
+    name: 'Filet Mignon',
+    subtitle: 'Lean & Supremely Tender',
+    fat: 1,
+    tenderness: 5,
+    flavour: 3,
+    desc: 'Cut from the tenderloin, this is the most tender cut. Low in fat, delicate in flavour — it calls for a wine that complements rather than overwhelms.',
+    cook: 'Rare to Medium-Rare',
+    icon: '🍖',
+  },
+  {
+    id: 'nystrip',
+    name: 'New York Strip',
+    subtitle: 'Balanced & Flavourful',
+    fat: 3,
+    tenderness: 3,
+    flavour: 4,
+    desc: 'A classic cut with a firm texture and robust beefy flavour. The fat cap along one edge bastes the meat during cooking, adding depth.',
+    cook: 'Medium-Rare',
+    icon: '🥩',
+  },
+  {
+    id: 'tbone',
+    name: 'T-Bone',
+    subtitle: 'Two Cuts in One',
+    fat: 4,
+    tenderness: 4,
+    flavour: 5,
+    desc: 'Combines the strip and the tenderloin in one impressive cut. Bold enough for big reds, yet tender enough for more elegant wines.',
+    cook: 'Medium-Rare',
+    icon: '🍖',
+  },
+  {
+    id: 'sirloin',
+    name: 'Sirloin',
+    subtitle: 'Lean & Hearty',
+    fat: 2,
+    tenderness: 3,
+    flavour: 4,
+    desc: 'Lean, affordable and deeply beefy. The firm texture and robust flavour pair best with medium-to-full bodied reds that echo its character.',
+    cook: 'Medium-Rare to Medium',
+    icon: '🥩',
+  },
+  {
+    id: 'flank',
+    name: 'Flank',
+    subtitle: 'Bold & Intense',
+    fat: 2,
+    tenderness: 2,
+    flavour: 5,
+    desc: 'Lean with long muscle fibres and an intensely beefy flavour. Often marinated. Best sliced thin across the grain, pairs well with fruity, spicy reds.',
+    cook: 'Medium-Rare (slice thin)',
+    icon: '🥩',
+  },
+  {
+    id: 'wagyu',
+    name: 'Wagyu',
+    subtitle: 'Buttery & Ultra-Rich',
+    fat: 5,
+    tenderness: 5,
+    flavour: 5,
+    desc: 'The apex of marbling. So rich that a small portion satisfies. The intense butteriness calls for wines with enough acidity or elegance to cut through the fat.',
+    cook: 'Rare to Medium-Rare',
+    icon: '🫀',
+  },
+];
+
+const WINES = [
+  {
+    id: 'cabsauv',
+    name: 'Cabernet Sauvignon',
+    region: 'Napa · Bordeaux · Tuscany',
+    body: 5,
+    tannin: 5,
+    acidity: 3,
+    colour: '#4a1230',
+    lightColour: '#8b2342',
+    notes: 'Blackcurrant, cedar, dark cherry, tobacco',
+    desc: 'The classic steak wine. High tannins bind with protein and fat, softening on the palate while its dark fruit complements bold cuts.',
+    temp: '16–18°C / 61–65°F',
+  },
+  {
+    id: 'malbec',
+    name: 'Malbec',
+    region: 'Mendoza · Cahors',
+    body: 4,
+    tannin: 3,
+    acidity: 3,
+    colour: '#3d1060',
+    lightColour: '#7a308a',
+    notes: 'Plum, blackberry, violet, cocoa',
+    desc: "Argentina's gift to the steakhouse. Velvety tannins, rich dark fruit and a smooth finish make it endlessly approachable with beef.",
+    temp: '15–17°C / 59–63°F',
+  },
+  {
+    id: 'merlot',
+    name: 'Merlot',
+    region: 'Pomerol · Napa · Tuscany',
+    body: 3,
+    tannin: 2,
+    acidity: 3,
+    colour: '#5c1020',
+    lightColour: '#9b2535',
+    notes: 'Cherry, plum, chocolate, bay leaf',
+    desc: 'Softer tannins and plummy fruit make Merlot a gentle companion to leaner, more delicate cuts that might be overwhelmed by bigger reds.',
+    temp: '15–17°C / 59–63°F',
+  },
+  {
+    id: 'pinot',
+    name: 'Pinot Noir',
+    region: 'Burgundy · Oregon · Central Otago',
+    body: 2,
+    tannin: 1,
+    acidity: 4,
+    colour: '#6b1525',
+    lightColour: '#a83040',
+    notes: 'Red cherry, raspberry, earth, mushroom',
+    desc: 'Light tannins and high acidity make Pinot the go-to for filet mignon and Wagyu, where you want elegance over brute force.',
+    temp: '12–14°C / 54–57°F',
+  },
+  {
+    id: 'syrah',
+    name: 'Syrah / Shiraz',
+    region: 'Rhône · Barossa · McLaren Vale',
+    body: 5,
+    tannin: 4,
+    acidity: 3,
+    colour: '#2a0a40',
+    lightColour: '#5a1870',
+    notes: 'Blackberry, pepper, smoke, bacon fat',
+    desc: 'The peppery, meaty character of Syrah is a natural with grilled beef — especially cuts with intense flavour like flank and ribeye.',
+    temp: '16–18°C / 61–65°F',
+  },
+  {
+    id: 'barolo',
+    name: 'Barolo',
+    region: 'Piedmont, Italy',
+    body: 5,
+    tannin: 5,
+    acidity: 5,
+    colour: '#3a0c15',
+    lightColour: '#7a2030',
+    notes: 'Tar, roses, dried cherry, leather, truffle',
+    desc: '"The King of Italian wines." High tannins and soaring acidity cut through rich, fatty cuts beautifully. Requires patience — decant generously.',
+    temp: '17–19°C / 63–66°F',
+  },
+  {
+    id: 'zinfandel',
+    name: 'Zinfandel',
+    region: 'Sonoma · Paso Robles',
+    body: 4,
+    tannin: 3,
+    acidity: 3,
+    colour: '#4a0c18',
+    lightColour: '#8a2030',
+    notes: 'Blackberry jam, spice, tobacco, vanilla',
+    desc: 'Bold jammy fruit and spice echo the char of grilled beef. Especially good with marinated or spice-rubbed cuts like flank steak.',
+    temp: '15–17°C / 59–63°F',
+  },
+  {
+    id: 'bordeaux',
+    name: 'Bordeaux Blend',
+    region: 'Bordeaux, France',
+    body: 5,
+    tannin: 4,
+    acidity: 4,
+    colour: '#2c0a20',
+    lightColour: '#601838',
+    notes: 'Cassis, graphite, tobacco, dark fruit, violet',
+    desc: 'The great Bordeaux blends — Cab Sauv, Merlot, Cab Franc — offer complexity and structure that rewards the finest cuts of beef.',
+    temp: '16–18°C / 61–65°F',
+  },
+];
+
+// 0=skip, 1=ok, 2=good, 3=perfect
+const PAIRINGS = {
+  ribeye:  { cabsauv:3, malbec:3, merlot:1, pinot:0, syrah:3, barolo:2, zinfandel:2, bordeaux:3 },
+  filet:   { cabsauv:1, malbec:1, merlot:3, pinot:3, syrah:1, barolo:2, zinfandel:0, bordeaux:2 },
+  nystrip: { cabsauv:3, malbec:2, merlot:2, pinot:1, syrah:2, barolo:2, zinfandel:2, bordeaux:3 },
+  tbone:   { cabsauv:3, malbec:2, merlot:1, pinot:0, syrah:3, barolo:3, zinfandel:1, bordeaux:3 },
+  sirloin: { cabsauv:2, malbec:3, merlot:2, pinot:1, syrah:3, barolo:1, zinfandel:2, bordeaux:2 },
+  flank:   { cabsauv:1, malbec:3, merlot:1, pinot:0, syrah:2, barolo:1, zinfandel:3, bordeaux:1 },
+  wagyu:   { cabsauv:1, malbec:2, merlot:3, pinot:3, syrah:1, barolo:2, zinfandel:0, bordeaux:3 },
+};
+
+const LABEL = { 0: null, 1: 'Works', 2: 'Good', 3: 'Perfect' };
+const LEVEL_COLOR = { 0: 'transparent', 1: 'var(--ok)', 2: 'var(--good)', 3: 'var(--perfect)' };
+
+// ─── COMPONENTS ────────────────────────────────────────────────────────────
+
+function StatBar({ value, max = 5, color = 'var(--gold)' }) {
+  return (
+    <div style={{ display:'flex', gap:3 }}>
+      {Array.from({length: max}).map((_, i) => (
+        <div key={i} style={{
+          width: 18, height: 4, borderRadius: 2,
+          background: i < value ? color : 'rgba(255,255,255,0.1)',
+          transition: 'background 0.3s'
+        }} />
+      ))}
+    </div>
+  );
+}
+
+function PairingDot({ level, size = 28, animated = false }) {
+  if (level === 0) return (
+    <div style={{
+      width: size, height: size, borderRadius: '50%',
+      border: '1px solid rgba(255,255,255,0.06)',
+      background: 'transparent', flexShrink: 0
+    }} />
+  );
+  return (
+    <div style={{
+      width: size, height: size, borderRadius: '50%',
+      background: LEVEL_COLOR[level],
+      flexShrink: 0,
+      boxShadow: level === 3 ? `0 0 ${animated?'14px':'8px'} ${LEVEL_COLOR[level]}` : 'none',
+      transition: 'all 0.3s',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+    }}>
+      {level === 3 && (
+        <div style={{
+          width: size * 0.45, height: size * 0.45, borderRadius: '50%',
+          background: 'rgba(255,255,255,0.3)'
+        }} />
+      )}
+    </div>
+  );
+}
+
+function SteakCard({ steak, selected, onClick }) {
+  const isSelected = selected === steak.id;
+  return (
+    <button onClick={() => onClick(steak.id === selected ? null : steak.id)} style={{
+      background: isSelected ? 'rgba(201,168,76,0.08)' : 'rgba(255,255,255,0.02)',
+      border: `1px solid ${isSelected ? 'rgba(201,168,76,0.5)' : 'rgba(255,255,255,0.07)'}`,
+      borderRadius: 8,
+      padding: '14px 16px',
+      cursor: 'pointer',
+      textAlign: 'left',
+      color: 'var(--cream)',
+      transition: 'all 0.25s',
+      width: '100%',
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      {isSelected && <div style={{
+        position:'absolute', left:0, top:0, bottom:0, width:3,
+        background: 'var(--gold)', borderRadius: '4px 0 0 4px'
+      }} />}
+      <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 18, fontWeight: 500, letterSpacing: '0.02em', marginBottom: 2 }}>
+        {steak.name}
+      </div>
+      <div style={{ fontSize: 11, color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 10 }}>
+        {steak.subtitle}
+      </div>
+      <div style={{ display:'flex', flexDirection:'column', gap: 4 }}>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+          <span style={{ fontSize: 10, color: 'var(--muted)', letterSpacing:'0.06em', textTransform:'uppercase', width: 72 }}>Marbling</span>
+          <StatBar value={steak.fat} color="#c9a84c" />
+        </div>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+          <span style={{ fontSize: 10, color: 'var(--muted)', letterSpacing:'0.06em', textTransform:'uppercase', width: 72 }}>Tenderness</span>
+          <StatBar value={steak.tenderness} color="#a82848" />
+        </div>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+          <span style={{ fontSize: 10, color: 'var(--muted)', letterSpacing:'0.06em', textTransform:'uppercase', width: 72 }}>Flavour</span>
+          <StatBar value={steak.flavour} color="#7b5c8a" />
+        </div>
+      </div>
+    </button>
+  );
+}
+
+function WineCard({ wine, pairing, selectedSteak, onClick, selectedWine }) {
+  const isSelected = selectedWine === wine.id;
+  const level = pairing || 0;
+  const label = LABEL[level];
+
+  return (
+    <button onClick={() => onClick(wine.id === selectedWine ? null : wine.id)} style={{
+      background: isSelected ? `${wine.colour}50` : level > 0 && selectedSteak ? `${wine.colour}25` : 'rgba(255,255,255,0.015)',
+      border: `1px solid ${isSelected ? wine.lightColour + '80' : level > 0 && selectedSteak ? wine.lightColour + '35' : 'rgba(255,255,255,0.06)'}`,
+      borderRadius: 8,
+      padding: '14px 16px',
+      cursor: 'pointer',
+      textAlign: 'left',
+      color: 'var(--cream)',
+      transition: 'all 0.3s',
+      width: '100%',
+      position: 'relative',
+      overflow: 'hidden',
+    }}>
+      {/* Wine colour swatch */}
+      <div style={{
+        position: 'absolute', top: 0, right: 0, width: 40, height: '100%',
+        background: `linear-gradient(to left, ${wine.colour}60, transparent)`,
+        pointerEvents: 'none'
+      }} />
+
+      <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap: 8 }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 16, fontWeight: 500, marginBottom: 1, lineHeight: 1.2 }}>
+            {wine.name}
+          </div>
+          <div style={{ fontSize: 10, color: 'var(--muted)', letterSpacing: '0.07em', textTransform:'uppercase', marginBottom: 8 }}>
+            {wine.region}
+          </div>
+          <div style={{ fontSize: 11, color: 'rgba(240,230,211,0.55)', fontStyle:'italic' }}>
+            {wine.notes}
+          </div>
+        </div>
+        {selectedSteak && level > 0 && (
+          <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:3, flexShrink:0, paddingTop:2 }}>
+            <PairingDot level={level} size={20} animated={isSelected} />
+            <span style={{
+              fontSize: 9, letterSpacing:'0.07em', textTransform:'uppercase',
+              color: LEVEL_COLOR[level], fontWeight: 400
+            }}>{label}</span>
+          </div>
+        )}
+      </div>
+    </button>
+  );
+}
+
+function DetailPanel({ steak, wine, pairing }) {
+  if (!steak && !wine) return (
+    <div style={{
+      display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',
+      height: '100%', gap: 12, color: 'var(--muted)',
+      padding: 40, textAlign:'center'
+    }}>
+      <div style={{ fontSize: 48, opacity: 0.3 }}>⬡</div>
+      <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize: 18, fontStyle:'italic' }}>
+        Select a steak or wine to explore pairings
+      </div>
+    </div>
+  );
+
+  if (steak && wine) {
+    const level = pairing || 0;
+    const label = LABEL[level];
+    return (
+      <div className="fade-up" style={{ padding: '28px 24px', height: '100%', display:'flex', flexDirection:'column', gap: 20 }}>
+        {/* Pairing verdict */}
+        <div style={{
+          background: level > 0 ? `${LEVEL_COLOR[level]}18` : 'rgba(255,255,255,0.03)',
+          border: `1px solid ${level > 0 ? LEVEL_COLOR[level] + '50' : 'rgba(255,255,255,0.08)'}`,
+          borderRadius: 10, padding: '18px 20px',
+          display:'flex', alignItems:'center', gap: 16
+        }}>
+          <PairingDot level={level} size={36} animated />
+          <div>
+            <div style={{ fontFamily:"'Cormorant SC', serif", fontSize: 22, letterSpacing:'0.05em', color: level > 0 ? LEVEL_COLOR[level] : 'var(--muted)' }}>
+              {level > 0 ? label + ' Pairing' : 'Not Recommended'}
+            </div>
+            <div style={{ fontSize: 12, color:'var(--muted)', marginTop: 2 }}>
+              {steak.name} · {wine.name}
+            </div>
+          </div>
+        </div>
+
+        {/* Steak info */}
+        <div>
+          <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize: 20, fontWeight: 500, marginBottom: 6 }}>
+            {steak.name}
+          </div>
+          <div style={{ fontSize: 12, color:'var(--muted)', lineHeight: 1.7, marginBottom: 10 }}>
+            {steak.desc}
+          </div>
+          <div style={{ display:'flex', alignItems:'center', gap: 6 }}>
+            <span style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.08em' }}>Best cooked:</span>
+            <span style={{ fontSize: 11, color:'var(--gold)', fontStyle:'italic' }}>{steak.cook}</span>
+          </div>
+        </div>
+
+        <div style={{ width:'100%', height:1, background:'var(--border)' }} />
+
+        {/* Wine info */}
+        <div>
+          <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize: 20, fontWeight: 500, marginBottom: 2 }}>
+            {wine.name}
+          </div>
+          <div style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.08em', marginBottom: 8 }}>
+            {wine.region}
+          </div>
+          <div style={{ fontSize: 12, color:'var(--muted)', lineHeight: 1.7, marginBottom: 12 }}>
+            {wine.desc}
+          </div>
+          <div style={{ display:'flex', flexDirection:'column', gap: 6 }}>
+            <div style={{ display:'flex', gap: 12 }}>
+              <div style={{ flex:1 }}>
+                <div style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom: 3 }}>Body</div>
+                <StatBar value={wine.body} color={wine.lightColour} />
+              </div>
+              <div style={{ flex:1 }}>
+                <div style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom: 3 }}>Tannins</div>
+                <StatBar value={wine.tannin} color={wine.lightColour} />
+              </div>
+              <div style={{ flex:1 }}>
+                <div style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom: 3 }}>Acidity</div>
+                <StatBar value={wine.acidity} color={wine.lightColour} />
+              </div>
+            </div>
+          </div>
+          <div style={{ marginTop: 10, display:'flex', alignItems:'center', gap: 6 }}>
+            <span style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.08em' }}>Serve at:</span>
+            <span style={{ fontSize: 11, color:'var(--gold)', fontStyle:'italic' }}>{wine.temp}</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (steak) {
+    const pairs = PAIRINGS[steak.id];
+    const perfectWines = WINES.filter(w => pairs[w.id] === 3);
+    const goodWines = WINES.filter(w => pairs[w.id] === 2);
+    return (
+      <div className="fade-up" style={{ padding: '28px 24px', display:'flex', flexDirection:'column', gap: 20 }}>
+        <div>
+          <div style={{ fontSize: 11, color:'var(--gold)', textTransform:'uppercase', letterSpacing:'0.12em', marginBottom: 6 }}>Selected Cut</div>
+          <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize: 26, fontWeight: 500 }}>{steak.name}</div>
+          <div style={{ fontSize: 12, color:'var(--muted)', lineHeight: 1.7, marginTop: 8 }}>{steak.desc}</div>
+          <div style={{ display:'flex', gap: 20, marginTop: 12 }}>
+            <div>
+              <div style={{ fontSize: 9, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:3 }}>Marbling</div>
+              <StatBar value={steak.fat} color="#c9a84c" />
+            </div>
+            <div>
+              <div style={{ fontSize: 9, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:3 }}>Tenderness</div>
+              <StatBar value={steak.tenderness} color="#a82848" />
+            </div>
+            <div>
+              <div style={{ fontSize: 9, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:3 }}>Flavour</div>
+              <StatBar value={steak.flavour} color="#7b5c8a" />
+            </div>
+          </div>
+          <div style={{ marginTop: 10, display:'flex', alignItems:'center', gap: 6 }}>
+            <span style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.08em' }}>Best cooked:</span>
+            <span style={{ fontSize: 11, color:'var(--gold)', fontStyle:'italic' }}>{steak.cook}</span>
+          </div>
+        </div>
+
+        {perfectWines.length > 0 && (
+          <div>
+            <div style={{ display:'flex', alignItems:'center', gap: 8, marginBottom: 10 }}>
+              <PairingDot level={3} size={14} />
+              <span style={{ fontSize: 11, color:'var(--gold)', textTransform:'uppercase', letterSpacing:'0.1em' }}>Perfect Pairings</span>
+            </div>
+            <div style={{ display:'flex', flexDirection:'column', gap: 6 }}>
+              {perfectWines.map(w => (
+                <div key={w.id} style={{
+                  padding:'10px 14px', borderRadius:6,
+                  background: `${w.colour}30`, border:`1px solid ${w.lightColour}35`,
+                  fontFamily:"'Cormorant Garamond', serif", fontSize:15
+                }}>
+                  <div>{w.name}</div>
+                  <div style={{ fontSize:11, color:'var(--muted)', fontStyle:'italic', marginTop:2 }}>{w.notes}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {goodWines.length > 0 && (
+          <div>
+            <div style={{ display:'flex', alignItems:'center', gap: 8, marginBottom: 10 }}>
+              <PairingDot level={2} size={14} />
+              <span style={{ fontSize: 11, color:'var(--good)', textTransform:'uppercase', letterSpacing:'0.1em' }}>Good Pairings</span>
+            </div>
+            <div style={{ display:'flex', flexDirection:'column', gap: 6 }}>
+              {goodWines.map(w => (
+                <div key={w.id} style={{
+                  padding:'10px 14px', borderRadius:6,
+                  background: 'rgba(123,92,138,0.12)', border:'1px solid rgba(123,92,138,0.25)',
+                  fontFamily:"'Cormorant Garamond', serif", fontSize:15
+                }}>
+                  <div>{w.name}</div>
+                  <div style={{ fontSize:11, color:'var(--muted)', fontStyle:'italic', marginTop:2 }}>{w.notes}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Wine selected
+  const wineId = wine.id;
+  const pairedSteaks = STEAKS.filter(s => PAIRINGS[s.id][wineId] > 0).sort((a,b) => PAIRINGS[b.id][wineId] - PAIRINGS[a.id][wineId]);
+  return (
+    <div className="fade-up" style={{ padding: '28px 24px', display:'flex', flexDirection:'column', gap: 20 }}>
+      <div>
+        <div style={{ fontSize: 11, color:'var(--gold)', textTransform:'uppercase', letterSpacing:'0.12em', marginBottom: 6 }}>Selected Wine</div>
+        <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize: 24, fontWeight: 500 }}>{wine.name}</div>
+        <div style={{ fontSize: 11, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom: 10 }}>{wine.region}</div>
+        <div style={{ fontSize: 12, color:'var(--muted)', lineHeight: 1.7 }}>{wine.desc}</div>
+        <div style={{ display:'flex', gap: 16, marginTop: 12 }}>
+          <div>
+            <div style={{ fontSize: 9, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:3 }}>Body</div>
+            <StatBar value={wine.body} color={wine.lightColour} />
+          </div>
+          <div>
+            <div style={{ fontSize: 9, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:3 }}>Tannins</div>
+            <StatBar value={wine.tannin} color={wine.lightColour} />
+          </div>
+          <div>
+            <div style={{ fontSize: 9, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:3 }}>Acidity</div>
+            <StatBar value={wine.acidity} color={wine.lightColour} />
+          </div>
+        </div>
+        <div style={{ marginTop: 10, display:'flex', alignItems:'center', gap: 6 }}>
+          <span style={{ fontSize: 10, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.08em' }}>Serve at:</span>
+          <span style={{ fontSize: 11, color:'var(--gold)', fontStyle:'italic' }}>{wine.temp}</span>
+        </div>
+      </div>
+
+      <div style={{ width:'100%', height:1, background:'var(--border)' }} />
+
+      <div>
+        <div style={{ fontSize: 11, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.1em', marginBottom: 12 }}>Pairs well with</div>
+        <div style={{ display:'flex', flexDirection:'column', gap: 8 }}>
+          {pairedSteaks.map(s => {
+            const lvl = PAIRINGS[s.id][wineId];
+            return (
+              <div key={s.id} style={{ display:'flex', alignItems:'center', gap: 12, padding:'10px 14px', borderRadius:6, background:'rgba(255,255,255,0.03)', border:'1px solid rgba(255,255,255,0.07)' }}>
+                <PairingDot level={lvl} size={16} />
+                <div>
+                  <div style={{ fontFamily:"'Cormorant Garamond', serif", fontSize:16 }}>{s.name}</div>
+                  <div style={{ fontSize:11, color:'var(--muted)', marginTop:1 }}>{s.subtitle}</div>
+                </div>
+                <div style={{ marginLeft:'auto', fontSize:11, color: LEVEL_COLOR[lvl], textTransform:'uppercase', letterSpacing:'0.07em' }}>{LABEL[lvl]}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── MATRIX VIEW ────────────────────────────────────────────────────────────
+
+function MatrixView({ selectedSteak, selectedWine, onSteakClick, onWineClick }) {
+  return (
+    <div style={{ overflowX:'auto', padding: '0 24px 24px' }}>
+      <table style={{ borderCollapse:'collapse', width:'100%', minWidth: 700 }}>
+        <thead>
+          <tr>
+            <th style={{ width: 120, padding:'0 0 12px 0' }}></th>
+            {WINES.map(w => (
+              <th key={w.id} style={{ padding:'0 4px 12px', width: 90 }}>
+                <button onClick={() => onWineClick(w.id === selectedWine ? null : w.id)} style={{
+                  background:'none', border:'none', cursor:'pointer', color: selectedWine === w.id ? 'var(--gold-light)' : 'var(--muted)',
+                  fontFamily:"'Cormorant Garamond', serif", fontSize:11, fontWeight:500,
+                  textAlign:'center', lineHeight:1.3, width:'100%',
+                  transition:'color 0.2s',
+                  display:'flex', flexDirection:'column', alignItems:'center', gap: 4
+                }}>
+                  <div style={{ width:10, height:10, borderRadius:'50%', background: w.lightColour, opacity: selectedWine === w.id ? 1 : 0.6 }} />
+                  <span style={{ wordBreak:'break-word', letterSpacing:'0.04em' }}>{w.name}</span>
+                </button>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {STEAKS.map((s, si) => (
+            <tr key={s.id} style={{ borderTop: '1px solid var(--border)' }}>
+              <td style={{ padding:'8px 12px 8px 0' }}>
+                <button onClick={() => onSteakClick(s.id === selectedSteak ? null : s.id)} style={{
+                  background:'none', border:'none', cursor:'pointer',
+                  color: selectedSteak === s.id ? 'var(--gold-light)' : 'var(--muted)',
+                  fontFamily:"'Cormorant Garamond', serif", fontSize:13, fontWeight:500,
+                  textAlign:'left', width:'100%', letterSpacing:'0.03em',
+                  transition:'color 0.2s'
+                }}>
+                  {s.name}
+                </button>
+              </td>
+              {WINES.map(w => {
+                const level = PAIRINGS[s.id][w.id];
+                const isFocused = (selectedSteak === s.id || selectedWine === w.id) && level > 0;
+                const isDimmed = (selectedSteak || selectedWine) && !isFocused && !(selectedSteak === s.id && selectedWine === w.id);
+                return (
+                  <td key={w.id} style={{ padding:'8px 4px', textAlign:'center' }}>
+                    <div style={{
+                      display:'flex', justifyContent:'center', alignItems:'center',
+                      opacity: isDimmed ? 0.25 : 1, transition:'opacity 0.3s'
+                    }}>
+                      <PairingDot level={level} size={22} animated={isFocused} />
+                    </div>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {/* Legend */}
+      <div style={{ display:'flex', gap: 20, marginTop: 16, paddingTop: 16, borderTop:'1px solid var(--border)' }}>
+        {[3,2,1].map(level => (
+          <div key={level} style={{ display:'flex', alignItems:'center', gap:7 }}>
+            <PairingDot level={level} size={16} />
+            <span style={{ fontSize:11, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em' }}>{LABEL[level]}</span>
+          </div>
+        ))}
+        <div style={{ display:'flex', alignItems:'center', gap:7 }}>
+          <div style={{ width:16, height:16, borderRadius:'50%', border:'1px solid rgba(255,255,255,0.1)' }} />
+          <span style={{ fontSize:11, color:'var(--muted)', textTransform:'uppercase', letterSpacing:'0.07em' }}>Not Recommended</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── MAIN APP ───────────────────────────────────────────────────────────────
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "view": "cards",
+  "theme": "dark",
+  "showTemperature": true
+}/*EDITMODE-END*/;
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [selectedSteak, setSelectedSteak] = useState(null);
+  const [selectedWine, setSelectedWine] = useState(null);
+
+  const steak = STEAKS.find(s => s.id === selectedSteak) || null;
+  const wine = WINES.find(w => w.id === selectedWine) || null;
+  const pairing = steak && wine ? PAIRINGS[steak.id][wine.id] : null;
+
+  const handleSteakClick = (id) => {
+    setSelectedSteak(id);
+    if (id === null) setSelectedWine(null);
+  };
+  const handleWineClick = (id) => {
+    setSelectedWine(id);
+    if (id === null) setSelectedSteak(null);
+  };
+
+  return (
+    <div style={{ minHeight:'100vh', display:'flex', flexDirection:'column' }}>
+      {/* Header */}
+      <header style={{
+        padding: '36px 40px 24px',
+        borderBottom: '1px solid var(--border)',
+        background: 'linear-gradient(to bottom, rgba(123,29,52,0.12), transparent)',
+        animation: 'fadeUp 0.7s ease both'
+      }}>
+        <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', flexWrap:'wrap', gap:12 }}>
+          <div>
+            <div style={{
+              fontFamily:"'Cormorant SC', serif",
+              fontSize: 11, letterSpacing:'0.3em', color:'var(--gold)', textTransform:'uppercase',
+              marginBottom: 8
+            }}>The Sommelier's Guide</div>
+            <h1 style={{
+              fontFamily:"'Cormorant Garamond', serif",
+              fontSize: 'clamp(32px, 5vw, 52px)',
+              fontWeight: 300, letterSpacing: '-0.01em',
+              lineHeight: 1,
+              background: 'linear-gradient(135deg, var(--cream) 0%, var(--gold-light) 60%, var(--cream) 100%)',
+              backgroundSize: '200% auto',
+              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+              animation: 'shimmer 4s linear infinite'
+            }}>Steak &amp; Wine</h1>
+            <h1 style={{
+              fontFamily:"'Cormorant Garamond', serif",
+              fontSize: 'clamp(32px, 5vw, 52px)',
+              fontWeight: 300, letterSpacing: '-0.01em',
+              lineHeight: 1, color:'var(--cream)', opacity: 0.85
+            }}>Pairing Guide</h1>
+          </div>
+          {/* View toggle */}
+          <div style={{ display:'flex', gap: 6 }}>
+            {['cards','matrix'].map(v => (
+              <button key={v} onClick={() => setTweak('view', v)} style={{
+                padding:'7px 16px', borderRadius:6, cursor:'pointer',
+                background: tweaks.view === v ? 'rgba(201,168,76,0.15)' : 'rgba(255,255,255,0.04)',
+                border: `1px solid ${tweaks.view === v ? 'rgba(201,168,76,0.5)' : 'rgba(255,255,255,0.1)'}`,
+                color: tweaks.view === v ? 'var(--gold)' : 'var(--muted)',
+                fontSize: 11, letterSpacing:'0.08em', textTransform:'uppercase',
+                fontFamily:"'Lato', sans-serif", transition:'all 0.2s'
+              }}>{v === 'cards' ? 'Card View' : 'Matrix'}</button>
+            ))}
+          </div>
+        </div>
+        <p style={{ marginTop: 12, fontSize: 13, color:'var(--muted)', maxWidth: 500, lineHeight: 1.6 }}>
+          Select a steak cut or wine to discover pairings, or choose both to see how they match.
+        </p>
+      </header>
+
+      {/* Body */}
+      {tweaks.view === 'matrix' ? (
+        <div style={{ padding:'24px 0', animation:'fadeUp 0.4s ease both' }}>
+          <MatrixView
+            selectedSteak={selectedSteak}
+            selectedWine={selectedWine}
+            onSteakClick={handleSteakClick}
+            onWineClick={handleWineClick}
+          />
+          {(steak || wine) && (
+            <div style={{ margin:'0 24px', borderTop:'1px solid var(--border)', paddingTop:24 }}>
+              <DetailPanel steak={steak} wine={wine} pairing={pairing} />
+            </div>
+          )}
+        </div>
+      ) : (
+        <div style={{
+          flex:1, display:'grid',
+          gridTemplateColumns: '220px 1fr 280px',
+          gridTemplateRows: '1fr',
+          gap: 0,
+          animation:'fadeUp 0.5s ease both'
+        }}>
+          {/* Steak column */}
+          <div style={{ borderRight:'1px solid var(--border)', padding:'20px 16px', display:'flex', flexDirection:'column', gap: 8, overflowY:'auto' }}>
+            <div style={{ fontSize:10, color:'var(--gold)', textTransform:'uppercase', letterSpacing:'0.15em', marginBottom:6, paddingLeft:4 }}>
+              The Cut
+            </div>
+            {STEAKS.map(s => (
+              <SteakCard key={s.id} steak={s} selected={selectedSteak} onClick={handleSteakClick} />
+            ))}
+          </div>
+
+          {/* Wine column */}
+          <div style={{ borderRight:'1px solid var(--border)', padding:'20px 16px', display:'flex', flexDirection:'column', gap: 8, overflowY:'auto' }}>
+            <div style={{ fontSize:10, color:'var(--gold)', textTransform:'uppercase', letterSpacing:'0.15em', marginBottom:6, paddingLeft:4 }}>
+              The Wine
+            </div>
+            {WINES.map(w => {
+              const pairing = selectedSteak ? PAIRINGS[selectedSteak][w.id] : null;
+              return (
+                <WineCard
+                  key={w.id}
+                  wine={w}
+                  pairing={pairing}
+                  selectedSteak={selectedSteak}
+                  selectedWine={selectedWine}
+                  onClick={handleWineClick}
+                />
+              );
+            })}
+          </div>
+
+          {/* Detail panel */}
+          <div style={{ overflowY:'auto' }}>
+            <DetailPanel steak={steak} wine={wine} pairing={pairing} />
+          </div>
+        </div>
+      )}
+
+      <TweaksPanel>
+        <TweakSection label="Layout">
+          <TweakRadio id="view" label="View Mode" options={['cards','matrix']} />
+        </TweakSection>
+      </TweaksPanel>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

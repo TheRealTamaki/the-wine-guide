@@ -1,0 +1,14 @@
+{
+  "slug": "best-wine-for-mulled-wine",
+  "date": "2026-04-19",
+  "wines": [
+    { "name": "CVNE Rioja Reserva 2020", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Rioja Reserva (Tempranillo) varietal quick-ref"] },
+    { "name": "Ancient Peaks Paso Robles Merlot 2022", "tannin": 3, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["Paso Robles Merlot, full-bodied ripe-fruit style"] },
+    { "name": "Cline California Old Vine Zinfandel 2024", "tannin": 3, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["California Zinfandel varietal quick-ref"] },
+    { "name": "Shatter Grenache 2022", "tannin": 3, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["Southern French Grenache (Maury) varietal quick-ref"] },
+    { "name": "Vina Real Crianza 2021", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Rioja Crianza (Tempranillo) varietal quick-ref"] },
+    { "name": "Hacienda Lopez de Haro Crianza 2021", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Rioja Crianza (Tempranillo) varietal quick-ref"] },
+    { "name": "J. Lohr Estates Los Osos Merlot 2023", "tannin": 3, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["Paso Robles Merlot, plum-and-chocolate soft style"] },
+    { "name": "Louis Jadot Beaujolais 2024", "tannin": 2, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Beaujolais (Gamay) varietal quick-ref"] }
+  ]
+}

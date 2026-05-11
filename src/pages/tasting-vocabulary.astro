@@ -1,0 +1,507 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Wine Tasting Vocabulary"
+  description="Every wine tasting term you'll actually hear, explained plainly. Acidity, tannins, body, finish, oak — what they mean and what they feel like in your glass."
+>
+  <div class="tv-wrap">
+
+    <header class="tv-header">
+      <div class="tv-kicker">Tasting Guide</div>
+      <h1>Wine tasting words, <em>actually explained.</em></h1>
+      <p class="tv-intro">You've heard someone say a wine has "good structure" or "grippy tannins" and just nodded along. This page fixes that. Every term here is one you'll encounter at a restaurant, on a label, or in a review — explained the way a friend would explain it, not a textbook.</p>
+    </header>
+
+    <nav class="tv-nav" aria-label="Jump to section">
+      <a href="#structure">Structure</a>
+      <a href="#flavour">Flavour</a>
+      <a href="#texture">Texture</a>
+      <a href="#finish">Finish</a>
+      <a href="#oak">Oak &amp; Ageing</a>
+      <a href="#winemaking">Winemaking</a>
+      <a href="#faults">Faults</a>
+    </nav>
+
+    <section class="tv-section" id="structure">
+      <h2>Structure</h2>
+      <p class="tv-section-intro">Structure is the skeleton of a wine. It's what holds everything together and what you feel, not just taste.</p>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Acidity</span>
+          <span class="tv-term-tag">feels like</span>
+        </div>
+        <p>That bright, mouthwatering sensation along the sides of your tongue. High acidity makes you salivate. It's the quality that makes white wines feel crisp and refreshing, and that makes food taste better alongside them. Wines without enough acidity taste flat. Think of the difference between fresh lemon juice and flat soda.</p>
+        <p class="tv-example">Example: Sauvignon Blanc has high acidity. An inexpensive Chardonnay from a warm climate often has low acidity, which is why it can taste "flabby."</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Tannins</span>
+          <span class="tv-term-tag">feels like</span>
+        </div>
+        <p>That dry, slightly grippy feeling in your mouth after a sip of red wine. Tannins come from grape skins, seeds, and oak barrels. They're why your gums feel a bit like you've bitten into an unripe grape. High-tannin wines (Cabernet Sauvignon, Barolo) pair well with fatty, protein-rich foods because the fat softens them. Low-tannin wines (Pinot Noir, Gamay) feel silky and easy to drink on their own.</p>
+        <p class="tv-example">Example: Bite into a grape seed. That dusty, astringent sensation is tannin.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Body</span>
+          <span class="tv-term-tag">feels like</span>
+        </div>
+        <p>How heavy or light the wine feels in your mouth. Full-bodied wines feel like whole milk. Light-bodied wines feel like water or skim milk. It's mostly about alcohol content and how much extract is in the wine. A 15% Napa Cabernet will feel much bigger than a 12% Mosel Riesling.</p>
+        <p class="tv-example">Light-bodied: Pinot Grigio, Beaujolais. Medium: Merlot, Rioja. Full: Shiraz, Zinfandel, Chardonnay from California.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Alcohol</span>
+          <span class="tv-term-tag">feels like</span>
+        </div>
+        <p>You'll sometimes notice warmth at the back of your throat after swallowing. That's alcohol. Wines over 14.5% can feel "hot" if the alcohol isn't balanced by fruit and acidity. A wine with a lot of alcohol but great fruit is "well-integrated." One where alcohol sticks out is "hot" or "boozy."</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Balance</span>
+          <span class="tv-term-tag">the goal</span>
+        </div>
+        <p>When none of the structural elements dominates. You don't notice the acidity or the tannins or the alcohol separately because they all support each other. Balance is what makes a wine easy to drink a second glass of without thinking about it.</p>
+      </div>
+    </section>
+
+    <section class="tv-section" id="flavour">
+      <h2>Flavour</h2>
+      <p class="tv-section-intro">Wine flavours are described in terms of what they remind you of, not what's actually in them. No one adds blackberry to Cabernet. The grape just smells that way.</p>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Primary aromas</span>
+          <span class="tv-term-tag">from the grape</span>
+        </div>
+        <p>Fruit, floral, and herbaceous notes that come directly from the grape variety. These are the freshest, most obvious smells: citrus, stone fruit, red berries, tropical fruit, fresh herbs. Younger wines tend to lead with primary aromas.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Secondary aromas</span>
+          <span class="tv-term-tag">from fermentation</span>
+        </div>
+        <p>Smells that develop during fermentation. Bread, yogurt, cream, cheese, and yeasty notes. You'll notice these most in wines that have been aged on the lees (dead yeast cells) — like Champagne or some Chardonnays.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Tertiary aromas</span>
+          <span class="tv-term-tag">from ageing</span>
+        </div>
+        <p>What happens when wine ages in barrel or bottle. Leather, tobacco, earth, mushroom, dried fruit, nuts, coffee, vanilla, spice. These are the complex smells people associate with "serious" wine. They take time to develop, which is why older wines tend to smell more interesting.</p>
+        <p class="tv-example">A young Chianti smells of fresh cherries (primary). A ten-year-old Chianti smells of dried cherries, leather, and earth (tertiary).</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Minerality</span>
+          <span class="tv-term-tag">the contested one</span>
+        </div>
+        <p>A word wine people argue about endlessly. When used carefully, it describes a flinty, chalky, or wet-stone quality in the flavour or smell of a wine. You might notice it in Chablis, Muscadet, or Mosel Rieslings. Whether it literally comes from the soil is still debated. What matters: you'll know the sensation when you taste it.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Fruit-forward</span>
+          <span class="tv-term-tag">style</span>
+        </div>
+        <p>Wines where fruit flavours dominate from the first sniff to the last sip. New World wines (Australia, USA, Chile) tend to be more fruit-forward. It doesn't mean sweet. It just means the fruit is right out front.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Herbaceous / green</span>
+          <span class="tv-term-tag">flavour</span>
+        </div>
+        <p>Grassy, bell pepper, jalapeño, tomato leaf, or fresh herb notes. Some of this is the variety (Sauvignon Blanc is naturally herbaceous). In reds it can signal underripe grapes. A little green in a Cabernet Franc is lovely. A lot in a Cabernet Sauvignon usually means they picked too early.</p>
+      </div>
+    </section>
+
+    <section class="tv-section" id="texture">
+      <h2>Texture</h2>
+      <p class="tv-section-intro">How a wine feels in your mouth, separate from how it tastes.</p>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Silky / velvety</span>
+          <span class="tv-term-tag">feels like</span>
+        </div>
+        <p>Tannins that are so fine and integrated they feel smooth. The opposite of grippy. Aged Burgundy and well-made Merlot are often described this way.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Grippy / chewy</span>
+          <span class="tv-term-tag">feels like</span>
+        </div>
+        <p>Tannins you can really feel. The wine seems to grab the inside of your mouth. Young Barolos, Tannat, and big Cabernets are often grippy. This isn't a flaw. It's a sign the wine needs either a few years of ageing or a fatty steak alongside it.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Creamy</span>
+          <span class="tv-term-tag">feels like</span>
+        </div>
+        <p>A rich, rounded texture often found in white wines that have gone through malolactic fermentation (the process that converts sharp malic acid into softer lactic acid). Buttery Chardonnays are the classic example.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Watery / thin</span>
+          <span class="tv-term-tag">a flaw</span>
+        </div>
+        <p>Not enough fruit concentration for the wine to feel substantial. Often the result of over-cropped vines or a difficult growing year. The wine tastes dilute, like the flavour has been stretched too far.</p>
+      </div>
+    </section>
+
+    <section class="tv-section" id="finish">
+      <h2>Finish</h2>
+      <p class="tv-section-intro">The finish is what you taste and feel after you swallow. It's one of the best indicators of quality.</p>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Finish / length</span>
+          <span class="tv-term-tag">the aftertaste</span>
+        </div>
+        <p>How long the flavour lingers after you swallow. A short finish disappears almost immediately. A long finish keeps evolving for 30, 60, even 90 seconds. Better wines almost always have longer finishes. It's one of the most reliable quality signals you can notice without any training.</p>
+        <p class="tv-example">Drink a $10 wine and a $50 wine side by side. After swallowing each, count to 10. The $50 wine will almost certainly still be going strong. The $10 wine probably won't.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Clean finish</span>
+          <span class="tv-term-tag">positive</span>
+        </div>
+        <p>The flavour is pleasant from start to finish with no jarring aftertaste. A clean finish is always a good sign.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Bitter finish</span>
+          <span class="tv-term-tag">context-dependent</span>
+        </div>
+        <p>In Italian reds it's often intentional and desirable. In most other wines a pronounced bitter aftertaste is a flaw.</p>
+      </div>
+    </section>
+
+    <section class="tv-section" id="oak">
+      <h2>Oak &amp; Ageing</h2>
+      <p class="tv-section-intro">Oak barrels are the most common ageing vessel in serious winemaking. They add flavour and let tiny amounts of oxygen in, which softens the wine over time.</p>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Oaky</span>
+          <span class="tv-term-tag">flavour</span>
+        </div>
+        <p>Vanilla, coconut, caramel, toast, cedar, or clove notes that come from time in oak barrels. New oak (barrels used for the first time) adds the most flavour. Old oak adds less. Some winemakers love heavy oak. Others avoid it entirely. Whether you like it is personal preference.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Unoaked</span>
+          <span class="tv-term-tag">style</span>
+        </div>
+        <p>Aged in stainless steel or concrete instead of oak, so none of those vanilla or toast notes appear. Unoaked Chardonnay tastes completely different from an oaked one. Crisper, more purely fruity, more mineral.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Lees ageing</span>
+          <span class="tv-term-tag">winemaking</span>
+        </div>
+        <p>Leaving the wine in contact with dead yeast cells (lees) after fermentation. It adds creaminess, complexity, and bread-like or pastry notes. Champagne aged on lees for longer gets a distinctive brioche character. White Burgundy and Muscadet often use this technique.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Malolactic fermentation (MLF)</span>
+          <span class="tv-term-tag">winemaking</span>
+        </div>
+        <p>A second fermentation that converts sharp malic acid (think green apple) into softer lactic acid (think milk). This is what gives many Chardonnays that buttery, creamy quality. It's not about adding butter. It's chemistry.</p>
+      </div>
+    </section>
+
+    <section class="tv-section" id="winemaking">
+      <h2>Winemaking terms</h2>
+      <p class="tv-section-intro">Words you'll see on labels or in reviews that are about how the wine was made.</p>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Terroir</span>
+          <span class="tv-term-tag">teh-RWAH</span>
+        </div>
+        <p>The idea that where a vine grows shapes how the wine tastes. Soil type, climate, altitude, sun exposure, drainage. A Pinot Noir from Burgundy and the same grape from Oregon will taste different partly because of terroir. The word is French and there's genuinely no good English translation.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Vintage</span>
+          <span class="tv-term-tag">the year</span>
+        </div>
+        <p>The year the grapes were harvested. Not when the wine was bottled or released. Vintage matters most in regions with variable climates (Burgundy, Champagne, Bordeaux) where a bad growing season can significantly affect quality. In warm, consistent climates (most of Australia, South America) vintage variation is smaller.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Blend</span>
+          <span class="tv-term-tag">winemaking</span>
+        </div>
+        <p>Wine made from more than one grape variety. Bordeaux is the most famous example, typically blending Cabernet Sauvignon, Merlot, and Cabernet Franc. Blending lets winemakers balance each grape's strengths and weaknesses.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Decanting</span>
+          <span class="tv-term-tag">serving</span>
+        </div>
+        <p>Pouring wine from the bottle into a wide-based glass vessel before serving. This exposes the wine to oxygen, which opens up aromas and softens tannins. Young, tannic reds (Barolo, Cabernet) benefit from 30-90 minutes of decanting. Old wines are decanted to separate the wine from any sediment.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Dosage</span>
+          <span class="tv-term-tag">DOH-sahj</span>
+        </div>
+        <p>The small amount of sweetened wine added to Champagne and other sparkling wines after the disgorging process. It determines how dry or sweet the final wine is. Brut has very low dosage. Demi-sec has more. Extra Brut has almost none.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Natural wine</span>
+          <span class="tv-term-tag">style</span>
+        </div>
+        <p>Wine made with minimal intervention in the vineyard and winery. No added sulphites (or very few), native yeast fermentation, no fining or filtering. There's no official legal definition. Natural wines can be extraordinary or very funky depending on who made them.</p>
+      </div>
+    </section>
+
+    <section class="tv-section" id="faults">
+      <h2>Faults</h2>
+      <p class="tv-section-intro">Things that can go wrong with wine. Useful to know so you can send a bottle back with confidence.</p>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Corked (TCA)</span>
+          <span class="tv-term-tag">fault</span>
+        </div>
+        <p>The most common wine fault. Caused by a compound called TCA (trichloroanisole) that can contaminate natural corks. A corked wine smells like wet cardboard, damp basement, or musty newspaper. The fruit is suppressed and flat. About 3-5% of wines sealed with natural corks are corked to some degree. Always worth sending back at a restaurant.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Oxidised</span>
+          <span class="tv-term-tag">fault</span>
+        </div>
+        <p>Wine that has been exposed to too much oxygen, usually because the cork failed or it's been open too long. Smells like sherry, nuts, or vinegar. The colour may have shifted to brown at the edges. Some wines (actual Sherry, Madeira) are deliberately oxidised. In a table wine, it's a flaw.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Reduction</span>
+          <span class="tv-term-tag">fault or feature</span>
+        </div>
+        <p>A sulphur-related fault that smells like struck matches, rubber, or rotten egg. It's caused by a lack of oxygen during winemaking. The good news: it often blows off with decanting or simply swirling the wine. Some producers intentionally use light reduction as a protective style.</p>
+      </div>
+
+      <div class="tv-term">
+        <div class="tv-term-head">
+          <span class="tv-term-name">Volatile acidity (VA)</span>
+          <span class="tv-term-tag">fault</span>
+        </div>
+        <p>A sharp, vinegary or nail polish remover smell caused by too much acetic acid in the wine. A tiny amount can add complexity. Too much and the wine is undrinkable. If a wine smells aggressively like vinegar, VA is usually the culprit.</p>
+      </div>
+    </section>
+
+    <div class="tv-next">
+      <p>Want to put this to use? The fastest way is to open two bottles side by side and taste them against each other. Pick two Sauvignon Blancs from different countries, or two Cabernets at different price points. The contrast makes every term on this page instantly make sense.</p>
+      <a href="/wine-basics/" class="tv-next-link">More beginner guides &rarr;</a>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .tv-wrap {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  /* Header */
+  .tv-kicker {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8a4a2f;
+    margin-bottom: 16px;
+  }
+
+  .tv-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #1a1713;
+    margin: 0 0 20px;
+  }
+
+  .tv-header h1 em {
+    font-style: italic;
+  }
+
+  .tv-intro {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #4a4540;
+    max-width: 44ch;
+    margin: 0 0 40px;
+  }
+
+  /* Nav */
+  .tv-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px 0;
+    border-top: 1.5px solid #e8e0d4;
+    border-bottom: 1.5px solid #e8e0d4;
+    margin-bottom: 56px;
+  }
+
+  .tv-nav a {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #5c3d2e;
+    text-decoration: none;
+    padding: 5px 12px;
+    border: 1px solid #d4c9b8;
+    border-radius: 2px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .tv-nav a:hover {
+    background: #5c3d2e;
+    color: #f4efe6;
+    border-color: #5c3d2e;
+  }
+
+  /* Sections */
+  .tv-section {
+    margin-bottom: 64px;
+    scroll-margin-top: 80px;
+  }
+
+  .tv-section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1713;
+    margin: 0 0 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #8a4a2f;
+  }
+
+  .tv-section-intro {
+    font-size: 14px;
+    color: #8a8177;
+    margin: 0 0 32px;
+    font-style: italic;
+  }
+
+  /* Terms */
+  .tv-term {
+    padding: 24px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+
+  .tv-term:last-child {
+    border-bottom: none;
+  }
+
+  .tv-term-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .tv-term-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1713;
+  }
+
+  .tv-term-tag {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8a4a2f;
+    background: #f4efe6;
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+
+  .tv-term p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #3a3530;
+    margin: 0 0 10px;
+  }
+
+  .tv-example {
+    font-size: 13.5px !important;
+    color: #6a6560 !important;
+    background: #f9f6f1;
+    border-left: 3px solid #d4c9b8;
+    padding: 10px 14px;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* Next step */
+  .tv-next {
+    margin-top: 64px;
+    padding: 32px;
+    background: #1a1713;
+    color: #f4efe6;
+    border-radius: 2px;
+  }
+
+  .tv-next p {
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0 0 20px;
+  }
+
+  .tv-next-link {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f4efe6;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .tv-next-link:hover {
+    color: #d4a574;
+  }
+
+  @media (max-width: 600px) {
+    .tv-wrap {
+      padding: 40px 16px 64px;
+    }
+  }
+</style>

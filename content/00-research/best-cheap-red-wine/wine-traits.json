@@ -1,0 +1,136 @@
+{
+  "slug": "best-cheap-red-wine",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Domaine Laroque Cite de Carcassonne Pinot Noir 2023",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Languedoc Pinot Noir — light, red cherry, soft tannins, 12.5-13% ABV"]
+    },
+    {
+      "name": "Schug Sonoma Coast Pinot Noir 2023",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Sonoma Coast Pinot Noir — cool-climate, strawberry, cola, 13.5-14% ABV"]
+    },
+    {
+      "name": "Chehalem Estate Grown Chehalem Mountains Pinot Noir 2022",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Willamette Valley Pinot Noir — earthy, structured, Burgundian, 13-13.5% ABV"]
+    },
+    {
+      "name": "Matsu El Picaro 2024",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Toro Tempranillo — concentrated, ripe, 14-14.5% ABV"]
+    },
+    {
+      "name": "E. Guigal Cotes du Rhone Rouge 2022",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Cotes du Rhone GSM — red berry, herbs, peppery, 14% ABV"]
+    },
+    {
+      "name": "Frescobaldi Nipozzano Chianti Rufina Riserva 2022",
+      "tannin": 4,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Chianti Rufina Riserva — Sangiovese, dried cherry, leather, 13-13.5% ABV"]
+    },
+    {
+      "name": "BenMarco Malbec 2022",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Uco Valley Mendoza Malbec — mineral backbone, dark plum, 14% ABV"]
+    },
+    {
+      "name": "Goldschmidt Vineyard Katherine Stonemason Hill Cabernet Sauvignon 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Alexander Valley Cabernet — dark cherry, cedar, firm tannins, 14-14.5% ABV"]
+    },
+    {
+      "name": "Susana Balbo Signature Cabernet Sauvignon 2022",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Uco Valley Cabernet Sauvignon — integrated ripe tannins, dark fruit, 14-14.5% ABV"]
+    },
+    {
+      "name": "Chateau Saint-Andre Corbin 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: St. Emilion Bordeaux — Merlot-dominant, dark plum, tobacco, 13.5-14% ABV"]
+    },
+    {
+      "name": "Buck Summit Old Vine Zinfandel 2023",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Lodi Old Vine Zinfandel — ripe blackberry, spice, 14.5-15% ABV"]
+    },
+    {
+      "name": "Oberon Paso Robles Cabernet Sauvignon 2022",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Paso Robles Cabernet — accessible bold, smooth tannins, 14-14.5% ABV"]
+    },
+    {
+      "name": "Calculated Risk Reserve Cabernet Sauvignon 2023",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["varietal inference: Sonoma Reserve Cabernet — blackberry, cassis, cedar, 14-14.5% ABV"]
+    }
+  ]
+}

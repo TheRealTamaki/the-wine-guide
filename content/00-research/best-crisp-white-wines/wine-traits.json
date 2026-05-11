@@ -1,0 +1,86 @@
+{
+  "slug": "best-crisp-white-wines",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Kim Crawford Sauvignon Blanc 2025",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["Marlborough SB ~13% ABV typical", "Article describes zesty, precise dry finish"]
+    },
+    {
+      "name": "Argiolas Costamolino Vermentino 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Article states 13.7% ABV, 'body behind it'", "Sardinian Vermentino textural style"]
+    },
+    {
+      "name": "Soalheiro Alvarinho 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Article states 12.5% ABV", "Monção e Melgaço denser/textured Alvarinho"]
+    },
+    {
+      "name": "Nigl Freiheit Grüner Veltliner 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 12.5% ABV, medium-bodied, excellent freshness"]
+    },
+    {
+      "name": "Santa Margherita Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 12% ABV", "Alto Adige clean, precise, dry Pinot Grigio"]
+    },
+    {
+      "name": "William Fèvre Chablis Champs Royaux 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 12.5% ABV", "Chablis bone-dry, mineral, unoaked benchmark"]
+    },
+    {
+      "name": "Domaine de la Pépière Muscadet Clisson 2022",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["Muscadet Clisson 12% ABV", "Single-vineyard lees-aged mineral style"]
+    },
+    {
+      "name": "Cloudy Bay Sauvignon Blanc 2025",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Article states 13.5% ABV, more body than Kim Crawford"]
+    }
+  ]
+}

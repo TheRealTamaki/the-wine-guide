@@ -1,0 +1,86 @@
+{
+  "slug": "best-red-wines-for-beginners",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Sur de los Andes Reserva Pinot Noir 2022",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Patagonian Pinot Noir, light-bodied Burgundy style per article", "category guidance (Pinot Noir light)"]
+    },
+    {
+      "name": "BenMarco Malbec 2022",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Uco Valley high-altitude Malbec, ~14% ABV typical", "varietal defaults"]
+    },
+    {
+      "name": "Castellani Chianti Classico Riserva 2019",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Chianti Classico Riserva Sangiovese style", "category guidance (Chianti Classico)"]
+    },
+    {
+      "name": "J. Lohr Estates Seven Oaks Cabernet Sauvignon 2023",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["Paso Robles Cabernet, softer tannins per article description", "varietal defaults (Cabernet)"]
+    },
+    {
+      "name": "Baron Philippe de Rothschild Escudo Rojo Pinot Noir 2023",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["Chilean Pinot Noir, smooth fruit-forward style per article", "varietal defaults"]
+    },
+    {
+      "name": "Vinos de Arganza Alvarez de Toledo Mencia 2021",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["Bierzo Mencia style, Pinot-adjacent per article", "varietal defaults (Mencia)"]
+    },
+    {
+      "name": "Chateau Bourdieu No.1 2018",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["Bordeaux Superieur Merlot-led blend, ~13% ABV typical", "varietal defaults"]
+    },
+    {
+      "name": "Frescobaldi Nipozzano Chianti Rufina Riserva 2022",
+      "tannin": 3,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Chianti Rufina Riserva Sangiovese, fuller than Classico per article", "category guidance"]
+    }
+  ]
+}

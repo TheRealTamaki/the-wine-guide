@@ -1,0 +1,44 @@
+---
+interface Trait {
+  label: string;
+  level: number; // 1-5
+}
+
+interface Props {
+  traits: Trait[];
+  title?: string;
+  caption?: string;
+}
+
+const { traits, title = 'Typical style profile', caption } = Astro.props;
+---
+
+<aside class="not-prose my-8 wine-style-profile">
+  <div class="rounded-xl border border-border bg-surface-low px-5 sm:px-7 py-5 sm:py-6">
+    <div class="mb-4">
+      <span class="block text-[10px] font-bold uppercase tracking-[0.24em] text-accent mb-1">{title}</span>
+      {caption && (
+        <p class="text-sm text-text-muted m-0 leading-snug">{caption}</p>
+      )}
+    </div>
+
+    <ul class="m-0 p-0 list-none space-y-3">
+      {traits.map((t) => {
+        const level = Math.max(1, Math.min(5, t.level));
+        const pct = (level / 5) * 100;
+        return (
+          <li class="grid grid-cols-[5.5rem_1fr_2.25rem] sm:grid-cols-[6.5rem_1fr_2.5rem] items-center gap-3">
+            <span class="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wider">{t.label}</span>
+            <span class="relative h-2 rounded-full bg-surface-highest overflow-hidden" aria-hidden="true">
+              <span
+                class="absolute inset-y-0 left-0 rounded-full bg-accent"
+                style={`width: ${pct}%`}
+              ></span>
+            </span>
+            <span class="text-xs text-text-muted text-right tabular-nums">{level}/5</span>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</aside>

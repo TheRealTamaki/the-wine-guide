@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Best Wine for Brunch: Instagram Carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #241914;
+    --cream: #fff7ec;
+    --paper: #f7ead9;
+    --wine: #5c0718;
+    --rose: #c65f68;
+    --gold: #e7b85d;
+    --green: #53633d;
+    --soft: #f2d5c6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #19090d;
+    color: var(--ink);
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 0;
+  }
+
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+    background: var(--cream);
+    padding: 70px 76px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide.alt { background: var(--paper); }
+  .slide.dark { background: var(--wine); color: var(--cream); }
+  .slide.photo {
+    background:
+      linear-gradient(180deg, rgba(36, 25, 20, 0.18), rgba(36, 25, 20, 0.72)),
+      url("../../..//public/images/best-wine-for-brunch.webp") center / cover no-repeat;
+    color: var(--cream);
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    color: rgba(36, 25, 20, 0.68);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .photo .meta,
+  .dark .meta { color: rgba(255, 247, 236, 0.76); }
+
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bottom { margin-top: auto; }
+
+  .kicker {
+    width: fit-content;
+    color: var(--wine);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .photo .kicker,
+  .dark .kicker { color: var(--gold); }
+
+  h1, h2 {
+    font-family: "Noto Serif", Georgia, serif;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: 0;
+  }
+
+  h1 { font-size: 104px; max-width: 900px; }
+  h1.big { font-size: 122px; }
+  h1.tight { font-size: 88px; }
+  h2 { font-size: 76px; max-width: 860px; }
+
+  .photo h1.big {
+    font-size: 88px;
+    max-width: 860px;
+  }
+
+  .copy {
+    font-size: 36px;
+    line-height: 1.38;
+    max-width: 880px;
+    font-weight: 600;
+  }
+
+  .small-copy {
+    font-size: 30px;
+    line-height: 1.42;
+    max-width: 860px;
+    font-weight: 600;
+  }
+
+  .rule {
+    width: 128px;
+    height: 5px;
+    background: var(--rose);
+    border: 0;
+  }
+
+  .dark .rule,
+  .photo .rule { background: var(--gold); }
+
+  .plate-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .plate {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 28px;
+    border: 3px solid rgba(92, 7, 24, 0.18);
+    background: rgba(255, 247, 236, 0.72);
+  }
+
+  .plate-mark {
+    width: 118px;
+    height: 118px;
+    border-radius: 999px;
+    background: var(--wine);
+    color: var(--cream);
+    display: grid;
+    place-items: center;
+    font-size: 49px;
+    font-weight: 800;
+  }
+
+  .plate b {
+    display: block;
+    font-size: 34px;
+    line-height: 1.13;
+    color: var(--wine);
+  }
+
+  .plate span {
+    display: block;
+    margin-top: 8px;
+    font-size: 25px;
+    line-height: 1.26;
+    color: rgba(36, 25, 20, 0.76);
+    font-weight: 700;
+  }
+
+  .wine-pick {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .bottle {
+    min-height: 470px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.48);
+    border: 3px solid rgba(92, 7, 24, 0.16);
+  }
+
+  .bottle img {
+    max-height: 420px;
+    max-width: 185px;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 18px rgba(36, 25, 20, 0.2));
+  }
+
+  .pick-label {
+    color: var(--rose);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .pick-name {
+    margin-top: 14px;
+    color: var(--wine);
+    font-family: "Noto Serif", Georgia, serif;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 1.05;
+  }
+
+  .reason {
+    margin-top: 24px;
+    color: var(--ink);
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .price {
+    margin-top: 24px;
+    width: fit-content;
+    background: var(--wine);
+    color: var(--cream);
+    padding: 14px 20px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .save-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .save-list li {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 20px;
+    align-items: start;
+    font-size: 32px;
+    line-height: 1.24;
+    font-weight: 700;
+  }
+
+  .save-list li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: var(--gold);
+    margin-top: 10px;
+  }
+
+  .cta {
+    text-align: center;
+    align-items: center;
+  }
+
+  .cta h1 {
+    font-size: 96px;
+    max-width: 900px;
+  }
+
+  .url {
+    color: var(--gold);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+  }
+
+  .blob {
+    position: absolute;
+    right: -180px;
+    bottom: -160px;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    background: rgba(198, 95, 104, 0.14);
+  }
+</style>
+</head>
+<body>
+
+<section class="slide photo" id="s1">
+  <div class="meta"><span>The Wine Guide</span><span>01 / 10</span></div>
+  <div class="body bottom">
+    <span class="kicker">Brunch wine cheat sheet</span>
+    <h1 class="big">Stop opening the same Prosecco every weekend</h1>
+    <hr class="rule">
+    <p class="copy">Your eggs, pancakes, bacon, and avocado toast are all asking for different bottles.</p>
+  </div>
+  <div class="meta bottom"><span>Swipe for the pairings</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide alt" id="s2">
+  <div class="meta"><span>Start here</span><span>02 / 10</span></div>
+  <div class="body">
+    <span class="kicker">The brunch rule</span>
+    <h1 class="tight">Pick the wine by the plate first</h1>
+    <hr class="rule">
+    <p class="copy">Brunch throws maple syrup, hollandaise, bacon, fruit, and toast onto the same table. The smarter move is knowing which bottle belongs with your plate.</p>
+  </div>
+  <div class="meta bottom"><span>Keep swiping</span><span>thewine.guide</span></div>
+  <div class="blob"></div>
+</section>
+
+<section class="slide" id="s3">
+  <div class="meta"><span>Quick picks</span><span>03 / 10</span></div>
+  <div class="body">
+    <span class="kicker">Save this part</span>
+    <h2>Match the bottle to what you are actually eating</h2>
+    <div class="plate-grid">
+      <div class="plate"><div class="plate-mark">1</div><div><b>Mimosas</b><span>Dry Prosecco keeps orange juice fresh.</span></div></div>
+      <div class="plate"><div class="plate-mark">2</div><div><b>Pancakes</b><span>Moscato can handle maple syrup.</span></div></div>
+      <div class="plate"><div class="plate-mark">3</div><div><b>Eggs Benedict</b><span>Chardonnay has the body for hollandaise.</span></div></div>
+      <div class="plate"><div class="plate-mark">4</div><div><b>Bacon and eggs</b><span>Light Pinot Noir works better than you think.</span></div></div>
+    </div>
+  </div>
+  <div class="meta bottom"><span>Now the bottles</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide alt" id="s4">
+  <div class="meta"><span>Mimosas</span><span>04 / 10</span></div>
+  <div class="body">
+    <div class="wine-pick">
+      <div class="bottle"><img src="https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/o3smk8maejbbv2yq7pvn.jpg" alt="La Marca Prosecco bottle"></div>
+      <div>
+        <div class="pick-label">Best for mimosas</div>
+        <div class="pick-name">La Marca Prosecco</div>
+        <p class="reason">Green apple, lemon, and fine bubbles. Mix it three-to-one with fresh orange juice and call brunch handled.</p>
+        <div class="price">Around $19</div>
+      </div>
+    </div>
+  </div>
+  <div class="meta bottom"><span>04 / 10</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide" id="s5">
+  <div class="meta"><span>Pancakes</span><span>05 / 10</span></div>
+  <div class="body">
+    <div class="wine-pick">
+      <div class="bottle"><img src="https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/zdt2mppcjy1junls6prk.jpg" alt="Saracco Moscato d'Asti bottle"></div>
+      <div>
+        <div class="pick-label">Best for French toast</div>
+        <div class="pick-name">Saracco Moscato d'Asti</div>
+        <p class="reason">Maple syrup beats dry wine flat. This is peachy, gently fizzy, 5.5% ABV, and sweet enough to keep up.</p>
+        <div class="price">Around $16</div>
+      </div>
+    </div>
+  </div>
+  <div class="meta bottom"><span>05 / 10</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide alt" id="s6">
+  <div class="meta"><span>Avocado toast</span><span>06 / 10</span></div>
+  <div class="body">
+    <div class="wine-pick">
+      <div class="bottle"><img src="https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/zwich78zgrepaaqjlmlw.jpg" alt="Kim Crawford Sauvignon Blanc bottle"></div>
+      <div>
+        <div class="pick-label">Best crisp white</div>
+        <div class="pick-name">Kim Crawford Sauvignon Blanc</div>
+        <p class="reason">Lime, fresh herbs, and bright acidity cut through avocado and make smoked salmon feel sharper.</p>
+        <div class="price">Under $18</div>
+      </div>
+    </div>
+  </div>
+  <div class="meta bottom"><span>06 / 10</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide" id="s7">
+  <div class="meta"><span>Eggs Benedict</span><span>07 / 10</span></div>
+  <div class="body">
+    <div class="wine-pick">
+      <div class="bottle"><img src="https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/xqo0nuwemzygk1lc7rme.jpg" alt="La Crema Chardonnay bottle"></div>
+      <div>
+        <div class="pick-label">Best for hollandaise</div>
+        <div class="pick-name">La Crema Chardonnay</div>
+        <p class="reason">Creamy texture, lemon, and golden peach. It has enough body for rich eggs without turning heavy.</p>
+        <div class="price">Around $22</div>
+      </div>
+    </div>
+  </div>
+  <div class="meta bottom"><span>07 / 10</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide alt" id="s8">
+  <div class="meta"><span>Patio brunch</span><span>08 / 10</span></div>
+  <div class="body">
+    <div class="wine-pick">
+      <div class="bottle"><img src="https://assets.wine.com/winecom/image/upload/e_trim/w_200,h_400,c_fit,q_auto:best,fl_progressive/mrfbwld3nwqfxc1hrvzd.jpg" alt="Miraval Rose bottle"></div>
+      <div>
+        <div class="pick-label">Best rose</div>
+        <div class="pick-name">Miraval Rose</div>
+        <p class="reason">Dry Provence rose with strawberry, white peach, and enough acidity for quiche, fruit, charcuterie, and sunshine.</p>
+        <div class="price">Around $25</div>
+      </div>
+    </div>
+  </div>
+  <div class="meta bottom"><span>08 / 10</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide" id="s9">
+  <div class="meta"><span>Bookmark this</span><span>09 / 10</span></div>
+  <div class="body">
+    <span class="kicker">Brunch wine map</span>
+    <h1 class="tight">Next weekend, choose like this</h1>
+    <hr class="rule">
+    <ul class="save-list">
+      <li>Mimosas: dry Prosecco</li>
+      <li>Pancakes or French toast: Moscato d'Asti</li>
+      <li>Avocado toast: Sauvignon Blanc</li>
+      <li>Eggs Benedict: Chardonnay</li>
+      <li>Patio brunch: dry Provence rose</li>
+      <li>Bacon and eggs: chilled light Pinot Noir</li>
+    </ul>
+  </div>
+  <div class="meta bottom"><span>One more slide</span><span>thewine.guide</span></div>
+</section>
+
+<section class="slide dark" id="s10">
+  <div class="meta"><span>The Wine Guide</span><span>10 / 10</span></div>
+  <div class="body cta">
+    <span class="kicker">Want the full bottle list?</span>
+    <h1>Read the full brunch wine guide</h1>
+    <hr class="rule">
+    <p class="copy">12 bottles for mimosas, eggs Benedict, pancakes, avocado toast, rose on the patio, and light reds before noon.</p>
+    <div class="url">thewine.guide/best-wines/<br>best-wine-for-brunch</div>
+  </div>
+  <div class="meta bottom"><span>Link in bio</span><span>Follow for smarter pours</span></div>
+</section>
+
+</body>
+</html>

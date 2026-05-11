@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wine Image Skill"
+  short_description: "Create iPhone-style wine post images."
+  default_prompt: "Create an optimized iPhone-style image for this Wineology post and report the asset path and frontmatter fields to use."

@@ -1,42 +1,219 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ui/ArticleCard.astro';
+import QuickAnswer from '../../components/content/QuickAnswer.astro';
 import { getCollection } from 'astro:content';
 
 const articles = (await getCollection('articles', (a) =>
   a.data.category === 'grapes' && !a.data.draft
-)).sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+)).sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const REDS = new Set([
+  'cabernet-franc', 'cabernet-sauvignon', 'gamay', 'grenache', 'malbec',
+  'merlot', 'nebbiolo', 'pinot-noir', 'sangiovese', 'syrah-shiraz',
+  'tempranillo', 'zinfandel',
+]);
+const WHITES = new Set([
+  'chardonnay', 'chenin-blanc', 'gewurztraminer', 'moscato', 'pinot-grigio',
+  'riesling', 'sauvignon-blanc', 'viognier',
+]);
+
+const slugOf = (a: typeof articles[number]) =>
+  a.id.replace('grapes/', '').replace(/\.mdx?$/, '');
+
+const reds = articles.filter((a) => REDS.has(slugOf(a)));
+const whites = articles.filter((a) => WHITES.has(slugOf(a)));
+
+const today = new Date().toISOString().split('T')[0];
 ---
 
 <BaseLayout
-  title="Grapes"
-  description="Deep dives on every major grape variety. What makes them tick and which bottles to buy."
+  title="Grape Varieties Guide: Every Major Wine Grape Explained"
+  description="A plain-English guide to the grape varieties behind every bottle. Taste profiles, key regions, food pairings, and how to pick your next favourite."
 >
-  <div class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <header class="max-w-[42rem] mb-10">
+  <article class="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 prose prose-lg">
+    <header class="not-prose mb-6">
       <span class="text-xs font-semibold uppercase tracking-wider text-accent">Grapes</span>
-      <h1 class="mt-2 font-heading text-[2rem] font-bold text-primary leading-tight">Grapes</h1>
-      <p class="mt-3 text-lg text-secondary leading-relaxed">Deep dives on every major grape variety. What makes them tick and which bottles to buy.</p>
+      <h1 class="mt-2 font-heading text-[2.25rem] sm:text-[2.5rem] font-bold text-primary leading-tight">
+        Grape Varieties Guide: Every Major Wine Grape Explained
+      </h1>
+      <p class="mt-4 text-base text-text-muted">By Claire Bennett · Updated {today}</p>
     </header>
 
-    {articles.length > 0 ? (
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((article) => {
-          const slug = article.id.replace('grapes/', '').replace(/\.mdx?$/, '');
-          return (
-            <ArticleCard
-              title={article.data.title}
-              description={article.data.description}
-              href={`/grapes/${slug}/`}
-              category={article.data.category}
-              date={article.data.publishDate}
-              ogImage={article.data.ogImage}
-            />
-          );
-        })}
-      </div>
-    ) : (
-      <p class="text-text-muted">Guides coming soon.</p>
+    <QuickAnswer answer="A grape variety is the type of grape a wine is made from, and it's the single biggest factor in how the wine tastes. Around 30 grape varieties make up most of what you'll see on a wine list, and learning the personality of each one is the fastest path to picking bottles you actually like." />
+
+    <p>You've stood in front of a bottle shop wall, eyes flicking from "Cabernet" to "Pinot" to "Riesling", and grabbed whatever's familiar. Because at least you know it won't be a disaster. The problem is that the same grape can taste completely different depending on where it grew and who made the wine, and the gap between a Marlborough Sauvignon Blanc and a Sancerre is bigger than most people realise. This page breaks down every major grape variety we cover, so the next time you're scanning a label you'll know what you're walking into.</p>
+
+    <p>By the end of this page you'll know:</p>
+
+    <ul>
+      <li>The single most useful number on any wine bottle (and it's not the price)</li>
+      <li>Why the same grape can taste like two different wines depending on the country</li>
+      <li>The four white grapes that cover almost every white wine you'll ever drink</li>
+      <li>The "gateway grape" that gets more first-time red drinkers hooked than any other</li>
+      <li>The one rule that makes pairing wine and food almost foolproof, no matter what's on the plate</li>
+      <li>How to spot a quality bottle in the $15 to $25 zone without doing any research at all</li>
+    </ul>
+
+    <hr />
+
+    <h2>What Is a Grape Variety?</h2>
+
+    <p>A grape variety, or "varietal", is the specific type of grape used to make a wine. Almost every wine on the shelf is made from the European wine grape species <em>Vitis vinifera</em>, but within that species there are over 10,000 known varieties. About 30 of them dominate the global wine trade, and roughly 20 of those are what you'll see on most restaurant lists.</p>
+
+    <p>If a label says "Pinot Noir", "Chardonnay", or "Riesling", it's a single-variety wine. If it says "Bordeaux", "Châteauneuf-du-Pape", or "Côtes du Rhône", it's almost always a blend of several grapes that have been planted together for centuries because they make better wine combined than alone. Both styles are valid. Single-variety wines tend to express the personality of one grape clearly. Blends layer different grapes to fill in each other's gaps.</p>
+
+    <p>Here's why this matters for you as a drinker. Once you know that Cabernet Sauvignon is structured and grippy, that Pinot Noir is light and silky, that Chardonnay can swing from steely Chablis to tropical Aussie, and that Riesling can be bone-dry or dessert-sweet, you can read a wine list without panicking. You don't need to memorise every region or every producer. You just need to know the grape's personality and a couple of style cues to confirm what you're getting.</p>
+
+    <h2>How Many Grape Varieties Should I Actually Know?</h2>
+
+    <p>Twenty grapes will cover roughly 90% of every bottle you'll encounter at a normal restaurant or bottle shop. That's a small enough number to genuinely learn in a few months of casual drinking. We've written a detailed page on each one, linked below. Read three or four to start, taste the wines as you go, and you'll be ahead of almost everyone you drink with.</p>
+
+    <p>The twenty grapes worth knowing split cleanly into reds and whites:</p>
+
+    <p><strong>Reds:</strong> <a href="/grapes/cabernet-sauvignon/">Cabernet Sauvignon</a>, <a href="/grapes/merlot/">Merlot</a>, <a href="/grapes/pinot-noir/">Pinot Noir</a>, <a href="/grapes/syrah-shiraz/">Syrah/Shiraz</a>, <a href="/grapes/malbec/">Malbec</a>, <a href="/grapes/zinfandel/">Zinfandel</a>, <a href="/grapes/sangiovese/">Sangiovese</a>, <a href="/grapes/nebbiolo/">Nebbiolo</a>, <a href="/grapes/tempranillo/">Tempranillo</a>, <a href="/grapes/grenache/">Grenache</a>, <a href="/grapes/cabernet-franc/">Cabernet Franc</a>, <a href="/grapes/gamay/">Gamay</a>.</p>
+
+    <p><strong>Whites:</strong> <a href="/grapes/chardonnay/">Chardonnay</a>, <a href="/grapes/sauvignon-blanc/">Sauvignon Blanc</a>, <a href="/grapes/riesling/">Riesling</a>, <a href="/grapes/pinot-grigio/">Pinot Grigio</a>, <a href="/grapes/moscato/">Moscato</a>, <a href="/grapes/gewurztraminer/">Gewürztraminer</a>, <a href="/grapes/viognier/">Viognier</a>, <a href="/grapes/chenin-blanc/">Chenin Blanc</a>.</p>
+
+    <h2>Why Does the Same Grape Taste Different in Different Places?</h2>
+
+    <p>Climate is the headline answer. Cooler climates push grapes to ripen slowly, holding onto more acidity and producing lighter, more savoury wines. Warmer climates ripen grapes harder and faster, producing rounder, riper, more fruit-driven wines with more alcohol. A Pinot Noir from Burgundy and a Pinot Noir from California are the same grape, but the Burgundy will taste like cherries and forest floor with a pinch of earth, while the Californian will taste like ripe black cherry and vanilla oak. Neither is better. They're built for different moods.</p>
+
+    <p>Soil plays a quieter but real role. The chalk and limestone of Champagne and Chablis lift acidity and add a flinty edge. The granite of Beaujolais gives Gamay its mineral spine. The schist of Priorat concentrates Garnacha into something inkier and more intense than the Garnacha grown 20 kilometres away on different soil. You don't need to study soil maps. You just need to know that "where it's grown" is doing real work on the flavour.</p>
+
+    <p>Winemaking choices are the third lever. Whether the wine sees oak, how long it ferments, whether it goes through malolactic fermentation, whether it's filtered, how long it ages before release. A South Australian Chardonnay matured in new French oak will taste nothing like a Chablis raised in stainless steel, even though both are 100% Chardonnay. Once you've tasted both, you'll never look at a Chardonnay label the same way again.</p>
+
+    <h2>What Are the Major Red Grape Varieties?</h2>
+
+    <p>Reds split most usefully by body weight. Light-bodied reds feel almost weightless on the palate. Full-bodied reds coat your mouth and stick around. Medium-bodied reds sit between. Body weight is the single most useful filter when you're picking a red, because it tells you what the wine will feel like and what food will work alongside it.</p>
+
+    <p><strong>Light-bodied reds:</strong> Pinot Noir, Gamay, Grenache (in lighter expressions), Cabernet Franc from cooler regions. These reward a 15-minute chill and pair beautifully with lighter food. Salmon, roast chicken, mushroom dishes, charcuterie boards.</p>
+
+    <p><strong>Medium-bodied reds:</strong> Merlot, Sangiovese, Tempranillo, Zinfandel (lighter examples), Cabernet Franc. The most flexible food category. Pasta, pizza, roast pork, lamb shanks, weeknight dinners.</p>
+
+    <p><strong>Full-bodied reds:</strong> Cabernet Sauvignon, Syrah/Shiraz, Malbec, Nebbiolo, Zinfandel (riper examples). Built for hearty food. Steak, BBQ, lamb, stews, hard aged cheeses. Most full reds benefit from 30 minutes of decanting before serving.</p>
+
+    <p>If you're newer to red wine, start with Merlot or Pinot Noir. Both are forgiving, neither has aggressive tannins, and both will tell you a lot about your own taste. If you already know you like big reds, Cabernet Sauvignon and Malbec are the most reliable picks under $25.</p>
+
+    <h2>What Are the Major White Grape Varieties?</h2>
+
+    <p>Whites are easiest to organise by aromatics and weight. Some whites are crisp and zippy, built for hot afternoons and seafood. Others are richer and rounder, more like a small meal in themselves. A few are aromatic outliers that smell like a perfume counter and pair with food that scares other wines off.</p>
+
+    <p><strong>Crisp and zippy:</strong> Sauvignon Blanc, Pinot Grigio, unoaked Chardonnay (Chablis), Albariño. Drink cold, drink young, pair with seafood, salads, goat cheese.</p>
+
+    <p><strong>Rich and round:</strong> Oaked Chardonnay (California, Margaret River, white Burgundy), Viognier, dry Chenin Blanc from South Africa. Bigger body, often barrel influence, work with creamy pastas, roast chicken, lobster.</p>
+
+    <p><strong>Aromatic and off-dry:</strong> Riesling (often slightly sweet), Gewürztraminer, Moscato, demi-sec Chenin Blanc. The "spicy food" category. Thai, Indian, Sichuan, anything with chilli or sweet glaze. Sweetness in the wine cools the heat in the food.</p>
+
+    <p>If you're new to white wine, Pinot Grigio is the safest bet, Sauvignon Blanc is the most flavoursome bet, and Riesling is the most rewarding bet once you get past the "is it sweet?" worry. Riesling labels can be tricky but the payoff is the most food-friendly white wine in the world.</p>
+
+    <h2>What's the Difference Between Old World and New World Wine?</h2>
+
+    <p>"Old World" means Europe: France, Italy, Spain, Germany, Portugal, Austria. "New World" is everywhere else: Australia, Argentina, Chile, the United States, New Zealand, South Africa. The difference goes beyond geography.</p>
+
+    <p>Old World wines tend to be more restrained, with higher acidity, lower alcohol, and more earthy, savoury, or mineral character. They often need food to show their best. New World wines tend to be riper, fuller, fruitier, and more immediately approachable. Same grape, different mood.</p>
+
+    <p>A Chardonnay from Chablis (Old World) is steely, lean, and tastes faintly of oyster shell. A Chardonnay from Sonoma (New World) is buttery, rounder, and leans into ripe pear and vanilla. Both are made from the same grape. Neither is superior. Knowing which style you're in the mood for is half the battle when you're scanning a wine list.</p>
+
+    <h2>How Should I Use This Guide?</h2>
+
+    <p>Pick three grapes you don't know well. One red, one white, one wildcard. Read the page on each, write down a producer or two we mention, and buy a bottle of each over the next three weekends. Drink them with the food we recommend. Take a five-minute mental note of what you noticed. Repeat with three more grapes the following month.</p>
+
+    <p>Within six months you'll have a working sense of about twelve major grape varieties, which is more than 95% of casual wine drinkers ever bother to learn. You'll stop ordering the same Pinot Grigio at every restaurant. You'll start spotting good value bottles in the $15 to $25 zone the way other people spot a cheap flight. And you'll know what you actually like, instead of relying on whatever's familiar.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What's the difference between a varietal wine and a blend?</h3>
+
+    <p>A varietal wine is made primarily from a single grape variety. Most countries require around 75% to 85% of the named grape to put it on the label. A blend uses two or more grape varieties, either co-fermented together or blended after fermentation. Bordeaux, Châteauneuf-du-Pape, and most Australian "GSM" reds are blends. Most Burgundy, Marlborough Sauvignon Blanc, and Mosel Riesling are single-varietal.</p>
+
+    <h3>What's the easiest grape variety for beginners?</h3>
+
+    <p>For reds, Merlot or Pinot Noir. Both are low to medium tannin, soft, and rarely surprise. For whites, Pinot Grigio is the most neutral starting point and Moscato is the friendliest sweet white. If you want one grape that's flexible across food and styles, Riesling is the most versatile and the most underrated white wine on shelf.</p>
+
+    <h3>Are there really 10,000 grape varieties?</h3>
+
+    <p>Yes, but only about 1,300 are grown commercially and only about 30 dominate global wine production. The rest are local heritage varieties, rare clones, or research grapes. You'll do well to know the top 20. The next 10 are bonus knowledge for when you start exploring lesser-known regions like Greece, Hungary, or Sicily.</p>
+
+    <h3>How do I know if a grape will be sweet or dry?</h3>
+
+    <p>Most wine on shelves is dry, including almost every red and most whites you'll see. The classic exceptions are Moscato (often sweet), Riesling (varies widely), Gewürztraminer (often off-dry), and dessert wines (always sweet). Riesling is the trickiest. Look for "Trocken" on German labels for dry, "Kabinett" or "Spätlese" for off-dry, and avoid "Auslese" or anything higher unless you want sweet.</p>
+
+    <h3>Does the grape variety matter more than the region?</h3>
+
+    <p>For a beginner, the grape matters more. It tells you what the wine is fundamentally going to taste like. Once you know your grapes, the region becomes the next layer of nuance. A Cabernet from Napa, Bordeaux, and Coonawarra are all recognisably Cabernet. The region just shades the personality.</p>
+
+    <h3>What grape variety is in Champagne?</h3>
+
+    <p>Champagne is a blend of three grapes: Chardonnay (white), Pinot Noir (red, white-pressed for sparkling), and Pinot Meunier (red, also white-pressed). A "Blanc de Blancs" Champagne is 100% Chardonnay. A "Blanc de Noirs" is made only from the two Pinot grapes. The grapes are red on the vine but the juice runs clear, which is how you get a white sparkling wine from red grapes.</p>
+
+    <hr />
+
+    <p class="text-base text-text-muted">Pick a grape and dig in. Each guide covers the personality, the regions worth knowing, the food it loves, and the price point that punches above its weight.</p>
+  </article>
+
+  <section class="max-w-[72rem] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    {reds.length > 0 && (
+      <>
+        <h2 class="font-heading text-2xl font-bold text-primary mb-6">Red Grape Varieties</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {reds.map((article) => {
+            const slug = slugOf(article);
+            return (
+              <ArticleCard
+                title={article.data.title}
+                description={article.data.description}
+                href={`/grapes/${slug}/`}
+                category={article.data.category}
+                date={article.data.publishDate}
+                ogImage={article.data.ogImage}
+              />
+            );
+          })}
+        </div>
+      </>
     )}
-  </div>
+
+    {whites.length > 0 && (
+      <>
+        <h2 class="font-heading text-2xl font-bold text-primary mb-6">White Grape Varieties</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whites.map((article) => {
+            const slug = slugOf(article);
+            return (
+              <ArticleCard
+                title={article.data.title}
+                description={article.data.description}
+                href={`/grapes/${slug}/`}
+                category={article.data.category}
+                date={article.data.publishDate}
+                ogImage={article.data.ogImage}
+              />
+            );
+          })}
+        </div>
+      </>
+    )}
+  </section>
+
+  <section class="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="border-t border-border pt-8">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-text-muted mb-4">About the author</h2>
+      <div class="flex gap-4 items-start">
+        <img
+          src="/images/author-claire.webp"
+          alt="Claire Bennett"
+          class="w-20 h-20 rounded-full object-cover shrink-0"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <p class="text-base font-semibold text-primary">Claire Bennett, Wine Editor</p>
+          <p class="text-sm text-text-muted leading-relaxed mt-2">
+            Claire learned wine from the inside. She spent years on the marketing teams at two of Australia's major wine companies, directing photoshoots, sitting across from top winemakers for on-camera interviews, and running the monthly magazine at one of the brands. She also sold wine over the phone to wine-club members, week after week, talking them through their next case. That's where her recommendation instinct comes from.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

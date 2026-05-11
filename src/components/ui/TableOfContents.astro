@@ -11,12 +11,8 @@ interface Props {
 
 const { headings } = Astro.props;
 
-// Only show h2 and h3, and exclude FAQ + its child question headings
-const faqIndex = headings.findIndex(
-  (h) => h.depth === 2 && /frequently asked questions|faqs?/i.test(h.text)
-);
-const beforeFaq = faqIndex === -1 ? headings : headings.slice(0, faqIndex);
-const filtered = beforeFaq.filter((h) => h.depth === 2 || h.depth === 3);
+// Show H2 headings only. Include the FAQ H2 so readers can jump to it.
+const filtered = headings.filter((h) => h.depth === 2);
 ---
 
 {filtered.length > 1 && (
@@ -27,7 +23,7 @@ const filtered = beforeFaq.filter((h) => h.depth === 2 || h.depth === 3);
     <nav aria-label="Table of contents">
       <ol class="space-y-2">
         {filtered.map((heading) => (
-          <li class={heading.depth === 3 ? 'pl-4' : ''}>
+          <li>
             <a
               href={`#${heading.slug}`}
               class="toc-link block text-sm text-text-muted hover:text-accent transition-colors duration-200 cursor-pointer leading-snug py-1"

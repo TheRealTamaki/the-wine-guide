@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4in" height="5in" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">The Wine Guide minimal modern label</title>
+  <desc id="desc">A spare modern wine bottle label for The Wine Guide.</desc>
+  <rect width="1200" height="1500" fill="#fbf3e4"/>
+  <rect x="70" y="70" width="1060" height="1360" fill="none" stroke="#1f1f1f" stroke-width="4"/>
+  <rect x="132" y="132" width="936" height="1236" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
+
+  <text x="600" y="226" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="800" text-anchor="middle" fill="#1f1f1f" letter-spacing="7">THE WINE GUIDE</text>
+  <text x="600" y="304" font-family="JetBrains Mono, Consolas, monospace" font-size="22" text-anchor="middle" fill="#584141" letter-spacing="4">MODERN TABLE RED</text>
+
+  <line x1="600" y1="398" x2="600" y2="708" stroke="#570013" stroke-width="10"/>
+  <circle cx="600" cy="550" r="82" fill="none" stroke="#570013" stroke-width="10"/>
+  <line x1="484" y1="708" x2="716" y2="708" stroke="#570013" stroke-width="10"/>
+
+  <text x="600" y="884" font-family="Playfair Display, Georgia, serif" font-size="116" font-weight="700" text-anchor="middle" fill="#1f1f1f">Good Call</text>
+  <text x="600" y="958" font-family="Inter, Arial, sans-serif" font-size="34" text-anchor="middle" fill="#3a3530">The bottle you bring when dinner matters.</text>
+
+  <g font-family="JetBrains Mono, Consolas, monospace" fill="#1f1f1f" font-size="24" letter-spacing="3">
+    <text x="168" y="1218">RED WINE</text>
+    <text x="600" y="1218" text-anchor="middle">750 ML</text>
+    <text x="1032" y="1218" text-anchor="end">13.5%</text>
+  </g>
+  <rect x="168" y="1276" width="864" height="2" fill="#1f1f1f"/>
+  <text x="600" y="1342" font-family="Inter, Arial, sans-serif" font-size="24" text-anchor="middle" fill="#584141">wineguide.co</text>
+</svg>

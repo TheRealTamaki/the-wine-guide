@@ -1,10 +1,19 @@
 # SEO Workspace
 
-Last updated: 2026-04-13
+Last updated: 2026-04-25
 
 ## What This Workspace Is
 
-On-page SEO optimization and content auditing. Upstream: final articles from `/content/04-final/`. Downstream: optimized content goes to `/src/` for site publishing.
+> **SEO tool for ALL article types (BOFU + MOFU): `beuron-seo`.** The `neuronwriter-seo` skill is NOT used on this site. Beuron-scored term packs live at `research/competitor-data/[keyword]/scored_terms.json`. Re-use existing packs whenever they exist; re-running Beuron costs Firecrawl credits.
+
+SEO auditing and post-hoc term coverage analysis. **Note: for new articles, SEO optimization now happens inline on the draft in `content/02-drafts/`, not as a separate stage.** Beuron terms are pulled at brief time (Stage 1) and absorbed during drafting (Stage 2). One gap sweep at polish time (Stage 3). No `seo/optimized/` hop for new articles.
+
+This workspace is now primarily for:
+- **Auditing already-shipped pages** — pull NW terms and check coverage of live articles
+- **Re-optimising shipped articles** based on GSC data
+- **Running standalone keyword audits** for new topic research
+
+Upstream: live pages in `src/content/articles/`. Downstream: findings flow back into the article draft in `02-drafts/` for re-deploy via `scripts/deploy-listicle.mjs`.
 
 ---
 
@@ -12,10 +21,11 @@ On-page SEO optimization and content auditing. Upstream: final articles from `/c
 
 | Task | Load These | Skip These |
 |------|-----------|------------|
-| Optimize an article for SEO | Final article from `/content/04-final/`, `REFERENCES.md` | `audits/` (unless re-optimizing) |
-| Run a keyword audit | `REFERENCES.md`, keyword data from `/research/keywords/` | `optimized/` files |
+| Audit a live article's SEO coverage | Live MDX from `src/content/articles/`, `REFERENCES.md` | `optimized/` archive |
+| Re-optimise a shipped article | Live MDX from `src/content/articles/`, pull Beuron terms | `optimized/` archive (pre-2026-04-25) |
+| Run a keyword audit | `REFERENCES.md`, keyword data from `/research/keywords/` | `optimized/` archive |
 | Audit existing pages | `REFERENCES.md`, `docs/seo-checklist.md` | `/content/` pipeline files |
-| Check term coverage | Use `/neuronwriter-seo` or `/beuron-seo` directly | Everything — tool provides data |
+| Check term coverage | Use `/beuron-seo` directly | Everything — tool provides data |
 
 ---
 
@@ -28,19 +38,23 @@ seo/
 ├── docs/
 │   └── seo-checklist.md ← On-page SEO checklist
 ├── audits/             ← Page/site audit reports ([topic]-audit.md)
-└── optimized/          ← SEO-optimized article versions ([topic]-seo.md)
+└── optimized/          ← ARCHIVE ONLY (pre-2026-04-25 SEO passes; new articles skip this)
 ```
 
 ---
 
 ## The Process
 
-1. **Take final article** from `/content/04-final/`
-2. **Run term analysis** — Use `/neuronwriter-seo` or `/beuron-seo` to get SERP-based term recommendations
-3. **Optimize content** — Weave in missing terms naturally (don't keyword-stuff)
-4. **Write meta tags** — Title tag, meta description, OG tags
-5. **Save optimized version** to `optimized/` as `[topic]-seo.md`
-6. **Run audit** if needed — Save to `audits/` as `[topic]-audit.md`
+**For new articles: SEO happens in the draft file at Stage 3.** See `content/docs/listicle-template.md`.
+
+**For auditing or re-optimising a live article:**
+
+1. **Load the live MDX** from `src/content/articles/[category]/[slug].mdx`
+2. **Run term analysis** — `/beuron-seo` for SERP-based term recommendations
+3. **Identify gaps** — list terms missing from the live article
+4. **Patch the draft** in `content/02-drafts/[slug]_draft.mdx` (restore the draft from git if needed)
+5. **Re-deploy** via `node scripts/deploy-listicle.mjs [slug]`
+6. **Log the audit** in `seo/audits/[topic]-audit.md` with before/after scores
 
 ---
 
@@ -48,23 +62,17 @@ seo/
 
 | Skill / Tool | When to Use | How |
 |-------------|-------------|-----|
-| `/neuronwriter-seo` | **Main pages only** — Pillar pages, high-volume BOFU buying guides, high-priority content. Uses NeuronWriter API (paid credits). | `/neuronwriter-seo [target keyword]` |
-| `/beuron-seo` | **All other pages** — Standard MOFU/TOFU content, lower-priority articles, grape/region pages. Self-hosted, no credit cost. | `/beuron-seo` with target keyword |
+| `/beuron-seo` | **All article types — BOFU + MOFU.** SERP-based term extraction and content scoring. Uses Firecrawl for competitor scrapes (paid credits per scrape — re-use stored term packs at `research/competitor-data/[keyword]/scored_terms.json` whenever possible). | `/beuron-seo` with target keyword |
 | `/dataforseo` | **Need search volume or SERP data for a keyword.** | `/dataforseo` — keyword research queries |
 | `/serp-scraper` | **Need to analyze what's currently ranking.** | `/serp-scraper` — scrape top results as markdown |
 
 ### Which SEO Skill to Use (Decision Guide)
 
-Use **`/neuronwriter-seo`** for:
-- Pillar pages (wine-basics, types-of-wine, food-wine-pairing, grape-varieties, wine-regions, wine-buying-guide, wine-glossary)
-- High-volume BOFU pages (best wines under $20, best wine subscription, best wine fridge, etc.)
-- Any page with Est Vol 5K+ or Priority 1
-
 Use **`/beuron-seo`** for:
-- Standard grape variety pages, region guides, pairing pages
-- Lower-priority BOFU pages (gift guides, seasonal, comparisons)
-- TOFU how-to and educational content
-- Everything else
+- **All article types**: `best-wines/*` listicles, `wine-tools/*`, `gift-guides/*`, `compare/*`, `pairing/*`, `food-wine-pairing/*`, regions, grapes, pillar pages.
+- The `neuronwriter-seo` skill is NOT used on this site — for any article type. Do not invoke it.
+
+TOFU/educational pages (`wine-basics/*`, `wine-glossary/*`, `regions/*`, `grapes/*`, `types-of-wine/*`) get Beuron only when the brief calls for it; default for TOFU is voice and structure quality control without an SEO term pass.
 
 ### Skills That Could Plug In Here (Not Configured)
 
@@ -78,4 +86,6 @@ Use **`/beuron-seo`** for:
 - **Don't keyword-stuff** — Terms must read naturally; if it sounds forced, rewrite the sentence
 - **Don't modify the article's voice** — SEO optimization preserves the writer's style
 - **Don't skip term analysis** — Gut-feel optimization underperforms data-driven optimization
-- **Don't load content pipeline files** — Work only with final articles from `04-final/`
+- **Don't load content pipeline files** — Work only with live articles in `src/content/articles/` and the draft in `02-drafts/`
+- **Don't add terms to intro paragraphs** — The intro is where readers decide to stay or leave. Keyword passes degrade it most. Use absorption zones in order: FAQ answers → wine/product descriptions → secondary sections → WineTip callouts. If a term only fits in the intro, skip it.
+- **After every keyword pass, review the intro** — Re-read the first three paragraphs against the voice guide. Rewrite any sentence that reads as process-first, clinical, or unnatural before the article ships.

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Wine Guide Bottle Labels</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --ink: #1f1f1f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+      }
+      main {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 40px 24px;
+      }
+      h1 {
+        margin: 0 0 24px;
+        font-family: Georgia, serif;
+        font-size: 42px;
+      }
+      .labels {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      figure {
+        margin: 0;
+      }
+      img {
+        width: 100%;
+        display: block;
+        background: white;
+        border: 1px solid #1f1f1f;
+      }
+      figcaption {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      @media print {
+        body { background: white; }
+        main { padding: 0; max-width: none; }
+        h1, figcaption { display: none; }
+        .labels {
+          display: block;
+        }
+        figure {
+          break-after: page;
+          page-break-after: always;
+          width: 4in;
+          margin: 0 auto;
+        }
+        img {
+          width: 4in;
+          height: 5in;
+          border: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>The Wine Guide Bottle Labels</h1>
+      <section class="labels" aria-label="Bottle label concepts">
+        <figure>
+          <img src="./wine-guide-label-classic.svg" alt="Classic label">
+          <figcaption>Classic</figcaption>
+        </figure>
+        <figure>
+          <img src="./wine-guide-label-editorial.svg" alt="Editorial label">
+          <figcaption>Editorial</figcaption>
+        </figure>
+        <figure>
+          <img src="./wine-guide-label-modern.svg" alt="Modern label">
+          <figcaption>Modern Original</figcaption>
+        </figure>
+        <figure>
+          <img src="./wine-guide-label-modern-minimal.svg" alt="Minimal modern label">
+          <figcaption>Modern Minimal</figcaption>
+        </figure>
+        <figure>
+          <img src="./wine-guide-label-modern-bold.svg" alt="Bold modern label">
+          <figcaption>Modern Bold</figcaption>
+        </figure>
+        <figure>
+          <img src="./wine-guide-label-modern-premium.svg" alt="Premium modern label">
+          <figcaption>Modern Premium</figcaption>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

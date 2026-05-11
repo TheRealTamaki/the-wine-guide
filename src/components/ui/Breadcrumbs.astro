@@ -17,7 +17,7 @@ const schema = {
     '@type': 'ListItem',
     position: index + 1,
     name: item.label,
-    ...(item.href ? { item: new URL(item.href, Astro.site ?? 'https://thewine.guide').href } : {}),
+    ...(item.href ? { item: new URL(item.href, Astro.site ?? 'https://wineguide.co').href } : {}),
   })),
 };
 ---

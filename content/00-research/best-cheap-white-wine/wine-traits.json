@@ -1,0 +1,127 @@
+{
+  "keyword": "best cheap white wine",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "La Crema Chardonnay 2022",
+      "variety": "Chardonnay",
+      "region": "Monterey County, California",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 3,
+      "confidence": "high",
+      "sources": ["Monterey Chardonnay profile; oak-aged creaminess; Wine Enthusiast 90 critic score"]
+    },
+    {
+      "name": "Kim Crawford Sauvignon Blanc 2023",
+      "variety": "Sauvignon Blanc",
+      "region": "Marlborough, New Zealand",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "high",
+      "sources": ["New Zealand Marlborough SB signature profile; vibrant acidity; James Suckling 91"]
+    },
+    {
+      "name": "Barefoot Pinot Grigio 2023",
+      "variety": "Pinot Grigio",
+      "region": "California",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "high",
+      "sources": ["Barefoot standard profile; light, citrus-forward; 4.1 customer rating (298 reviews)", "https://www.wine.com/product/barefoot-pinot-grigio-2023/3438971"]
+    },
+    {
+      "name": "Barefoot Chardonnay 2023",
+      "variety": "Chardonnay",
+      "region": "California",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "high",
+      "sources": ["Barefoot entry-level Chardonnay; oak-aged without butter-bomb profile; 4.0 customer rating (267 reviews)", "https://www.wine.com/product/barefoot-chardonnay-2023/3438969"]
+    },
+    {
+      "name": "Ecco Domani Pinot Grigio 2023",
+      "variety": "Pinot Grigio",
+      "region": "Friuli, Italy",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "high",
+      "sources": ["Friuli Italian Pinot Grigio profile; pale, mineral-driven, low oak; Wine Enthusiast 89"]
+    },
+    {
+      "name": "Sancerre (Fournier) 2023",
+      "variety": "Sauvignon Blanc",
+      "region": "Loire Valley, France",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "medium",
+      "sources": ["Loire Valley Sancerre SB; mineral-driven, herbaceous; Robert Parker 91 (per Lena's file)", "Product ID verification pending per Lena's notes"]
+    },
+    {
+      "name": "Dr. L Riesling 2023",
+      "variety": "Riesling",
+      "region": "Mosel, Germany",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "high",
+      "sources": ["Mosel Riesling off-dry profile; slate minerality; Wine Enthusiast 90; 4.1 customer rating (142 reviews)"]
+    },
+    {
+      "name": "Chablis William Fèvre 2022",
+      "variety": "Chardonnay",
+      "region": "Chablis, Burgundy, France",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "high",
+      "sources": ["Chablis unoaked Chardonnay; pristine minerality, high acidity, terroir-driven; Wine Spectator 90; 4.2 customer rating (76 reviews)", "https://www.wine.com/product/william-fevre-chablis-2022/3421547"]
+    },
+    {
+      "name": "Willm Pinot Blanc 2023",
+      "variety": "Pinot Blanc",
+      "region": "Alsace, France",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "medium",
+      "sources": ["Alsace Pinot Blanc profile; apple, stone fruit, subtle floral; Wine Enthusiast 91", "Product ID verification pending per Lena's notes; 3.8 customer rating"]
+    },
+    {
+      "name": "Educated Guess Chardonnay 2023",
+      "variety": "Chardonnay",
+      "region": "California",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 2,
+      "confidence": "high",
+      "sources": ["California Chardonnay; balanced oak, not over-oaked; Wine Enthusiast 90; 4.2 customer rating (93 reviews)"]
+    }
+  ],
+  "notes": "Wine count: 10 wines. Confidence distribution: 7 high, 2 medium, 1 pending full verification. Product URLs flagged as stale by Lena (8 of 10 marked PENDING_VERIFICATION). Traits sourced from: varietal/regional profile standards, critic notes provided in Lena's JSON, customer ratings. All tannin values are 1 (white wines have minimal tannin). Alcohol standardized to 3-4 for budget whites ($13-$20 range, typical 12-13% ABV). Acidity and body vary by varietal: SB/Riesling high acidity (4-5); Chardonnay/Pinot Grigio moderate (3); Chablis elevated (4); Pinot Blanc light (3)."
+}

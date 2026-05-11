@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wine Aroma Wheel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Cinzel:wght@400;600;900&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#0D0102;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:20px;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.wheel-wrap{
+  position:relative;
+  width:100%;
+  max-width:860px;
+}
+
+#wine-svg{
+  width:100%;
+  height:auto;
+  display:block;
+  /* Extra padding so lifted slices don't clip */
+  overflow:visible;
+  filter:drop-shadow(0 0 60px rgba(139,20,40,0.38));
+}
+
+/* Each category is a <g class="cat-grp"> — the whole slice lifts together */
+.cat-grp{
+  cursor:pointer;
+  transition:
+    transform 0.38s cubic-bezier(0.34, 1.45, 0.64, 1),
+    filter     0.22s ease;
+  will-change:transform,filter;
+}
+
+/* Dimmed state when another slice is active */
+.cat-grp.dimmed{
+  opacity:0.18;
+  transition:opacity 0.22s ease, transform 0.38s cubic-bezier(0.34,1.45,0.64,1), filter 0.22s ease;
+}
+
+.cat-grp.lifted{
+  filter:brightness(1.2);
+}
+
+#legend{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:6px 12px;margin-top:16px;opacity:0.78;
+}
+.legend-item{
+  display:flex;align-items:center;gap:6px;cursor:pointer;
+  font-family:'Cinzel',serif;font-size:9px;letter-spacing:1.5px;
+  color:#C9A84C;padding:3px 8px;border:1px solid transparent;transition:all 0.2s;
+}
+.legend-item:hover{ border-color:#C9A84C55;opacity:1; }
+.legend-dot{ width:9px;height:9px;border-radius:50%;flex-shrink:0; }
+
+#tip{
+  position:fixed;background:rgba(6,1,1,0.97);border:1px solid #C9A84C66;
+  color:#F5EFE0;padding:10px 16px;font-family:'Cormorant Garamond',serif;
+  font-size:15px;pointer-events:none;display:none;z-index:9999;
+  max-width:190px;text-align:center;backdrop-filter:blur(6px);
+  box-shadow:0 6px 28px rgba(0,0,0,0.7);
+}
+#tip-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;color:#C9A84C;margin-bottom:4px;}
+#tip-name{font-size:15px;color:#F5EFE0;line-height:1.3;}
+</style>
+</head>
+<body>
+<div class="wheel-wrap">
+  <svg id="wine-svg" viewBox="-110 -110 1120 1120" xmlns="http://www.w3.org/2000/svg">
+    <defs id="arc-defs">
+      <radialGradient id="bgr" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#1E0606"/>
+        <stop offset="70%" stop-color="#0F0202"/>
+        <stop offset="100%" stop-color="#070101"/>
+      </radialGradient>
+      <radialGradient id="centreGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#300A0A"/>
+        <stop offset="100%" stop-color="#0F0202"/>
+      </radialGradient>
+      <filter id="textGlow" x="-10%" y="-10%" width="120%" height="120%">
+        <feGaussianBlur stdDeviation="1.5" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <!-- Static background disc -->
+    <circle cx="450" cy="450" r="448" fill="url(#bgr)" stroke="#2A0808" stroke-width="1"/>
+
+    <!-- All category slices in their resting state (behind gold rings) -->
+    <g id="slices-g"></g>
+
+    <!-- Gold ring borders — always visible, above resting slices -->
+    <g id="borders-g" pointer-events="none"></g>
+
+    <!-- Active slice is moved here on hover so it renders above the gold rings -->
+    <g id="top-layer"></g>
+
+    <!-- Centre medallion — always on top -->
+    <circle cx="450" cy="450" r="112" fill="url(#centreGrad)" stroke="#C9A84C" stroke-width="1.5"/>
+    <circle cx="450" cy="450" r="96"  fill="none" stroke="#C9A84C44" stroke-width="0.8" stroke-dasharray="4 3"/>
+    <circle cx="450" cy="450" r="82"  fill="none" stroke="#C9A84C22" stroke-width="0.5"/>
+
+    <g id="centre-default">
+      <text x="450" y="436" text-anchor="middle" fill="#C9A84C" font-family="Cinzel,serif" font-size="18" letter-spacing="5" filter="url(#textGlow)">WINE</text>
+      <text x="450" y="460" text-anchor="middle" fill="#C9A84C" font-family="Cinzel,serif" font-size="18" letter-spacing="5" filter="url(#textGlow)">WHEEL</text>
+      <text x="450" y="482" text-anchor="middle" fill="#C9A84C55" font-family="Cormorant Garamond,serif" font-size="9" letter-spacing="3">AROMA · FLAVOUR</text>
+    </g>
+    <g id="centre-hover" opacity="0">
+      <text id="ch-label" x="450" y="424" text-anchor="middle" fill="#C9A84C99" font-family="Cinzel,serif" font-size="8" letter-spacing="2.5"></text>
+      <text id="ch-name"  x="450" y="450" text-anchor="middle" fill="#F5EFE0" font-family="Cormorant Garamond,serif" font-size="16" font-weight="300" letter-spacing="0.5"></text>
+      <text id="ch-sub"   x="450" y="470" text-anchor="middle" fill="#C9A84CCC" font-family="Cormorant Garamond,serif" font-size="10" font-style="italic"></text>
+    </g>
+  </svg>
+  <div id="legend"></div>
+</div>
+<div id="tip"><div id="tip-label"></div><div id="tip-name"></div></div>
+
+<script>
+const CX=450, CY=450;
+const R0=113, R1=228, R2=338, R3=432;
+const SCALE=1.20; // how much each slice grows on hover
+
+const data=[
+  { name:"FRUITY",  color:"#6E1220", light:"#A82840", desc:"Fruit-forward aromas & flavours",
+    subs:[
+      {name:"Red Fruits",   items:["Cherry","Raspberry","Strawberry","Cranberry"]},
+      {name:"Black Fruits", items:["Blackberry","Cassis","Plum","Blueberry"]},
+      {name:"Tropical",     items:["Pineapple","Mango","Passion Fruit","Lychee"]},
+      {name:"Citrus",       items:["Lemon","Grapefruit","Orange Zest","Lime"]},
+    ]},
+  { name:"FLORAL",  color:"#5C2250", light:"#8C3A7A", desc:"Delicate flower-derived scents",
+    subs:[
+      {name:"Fresh Flowers",items:["Rose","Violet","Lilac","Lavender"]},
+      {name:"Dried Flowers",items:["Jasmine","Elderflower","Hibiscus","Neroli"]},
+    ]},
+  { name:"SPICE",   color:"#6E2E0A", light:"#A84E1A", desc:"Warm & aromatic spice notes",
+    subs:[
+      {name:"Sweet Spice",items:["Vanilla","Cinnamon","Clove","Nutmeg"]},
+      {name:"Hot Spice",  items:["Black Pepper","White Pepper","Anise","Licorice"]},
+    ]},
+  { name:"WOODY",   color:"#3E200A", light:"#6A4020", desc:"Oak ageing & resinous notes",
+    subs:[
+      {name:"Oak Barrel",items:["Cedar","Smoky","Toasty","Charred Oak"]},
+      {name:"Resinous",  items:["Pine","Eucalyptus","Sandalwood","Pencil"]},
+    ]},
+  { name:"EARTHY",  color:"#302A10", light:"#585030", desc:"Terroir — soil & mineral character",
+    subs:[
+      {name:"Mineral",items:["Flint","Slate","Wet Stone","Chalk"]},
+      {name:"Soil",   items:["Mushroom","Truffle","Forest Floor","Clay"]},
+    ]},
+  { name:"ANIMAL",  color:"#281808", light:"#503828", desc:"Wild & savoury animal notes",
+    subs:[
+      {name:"Animal",items:["Leather","Gamey","Cured Meat","Wet Fur"]},
+    ]},
+  { name:"DAIRY",   color:"#605010", light:"#988028", desc:"Creamy & lactic characters",
+    subs:[
+      {name:"Dairy",items:["Butter","Cream","Yogurt","Cheese"]},
+    ]},
+  { name:"NUTTY",   color:"#483A10", light:"#786020", desc:"Nut-driven oxidative notes",
+    subs:[
+      {name:"Nuts",items:["Almond","Hazelnut","Walnut","Marzipan"]},
+    ]},
+  { name:"CARAMEL", color:"#602808", light:"#984018", desc:"Sweet caramelisation & roast",
+    subs:[
+      {name:"Sweet Caramel",items:["Caramel","Toffee","Honey","Molasses"]},
+      {name:"Roasted",      items:["Dark Choc","Coffee","Malt","Toast"]},
+    ]},
+  { name:"VEGETAL", color:"#183A10", light:"#306025", desc:"Green, herbal & plant matter",
+    subs:[
+      {name:"Fresh Green",items:["Grass","Bell Pepper","Fresh Herbs","Asparagus"]},
+      {name:"Dried Green",items:["Tobacco","Tea Leaf","Hay","Olive"]},
+    ]},
+];
+
+const totalSubs = data.reduce((s,c)=>s+c.subs.length, 0);
+const degPerSub = 360 / totalSubs;
+
+function pt(r, deg){
+  const a=(deg-90)*Math.PI/180;
+  return [CX+r*Math.cos(a), CY+r*Math.sin(a)];
+}
+function sector(r1,r2,a1,a2){
+  const [x1,y1]=pt(r1,a1),[x2,y2]=pt(r2,a1);
+  const [x3,y3]=pt(r2,a2),[x4,y4]=pt(r1,a2);
+  const lg=a2-a1>180?1:0;
+  return `M${x1},${y1}L${x2},${y2}A${r2},${r2},0,${lg},1,${x3},${y3}L${x4},${y4}A${r1},${r1},0,${lg},0,${x1},${y1}Z`;
+}
+function ns(tag){ return document.createElementNS("http://www.w3.org/2000/svg",tag); }
+
+const defsEl  = document.getElementById("arc-defs");
+const slicesG = document.getElementById("slices-g");
+const bordsG  = document.getElementById("borders-g");
+const topLayer= document.getElementById("top-layer");
+let lidSeq=0;
+
+/* Curved textPath label */
+function arcLabel(text, r, a1, a2, fontSize, fillColor, fontFam, letterSpacing){
+  const mid=(a1+a2)/2;
+  const flip=(mid>90&&mid<270);
+  const [sx,sy]=pt(r, flip?a2:a1);
+  const [ex,ey]=pt(r, flip?a1:a2);
+  const span=a2-a1, lg=span>180?1:0, sw=flip?0:1;
+  const pid="al"+(lidSeq++);
+  const ap=ns("path");
+  ap.setAttribute("id",pid); ap.setAttribute("d",`M${sx},${sy} A${r},${r},0,${lg},${sw},${ex},${ey}`);
+  ap.setAttribute("fill","none");
+  defsEl.appendChild(ap);
+  const tel=ns("text");
+  tel.setAttribute("font-size",fontSize);
+  tel.setAttribute("font-family",fontFam||"Cormorant Garamond,serif");
+  tel.setAttribute("fill",fillColor||"#F5EFE0CC");
+  tel.setAttribute("pointer-events","none");
+  const tp=ns("textPath");
+  tp.setAttribute("href","#"+pid);
+  tp.setAttribute("startOffset","50%");
+  tp.setAttribute("text-anchor","middle");
+  if(letterSpacing!==undefined) tp.setAttribute("letter-spacing",letterSpacing);
+  tp.textContent=text;
+  tel.appendChild(tp);
+  return tel;
+}
+
+/* ─── Build one <g> per category ─── */
+const catGrps = [];
+let angle=0;
+
+data.forEach((cat, ci)=>{
+  const nSubs  =cat.subs.length;
+  const span   =nSubs*degPerSub;
+  const cStart =angle, cEnd=angle+span;
+  const midDeg =cStart+span/2;
+
+  /* category group — everything for this slice lives here */
+  const grp=ns("g");
+  grp.classList.add("cat-grp");
+  grp.dataset.ci=ci;
+  slicesG.appendChild(grp);
+  catGrps.push(grp);
+
+  /* ── Ring 1 ── */
+  const p1=ns("path");
+  p1.setAttribute("d",sector(R0,R1,cStart,cEnd));
+  p1.setAttribute("fill",cat.color);
+  p1.setAttribute("stroke","#0A0101"); p1.setAttribute("stroke-width","2");
+  p1.dataset.t="cat"; p1.dataset.ci=ci; p1.dataset.cat=cat.name;
+  grp.appendChild(p1);
+
+  const r1fs=span>55?14:span>32?11.5:9.5;
+  const r1ls=span>65?"4":span>38?"2":"1";
+  grp.appendChild(arcLabel(cat.name,(R0+R1)/2,cStart,cEnd,r1fs,"#FFEEEEF5","Cinzel,serif",r1ls));
+
+  /* ── Ring 2 & 3 ── */
+  let subAngle=cStart;
+  cat.subs.forEach((sub,si)=>{
+    const s1=subAngle, s2=subAngle+degPerSub;
+    const fill=si%2===0?cat.light:cat.color;
+    const op  =si%2===0?"1":"0.82";
+
+    const p2=ns("path");
+    p2.setAttribute("d",sector(R1,R2,s1,s2));
+    p2.setAttribute("fill",fill); p2.setAttribute("opacity",op);
+    p2.setAttribute("stroke","#0A0101"); p2.setAttribute("stroke-width","1");
+    p2.dataset.t="sub"; p2.dataset.ci=ci; p2.dataset.cat=cat.name; p2.dataset.sub=sub.name;
+    grp.appendChild(p2);
+    grp.appendChild(arcLabel(sub.name,(R1+R2)/2,s1,s2,13,"#F5EFE0F0","Cormorant Garamond,serif","0.8"));
+
+    const nItems=sub.items.length, dpI=degPerSub/nItems;
+    sub.items.forEach((item,ii)=>{
+      const i1=s1+ii*dpI, i2=i1+dpI;
+      const ifill=ii%2===0?cat.color:cat.light;
+      const iop  =ii%2===0?"0.68":"0.56";
+      const p3=ns("path");
+      p3.setAttribute("d",sector(R2,R3,i1,i2));
+      p3.setAttribute("fill",ifill); p3.setAttribute("opacity",iop);
+      p3.setAttribute("stroke","#0A0101"); p3.setAttribute("stroke-width","0.5");
+      p3.dataset.t="item"; p3.dataset.ci=ci;
+      p3.dataset.cat=cat.name; p3.dataset.sub=sub.name; p3.dataset.item=item;
+      grp.appendChild(p3);
+      // Ring 3: radial (spoke) text — sits perpendicular to arc so full words are readable
+      const midItem=(i1+i2)/2;
+      const rMid=(R2+R3)/2;
+      const [tx,ty]=pt(rMid, midItem);
+      const isLeft=midItem>180;
+      const rot=midItem-90+(isLeft?180:0);
+      const tel=ns("text");
+      tel.setAttribute("x",tx); tel.setAttribute("y",ty);
+      tel.setAttribute("text-anchor","middle");
+      tel.setAttribute("dominant-baseline","middle");
+      tel.setAttribute("fill","#F5EFE0CC");
+      tel.setAttribute("font-size","10");
+      tel.setAttribute("font-family","Cormorant Garamond,serif");
+      tel.setAttribute("letter-spacing","0.3");
+      tel.setAttribute("transform",`rotate(${rot},${tx},${ty})`);
+      tel.setAttribute("pointer-events","none");
+      tel.textContent=item;
+      grp.appendChild(tel);
+    });
+    subAngle=s2;
+  });
+
+  angle=cEnd;
+});
+
+/* ─── Gold separator rings (static, above slices) ─── */
+[R0,R1,R2,R3].forEach(r=>{
+  const c=ns("circle");
+  c.setAttribute("cx",CX); c.setAttribute("cy",CY); c.setAttribute("r",r);
+  c.setAttribute("fill","none"); c.setAttribute("stroke","#C9A84C");
+  c.setAttribute("stroke-width",r===R0?"1.6":"0.75");
+  bordsG.appendChild(c);
+});
+const halo=ns("circle");
+halo.setAttribute("cx",CX); halo.setAttribute("cy",CY); halo.setAttribute("r","446");
+halo.setAttribute("fill","none"); halo.setAttribute("stroke","#C9A84C");
+halo.setAttribute("stroke-width","0.5"); halo.setAttribute("opacity","0.35");
+bordsG.appendChild(halo);
+
+/* ─── Legend ─── */
+const legendEl=document.getElementById("legend");
+data.forEach((cat,ci)=>{
+  const li=document.createElement("div");
+  li.className="legend-item";
+  li.innerHTML=`<div class="legend-dot" style="background:${cat.light}"></div>${cat.name}`;
+  li.addEventListener("mouseenter",()=>activateCat(ci,null));
+  li.addEventListener("mouseleave",deactivate);
+  legendEl.appendChild(li);
+});
+
+/* ─── Centre info ─── */
+const cDefault=document.getElementById("centre-default");
+const cHover  =document.getElementById("centre-hover");
+const chLabel =document.getElementById("ch-label");
+const chName  =document.getElementById("ch-name");
+const chSub   =document.getElementById("ch-sub");
+
+function showCentre(label,name,sub){
+  cDefault.setAttribute("opacity","0"); cHover.setAttribute("opacity","1");
+  chLabel.textContent=label||""; chName.textContent=name||""; chSub.textContent=sub||"";
+}
+function hideCentre(){
+  cDefault.setAttribute("opacity","1"); cHover.setAttribute("opacity","0");
+}
+
+/* ─── Lift / dim logic ─── */
+let activeCi=-1;
+
+function activateCat(ci, seg){
+  if(activeCi===ci) return;
+  // Restore any previously active slice first
+  if(activeCi!==-1){
+    const prev=catGrps[activeCi];
+    slicesG.appendChild(prev); // move back into normal layer
+    prev.style.transform="";
+    prev.classList.remove("lifted");
+  }
+  activeCi=ci;
+  catGrps.forEach((g,i)=>{
+    g.classList.remove("dimmed","lifted");
+    if(i===ci){
+      // Move into top-layer so it paints above the gold rings
+      topLayer.appendChild(g);
+      g.style.transform=`translate(${CX}px,${CY}px) scale(${SCALE}) translate(-${CX}px,-${CY}px)`;
+      g.classList.add("lifted");
+    } else {
+      g.classList.add("dimmed");
+    }
+  });
+
+  /* Centre info */
+  if(!seg){
+    showCentre("CATEGORY", data[ci].name, data[ci].desc);
+  } else if(seg.dataset.t==="cat"){
+    showCentre("CATEGORY", seg.dataset.cat, data[ci].desc);
+  } else if(seg.dataset.t==="sub"){
+    showCentre(seg.dataset.cat, seg.dataset.sub,"");
+  } else {
+    showCentre(seg.dataset.sub, seg.dataset.item, seg.dataset.cat);
+  }
+}
+
+function deactivate(){
+  activeCi=-1;
+  // Restore all groups back to slicesG in original order
+  catGrps.forEach(g=>{
+    slicesG.appendChild(g);
+    g.classList.remove("dimmed","lifted");
+    g.style.transform="";
+  });
+  hideCentre();
+  tip.style.display="none";
+}
+
+/* ─── Tooltip ─── */
+const tip     =document.getElementById("tip");
+const tipLabel=document.getElementById("tip-label");
+const tipName =document.getElementById("tip-name");
+
+/* Delegate events on each segment inside each group */
+catGrps.forEach(grp=>{
+  /* Lift the whole slice when entering anywhere in the group */
+  grp.addEventListener("mouseenter",e=>{
+    const seg=e.target.closest("[data-t]");
+    const ci=parseInt(grp.dataset.ci);
+    activateCat(ci, seg||null);
+    if(seg){
+      if(seg.dataset.t==="cat"){
+        tipLabel.textContent="CATEGORY"; tipName.textContent=seg.dataset.cat;
+      } else if(seg.dataset.t==="sub"){
+        tipLabel.textContent=seg.dataset.cat; tipName.textContent=seg.dataset.sub;
+      } else {
+        tipLabel.textContent=seg.dataset.sub; tipName.textContent=seg.dataset.item;
+      }
+      tip.style.display="block";
+    }
+  });
+
+  /* Update tooltip as cursor moves between segments inside the same group */
+  grp.addEventListener("mouseover",e=>{
+    const seg=e.target.closest("[data-t]");
+    if(!seg) return;
+    const ci=parseInt(grp.dataset.ci);
+    activateCat(ci, seg);
+    if(seg.dataset.t==="cat"){
+      tipLabel.textContent="CATEGORY"; tipName.textContent=seg.dataset.cat;
+    } else if(seg.dataset.t==="sub"){
+      tipLabel.textContent=seg.dataset.cat; tipName.textContent=seg.dataset.sub;
+    } else {
+      tipLabel.textContent=seg.dataset.sub; tipName.textContent=seg.dataset.item;
+    }
+    tip.style.display="block";
+  });
+
+  grp.addEventListener("mousemove",e=>{
+    tip.style.left=(e.clientX+16)+"px";
+    tip.style.top =(e.clientY-10)+"px";
+  });
+
+  grp.addEventListener("mouseleave",deactivate);
+});
+
+/* ─── Entrance animation ─── */
+const svgEl=document.getElementById("wine-svg");
+Object.assign(svgEl.style,{
+  opacity:"0",transform:"scale(0.93)",
+  transition:"opacity 1s ease, transform 1s ease"
+});
+requestAnimationFrame(()=>setTimeout(()=>{
+  svgEl.style.opacity="1"; svgEl.style.transform="scale(1)";
+},80));
+</script>
+</body>
+</html>

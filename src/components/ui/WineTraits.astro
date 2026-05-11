@@ -1,0 +1,136 @@
+---
+interface Props {
+  tannin: 1 | 2 | 3 | 4 | 5;
+  acidity: 1 | 2 | 3 | 4 | 5;
+  sweetness: 1 | 2 | 3 | 4 | 5;
+  alcohol: 1 | 2 | 3 | 4 | 5;
+  body: 1 | 2 | 3 | 4 | 5;
+}
+
+const { tannin, acidity, sweetness, alcohol, body } = Astro.props;
+
+const fiveStepLabels: Record<number, string> = {
+  1: 'Very Low',
+  2: 'Low',
+  3: 'Medium',
+  4: 'Medium-High',
+  5: 'High',
+};
+
+const sweetnessLabels: Record<number, string> = {
+  1: 'Bone Dry',
+  2: 'Dry',
+  3: 'Off-dry',
+  4: 'Semi-sweet',
+  5: 'Sweet',
+};
+
+const bodyLabels: Record<number, string> = {
+  1: 'Very Light',
+  2: 'Light',
+  3: 'Medium',
+  4: 'Medium-Full',
+  5: 'Full',
+};
+
+const tanninColor = '#7B2D2D';
+const acidityColor = '#5A8A5A';
+const sweetnessColor = '#C99A3B';
+const alcoholColor = '#7B4F8A';
+const bodyColor = '#4A5568';
+
+const traits = [
+  { key: 'tannin', label: 'Tannin', value: tannin, valueLabel: fiveStepLabels[tannin], color: tanninColor },
+  { key: 'acidity', label: 'Acidity', value: acidity, valueLabel: fiveStepLabels[acidity], color: acidityColor },
+  { key: 'sweetness', label: 'Sweetness', value: sweetness, valueLabel: sweetnessLabels[sweetness], color: sweetnessColor },
+  { key: 'alcohol', label: 'Alcohol', value: alcohol, valueLabel: fiveStepLabels[alcohol], color: alcoholColor },
+  { key: 'body', label: 'Body', value: body, valueLabel: bodyLabels[body], color: bodyColor },
+];
+---
+
+<div class="wine-traits not-prose" role="group" aria-label="Wine traits at a glance">
+  {traits.map((trait) => (
+    <div class="trait-card" style={`--badge-color: ${trait.color};`}>
+      <span class="badge-label">{trait.label}</span>
+      <span class="dot-scale" role="img" aria-label={`${trait.label}: ${trait.valueLabel} (${trait.value} of 5)`}>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <span class={`dot${i <= trait.value ? ' dot--filled' : ''}`} />
+        ))}
+      </span>
+      <span class="badge-value">{trait.valueLabel}</span>
+    </div>
+  ))}
+</div>
+
+<style>
+  .wine-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0.75rem;
+  }
+
+  .trait-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    background: #fff;
+    border: 1.5px solid color-mix(in srgb, var(--badge-color) 25%, transparent);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem 0.5rem;
+    min-width: 90px;
+    flex: 1 1 90px;
+    max-width: 160px;
+  }
+
+  .badge-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: color-mix(in srgb, var(--badge-color) 80%, #584141);
+    font-weight: 600;
+    font-family: var(--font-body, sans-serif);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .dot-scale {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1.5px solid var(--badge-color);
+    background: transparent;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .dot.dot--filled {
+    background: var(--badge-color);
+    border-color: var(--badge-color);
+  }
+
+  .badge-value {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--badge-color);
+    font-family: var(--font-body, sans-serif);
+    line-height: 1.2;
+  }
+
+  /* Mobile: two-column wrap so the five cards fit cleanly */
+  @media (max-width: 480px) {
+    .trait-card {
+      max-width: calc(50% - 0.25rem);
+    }
+  }
+</style>
+</content>
+</invoke>

@@ -1,0 +1,18 @@
+{
+  "slug": "best-organic-wines",
+  "date": "2026-04-19",
+  "wines": [
+    { "name": "Clos Henri Otira Sauvignon Blanc 2024", "tannin": 1, "acidity": 5, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["NZ Marlborough Sauvignon Blanc varietal quick-ref"] },
+    { "name": "Villa a Sesta Il Palei Chianti Classico 2019", "tannin": 4, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Chianti Classico (Sangiovese) varietal quick-ref"] },
+    { "name": "Miraval Rose 2024", "tannin": 1, "acidity": 4, "sweetness": 2, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Provence Rose varietal quick-ref"] },
+    { "name": "Dog Point Vineyard Sauvignon Blanc 2024", "tannin": 1, "acidity": 5, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["NZ Marlborough Sauvignon Blanc varietal quick-ref"] },
+    { "name": "Grand Napa Vineyards Los Carneros Pinot Noir 2023", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Carneros/California Pinot Noir varietal quick-ref"] },
+    { "name": "La Rioja Alta Vina Ardanza Reserva 2019", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Rioja Reserva (Tempranillo) varietal quick-ref"] },
+    { "name": "Chateau D'Aqueria Tavel Rose 2024", "tannin": 2, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 3, "confidence": "inferred", "sources": ["Tavel Rose (fuller Grenache-led southern Rhone style)"] },
+    { "name": "Grand Napa Vineyards Los Carneros Chardonnay 2024", "tannin": 1, "acidity": 3, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Carneros cool-climate Chardonnay, restrained style"] },
+    { "name": "Ziobaffa Organic Toscana 2020", "tannin": 3, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Tuscan Sangiovese blend varietal quick-ref"] },
+    { "name": "Domaine du Colombier Chablis 2023", "tannin": 1, "acidity": 5, "sweetness": 1, "alcohol": 3, "body": 3, "confidence": "inferred", "sources": ["Chablis (unoaked Chardonnay) varietal quick-ref"] },
+    { "name": "Calculated Risk Reserve Cabernet Sauvignon 2023", "tannin": 4, "acidity": 3, "sweetness": 1, "alcohol": 4, "body": 4, "confidence": "inferred", "sources": ["California Cab Sauvignon varietal quick-ref"] },
+    { "name": "Grand Napa Vineyards Sauvignon Blanc 2025", "tannin": 1, "acidity": 4, "sweetness": 1, "alcohol": 3, "body": 2, "confidence": "inferred", "sources": ["Napa Sauvignon Blanc, Spring Mountain District"] }
+  ]
+}

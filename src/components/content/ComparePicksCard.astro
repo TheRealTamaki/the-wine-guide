@@ -1,0 +1,43 @@
+---
+interface Pick {
+  title: string;
+  description: string;
+  href: string;
+  label?: string;
+  image?: string;
+}
+
+interface Props {
+  picks: Pick[];
+  heading?: string;
+}
+
+const { picks, heading = 'Our Picks' } = Astro.props;
+---
+
+<aside class="not-prose my-10 rounded-2xl border border-border bg-bg-alt overflow-hidden" style="box-shadow: var(--twg-shadow-md);">
+  <div class="px-7 pt-7 pb-2">
+    <p class="text-[18px] font-bold uppercase tracking-widest text-accent mb-1">{heading}</p>
+  </div>
+
+  <div class="px-7 pb-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {picks.map((pick) => (
+      <div class="bg-surface-white rounded-xl border border-border flex flex-col overflow-hidden">
+        {pick.image && (
+          <img src={pick.image} alt={pick.title} class="w-full h-40 object-cover" />
+        )}
+        <div class="p-5 flex flex-col flex-1">
+          <p class="font-heading font-semibold text-primary text-lg leading-snug">{pick.title}</p>
+          <p class="mt-2 text-sm text-secondary leading-relaxed flex-1">{pick.description}</p>
+          <a
+            href={pick.href}
+            class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent-hover transition-colors duration-150"
+          >
+            {pick.label ?? 'See our picks'}
+            <span aria-hidden="true" class="text-base leading-none">→</span>
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</aside>

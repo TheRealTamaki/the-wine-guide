@@ -1,0 +1,136 @@
+{
+  "slug": "best-moscato-wine",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Saracco Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 5.5% ABV", "Moscato d'Asti DOCG frizzante sweet"]
+    },
+    {
+      "name": "Ceretto Santo Stefano Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 5.5% ABV", "Moscato d'Asti DOCG"]
+    },
+    {
+      "name": "Damilano Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 5.5% ABV", "Moscato d'Asti DOCG"]
+    },
+    {
+      "name": "Patrizi Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 5.5% ABV", "Moscato d'Asti DOCG fuller peachy style"]
+    },
+    {
+      "name": "Marenco Scrapona Moscato d'Asti 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 5.5% ABV", "Fuller Moscato d'Asti style"]
+    },
+    {
+      "name": "Coppo Moncalvina Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 5.5% ABV", "Moscato d'Asti DOCG"]
+    },
+    {
+      "name": "Viberti Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article implies 5.5% ABV, more texture/minerality than big estates"]
+    },
+    {
+      "name": "Martini & Rossi Asti Spumante",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 3,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 7-7.5% ABV", "Asti DOCG fully sparkling sweet"]
+    },
+    {
+      "name": "Caposaldo Moscato",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["Lombardy sweet Moscato ~5.5% ABV"]
+    },
+    {
+      "name": "Centorri Moscato 2025",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states ~7% ABV", "Moscato di Pavia"]
+    },
+    {
+      "name": "Bartenura Moscato (OU Kosher) 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Article states 5.5% ABV", "Kosher Moscato d'Asti-style"]
+    },
+    {
+      "name": "Donnafugata Ben Ryé 2023",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Passito di Pantelleria Zibibbo ~13.5% ABV", "Dessert-sweet, intense"]
+    },
+    {
+      "name": "La Spinetta Moscato Passito Oro 2016",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Piedmont Passito ~13-14% ABV", "Late-harvest oak-aged dessert Moscato"]
+    }
+  ]
+}

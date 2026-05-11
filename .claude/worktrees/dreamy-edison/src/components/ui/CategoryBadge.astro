@@ -1,0 +1,14 @@
+---
+interface Props {
+  category: string;
+  class?: string;
+}
+
+const { category, class: className = '' } = Astro.props;
+
+const label = category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+---
+
+<span class={`inline-block text-xs font-bold uppercase tracking-widest text-green-dark bg-green-light px-3 py-1 rounded-lg ${className}`}>
+  {label}
+</span>

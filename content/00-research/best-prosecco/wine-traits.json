@@ -1,0 +1,146 @@
+{
+  "slug": "best-prosecco",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "La Marca Prosecco",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Prosecco DOC Brut 11% ABV, light-bodied"]
+    },
+    {
+      "name": "Mionetto Prosecco Brut",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Treviso Brut Prosecco 11% ABV"]
+    },
+    {
+      "name": "Zardetto Prosecco Brut",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Conegliano Brut Prosecco 11-11.5% ABV"]
+    },
+    {
+      "name": "Spellbound Incantato Prosecco",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "inferred",
+      "sources": ["Softer Brut register per article", "Prosecco DOC ~11% ABV"]
+    },
+    {
+      "name": "Tiamo Organic Prosecco",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Organic Prosecco DOC Brut 11% ABV"]
+    },
+    {
+      "name": "Val D'Oca Prosecco Extra Dry",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 3,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Extra Dry 12-17 g/L residual sugar", "Valdobbiadene 11% ABV"]
+    },
+    {
+      "name": "Zardetto Prosecco Superiore Extra Dry",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 3,
+      "alcohol": 2,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Conegliano-Valdobbiadene DOCG Extra Dry 11.5% ABV", "Superiore has more body than DOC"]
+    },
+    {
+      "name": "Sorelle Bronca Valdobbiadene L'Ovest Prosecco Superiore Extra Dry",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 3,
+      "alcohol": 2,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Valdobbiadene Superiore DOCG 11.5% ABV", "Hillside fruit more textural"]
+    },
+    {
+      "name": "La Marca Prosecco Rosé 2023",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Prosecco DOC Rosé 11% ABV, Brut style"]
+    },
+    {
+      "name": "Mionetto Prosecco Rosé 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Prosecco DOC Rosé 11% ABV, Brut rounder style"]
+    },
+    {
+      "name": "Case Paolin Col Fondo Asolo Prosecco Superiore",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 2,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Col Fondo fully dry (0-2 g/L RS)", "Lees-driven textural weight"]
+    },
+    {
+      "name": "Nino Franco Rustico Valdobbiadene Prosecco Superiore",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Valdobbiadene DOCG Brut 11% ABV, structured hillside fruit"]
+    },
+    {
+      "name": "Adami Bosco di Gica Prosecco Superiore",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 1,
+      "alcohol": 2,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Valdobbiadene DOCG Brut, article notes drier/more austere, Chablis-adjacent"]
+    },
+    {
+      "name": "Mionetto Valdobbiadene Prosecco Superiore Brut",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 2,
+      "alcohol": 2,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Valdobbiadene DOCG Brut 11.5% ABV", "More weight than Mionetto DOC Brut"]
+    }
+  ]
+}

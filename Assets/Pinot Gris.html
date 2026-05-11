@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Pinot Gris — An Interactive Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f5f0e8;
+    --bg-2: #ede4d3;
+    --ink: #2a231c;
+    --ink-2: #5a4d3f;
+    --muted: #8a7a66;
+    --line: #d9cdb8;
+    --card: #fbf7ef;
+    --accent: #6b3a2a;        /* deep wine-wood */
+    --wine: #e4c56a;          /* pinot gris straw */
+    --wine-deep: #b8913a;
+    --wine-pale: #f3e4ad;
+    --copper: #d9a978;        /* subtle copper tint */
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif}
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(1200px 700px at 20% 10%, #faf5ea 0%, transparent 60%),
+      radial-gradient(900px 600px at 90% 90%, #e9ddc4 0%, transparent 60%),
+      var(--bg);
+  }
+
+  .wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding: 36px 40px 60px;
+  }
+
+  header.top{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    border-bottom:1px solid var(--line);
+    padding-bottom:18px;
+    margin-bottom:28px;
+  }
+  .brand{
+    display:flex;align-items:baseline;gap:14px;
+  }
+  .brand .mark{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--wine);
+    box-shadow:0 0 0 3px var(--bg), 0 0 0 4px var(--wine-deep);
+    align-self:center;
+  }
+  .brand h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-size:22px;
+    margin:0;
+    letter-spacing:0.01em;
+  }
+  .brand h1 em{font-style:italic;color:var(--muted);font-weight:400}
+  .meta{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;color:var(--muted);
+    letter-spacing:0.08em;text-transform:uppercase;
+  }
+
+  .stage{
+    display:grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* ------- Glass column ------- */
+  .glass-col{
+    position:relative;
+    background:
+      radial-gradient(80% 55% at 50% 62%, rgba(120,90,40,0.10) 0%, transparent 70%),
+      linear-gradient(180deg, #f8f2e6 0%, #ebdfc6 100%);
+    border:1px solid var(--line);
+    border-radius: 6px;
+    padding: 28px 20px 20px;
+    min-height: 720px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .glass-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--muted);
+    align-self:flex-start;
+  }
+  .glass-label b{color:var(--ink);font-weight:500}
+  .glass-wrap{
+    position:relative;
+    width:100%;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  svg.glass{
+    width: 380px;
+    max-width:100%;
+    height:auto;
+    filter: drop-shadow(0 18px 30px rgba(80,55,20,0.18));
+  }
+
+  /* color chip legend */
+  .swatch-row{
+    display:flex;gap:8px;margin-top:14px;align-self:flex-start;
+  }
+  .chip{
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;letter-spacing:0.1em;color:var(--muted);
+  }
+  .chip .sw{
+    width:28px;height:28px;border-radius:50%;
+    border:1px solid rgba(0,0,0,0.08);
+    box-shadow: inset 0 -4px 6px rgba(0,0,0,0.08), inset 0 2px 4px rgba(255,255,255,0.4);
+  }
+
+  /* annotation callouts around the glass */
+  .callouts{
+    position:absolute; inset:0; pointer-events:none;
+  }
+  .callout{
+    position:absolute;
+    pointer-events:auto;
+    display:flex; align-items:center; gap:10px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--ink-2);
+    cursor:pointer;
+  }
+  .callout .dot{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--card);
+    border:1.5px solid var(--accent);
+    transition: all .2s ease;
+  }
+  .callout:hover .dot{ background:var(--accent); transform:scale(1.2) }
+  .callout .line{
+    height:1px;width:40px;background:var(--ink-2);opacity:0.4;
+  }
+  .callout .txt b{color:var(--ink);font-weight:500;display:block;font-size:11px;letter-spacing:0.12em}
+  .callout .txt span{color:var(--muted);text-transform:none;letter-spacing:0;font-size:10.5px;font-family:'Inter',sans-serif}
+
+  .co-1{ top: 18%; left: 4%; }
+  .co-2{ top: 38%; left: 4%; }
+  .co-3{ top: 56%; right: 4%; flex-direction:row-reverse; text-align:right; }
+  .co-4{ bottom: 18%; right: 4%; flex-direction:row-reverse; text-align:right; }
+
+  /* ------- Info card column ------- */
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding: 28px 30px 32px;
+    position:sticky; top:20px;
+  }
+  .card .kicker{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:10px;
+  }
+  .card .kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+  .card h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-size:52px;
+    line-height:1;
+    margin:14px 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .card h2 em{font-style:italic;color:var(--accent)}
+  .card .pronounce{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    color:var(--muted);
+    font-size:18px;
+    margin-bottom:20px;
+  }
+  .card .lede{
+    font-size:14.5px; line-height:1.6; color:var(--ink-2);
+    margin:0 0 22px;
+    max-width: 46ch;
+    text-wrap:pretty;
+  }
+
+  /* tabs */
+  .tabs{
+    display:flex; gap:0;
+    border-bottom:1px solid var(--line);
+    margin-bottom:22px;
+  }
+  .tab{
+    appearance:none;background:none;border:0;padding:10px 14px 12px;
+    font-family:'Inter',sans-serif;font-size:12px;
+    letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--muted);cursor:pointer;
+    border-bottom:2px solid transparent;
+    margin-bottom:-1px;
+    transition: all .15s ease;
+  }
+  .tab:hover{color:var(--ink-2)}
+  .tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
+
+  .panel{display:none; animation: fade .25s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* Grape panel */
+  .grape-head{display:flex;gap:18px;align-items:center;margin-bottom:16px}
+  .grape-vis{
+    width:90px;height:90px;border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, #d8c7a8, #8a6a3c 70%, #4a3a20);
+    position:relative;flex-shrink:0;
+    box-shadow: inset -6px -10px 18px rgba(0,0,0,0.3), inset 4px 6px 10px rgba(255,255,255,0.2);
+  }
+  .grape-vis::after{
+    content:"";position:absolute;inset:0;border-radius:50%;
+    background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.5), transparent 30%);
+  }
+  .grape-head h3{
+    font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;margin:0 0 4px;
+  }
+  .grape-head p{margin:0;font-size:13px;color:var(--muted)}
+
+  dl.facts{
+    display:grid;grid-template-columns:110px 1fr;gap:10px 16px;
+    margin:18px 0 0;font-size:13.5px;
+  }
+  dl.facts dt{
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;
+    letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);
+    padding-top:3px;
+  }
+  dl.facts dd{margin:0;color:var(--ink-2);line-height:1.5}
+
+  /* Stages panel */
+  ol.stages{
+    list-style:none;padding:0;margin:0;
+    counter-reset: step;
+  }
+  ol.stages li{
+    position:relative;
+    padding: 14px 0 14px 48px;
+    border-bottom:1px dashed var(--line);
+    counter-increment:step;
+    cursor:pointer;
+    transition: background .15s ease;
+  }
+  ol.stages li:last-child{border-bottom:0}
+  ol.stages li::before{
+    content: counter(step, decimal-leading-zero);
+    position:absolute;left:0;top:14px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;color:var(--accent);
+    letter-spacing:0.08em;
+    width:30px;
+  }
+  ol.stages li h4{
+    margin:0 0 4px;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;font-size:19px;
+    color:var(--ink);
+  }
+  ol.stages li p{
+    margin:0;font-size:13px;line-height:1.55;color:var(--ink-2);
+    max-width: 50ch;
+  }
+  ol.stages li:hover{background:rgba(107,58,42,0.04)}
+  ol.stages li.on h4{color:var(--accent)}
+
+  /* Regions panel */
+  .regions{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  }
+  .region{
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:14px 16px;
+    background:#fff;
+    transition: all .2s ease;
+    cursor:pointer;
+  }
+  .region:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .region .flag{
+    font-family:'JetBrains Mono',monospace;font-size:10px;
+    letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:6px;
+  }
+  .region h4{
+    font-family:'Cormorant Garamond',serif;font-weight:500;font-size:20px;
+    margin:0 0 6px;
+  }
+  .region p{margin:0;font-size:12.5px;line-height:1.5;color:var(--ink-2)}
+  .region .tag{
+    display:inline-block;margin-top:8px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;
+    color:var(--accent);letter-spacing:0.06em;
+  }
+
+  /* Taste panel */
+  .taste-grid{
+    display:grid;grid-template-columns:1fr;gap:14px;
+  }
+  .taste-row{
+    display:flex;align-items:center;gap:14px;
+    font-size:13px;
+  }
+  .taste-row .label{
+    width:90px;flex-shrink:0;
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;
+    color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;
+  }
+  .taste-row .bar{
+    flex:1;height:4px;background:var(--line);border-radius:2px;position:relative;
+  }
+  .taste-row .bar::after{
+    content:"";position:absolute;left:0;top:0;bottom:0;
+    background: linear-gradient(90deg,var(--wine-pale),var(--wine-deep));
+    border-radius:2px;
+    width: var(--v,50%);
+  }
+  .taste-row .val{
+    width:28px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-2);
+  }
+
+  .flavors{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;
+  }
+  .flavor{
+    font-size:12px;padding:6px 12px;border-radius:999px;
+    background:#fff;border:1px solid var(--line);
+    color:var(--ink-2);
+  }
+  .flavor b{color:var(--accent);font-weight:500;margin-right:4px}
+
+  .pairing{
+    margin-top:22px;padding:16px;
+    border:1px solid var(--line);border-radius:4px;
+    background:linear-gradient(180deg,#fff,#faf4e6);
+  }
+  .pairing .kicker{margin-bottom:8px}
+  .pairing p{margin:0;font-size:13px;line-height:1.55;color:var(--ink-2)}
+
+  /* footer note */
+  footer{
+    margin-top: 36px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px; color:var(--muted);
+    letter-spacing:0.1em;text-transform:uppercase;
+    display:flex;justify-content:space-between;
+    border-top:1px solid var(--line);
+    padding-top:14px;
+  }
+
+  @media (max-width: 920px){
+    .stage{grid-template-columns:1fr;gap:28px}
+    .card{position:static}
+    .glass-col{min-height:auto;padding-bottom:40px}
+    svg.glass{width:280px}
+    .co-1,.co-2{left:2%}
+    .co-3,.co-4{right:2%}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <span class="mark"></span>
+      <h1>Pinot Gris <em>— an illustrated field guide</em></h1>
+    </div>
+    <div class="meta">No. 01 · White Wines</div>
+  </header>
+
+  <div class="stage">
+
+    <!-- ================= GLASS COLUMN ================= -->
+    <section class="glass-col" aria-label="Illustration of a glass of Pinot Gris">
+      <div class="glass-label"><b>Fig. 1</b> &nbsp;·&nbsp; Pinot Gris, served ~10°C in a white-wine glass</div>
+
+      <div class="glass-wrap">
+        <!-- Annotations -->
+        <div class="callouts">
+          <div class="callout co-1" data-tab="taste" title="Jump to Taste">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="txt"><b>Aroma</b><span>pear, apple, honeysuckle</span></div>
+          </div>
+          <div class="callout co-2" data-tab="grape" title="Jump to Grape">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="txt"><b>Color</b><span>pale straw, faint copper</span></div>
+          </div>
+          <div class="callout co-3" data-tab="stages" title="Jump to How it's made">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="txt"><b>Body</b><span>light → medium</span></div>
+          </div>
+          <div class="callout co-4" data-tab="regions" title="Jump to Regions">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="txt"><b>Serve</b><span>chilled, tulip glass</span></div>
+          </div>
+        </div>
+
+        <!-- SVG Glass -->
+        <svg class="glass" viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <!-- wine liquid gradient: pale straw with copper glint -->
+            <linearGradient id="wine" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#f7e7ad"/>
+              <stop offset="35%" stop-color="#ecd07a"/>
+              <stop offset="75%" stop-color="#d9a858"/>
+              <stop offset="100%" stop-color="#b8823a"/>
+            </linearGradient>
+            <radialGradient id="wineGlow" cx="50%" cy="35%" r="55%">
+              <stop offset="0%" stop-color="#fff4c9" stop-opacity="0.9"/>
+              <stop offset="60%" stop-color="#f3d984" stop-opacity="0.0"/>
+            </radialGradient>
+            <linearGradient id="wineRim" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fff2b8" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#e9c56b" stop-opacity="0"/>
+            </linearGradient>
+
+            <!-- glass body gradient -->
+            <linearGradient id="glassBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.65"/>
+              <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.35"/>
+            </linearGradient>
+            <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#d8cdb6"/>
+              <stop offset="50%" stop-color="#f0e6d0"/>
+              <stop offset="100%" stop-color="#c9bea4"/>
+            </linearGradient>
+
+            <!-- stem + base -->
+            <linearGradient id="stem" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"   stop-color="#b8ae96" stop-opacity="0.9"/>
+              <stop offset="50%"  stop-color="#f4ecd8"/>
+              <stop offset="100%" stop-color="#a89f87" stop-opacity="0.9"/>
+            </linearGradient>
+
+            <!-- clip for the liquid inside the bowl -->
+            <clipPath id="bowlClip">
+              <!-- bowl interior shape -->
+              <path d="M 110 90
+                       C 110 230, 130 330, 200 340
+                       C 270 330, 290 230, 290 90 Z"/>
+            </clipPath>
+
+            <!-- soft shadow under glass -->
+            <radialGradient id="tableShadow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(60,40,10,0.35)"/>
+              <stop offset="100%" stop-color="rgba(60,40,10,0)"/>
+            </radialGradient>
+          </defs>
+
+          <!-- table shadow -->
+          <ellipse cx="200" cy="600" rx="130" ry="10" fill="url(#tableShadow)"/>
+
+          <!-- Back reflection tint that shows through the wine (on the table) -->
+          <ellipse cx="200" cy="585" rx="95" ry="6" fill="#d9a858" opacity="0.25"/>
+
+          <!-- BOWL outer outline (glass walls) -->
+          <!-- outer bowl -->
+          <path d="M 92 80
+                   C 92 240, 118 355, 200 360
+                   C 282 355, 308 240, 308 80 Z"
+                fill="url(#glassBody)"
+                stroke="url(#glassEdge)"
+                stroke-width="1.4"/>
+
+          <!-- liquid: fills the bowl from ~y=170 down to y=340 -->
+          <g clip-path="url(#bowlClip)">
+            <!-- base liquid -->
+            <rect x="80" y="170" width="240" height="200" fill="url(#wine)"/>
+            <!-- internal glow -->
+            <ellipse cx="200" cy="240" rx="110" ry="70" fill="url(#wineGlow)"/>
+            <!-- subtle copper tint bottom -->
+            <ellipse cx="200" cy="340" rx="120" ry="22" fill="#c47c3a" opacity="0.45"/>
+            <!-- meniscus highlight at top -->
+            <rect x="100" y="168" width="200" height="5" fill="url(#wineRim)"/>
+            <!-- curved meniscus ellipse (top surface seen slightly) -->
+            <ellipse cx="200" cy="172" rx="88" ry="6" fill="#fff4c9" opacity="0.55"/>
+            <ellipse cx="200" cy="172" rx="88" ry="6" fill="none" stroke="#b58428" stroke-width="0.6" opacity="0.5"/>
+          </g>
+
+          <!-- inside-of-bowl front curve (gives depth) -->
+          <path d="M 110 90
+                   C 110 230, 130 330, 200 340
+                   C 270 330, 290 230, 290 90"
+                fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+
+          <!-- GLASS highlights (specular) -->
+          <!-- left vertical highlight -->
+          <path d="M 118 110 C 108 200, 120 300, 150 345"
+                fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+          <!-- thin left edge shine -->
+          <path d="M 130 120 C 124 200, 132 290, 156 335"
+                fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- right curved highlight -->
+          <path d="M 280 120 C 292 210, 278 310, 252 345"
+                fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+          <!-- top rim highlight (glass lip) -->
+          <ellipse cx="200" cy="80" rx="108" ry="7" fill="none"
+                   stroke="rgba(255,255,255,0.9)" stroke-width="1.2"/>
+          <ellipse cx="200" cy="80" rx="108" ry="7" fill="rgba(255,255,255,0.08)"/>
+
+          <!-- refraction ellipse inside wine (shows stem through liquid) -->
+          <ellipse cx="200" cy="320" rx="25" ry="8" fill="#8a5a20" opacity="0.25"/>
+
+          <!-- stem -->
+          <rect x="196" y="360" width="8" height="170" fill="url(#stem)"/>
+          <!-- stem highlight -->
+          <rect x="197.5" y="362" width="1.5" height="166" fill="rgba(255,255,255,0.8)" opacity="0.7"/>
+
+          <!-- base (foot) -->
+          <ellipse cx="200" cy="540" rx="85" ry="10" fill="url(#stem)"/>
+          <ellipse cx="200" cy="540" rx="85" ry="10" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="0.8"/>
+          <ellipse cx="200" cy="537" rx="70" ry="5" fill="rgba(255,255,255,0.5)"/>
+          <ellipse cx="200" cy="545" rx="85" ry="4" fill="rgba(0,0,0,0.12)"/>
+
+          <!-- a couple of tiny bubbles on the rim for life -->
+          <circle cx="168" cy="174" r="1.6" fill="#fff9e0" opacity="0.9"/>
+          <circle cx="225" cy="173" r="1.2" fill="#fff9e0" opacity="0.85"/>
+          <circle cx="240" cy="175" r="0.9" fill="#fff9e0" opacity="0.7"/>
+
+          <!-- condensation drop -->
+          <ellipse cx="115" cy="260" rx="2" ry="3" fill="rgba(255,255,255,0.8)"/>
+          <ellipse cx="287" cy="290" rx="1.5" ry="2.5" fill="rgba(255,255,255,0.7)"/>
+        </svg>
+      </div>
+
+      <!-- color swatches -->
+      <div class="swatch-row" title="The color spectrum of Pinot Gris">
+        <div class="chip"><div class="sw" style="background:#f7e7ad"></div>pale straw</div>
+        <div class="chip"><div class="sw" style="background:#ecd07a"></div>lemon</div>
+        <div class="chip"><div class="sw" style="background:#d9a858"></div>golden</div>
+        <div class="chip"><div class="sw" style="background:#d9a978"></div>copper</div>
+      </div>
+    </section>
+
+    <!-- ================= INFO CARD ================= -->
+    <aside class="card">
+      <div class="kicker">Vitis vinifera · White grape</div>
+      <h2>Pinot <em>Gris</em></h2>
+      <div class="pronounce">/ˈpiːnoʊ ˈɡriː/  &nbsp; “pee-no gree”</div>
+      <p class="lede">
+        A food-friendly white wine made from a grayish-pink grape. Depending on where it’s grown and who makes it, it can be crisp and lemony <em>(Italian Pinot Grigio)</em> or rich, honeyed, and aromatic <em>(Alsatian Pinot Gris)</em> — same grape, two personalities.
+      </p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-panel="grape">Grape</button>
+        <button class="tab" data-panel="stages">How it’s made</button>
+        <button class="tab" data-panel="regions">Best regions</button>
+        <button class="tab" data-panel="taste">Taste &amp; pairing</button>
+      </div>
+
+      <!-- GRAPE PANEL -->
+      <div class="panel active" id="grape">
+        <div class="grape-head">
+          <div class="grape-vis" aria-hidden="true"></div>
+          <div>
+            <h3>The grape itself</h3>
+            <p>A mutation of Pinot Noir — same DNA, different skin color.</p>
+          </div>
+        </div>
+        <p style="font-size:13.5px;line-height:1.65;color:var(--ink-2);max-width:50ch">
+          Pinot Gris berries aren’t green like most white grapes — they’re dusty pink, grayish, or even bluish (hence <em>gris</em>, French for “gray”). That extra skin pigment is why some Pinot Gris wines have a gentle copper or salmon tint.
+        </p>
+        <dl class="facts">
+          <dt>Family</dt><dd>Pinot family — cousin of Pinot Noir &amp; Pinot Blanc</dd>
+          <dt>Skin</dt><dd>Pinkish-gray to pale blue</dd>
+          <dt>Ripening</dt><dd>Early; sensitive to heat</dd>
+          <dt>Climate</dt><dd>Cool to moderate — loves mornings of fog and sun</dd>
+          <dt>Also called</dt><dd>Pinot Grigio (Italy), Grauburgunder / Ruländer (Germany), Szürkebarát (Hungary)</dd>
+        </dl>
+      </div>
+
+      <!-- STAGES PANEL -->
+      <div class="panel" id="stages">
+        <ol class="stages">
+          <li>
+            <h4>Growing the grapes</h4>
+            <p>Vines are pruned in winter and tended all summer. Cool nights keep the acidity bright; warm days build flavor. Pinot Gris likes slow, steady ripening.</p>
+          </li>
+          <li>
+            <h4>Harvest</h4>
+            <p>Picked early-to-mid autumn when sugar and acid are balanced. For a crisper style, growers pick earlier; for a richer style, later.</p>
+          </li>
+          <li>
+            <h4>Pressing</h4>
+            <p>Grapes are gently pressed. Because the skins have a little color, winemakers usually separate the juice quickly to keep the wine pale — but some leave brief skin contact for that signature copper hue.</p>
+          </li>
+          <li>
+            <h4>Fermentation</h4>
+            <p>Yeast turns grape sugar into alcohol, typically in stainless steel tanks at cool temperatures (12–16°C) to preserve fresh fruit aromas. Richer styles may use old oak barrels.</p>
+          </li>
+          <li>
+            <h4>Aging &amp; blending</h4>
+            <p>Most Pinot Gris rests on its lees (spent yeast) for a few months to add body and a creamy texture. It’s then racked, lightly filtered, and bottled.</p>
+          </li>
+          <li>
+            <h4>Bottle &amp; release</h4>
+            <p>Usually released young — within a year of harvest. Best enjoyed within 2–3 years, though top Alsace bottles can age a decade or more.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- REGIONS PANEL -->
+      <div class="panel" id="regions">
+        <div class="regions">
+          <div class="region">
+            <div class="flag">🇫🇷 · France</div>
+            <h4>Alsace</h4>
+            <p>The benchmark for rich, aromatic Pinot Gris — rounder body, honeyed pear, a hint of spice. Often off-dry.</p>
+            <span class="tag">Rich · Aromatic</span>
+          </div>
+          <div class="region">
+            <div class="flag">🇮🇹 · Italy</div>
+            <h4>Friuli &amp; Alto Adige</h4>
+            <p>Northern Italian Pinot Grigio at its best: crisp, zesty, pear-skin minerality. Miles beyond supermarket versions.</p>
+            <span class="tag">Crisp · Dry</span>
+          </div>
+          <div class="region">
+            <div class="flag">🇺🇸 · USA</div>
+            <h4>Oregon (Willamette)</h4>
+            <p>Split-the-difference style: fruit-forward like Italy, texture like Alsace. Apple, pear, and bright acidity.</p>
+            <span class="tag">Balanced</span>
+          </div>
+          <div class="region">
+            <div class="flag">🇩🇪 · Germany</div>
+            <h4>Baden / Pfalz</h4>
+            <p>Called <em>Grauburgunder</em>. Medium-bodied, dry, and nutty — food wine through and through.</p>
+            <span class="tag">Dry · Nutty</span>
+          </div>
+          <div class="region">
+            <div class="flag">🇳🇿 · New Zealand</div>
+            <h4>Marlborough / Central Otago</h4>
+            <p>Pure, pristine fruit — nashi pear, quince, citrus. Often slightly off-dry with vivid acidity.</p>
+            <span class="tag">Fresh · Fruity</span>
+          </div>
+          <div class="region">
+            <div class="flag">🇦🇺 · Australia</div>
+            <h4>Mornington Peninsula</h4>
+            <p>Textural, savory, and precise. A modern take on Pinot Gris that rewards a little patience.</p>
+            <span class="tag">Textural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TASTE PANEL -->
+      <div class="panel" id="taste">
+        <div class="taste-grid">
+          <div class="taste-row"><span class="label">Sweetness</span><div class="bar" style="--v:22%"></div><span class="val">dry</span></div>
+          <div class="taste-row"><span class="label">Acidity</span><div class="bar" style="--v:65%"></div><span class="val">med+</span></div>
+          <div class="taste-row"><span class="label">Body</span><div class="bar" style="--v:55%"></div><span class="val">med</span></div>
+          <div class="taste-row"><span class="label">Tannin</span><div class="bar" style="--v:10%"></div><span class="val">low</span></div>
+          <div class="taste-row"><span class="label">Alcohol</span><div class="bar" style="--v:55%"></div><span class="val">12–14%</span></div>
+        </div>
+
+        <div class="flavors" aria-label="Common flavor notes">
+          <span class="flavor"><b>fruit</b>pear</span>
+          <span class="flavor"><b>fruit</b>green apple</span>
+          <span class="flavor"><b>fruit</b>lemon zest</span>
+          <span class="flavor"><b>fruit</b>white peach</span>
+          <span class="flavor"><b>floral</b>honeysuckle</span>
+          <span class="flavor"><b>spice</b>ginger</span>
+          <span class="flavor"><b>other</b>almond</span>
+          <span class="flavor"><b>other</b>wet stone</span>
+          <span class="flavor"><b>other</b>honey</span>
+        </div>
+
+        <div class="pairing">
+          <div class="kicker">Food pairing</div>
+          <p>Perfect with lighter food: grilled white fish, prosciutto and melon, goat cheese, risotto, roast chicken with lemon, Thai curries (for the off-dry Alsatian style). Serve chilled — about <b>8–10°C</b> — in a medium tulip glass.</p>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer>
+    <span>Illustrated guide · Pinot Gris</span>
+    <span>Hover the dots on the glass · click tabs to explore</span>
+  </footer>
+</div>
+
+<script>
+  // Tabs
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  function activate(name){
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.panel === name));
+    panels.forEach(p => p.classList.toggle('active', p.id === name));
+  }
+  tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.panel)));
+
+  // Callouts link to tabs
+  document.querySelectorAll('.callout').forEach(c => {
+    c.addEventListener('click', () => {
+      activate(c.dataset.tab);
+      c.querySelector('.dot').animate(
+        [{transform:'scale(1)'},{transform:'scale(1.6)'},{transform:'scale(1)'}],
+        {duration:400, easing:'ease-out'}
+      );
+    });
+  });
+
+  // Stages: highlight on click
+  document.querySelectorAll('ol.stages li').forEach(li => {
+    li.addEventListener('click', () => {
+      document.querySelectorAll('ol.stages li').forEach(x => x.classList.remove('on'));
+      li.classList.add('on');
+    });
+  });
+</script>
+</body>
+</html>

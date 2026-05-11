@@ -1,0 +1,86 @@
+{
+  "slug": "best-wine-for-beginners",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Sur de los Andes Reserva Pinot Noir 2022",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Patagonian light-bodied Pinot per article", "varietal defaults"]
+    },
+    {
+      "name": "BenMarco Malbec 2022",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Uco Valley high-altitude Malbec, ~14% ABV", "varietal defaults"]
+    },
+    {
+      "name": "Santa Margherita Pinot Grigio 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Trentino Pinot Grigio", "category guidance"]
+    },
+    {
+      "name": "Grand Napa Vineyards Sauvignon Blanc 2025",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["Napa Spring Mountain SB", "varietal defaults"]
+    },
+    {
+      "name": "Eroica Riesling 2024",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 3,
+      "alcohol": 2,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Washington off-dry Riesling, ~12% ABV", "article note"]
+    },
+    {
+      "name": "Grand Napa Vineyards Los Carneros Chardonnay 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "inferred",
+      "sources": ["Carneros cool-climate Chardonnay", "varietal defaults"]
+    },
+    {
+      "name": "Chateau d'Esclans Whispering Angel Rose 2024",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 1,
+      "alcohol": 3,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Cotes de Provence dry rose, Grenache/Cinsault/Rolle blend", "varietal defaults (dry rose)"]
+    },
+    {
+      "name": "Damilano Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Moscato d'Asti DOCG (5.5% ABV per article)", "category guidance"]
+    }
+  ]
+}

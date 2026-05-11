@@ -8,19 +8,19 @@ const { type = 'tip', title } = Astro.props;
 
 const styles = {
   tip: {
-    container: 'bg-accent-light border border-accent/40',
+    container: 'bg-accent-light rounded-xl',
     icon: 'lightbulb',
     label: 'tip',
     color: 'text-accent',
   },
   note: {
-    container: 'bg-green-light border border-green/40',
+    container: 'bg-green-light rounded-xl',
     icon: 'info',
     label: 'note',
     color: 'text-green',
   },
   warning: {
-    container: 'bg-amber-50 border border-amber-400/50',
+    container: 'bg-amber-50 rounded-xl',
     icon: 'warning',
     label: 'heads up',
     color: 'text-amber-700',

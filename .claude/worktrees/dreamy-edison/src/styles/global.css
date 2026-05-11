@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────
+   Adapted from Stitch "The Curated Cellar" design system.
+   Material Design 3 warm palette + editorial serif/sans pairing.
+────────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Colors — warm cream & deep wine palette */
+  --color-primary: #570013;
+  --color-primary-container: #800020;
+  --color-secondary: #584141;
+  --color-accent: #800020;
+  --color-accent-hover: #570013;
+  --color-accent-light: #ffdada;
+  --color-cta: #800020;
+  --color-cta-hover: #570013;
+  --color-cta-light: #bdedaa;
+  --color-bg: #fff8ef;
+  --color-bg-alt: #f5edde;
+  --color-surface-high: #efe7d9;
+  --color-surface-highest: #e9e2d3;
+  --color-surface-low: #fbf3e4;
+  --color-surface-white: #ffffff;
+  --color-text: #1e1b13;
+  --color-text-muted: #584141;
+  --color-border: #e0bfbf;
+  --color-border-dark: #8c7071;
+  --color-green: #3f6833;
+  --color-green-light: #bdedaa;
+  --color-green-dark: #28501e;
+
+  /* Fonts — Noto Serif (headlines) + Plus Jakarta Sans (body) */
+  --font-heading: 'Noto Serif', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* ─── Custom properties (outside @theme to avoid namespace conflicts) ──────── */
+:root {
+  /* Layout widths */
+  --w-prose: 42rem;
+  --w-page: 72rem;
+  --w-wide: 80rem;
+
+  /* Shadows — editorial style */
+  --twg-shadow-sm: 0 1px 2px rgba(30, 27, 19, 0.04);
+  --twg-shadow-md: 0 12px 24px rgba(30, 27, 19, 0.06);
+  --twg-shadow-lg: 0 16px 32px rgba(30, 27, 19, 0.08);
+  --twg-shadow-xl: 0 24px 48px rgba(30, 27, 19, 0.12);
+
+  /* Radii — large, editorial */
+  --twg-radius: 0.75rem;
+  --twg-radius-lg: 1.5rem;
+  --twg-radius-xl: 2rem;
+  --twg-radius-2xl: 2.5rem;
+  --twg-radius-3xl: 3rem;
+}
+
+/* ─── Base layer ───────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1.2;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-body);
+    color: var(--color-primary);
+    line-height: 1.4;
+  }
+
+  h1 { font-size: 2.5rem; font-weight: 700; }
+  h2 { font-size: 1.75rem; font-weight: 700; line-height: 1.25; }
+  h3 { font-size: 1.25rem; font-weight: 700; }
+  h4 { font-size: 1.125rem; font-weight: 600; }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 300ms ease;
+  }
+
+  a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+/* ─── Prose (article body) ───────────────────────────────────────────────── */
+.prose {
+  --tw-prose-body: #000000;
+  --tw-prose-headings: var(--color-primary);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-primary);
+  --tw-prose-counters: var(--color-text-muted);
+  --tw-prose-bullets: var(--color-border-dark);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-quotes: var(--color-secondary);
+  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-captions: var(--color-text-muted);
+  --tw-prose-code: var(--color-primary);
+  --tw-prose-th-borders: var(--color-border-dark);
+  --tw-prose-td-borders: var(--color-border);
+  max-width: var(--w-prose);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.prose {
+  color: #000000;
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
+}
+
+.prose hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-color: var(--color-border);
+}
+
+.prose img {
+  border-radius: 0;
+}
+
+.prose blockquote {
+  border-radius: 0;
+}
+
+.prose h1, .prose h2, .prose h3 { font-family: var(--font-heading); }
+.prose h4 { font-family: var(--font-body); }
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.prose a:hover { color: var(--color-accent-hover); }
+
+.prose .not-prose a,
+.not-prose a {
+  text-decoration: none;
+}
+
+.prose blockquote {
+  border-left-color: var(--color-accent);
+  font-style: italic;
+  background-color: var(--color-accent-light);
+  padding: 1rem 1.5rem;
+}
+
+.prose table { border-collapse: collapse; }
+
+.prose thead th {
+  background-color: var(--color-bg-alt);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* ─── Utility classes ──────────────────────────────────────────────────────── */
+.editorial-shadow {
+  box-shadow: 0 12px 24px rgba(30, 27, 19, 0.06);
+}
+
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

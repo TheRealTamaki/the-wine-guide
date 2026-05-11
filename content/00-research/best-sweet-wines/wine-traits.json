@@ -1,0 +1,126 @@
+{
+  "slug": "best-sweet-wines",
+  "date": "2026-04-19",
+  "wines": [
+    {
+      "name": "Dr. Loosen Wehlener Sonnenuhr Riesling Kabinett 2023",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 3,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Mosel Kabinett style (8% ABV cited in article body)", "varietal defaults"]
+    },
+    {
+      "name": "Hugel Classic Gewurztraminer 2023",
+      "tannin": 1,
+      "acidity": 2,
+      "sweetness": 3,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Alsace Gewurztraminer Classic style, 13% ABV cited in article", "varietal defaults"]
+    },
+    {
+      "name": "Oremus Late Harvest Tokaji 500ML 2023",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Tokaj Late Harvest Furmint style, ~120g/L RS per article", "category guidance"]
+    },
+    {
+      "name": "Saracco Moscato d'Asti 2024",
+      "tannin": 1,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Moscato d'Asti DOCG (5.5% ABV cited)", "category guidance"]
+    },
+    {
+      "name": "Banfi Rosa Regale Brachetto d'Acqui 2024",
+      "tannin": 2,
+      "acidity": 4,
+      "sweetness": 4,
+      "alcohol": 1,
+      "body": 2,
+      "confidence": "verified",
+      "sources": ["Brachetto d'Acqui DOCG (7% ABV cited)", "category guidance"]
+    },
+    {
+      "name": "Jam Jar Sweet Shiraz 2024",
+      "tannin": 2,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 3,
+      "body": 3,
+      "confidence": "inferred",
+      "sources": ["South African sweet Shiraz style, ~12.5% ABV typical", "varietal defaults"]
+    },
+    {
+      "name": "Graham's Six Grapes Reserve Ruby Port",
+      "tannin": 4,
+      "acidity": 3,
+      "sweetness": 5,
+      "alcohol": 5,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Reserve Ruby Port (20% ABV cited in article)", "category guidance"]
+    },
+    {
+      "name": "Sandeman 10-Year Old Tawny Port",
+      "tannin": 3,
+      "acidity": 3,
+      "sweetness": 4,
+      "alcohol": 5,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["10-year Tawny Port category (~20% ABV)", "category guidance"]
+    },
+    {
+      "name": "Alvear Pedro Ximenez Solera 1927 375ML",
+      "tannin": 1,
+      "acidity": 2,
+      "sweetness": 5,
+      "alcohol": 4,
+      "body": 5,
+      "confidence": "verified",
+      "sources": ["Pedro Ximenez Montilla-Moriles (15-17% ABV per article)", "category guidance"]
+    },
+    {
+      "name": "Chateau Suduiraut Sauternes 375ML 2020",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 5,
+      "alcohol": 4,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Sauternes botrytis blend (~14% ABV typical)", "category guidance"]
+    },
+    {
+      "name": "Royal Tokaji 5 Puttonyos Red Label 500ML 2018",
+      "tannin": 1,
+      "acidity": 4,
+      "sweetness": 5,
+      "alcohol": 3,
+      "body": 4,
+      "confidence": "verified",
+      "sources": ["Tokaji Aszu 5 Puttonyos (~11-12% ABV typical)", "category guidance"]
+    },
+    {
+      "name": "Inniskillin Vidal Icewine 375ML 2023",
+      "tannin": 1,
+      "acidity": 5,
+      "sweetness": 5,
+      "alcohol": 1,
+      "body": 3,
+      "confidence": "verified",
+      "sources": ["Canadian Vidal Icewine (~9-10% ABV typical)", "category guidance"]
+    }
+  ]
+}

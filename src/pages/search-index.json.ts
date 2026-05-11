@@ -11,6 +11,7 @@ export const GET: APIRoute = async () => {
       description: article.data.description,
       category: article.data.category,
       url: `/${slug}/`,
+      image: article.data.ogImage ?? null,
     };
   });
 
