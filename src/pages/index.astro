@@ -36,7 +36,7 @@ const schema = {
       <p class="hp-lede">For people who are new to wine and want down-to-earth advice and knowledge.</p>
     </div>
     <div class="hp-hero-right">
-      <img src="/images/home-hero-selected-wine-night.webp" alt="Two friends sharing red wine on a sofa at night" class="hp-hero-right-bg" loading="eager" />
+      <img src="/images/home-hero-selected-wine-night-no-shadow.webp" alt="Two friends sharing red wine on a sofa at night" class="hp-hero-right-bg" loading="eager" />
     </div>
   </div>
 
@@ -1241,7 +1241,8 @@ const schema = {
   }
 
   .hp-hero-right {
-    min-height: 260px;
+    min-height: 360px;
+    aspect-ratio: 4 / 3;
   }
 
   .hp-grape-grid {
@@ -1273,6 +1274,10 @@ const schema = {
   .hp-course-left {
     border-right: 0;
     border-bottom: var(--rule) solid var(--line);
+  }
+
+  .hp-course-right {
+    min-height: 400px;
   }
 
   .hp-editorial {
