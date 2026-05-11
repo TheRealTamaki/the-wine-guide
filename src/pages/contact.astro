@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Claire Bennett, editor of The Wine Guide. Questions, feedback, or recommendation requests welcome."
+>
+  <div class="legal-wrap">
+    <h1>Contact</h1>
+    <p class="legal-meta">Run by Claire Bennett, Sydney, Australia</p>
+
+    <div class="legal-body">
+
+      <p>The Wine Guide is a one-person operation. Every article, every recommendation, every reply to your email comes from me, Claire Bennett.</p>
+
+      <p>I've spent years inside the Australian wine industry, working on the marketing teams at two major wine companies. That meant directing photoshoots, sitting across from top winemakers for on-camera interviews, and running the monthly magazine at one of the brands. The part that shaped my recommendation instinct most was the wine club. I sold wine over the phone to club members week after week, talking them through their next case: what they'd loved, what had missed, what they wanted next.</p>
+
+      <p>That's the lens I write through. Everything on this site is the kind of advice I'd give to a club member about to commit to a nine-bottle case (or two), who wants every bottle in that order to earn its place.</p>
+
+      <h2>Get in touch</h2>
+
+      <p>The best way to reach me is email:</p>
+
+      <p><a href="mailto:claire.bennett@wineguide.co">claire.bennett@wineguide.co</a></p>
+
+      <p>What you can email about:</p>
+
+      <ul>
+        <li>Questions about anything you've read on the site</li>
+        <li>Recommendation requests (tell me your budget, the occasion, and what you've liked before)</li>
+        <li>Feedback, corrections, or topics you'd like covered</li>
+      </ul>
+
+      <p>I read every email personally and try to reply within a few days. If your question is urgent, say so in the subject line.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .legal-wrap {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+  .legal-wrap h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+  .legal-meta {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .legal-body h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .legal-body p,
+  .legal-body li {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .legal-body ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .legal-body a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+</style>
